@@ -44,6 +44,50 @@ Restrict hover-only motion to suitable pointing devices and keep the action
 usable on touch and keyboard. Essential meaning must remain when animation is
 disabled, interrupted or unavailable.
 
+## Gestures and continuity
+
+Prefer the installed primitive's gesture owner. For custom pointer handling,
+track the active `pointerId` and use `setPointerCapture` when the drag must continue
+outside the hit area. Clean up on `pointerup`, `pointercancel`, `lostpointercapture` and
+unmount; cancellation must not accidentally commit a dismissal. Choose scoped
+`touch-action` behavior before the gesture starts, retaining native scrolling and
+zoom where possible. See [MDN pointer events](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events).
+
+Keep the initial contact offset relative to the element so it does not jump to
+center under the pointer. When grabbing a moving surface, continue from its
+current rendered position. Hand release velocity to the settling mechanism when
+supported; preserve direction and continuity on interruption or reversal, with
+deliberate bounds rather than a reset to a canned starting frame. Exercise slow
+drags, fast releases, re-grabs and cancellation. Retain a non-drag action.
+
+## Optional transitions-dev recipes
+
+When a concrete transition recipe would help, consult an installed
+`transitions-dev` catalog for the matching interaction, such as an anchored
+dropdown, sliding tab indicator, content reveal or icon swap. Load its index and
+selected recipe only. It complements Impeccable's direction and this reference's
+behavior checks; it does not determine where animation belongs.
+
+The inspected version offers `transitions reveal` for browsing, `transitions
+review` for review, `transitions apply` for installation and `transitions refine`
+for token suggestions. These are skill workflows, not assumed shell executables;
+check the installed entrypoint for current syntax. Choose the mode matching the
+request; review/browsing does not authorize application or a global token migration.
+
+Use the current recipe's hooks and cleanup contract while integrating with the
+existing component/state owner. Prefer its per-recipe variables for a single
+effect; map tunable values to adopted motion tokens where supported rather than
+installing a competing global scale. Preserve the recipe's reduced-motion branch
+and verify actual keyboard, focus, interruption and theme behavior. A CSS recipe
+does not replace an accessible dialog, menu or tabs primitive. Measure expensive
+effects under representative load using [performance](performance.md).
+
+The inspected catalog permits project use but restricts republication as a
+competing library, template pack or component kit. Check its license; keep recipe
+files, shared CSS and catalog outside this distributable skill. If unavailable,
+use the project's existing mechanism or the independently authored suggestions
+below; do not claim the catalog was consulted or recreate its library.
+
 ## Recipes by interaction
 
 Use these as starting suggestions only when the project lacks a matching token.
@@ -76,7 +120,22 @@ while users interact where appropriate and ensure actionable information can be
 recovered. Announcements follow the [accessibility reference](interaction-accessibility.md),
 not the animation's completion. See [Motion drag](https://motion.dev/docs/react-drag).
 
-## Review checklist
+## Motion audit and inspection
+
+For a requested audit, record each relevant interaction's current effect, purpose,
+observed issue and recommendation: keep, adjust, remove or remain static. Include
+places where adding animation would delay frequent work, distract from reading,
+obscure a value or compete with another signal. An audit need not produce new
+animations and remains read-only unless implementation is requested.
+
+Inspect at normal speed first. When jumps, overlap, easing or exit cleanup are
+hard to diagnose, use the browser's animation tools or a recording at slow speed
+and scrub frame by frame. Identify the problematic state/frame and input sequence;
+then recheck at normal speed and with reduced motion. Slow playback diagnoses
+composition and continuity, not real-time performance. Name unavailable inspection
+tools and untested states rather than reporting a visual pass.
+
+### Review checklist
 
 - Does the movement explain a useful change without delaying repeated work?
 - Do entry, exit and anchoring make sense beside the real surrounding content?

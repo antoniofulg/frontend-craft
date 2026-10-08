@@ -27,8 +27,8 @@ npx skills add antoniofulg/frontend-craft --skill frontend-craft --agent codex c
 For a local development checkout, replace `antoniofulg/frontend-craft` with its
 directory, such as `~/Projects/frontend-craft`. The package uses the standard
 `skills/frontend-craft/SKILL.md` layout. No npm publication or custom installer is required.
-Impeccable and UI/UX Pro Max are optional companions; neither is bundled or
-installed automatically.
+Impeccable, UI/UX Pro Max and transitions-dev are optional companions; none is
+bundled or installed automatically.
 
 ## Use
 
@@ -97,8 +97,8 @@ usable with the project's contracts and its bundled references.
 
 The [skill entrypoint](skills/frontend-craft/SKILL.md) routes to focused references:
 mapping; reuse and consistency; components; interaction and accessibility; motion;
-landing pages; visual details; charts; and reviews. Typical work reads the core and
-the relevant references, not a catalog of every rule. The core is stack-neutral;
+landing pages; performance; visual details; charts; and reviews. Typical work reads
+the core and the relevant references, not a catalog of every rule. The core is stack-neutral;
 React recipes are explicitly conditional, and there is no Tailwind module.
 
 The expanded references cover forced colors and announcement priorities, disabled
@@ -106,6 +106,18 @@ control semantics, state/action composition and refs, interaction-specific motio
 commercial claims and messaging alternatives, font/bidi/color details, and chart
 selection with accessible alternatives. Suggested timing and visual values yield
 to the actual project tokens and requirements.
+
+Public redesigns also check URL/anchor, metadata/SEO, analytics, form and legal
+contracts. Onboarding and authentication guidance distinguishes WCAG requirements
+from ergonomic recommendations. A separate performance reference covers field
+versus local evidence, trace-based diagnosis and comparable before/after runs.
+
+Interface wording routes to Impeccable's `clarify` when available. Motion work
+can consult an installed `transitions-dev` for a selected recipe; Frontend Craft
+keeps direction, component ownership, accessibility and verification in scope.
+The catalog is optional and is not redistributed here. Gesture guidance covers
+pointer capture, contact/velocity continuity and cancellation; motion audits also
+record where the interface should remain static.
 
 Reviews report evidence and limitations; fixes require a request to implement them.
 Source-only inspection is not a claim that visual or keyboard behavior passed.

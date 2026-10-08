@@ -1,6 +1,6 @@
 # Interaction and accessibility
 
-Read for changes to controls, forms, feedback, responsive behavior, or an
+Read for changes to controls, forms, onboarding, authentication, feedback, responsive behavior, or an
 accessibility review. Check only applicable interactions, using the project's
 accessibility target and current authoritative standards when exact criteria matter.
 
@@ -66,6 +66,47 @@ Use meaningful input types and autocomplete where applicable. Support paste
 and password managers. Match existing locale/date/number conventions and keep
 formatting separate from canonical values. Destructive operations need suitable
 protection proportional to their consequence, such as undo or confirmation.
+
+## Onboarding and authentication
+
+Check the complete process, including back navigation, recovery and repeated
+authentication. Use the project's conformance target. These WCAG 2.2 criteria
+are conditional requirements, distinct from additional ergonomic recommendations:
+
+- **3.2.6 Consistent Help (A):** when covered help mechanisms repeat across a set
+  of pages, keep their relative order unless the user initiates a change. This
+  does not require adding a help mechanism to every page. See
+  [consistent help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+- **3.3.7 Redundant Entry (A):** information already supplied by or to the user
+  that is needed again in the same process should be auto-populated or selectable.
+  Exceptions cover essential repetition, security and information no longer valid.
+  Preserve valid entries between steps. See
+  [redundant entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+- **3.3.8 Accessible Authentication (Minimum, AA):** avoid requiring a cognitive
+  function test such as memorizing a password or transcribing a code without a
+  permitted alternative, assistance mechanism or exception. Support password
+  managers and paste, including codes pasted into segmented inputs. Object
+  recognition and personal-content identification are AA exceptions, not blanket
+  proof of an accessible flow; the enhanced AAA criterion is stricter. Verify the
+  actual login, MFA and recovery paths. See
+  [accessible authentication](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html).
+
+### Target sizes: requirement versus recommendation
+
+For WCAG 2.2 **2.5.8 (AA)**, pointer targets are at least **24 × 24 CSS px** unless
+an exception applies. For the spacing exception, 24 CSS px diameter circles
+centered on undersized targets must not intersect another target or the circle
+around another undersized target. Other exceptions cover equivalent controls,
+inline targets, unmodified user-agent controls and essential presentations. Check
+the actual hit area and neighboring controls, not just the icon's visible size.
+See [target size minimum](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+
+**2.5.5 (AAA)** uses **44 × 44 CSS px**, with its own exceptions; it is not the AA
+minimum. Larger touch targets can still be appropriate ergonomic recommendations
+or project requirements. Label the basis of each finding: applicable criterion,
+project contract or recommendation. Avoid converting platform points/dp directly
+into a universal CSS-pixel rule. See
+[target size enhanced](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html).
 
 ## Layout, typography and color
 

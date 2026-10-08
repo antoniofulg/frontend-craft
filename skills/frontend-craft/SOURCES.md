@@ -52,6 +52,23 @@ specialist reference. It does not bundle a third-party chart catalog. Motion
 timings, spring settings, corner geometry and color examples are contextual
 starting points rather than universal requirements or upstream design tokens.
 
+## Contract and evidence additions in 0.3.0
+
+The public-redesign checklist, onboarding/authentication criteria, performance
+workflow and gesture/audit additions are independently expressed. Primary sources
+linked beside the guidance are WCAG 2.2 and its WAI Understanding documents, MDN
+Pointer Events, web.dev Web Vitals and Chrome DevTools performance documentation,
+consulted on 2026-10-08. WCAG conformance criteria and ergonomic suggestions are
+identified separately; local measurements do not establish field results.
+
+An installed `transitions-dev` catalog was inspected on 2026-10-08: 32 recipes,
+copyright 2026 Jakub Antalik / Transitions.dev; source revision not recorded.
+Its [license terms](https://transitions.dev/terms.html) permit use and modification
+in products but restrict republishing the collection or a substantial portion as
+a competing library, template pack or component kit. This package adds optional
+routing only; it includes no catalog prose, recipe code or shared CSS. Consult
+the installed copy's license and recipe contract for actual product use.
+
 ## Companion and distribution
 
 [Impeccable](https://github.com/pbakaus/impeccable) is an optional companion and

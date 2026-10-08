@@ -1,10 +1,10 @@
 ---
 name: frontend-craft
-description: Map an existing frontend, reuse its domain components and page patterns, and build or review consistent interfaces. Use for new sibling pages, UI changes, component reviews, and frontend mapping; complements Impeccable's design direction. Includes on-demand accessibility, motion, landing-page, chart and visual-detail guidance.
+description: Map an existing frontend, reuse its domain components and page patterns, and build or review consistent interfaces. Use for new sibling pages, UI changes, component reviews, and frontend mapping; complements Impeccable's design direction. Includes on-demand accessibility, motion, public-redesign, performance, chart and visual-detail guidance.
 license: CC-BY-4.0
 metadata:
   author: Antonio Fulgêncio
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Frontend Craft
@@ -25,9 +25,11 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Map the frontend or refresh its inventory | [mapping](references/mapping.md) | A source-linked map with explicit coverage |
 | Plan, create, recreate, or change a page/component | [reuse and consistency](references/reuse-consistency.md) | Proposal or implementation grounded in matching precedents |
 | Design or change a component API/state owner | [components](references/components.md) | The smallest compatible extension of the actual owner |
-| Change controls, forms, feedback, layout adaptation, or keyboard behavior | [interaction and accessibility](references/interaction-accessibility.md) | Usable behavior in the relevant states and environments |
-| Add, change, or review motion | [motion](references/motion.md) | Purposeful, interruptible movement or an intentional static response |
-| Create or assess a marketing/landing page | [landing pages](references/landing-pages.md) | A page supporting the visitor's decision |
+| Change controls, forms, onboarding, authentication, layout adaptation, or keyboard behavior | [interaction and accessibility](references/interaction-accessibility.md) | Usable behavior in the relevant states and environments |
+| Clarify labels, instructions, empty states, or errors | Impeccable's `clarify`, when available; [interaction and accessibility](references/interaction-accessibility.md) for behavior | Accurate wording for the actual action and recovery path |
+| Add, change, or review motion/gestures; choose a transition recipe | [motion](references/motion.md), including optional transitions-dev routing | Purposeful, interruptible movement or an intentional static response |
+| Create or assess a marketing/landing page; redesign a public page | [landing pages](references/landing-pages.md), including public redesign contracts | A page supporting the visitor's decision and preserving its public contracts |
+| Diagnose loading, responsiveness, layout shifts, or a performance regression | [performance](references/performance.md) | A traced cause and a comparable measurement with explicit evidence limits |
 | Refine nested corners, font features, mixed-direction text, or advanced color | [visual details](references/visual-details.md) | A scoped technical refinement within the existing design |
 | Choose or review a chart | [charts](references/charts.md) | A truthful encoding and accessible access to the data |
 | Review a page, component, change, or consistency | [review](references/review.md) | Evidence-backed findings and verification limits |
@@ -69,6 +71,11 @@ Let Impeccable own its context setup, design direction, and artifact lifecycle.
 Read its applicable product/design/surface documents at the paths it resolves;
 reuse its context and evidence rather than running its setup twice. This skill
 adds implementation precedents and consistency checks, not another visual system.
+
+For interface wording, use Impeccable's installed `clarify` capability when
+available. Preserve domain terms, approved claims and legal meaning; align labels,
+instructions and errors with actual behavior. Without it, make the scoped wording
+change directly using the existing vocabulary and interaction reference.
 
 Preserve an established family in ordinary creation/refinement. For an explicit
 redesign, use the approved replacement direction and migration scope; keep domain

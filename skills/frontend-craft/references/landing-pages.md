@@ -15,6 +15,33 @@ offered, why it matters, how it works, whether to trust it, what it costs where
 relevant, and what happens next. The sequence follows the decision; it is not a
 mandatory nine-section template or a fixed word-count formula.
 
+## Public redesign contracts
+
+Before replacing an existing public page, inventory the affected contracts from
+routes, rendered markup, metadata, form handlers and analytics callers. Record
+what stays and any deliberate migration in the existing brief or change plan:
+
+- URLs, query parameters and shared deep links; preserve destinations or map old
+  URLs to intended replacements using the project's redirect mechanism.
+- Anchor IDs and incoming fragment links; retain working targets or provide a
+  compatible target at the replacement section. A page redirect alone does not
+  repair a missing fragment target.
+- Titles, descriptions, canonical URLs, robots directives, social previews,
+  structured data and applicable locale/sitemap entries. Check their rendered
+  output and consistency with the replacement content.
+- Analytics event names, payloads, consent conditions and firing points; preserve
+  attribution and avoid firing a conversion twice after a composition change.
+- Form field names, requiredness, hidden attribution values, validation, submit
+  destinations and success/error behavior; visual similarity is not payload
+  compatibility.
+- Legal text, consent choices, policy links, pricing and disclaimers. Carry
+  approved meaning forward; changes follow the authorized migration scope.
+
+Verify representative old URLs/anchors, metadata, form submissions and relevant
+events through existing safe preview/test mechanisms. Record unverified contracts
+and intentional changes. A visual redesign alone does not authorize changing
+commercial/legal terms or publishing a migration.
+
 ## Commercial brief and claim inventory
 
 Before writing new copy, recover the audience's situation, desired outcome,

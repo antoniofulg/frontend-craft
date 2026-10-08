@@ -27,13 +27,14 @@ replacement elsewhere in the change before reporting the removal as a defect.
 | Controls, forms, layout, typography, color, feedback | [interaction and accessibility](interaction-accessibility.md) |
 | Motion, timing, interruption and reduced motion | [motion](motion.md) |
 | Public-page decision path | [landing pages](landing-pages.md) |
+| Loading, responsiveness, shifts or measured smoothness | [performance](performance.md) |
 | Nested geometry, font features, bidi and advanced color | [visual details](visual-details.md) |
 | Chart encoding, truthful comparisons and data access | [charts](charts.md) |
 
 Use the project's correctness/security/performance workflow for concerns outside
 these lenses. Name a material concern and its owner rather than claiming a full
-technical audit. If slowness matters, measure under stated conditions before
-reporting a performance failure; keep lab and field evidence distinct.
+technical audit. If slowness matters, load the performance reference and measure
+under stated conditions before reporting a performance failure.
 
 ## Stress a real component
 
