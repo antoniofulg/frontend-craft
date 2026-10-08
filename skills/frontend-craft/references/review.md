@@ -27,6 +27,8 @@ replacement elsewhere in the change before reporting the removal as a defect.
 | Controls, forms, layout, typography, color, feedback | [interaction and accessibility](interaction-accessibility.md) |
 | Motion, timing, interruption and reduced motion | [motion](motion.md) |
 | Public-page decision path | [landing pages](landing-pages.md) |
+| Nested geometry, font features, bidi and advanced color | [visual details](visual-details.md) |
+| Chart encoding, truthful comparisons and data access | [charts](charts.md) |
 
 Use the project's correctness/security/performance workflow for concerns outside
 these lenses. Name a material concern and its owner rather than claiming a full
@@ -43,7 +45,7 @@ Derive scenarios from its public inputs, slots, states and real consumers:
 | Quantity | No items, one item, realistic large collection, no search matches |
 | State | Selected, disabled, pending, denied, error/retry, repeated action |
 | Container | Actual narrow/wide hosts, dense layout, nested scroll/overlay |
-| Environment | Supported themes, zoom/text scaling, keyboard/touch, reduced motion |
+| Environment | Supported themes, forced colors, zoom/text scaling, keyboard/touch, reduced motion |
 
 Select relevant axes, not their Cartesian product. Render the actual imported
 component with synthetic realistic data in the project's fonts, tokens and
