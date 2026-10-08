@@ -11,22 +11,22 @@ just whether the same component was imported.
 
 ## Install
 
-From your consuming project's directory, install this local checkout through the
+From your consuming project's directory, install through the
 [skills CLI](https://github.com/vercel-labs/skills):
 
 ```bash
-npx skills add ~/Projects/frontend-craft --skill frontend-craft
+npx skills add antoniofulg/frontend-craft
 ```
 
 Choose the agents interactively, or target Codex and Claude Code explicitly:
 
 ```bash
-npx skills add ~/Projects/frontend-craft --skill frontend-craft --agent codex claude-code
+npx skills add antoniofulg/frontend-craft --skill frontend-craft --agent codex claude-code
 ```
 
-The package uses the standard `skills/frontend-craft/SKILL.md` layout. A GitHub
-copy of this repository can be installed by replacing the local path with its
-`owner/repository` source. No npm publication or custom installer is required.
+For a local development checkout, replace `antoniofulg/frontend-craft` with its
+directory, such as `~/Projects/frontend-craft`. The package uses the standard
+`skills/frontend-craft/SKILL.md` layout. No npm publication or custom installer is required.
 Impeccable is optional and is not bundled or installed automatically.
 
 ## Use
