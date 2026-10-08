@@ -1,10 +1,10 @@
 ---
 name: frontend-craft
-description: Map an existing frontend, reuse its domain components and page patterns, and build or review consistent interfaces. Use for new sibling pages, UI changes, component reviews, and frontend mapping; complements Impeccable's design direction. Includes on-demand accessibility, motion, and landing-page guidance.
+description: Map an existing frontend, reuse its domain components and page patterns, and build or review consistent interfaces. Use for new sibling pages, UI changes, component reviews, and frontend mapping; complements Impeccable's design direction. Includes on-demand accessibility, motion, landing-page, chart and visual-detail guidance.
 license: CC-BY-4.0
 metadata:
   author: Antonio Fulgêncio
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Frontend Craft
@@ -28,6 +28,8 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Change controls, forms, feedback, layout adaptation, or keyboard behavior | [interaction and accessibility](references/interaction-accessibility.md) | Usable behavior in the relevant states and environments |
 | Add, change, or review motion | [motion](references/motion.md) | Purposeful, interruptible movement or an intentional static response |
 | Create or assess a marketing/landing page | [landing pages](references/landing-pages.md) | A page supporting the visitor's decision |
+| Refine nested corners, font features, mixed-direction text, or advanced color | [visual details](references/visual-details.md) | A scoped technical refinement within the existing design |
+| Choose or review a chart | [charts](references/charts.md) | A truthful encoding and accessible access to the data |
 | Review a page, component, change, or consistency | [review](references/review.md) | Evidence-backed findings and verification limits |
 
 Load only matching references. A heading correction needs the nearest page
@@ -77,6 +79,20 @@ If Impeccable is unavailable, proceed from the project's existing contracts and
 observed UI. Name missing design decisions; do not generate replacement Impeccable
 files or claim its workflow ran. Installation alone does not ensure co-invocation:
 the repository can route interface work to both skills in its own instructions.
+
+## With UI/UX Pro Max
+
+Use an installed UI/UX Pro Max skill for a specific unresolved question, such as
+chart selection or an unfamiliar interaction pattern. This pairing is reference-only:
+use its current domain-query syntax and relevant results, not its broad new-page
+workflow. This scoped integration takes precedence over its default requirement to
+generate a design system for a new page. Do not run design-system generation or
+persistence unless the user actually requested that scope. Treat recommendations as
+options subordinate to the task, accessibility requirements and project contracts.
+Keep Impeccable's adopted design context authoritative for visual direction.
+Do not regenerate palettes, fonts or a parallel design-system document for an
+established page family. If the companion is unavailable, use this package's
+references and relevant official documentation; installation is not a prerequisite.
 
 ## Before delivery
 

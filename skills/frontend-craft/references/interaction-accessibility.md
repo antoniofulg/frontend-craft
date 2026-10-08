@@ -16,6 +16,21 @@ failure; provide a concrete retry or correction path. Announce asynchronous
 outcomes where appropriate without repeatedly interrupting assistive technology.
 For optimistic UI, preserve the established rollback and conflict behavior.
 
+### Choose announcement priority
+
+| Event | Starting mechanism | Verify |
+| --- | --- | --- |
+| Routine saved/search/progress status | An existing stable `role="status"` region (polite) | Include enough context; batch rapid updates rather than reading every keystroke |
+| Urgent failure requiring immediate attention without a focus change | `role="alert"` or an appropriate assertive live region | Use one announcement path; avoid interrupting for ordinary updates |
+| Invalid field on submission | Associated error and deliberate focus on the summary/invalid field | The focused label/error is understandable without a duplicate alert |
+| Dialog opened or control expanded | Its focus and semantic state contract | Do not add a live announcement for a change already conveyed |
+
+Keep routine live regions mounted before updating their content. Verify actual
+screen-reader output: adding both a live message and a focused error can announce
+the same event twice. Keep essential errors available after transient feedback
+disappears. See [WAI status messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html)
+and [alert guidance](https://www.w3.org/WAI/ARIA/apg/patterns/alert/).
+
 ## Controls and navigation
 
 - Use native semantics or the actual library's accessible primitive. Verify
@@ -28,6 +43,17 @@ For optimistic UI, preserve the established rollback and conflict behavior.
   reveals and dragging must not be the sole path to essential operations.
 - Preserve navigation expectations, link destinations, and back behavior.
   A button performs an action; a link navigates, using the stack's conventions.
+
+### Unavailable actions
+
+Use native `disabled` when native exclusion from focus and form submission fits
+the task. Use `aria-disabled="true"` when an unavailable control must remain
+discoverable in the intended focus model: it conveys state but does not suppress
+activation, change focusability, or remove form values. Implement click, keyboard
+and submit guards as applicable; CSS `pointer-events` alone is insufficient.
+Scope the attribute to the actual control rather than unintentionally disabling
+all focusable descendants. Provide an explanation reachable without hovering a
+disabled element. See [MDN aria-disabled](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled).
 
 ## Forms and feedback
 
@@ -57,6 +83,21 @@ variable backgrounds require more than sampling one convenient pixel. Preserve
 semantic color meaning and pair color with text, shape or another cue for status.
 For charts, retain labels/units and an accessible way to obtain essential values.
 Theme changes must preserve relationships, not merely invert raw colors.
+
+### Forced colors and translated content
+
+In `forced-colors: active`, check borders, focus, selection, icons and charts
+when author colors/shadows are replaced. Prefer system colors such as `Canvas`,
+`CanvasText`, `ButtonText` and `Highlight` in targeted repairs; native semantics
+help the browser choose appropriate colors. Do not disable adjustments globally
+with `forced-color-adjust: none`. Any narrow exception must remain legible under
+the user's palette. See [MDN forced colors](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors).
+
+Exercise a long translation or pseudolocalized string, a long unbroken identifier,
+and mixed-direction names where supported. Combine a narrow layout with zoom or
+text enlargement and keyboard navigation: confirm labels, errors, focus and
+actions remain reachable. Do not shorten translated copy merely to hide clipping.
+For isolation of embedded names, read [visual details](visual-details.md).
 
 ## Verification
 

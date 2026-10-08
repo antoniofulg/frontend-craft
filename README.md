@@ -27,7 +27,8 @@ npx skills add antoniofulg/frontend-craft --skill frontend-craft --agent codex c
 For a local development checkout, replace `antoniofulg/frontend-craft` with its
 directory, such as `~/Projects/frontend-craft`. The package uses the standard
 `skills/frontend-craft/SKILL.md` layout. No npm publication or custom installer is required.
-Impeccable is optional and is not bundled or installed automatically.
+Impeccable and UI/UX Pro Max are optional companions; neither is bundled or
+installed automatically.
 
 ## Use
 
@@ -40,6 +41,7 @@ $frontend-craft Build the projects list using the existing dashboard patterns.
 $frontend-craft Review the task editor for reuse and consistency with sibling pages.
 $frontend-craft Check the owner picker with long names, no results, and save failures.
 $frontend-craft Review this landing page's decision path and mobile form.
+$frontend-craft Choose a chart for this dataset and provide accessible value lookup.
 ```
 
 Mapping creates or extends the project's frontend map, normally in its existing
@@ -79,12 +81,31 @@ edit agent instructions or Impeccable's files as an installation side effect.
 An explicit redesign follows the approved new direction rather than freezing an
 old appearance. Existing behavior and compatible components still inform the work.
 
+## Consult UI/UX Pro Max selectively
+
+Use Frontend Craft to establish existing owners and contracts, Impeccable for
+visual direction, and UI/UX Pro Max when a specific design question remains open.
+A new chart can justify a chart-domain lookup; another page in an established
+dashboard does not justify regenerating its fonts, palette or design system.
+
+UI/UX Pro Max recommendations are options, not overrides of the project's adopted
+contracts. Load the relevant domain only, and retain Impeccable's existing context
+as the visual source of truth. Without either companion, Frontend Craft remains
+usable with the project's contracts and its bundled references.
+
 ## What loads when
 
 The [skill entrypoint](skills/frontend-craft/SKILL.md) routes to focused references:
 mapping; reuse and consistency; components; interaction and accessibility; motion;
-landing pages; and reviews. Typical work reads the core and the relevant references,
-not a catalog of every rule. The package is stack-neutral and has no Tailwind module.
+landing pages; visual details; charts; and reviews. Typical work reads the core and
+the relevant references, not a catalog of every rule. The core is stack-neutral;
+React recipes are explicitly conditional, and there is no Tailwind module.
+
+The expanded references cover forced colors and announcement priorities, disabled
+control semantics, state/action composition and refs, interaction-specific motion,
+commercial claims and messaging alternatives, font/bidi/color details, and chart
+selection with accessible alternatives. Suggested timing and visual values yield
+to the actual project tokens and requirements.
 
 Reviews report evidence and limitations; fixes require a request to implement them.
 Source-only inspection is not a claim that visual or keyboard behavior passed.

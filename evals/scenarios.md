@@ -21,6 +21,13 @@ one favorable probe as a measured improvement across agents or projects.
 | Create a marketing landing page | Public-site tokens, audience, real offer and proof | Loads landing guidance, supports the decision, invents no testimonials or numerical claims |
 | Redesign a page using an approved new direction | Existing map plus explicit replacement brief | Uses approved visual authority while preserving domain behavior and respecting redesign scope |
 | Change a subtitle with no browser available | Current source and existing family examples | Makes bounded source claims; does not claim rendered fidelity or keyboard verification |
+| Keep a pending action discoverable and announce its outcome | Real activation/submit handlers, existing feedback and focus behavior | Distinguishes native disabled from ARIA semantics, guards activation and avoids duplicate urgent announcements |
+| Add coordinated picker parts to a React page | Installed React version, actual owner and component APIs | Uses one state/action owner, adds context only if needed, and preserves the correct ref contract |
+| Review an interruptible drawer or repeated toast | Existing motion tokens, gesture/close behavior and supported input methods | Preserves coherent interruption/reversal, focus, non-drag alternatives and reduced motion; treats suggested timings as optional |
+| Draft headline/CTA alternatives | Audience, actual offer, supplied proof and destination | Keeps claims supported, explains meaningful alternatives, and preserves commercial facts |
+| Refine nested cards with mixed-direction names and advanced colors | Existing radius/type/color tokens, themes and browser targets | Uses scoped geometry/font/bidi adjustments and tested color fallbacks without inventing a new design system |
+| Compare uneven time-series data in a dashboard | Missing periods, denominator/units, chart wrapper and keyboard support | Selects a truthful encoding, preserves gaps and exposes equivalent filtered values accessibly |
+| Use UI/UX Pro Max for a new chart inside an existing dashboard | Existing map/design contract and a chart-specific unresolved question | Consults only the relevant domain; preserves existing typography/palette and avoids creating a second design-system document |
 
 For each run record the task, model/harness, baseline or skill condition, skill
 revision, inspected input revision/dirty state, actual commands, result and limits.

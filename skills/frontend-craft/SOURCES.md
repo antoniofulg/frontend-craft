@@ -39,6 +39,19 @@ bundled here. Installed project copies may differ from their recorded upstream.
 Fixed aesthetic formulas, unsupported conversion estimates, promotional tool
 requirements and restricted transition recipes were not incorporated.
 
+## Technical reference additions in 0.2.0
+
+Technical examples are independently authored. Links beside the relevant rules
+point to React's context/ref documentation, MDN's CSS/HTML/ARIA references, WAI's
+status-message/alert/complex-image guidance, and Motion's transition/drag reference.
+These primary sources were consulted on 2026-10-08; exact APIs and browser support
+must still match the consuming project's installed versions and targets.
+
+The chart guide is a compact question-driven aid, with Data to Viz as an optional
+specialist reference. It does not bundle a third-party chart catalog. Motion
+timings, spring settings, corner geometry and color examples are contextual
+starting points rather than universal requirements or upstream design tokens.
+
 ## Companion and distribution
 
 [Impeccable](https://github.com/pbakaus/impeccable) is an optional companion and

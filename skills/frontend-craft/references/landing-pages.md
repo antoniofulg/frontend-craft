@@ -15,6 +15,46 @@ offered, why it matters, how it works, whether to trust it, what it costs where
 relevant, and what happens next. The sequence follows the decision; it is not a
 mandatory nine-section template or a fixed word-count formula.
 
+## Commercial brief and claim inventory
+
+Before writing new copy, recover the audience's situation, desired outcome,
+current alternative, decision stage and material objections from supplied context.
+Distinguish user, buyer and approver when they need different evidence. Ask only
+for missing facts that would otherwise force an invented offer or claim.
+
+Maintain a small working inventory for claims used on the page. Return it in the
+response for planning or review; update an existing brief only when the requested
+work authorizes editing it. Use this shape rather than a second marketing ledger:
+
+| Claim | Evidence and scope | Qualification | Decision |
+| --- | --- | --- | --- |
+| Proposed promise, number, testimonial or guarantee | Supplied source, date/population and permission where relevant | Limits needed for an accurate reading | Supported, needs confirmation, or omit |
+
+A design example is not evidence for a customer count. Distinguish an aspiration
+from a product capability already available. Keep the promise, supporting proof,
+CTA destination and post-click experience aligned; an honest narrower promise
+is preferable to an unsupported stronger one. Flag contradictions with approved
+copy rather than silently changing commercial facts.
+
+## Narrative and alternatives
+
+Outline sections as visitor question → answer → evidence → next decision. For
+example, an integration concern may need a concrete workflow illustration before
+a purchase CTA; a familiar low-friction product may need a much shorter path.
+Remove sections that repeat a claim without adding useful proof or resolving an
+objection. Preserve the public-site's established header, navigation and vocabulary.
+
+When asked to explore messaging, offer a small set of headline/CTA alternatives
+on one meaningful axis, such as outcome-led versus workflow-led framing. Each
+option must use the same supported facts and state its audience fit or tradeoff.
+CTA wording describes the actual next step: booking a conversation differs from
+starting a trial. Avoid arbitrary word counts, fake urgency and changing the offer
+to make an option sound stronger. Save chosen wording to the existing brief only
+within authorized edits; otherwise present it for review in the response.
+
+When only implementation or visual refinement is requested, preserve approved
+copy. Do not automatically run a messaging workshop or produce alternatives.
+
 ## Make each element earn its place
 
 - Make the principal promise and next action easy to locate. Use supporting
