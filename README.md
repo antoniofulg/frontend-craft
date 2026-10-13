@@ -1,13 +1,18 @@
 # Frontend Craft
 
-Map how a product's frontend already works, reuse its domain components, and
-keep new pages consistent with their siblings. Frontend Craft is an Agent Skill
-designed to work alongside Impeccable or an existing project design system.
+Build and review interfaces for conversion, activation, monetization and retention.
+Frontend Craft connects the commercial objective to the user's journey, then
+reuses the product's components and verifies the implementation. It works alongside
+Impeccable or an existing project design system.
 
 It addresses two recurring failures: replacing a domain interaction with a generic
 control, and inventing a new header, subtitle, or typography treatment for another
 page in the same dashboard. It checks actual usages and rendered behavior, not
 just whether the same component was imported.
+
+For commercial work, the outcome guides what should change and why; implementation
+precedents guide how to build it. Existing patterns can change when a diagnosed
+barrier warrants it. Commercial recommendations remain hypotheses until measured.
 
 ## Install
 
@@ -40,7 +45,10 @@ $frontend-craft Map the dashboard's page families and assignment workflows.
 $frontend-craft Build the projects list using the existing dashboard patterns.
 $frontend-craft Review the task editor for reuse and consistency with sibling pages.
 $frontend-craft Check the owner picker with long names, no results, and save failures.
-$frontend-craft Review this landing page's decision path and mobile form.
+$frontend-craft Review this landing page for conversion. Prioritize concrete improvements by commercial impact, evidence and effort.
+$frontend-craft Review onboarding from signup to the first useful result.
+$frontend-craft Assess this pricing page, trial and upgrade path against paid conversion and retained revenue.
+$frontend-craft Review cancellation reasons and propose changes that support continued value.
 $frontend-craft Choose a chart for this dataset and provide accessible value lookup.
 ```
 
@@ -57,9 +65,10 @@ and paths come from the consuming project, not from a fixed starter template.
 
 ## Pair with Impeccable
 
-Impeccable supplies visual direction and maintains its own product, design and
-surface context. Frontend Craft finds the implementation precedents, preserves
-domain behavior, and checks consistency and interaction quality.
+Frontend Craft defines the commercial objective and proposed journey changes for
+growth work. Impeccable supplies visual direction and maintains its own product,
+design and surface context. Frontend Craft then finds implementation precedents,
+preserves domain behavior, and checks consistency and interaction quality.
 
 For an explicit joint request:
 
@@ -72,7 +81,9 @@ For recurring work, add this instruction to the consuming project's existing
 agent guidance when appropriate:
 
 > For frontend creation, changes, and reviews, use frontend-craft to identify
-> and verify applicable page-family and domain-component precedents. When using
+> and verify applicable page-family and domain-component precedents. For commercial
+> work, first establish the outcome and diagnose the journey with frontend-craft.
+> When using
 > Impeccable, keep its design direction and context files authoritative for the
 > approved visual scope, and apply frontend-craft's reuse and consistency checks.
 
@@ -97,7 +108,8 @@ usable with the project's contracts and its bundled references.
 
 The [skill entrypoint](skills/frontend-craft/SKILL.md) routes to focused references:
 mapping; reuse and consistency; components; interaction and accessibility; motion;
-landing pages; performance; visual details; charts; and reviews. Typical work reads
+commercial strategy; landing pages; activation; monetization; retention;
+experimentation; performance; visual details; charts; and reviews. Typical work reads
 the core and the relevant references, not a catalog of every rule. The core is stack-neutral;
 React recipes are explicitly conditional, and there is no Tailwind module.
 
@@ -122,6 +134,24 @@ record where the interface should remain static.
 Reviews report evidence and limitations; fixes require a request to implement them.
 Source-only inspection is not a claim that visual or keyboard behavior passed.
 No background scanner, runtime dependency, or project-wide refactor is installed.
+
+## Commercial reviews
+
+A landing-page review examines audience and decision stage, promise and proof,
+objections, offer, CTA and the requested path to a useful commercial action.
+The report locates each problem, explains its possible commercial consequence,
+proposes a concrete change, ranks priority and effort, and states how to validate
+it. Observed defects and conversion hypotheses are labeled separately.
+
+Without analytics, the agent can still identify clarity and usability issues and
+propose research or experiments. With comparable funnel data, it can better
+prioritize opportunities. A screenshot does not establish working forms, and
+passing interface checks does not establish increased sales.
+
+The commercial references cover behavioral choices such as defaults, progress,
+anchoring and gain/loss framing as contextual options. They do not prescribe a
+fixed landing-page formula or plan count. Narrow interface repairs and mapping
+tasks retain their original scope without a mandatory commercial workshop.
 
 ## Development and validation
 
@@ -148,7 +178,13 @@ do not prove better agent decisions; report behavioral evidence separately.
 
 ## License and sources
 
-Copyright 2026 Antonio Fulgêncio. Licensed under [CC BY 4.0](LICENSE).
-[Source notes](skills/frontend-craft/SOURCES.md) identify the adapted WTK material
-and independently written guidance informed by other skills. This repository does
-not redistribute third-party skill bundles, recipe libraries or searchable datasets.
+Copyright 2026 Antonio Fulgêncio. This package has [mixed license terms](LICENSE).
+The pre-existing technical guidance retains CC BY 4.0. Commercial guidance added
+in 0.4.0 adapts Richard's (@richardrx) ideas from Revenue-Centric Design and is
+subject to its [full source-available terms](skills/frontend-craft/licenses/revenue-centric-design.txt),
+including attribution and the restriction on betting, casino, gambling and the
+real-money gaming/loot-box applications specified there.
+
+[Source notes](skills/frontend-craft/SOURCES.md) identify the adaptation scope,
+upstream revision and changes. No third-party skill bundle, recipe library,
+case-study asset or searchable dataset is redistributed.

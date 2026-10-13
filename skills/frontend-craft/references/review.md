@@ -27,6 +27,11 @@ replacement elsewhere in the change before reporting the removal as a defect.
 | Controls, forms, layout, typography, color, feedback | [interaction and accessibility](interaction-accessibility.md) |
 | Motion, timing, interruption and reduced motion | [motion](motion.md) |
 | Public-page decision path | [landing pages](landing-pages.md) |
+| Commercial objective, audience, persuasion and growth priorities | [commercial strategy](commercial-strategy.md) |
+| First useful result and onboarding abandonment | [activation](activation.md) |
+| Plans, trial, checkout and upgrade decisions | [monetization](monetization.md) |
+| Continued value, renewal and cancellation | [retention](retention.md) |
+| Commercial metrics, causal claims and experiment design | [experimentation](experimentation.md) |
 | Loading, responsiveness, shifts or measured smoothness | [performance](performance.md) |
 | Nested geometry, font features, bidi and advanced color | [visual details](visual-details.md) |
 | Chart encoding, truthful comparisons and data access | [charts](charts.md) |
@@ -83,3 +88,29 @@ not defects in the UI. Use the repository's report when one already exists.
 Review alone does not authorize fixes. When fixes are requested, repair the
 owning cause, recheck failing states and relevant consumers, and update affected
 map entries. Avoid another audit of unchanged surfaces without a causal reason.
+
+## Commercial findings
+
+For a landing-page or commercial-flow review, read
+[commercial strategy](commercial-strategy.md) and the affected journey reference.
+Lead with the intended outcome, audience and inspected path. Present one
+prioritized report, combining usable-interface findings and commercial proposals.
+Each actionable item contains:
+
+- **Location and evidence:** the element or step, observed problem and source;
+  label source-only or uninspected behavior explicitly.
+- **Commercial consequence:** how the barrier could affect qualified demand,
+  activation, purchase or retained revenue; distinguish inference from measured loss.
+- **Concrete change:** a specific correction or variant and why it addresses
+  this audience's barrier. Respect actual claims, terms and implementation scope.
+- **Priority and effort:** affected volume when known, consequence, evidence
+  strength and implementation effort. Explain the order without invented lift
+  percentages or numerical scoring unsupported by inputs.
+- **Validation:** the relevant functional check and, for a commercial hypothesis,
+  a success metric and suitable observation, research or experiment.
+
+Surface access and task blockers first; rank remaining opportunities against the
+commercial objective. Separate observed defects, hypotheses to test and optional
+polish. Missing analytics limits commercial certainty but does not block a useful
+review. End with what to do first and the material evidence still missing, rather
+than presenting a generic checklist or claiming an aesthetic change will sell more.

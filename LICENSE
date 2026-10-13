@@ -1,7 +1,7 @@
 Copyright 2026 Antonio Fulgêncio
 
-Frontend Craft is licensed under the Creative Commons Attribution 4.0
-International License (CC BY 4.0).
+The pre-existing Frontend Craft technical guidance is licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
 
 License: https://creativecommons.org/licenses/by/4.0/
 Legal code: https://creativecommons.org/licenses/by/4.0/legalcode.en
@@ -9,3 +9,13 @@ Legal code: https://creativecommons.org/licenses/by/4.0/legalcode.en
 Retain attribution and indicate modifications when sharing adapted material.
 Source attribution is provided in skills/frontend-craft/SOURCES.md and is
 distributed with the skill.
+
+Commercial guidance introduced in 0.4.0 adapts Revenue-Centric Design, based
+on Richard's (@richardrx) work. Those additions are subject to the full
+source-available terms in:
+skills/frontend-craft/licenses/revenue-centric-design.txt
+
+Those terms require attribution, preservation of the full license, and exclude
+betting, casino, gambling and the real-money gaming/loot-box applications named
+there. The commercial additions are not offered under CC BY 4.0 alone. See
+skills/frontend-craft/SOURCES.md for the files and integration passages covered.

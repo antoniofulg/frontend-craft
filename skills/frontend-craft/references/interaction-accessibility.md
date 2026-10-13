@@ -69,6 +69,10 @@ protection proportional to their consequence, such as undo or confirmation.
 
 ## Onboarding and authentication
 
+When the task concerns reaching first value or onboarding conversion, also read
+[activation](activation.md). A focused authentication or accessibility repair
+does not require a commercial diagnosis.
+
 Check the complete process, including back navigation, recovery and repeated
 authentication. Use the project's conformance target. These WCAG 2.2 criteria
 are conditional requirements, distinct from additional ergonomic recommendations:

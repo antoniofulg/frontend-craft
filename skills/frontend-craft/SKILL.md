@@ -1,17 +1,19 @@
 ---
 name: frontend-craft
-description: Map an existing frontend, reuse its domain components and page patterns, and build or review consistent interfaces. Use for new sibling pages, UI changes, component reviews, and frontend mapping; complements Impeccable's design direction. Includes on-demand accessibility, motion, public-redesign, performance, chart and visual-detail guidance.
-license: CC-BY-4.0
+description: Build and review interfaces for conversion, activation, monetization and retention, grounded in the product's actual components and behavior. Use for landing-page audits, onboarding, pricing, upgrade and cancellation flows, sibling pages, component reviews and frontend mapping. Complements Impeccable's visual direction with commercial diagnosis, reuse and verification.
+license: Mixed terms; see LICENSE and licenses/revenue-centric-design.txt
 metadata:
   author: Antonio Fulgêncio
-  version: "0.3.0"
+  version: "0.4.0"
 ---
 
 # Frontend Craft
 
-Make the next interface belong to the product. Discover how the project already
-solves the user's task, reuse that implementation where it fits, and verify the
-result against equivalent pages. Search by responsibility, not only component name.
+Make the interface advance the user's task and the product's commercial outcome.
+For growth work, diagnose the journey before choosing a change; then discover
+existing owners, reuse what fits, and verify the result. Search by responsibility,
+not only component name. Consistency supports the outcome rather than freezing
+a pattern that prevents it.
 
 ## Resolve the request
 
@@ -22,13 +24,18 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 
 | Request | Read | Deliver |
 | --- | --- | --- |
+| Improve conversion, activation, revenue or retention; assess audience, offer or behavioral choices | [commercial strategy](references/commercial-strategy.md), then the relevant journey reference below | A commercial objective, diagnosed decision barrier and scoped change hypothesis |
 | Map the frontend or refresh its inventory | [mapping](references/mapping.md) | A source-linked map with explicit coverage |
 | Plan, create, recreate, or change a page/component | [reuse and consistency](references/reuse-consistency.md) | Proposal or implementation grounded in matching precedents |
 | Design or change a component API/state owner | [components](references/components.md) | The smallest compatible extension of the actual owner |
 | Change controls, forms, onboarding, authentication, layout adaptation, or keyboard behavior | [interaction and accessibility](references/interaction-accessibility.md) | Usable behavior in the relevant states and environments |
 | Clarify labels, instructions, empty states, or errors | Impeccable's `clarify`, when available; [interaction and accessibility](references/interaction-accessibility.md) for behavior | Accurate wording for the actual action and recovery path |
 | Add, change, or review motion/gestures; choose a transition recipe | [motion](references/motion.md), including optional transitions-dev routing | Purposeful, interruptible movement or an intentional static response |
-| Create or assess a marketing/landing page; redesign a public page | [landing pages](references/landing-pages.md), including public redesign contracts | A page supporting the visitor's decision and preserving its public contracts |
+| Create or assess a marketing/landing page; redesign a public page | [landing pages](references/landing-pages.md), including its commercial and review routing | A persuasive decision path or prioritized conversion findings, preserving public contracts |
+| Improve first-run onboarding, empty-state guidance or activation | [activation](references/activation.md) | A shorter or clearer path to a measurable first useful result |
+| Design or review pricing, trials, checkout, upgrades or expansion | [monetization](references/monetization.md) | An understandable offer and a revenue hypothesis evaluated across the full funnel |
+| Diagnose churn or review renewal, cancellation and recovery flows | [retention](references/retention.md) | A cause-specific retention proposal and a usable exit path |
+| Choose success metrics, assess experiment results or plan commercial validation | [experimentation](references/experimentation.md) | Defined cohorts, denominators, success criteria and evidence limits |
 | Diagnose loading, responsiveness, layout shifts, or a performance regression | [performance](references/performance.md) | A traced cause and a comparable measurement with explicit evidence limits |
 | Refine nested corners, font features, mixed-direction text, or advanced color | [visual details](references/visual-details.md) | A scoped technical refinement within the existing design |
 | Choose or review a chart | [charts](references/charts.md) | A truthful encoding and accessible access to the data |
@@ -44,6 +51,12 @@ necessary differences and unresolved decisions. Stop before editing or claiming
 implementation checks passed; name the rendered checks needed for later execution.
 
 ## Before implementation
+
+For commercial work, establish the objective and audience, diagnose the journey,
+and propose the change before selecting implementation precedents. Use
+[commercial strategy](references/commercial-strategy.md) for this brief and
+precedence rules. A narrow repair or mapping task keeps its requested scope;
+it does not require a new growth strategy.
 
 1. Identify the page family and user intention: for example, an operational
    list page and assigning a task owner. Locate any existing frontend map and
@@ -70,7 +83,10 @@ subject to repository documentation policy. Reviews do not silently rewrite it.
 Let Impeccable own its context setup, design direction, and artifact lifecycle.
 Read its applicable product/design/surface documents at the paths it resolves;
 reuse its context and evidence rather than running its setup twice. This skill
-adds implementation precedents and consistency checks, not another visual system.
+sets the commercial objective for growth work and supplies implementation
+precedents and verification; Impeccable expresses the approved visual direction.
+Resolve conflicts using the commercial strategy reference rather than treating
+either existing appearance or a conversion tactic as an automatic override.
 
 For interface wording, use Impeccable's installed `clarify` capability when
 available. Preserve domain terms, approved claims and legal meaning; align labels,
@@ -112,5 +128,19 @@ Coordinate with Impeccable's inspection pass rather than adding a second polish 
 Report the useful result: reused/extended owners, deliberate differences, checks
 actually performed, and unresolved gaps. Source inspection supports source claims;
 rendered behavior requires rendered evidence. Never report unvisited states as passed.
+
+For commercial work, state the objective, prioritized changes and validation
+status. A functioning interface does not prove improved conversion or revenue;
+report measured outcomes separately from pending commercial hypotheses.
+
+## Commercial source terms
+
+The commercial guidance adapts Richard's ideas, curated by Revenue-Centric Design,
+under [its source-available terms](licenses/revenue-centric-design.txt). Its use
+excludes betting, casino, gambling and the real-money gaming/loot-box applications
+specified there. Decline requests to apply that material to those products.
+The pre-existing technical guidance retains CC BY 4.0; see [LICENSE](LICENSE)
+for the mixed-license scope. Preserve attribution and the full upstream terms
+when sharing the commercial additions.
 
 Provenance and adaptation boundaries: [sources](SOURCES.md).
