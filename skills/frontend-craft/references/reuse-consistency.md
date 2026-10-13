@@ -50,6 +50,12 @@ with different consequences even when their buttons share styling.
 
 ## Exceptions and evolution
 
+For conversion, activation, monetization or retention work, apply the objective
+and precedence in [commercial strategy](commercial-strategy.md). A diagnosed
+decision barrier can justify changing composition or flow within the authorized
+scope. Explain the commercial hypothesis and validation; preserve compatible
+owners rather than reproducing a weak pattern merely for visual consistency.
+
 Consistency permits purposeful variants: dense operational lists, explanatory
 onboarding, or destructive confirmation can have different needs. Name the
 trigger and owner of the difference. Distinguish a required correction from an

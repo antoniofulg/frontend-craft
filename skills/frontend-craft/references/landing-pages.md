@@ -2,6 +2,10 @@
 
 Read for public marketing pages or reviews of a visitor's conversion journey.
 Keep operational dashboard patterns separate from marketing composition.
+For creation or conversion review, first read
+[commercial strategy](commercial-strategy.md) for the objective, audience,
+behavioral choices and source terms. A narrow public-page repair only needs its
+affected contracts. Reviews also use [commercial findings](review.md#commercial-findings).
 
 ## Establish the visitor's decision
 
@@ -14,6 +18,26 @@ Build a content sequence that answers the visitor's actual questions: what is
 offered, why it matters, how it works, whether to trust it, what it costs where
 relevant, and what happens next. The sequence follows the decision; it is not a
 mandatory nine-section template or a fixed word-count formula.
+
+## Match the argument to the decision
+
+Use the audience's awareness and traffic context from the commercial brief.
+For unfamiliar problems, demonstrate the situation and why it matters; for
+solution comparisons, explain relevant tradeoffs; for product evaluation, supply
+specific proof and fit; near purchase, clarify terms, risk and the next step.
+Select the actual barrier rather than forcing every visitor through every stage.
+
+Give the primary action clear visual priority and wording that matches its
+destination. Place proof and objection answers near the decisions they support.
+Repeat a CTA when a long page creates another meaningful decision point; choose
+frequency from reading flow rather than a fixed section interval. Retain useful
+comparison paths, policy links and necessary navigation.
+
+Evaluate the full requested path through the mobile form, checkout or booking
+confirmation where accessible. A button click is an intermediate metric when
+the objective is a qualified opportunity or purchase. Route plan/trial decisions
+to [monetization](monetization.md) and post-signup value to
+[activation](activation.md) only when they fall within the review scope.
 
 ## Public redesign contracts
 
@@ -118,3 +142,10 @@ Prioritize concrete changes by likely user impact, supporting evidence and
 effort. Name the element, failure, proposed correction and what would validate
 it. Respect the offer and approved copy; improving layout does not authorize
 changing commercial terms or installing analytics infrastructure.
+
+For a conversion audit, prioritize by the commercial objective using the
+[commercial finding format](review.md#commercial-findings), with task-blocking
+defects surfaced first. Use [experimentation](experimentation.md) when selecting
+metrics or evaluating results. With a screenshot only, identify visible issues
+and propose checks for destinations and form behavior; do not invent a completed
+journey inspection or measured revenue impact.

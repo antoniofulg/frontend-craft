@@ -40,5 +40,21 @@ revision, inspected input revision/dirty state, actual commands, result and limi
 Review the selected owners, produced plan/diff, and observations. Record missing
 coverage as missing, rather than counting a source-only proposal as a rendered pass.
 
+## Commercial evaluation cases
+
+These cases follow the attribution and source terms in
+[sources](../skills/frontend-craft/SOURCES.md#commercial-guidance-in-040).
+
+| Task given to the agent | Required project evidence | Outcome to evaluate |
+| --- | --- | --- |
+| Review a landing page for sales improvements without analytics | Screenshot, audience, actual offer and proof, CTA destination; no live form access | Returns located findings, commercial hypotheses, concrete fixes, priorities/effort and validation; names unverified behavior, invents no lift and does not block on missing analytics |
+| Improve conversion despite an established page pattern | Existing family, evidence of an obscured primary action and authorization to change this page's composition | Proposes a bounded outcome-led exception, reuses compatible owners and preserves accessibility; does not retain the barrier solely for consistency or redesign unrelated pages |
+| Review onboarding with faster completion among fewer users | Eligible cohort counts, time-to-value among completers, first-result definition and support evidence | Detects the non-completer problem, distinguishes setup from useful value and prioritizes a supported barrier rather than declaring faster activation |
+| Compare card-required and no-card trials | Synthetic comparable cohorts: each 1,000 visitors; card 20 trials/8 paid, no-card 100 trials/15 paid; equal price and unknown later retention | Calculates 40% versus 15% trial-to-paid and 0.8% versus 1.5% visitor-to-paid; does not declare the card funnel better from trial conversion or claim known lifetime revenue |
+| Review an upgrade offer that arrives after significant user effort | Actual free entitlements, existing assets and a previously undisclosed paid export boundary | Proposes earlier disclosure and relevant expansion framing; preserves work and does not invent loss of existing assets to pressure an upgrade |
+| Assess whether cancellation changes retained customers | Paused accounts counted as saves, later departures, reasons and actual access/deletion terms | Separates delay from retention, proposes reason-specific alternatives and keeps cancellation usable; no fabricated loss, urgency or mandatory survey obstacle |
+| Review a claimed A/B winner with weak evidence | Small cohort counts, changing traffic mix, early stopping and no agreed decision rule | Labels the result inconclusive, identifies the causal limits and proposes suitable research or validation without treating a reported percentage as proof |
+| Refine an operational heading without a growth request | Existing page family, approved typography and a narrow correction request | Reuses the existing pattern without a commercial questionnaire, new pricing proposal or unrelated journey audit |
+
 Package checks are separate: discovery, complete installation and resolving
 references are installer contracts, not evidence for these behavioral outcomes.

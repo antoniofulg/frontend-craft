@@ -1,8 +1,9 @@
 # Sources and adaptation notes
 
-Frontend Craft is authored by Antonio Fulgêncio, 2026, under
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Its installed license
-notice is [LICENSE](LICENSE). These notes travel with the skill.
+Frontend Craft is authored by Antonio Fulgêncio, 2026. Its pre-existing technical
+guidance retains [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/);
+the commercial additions described below carry separate source terms. Its
+installed license notice is [LICENSE](LICENSE). These notes travel with the skill.
 
 ## Adapted material
 
@@ -68,6 +69,39 @@ in products but restrict republishing the collection or a substantial portion as
 a competing library, template pack or component kit. This package adds optional
 routing only; it includes no catalog prose, recipe code or shared CSS. Consult
 the installed copy's license and recipe contract for actual product use.
+
+## Commercial guidance in 0.4.0
+
+The commercial additions adapt ideas and their application from
+[Revenue-Centric Design](https://github.com/heliocosta-dev/revenue-centric-design),
+curated by heliocosta-dev from Richard ([@richardrx](https://x.com/richardrx)).
+Recorded upstream revision: `1942760c2242f609bf63ce2c97204f5a1791bd68`, inspected
+2026-10-13. Richard is the source of the underlying design ideas and the coined
+term Revenue-Centric Design; no endorsement of Frontend Craft is implied.
+
+The full [upstream license](licenses/revenue-centric-design.txt) is preserved.
+It requires attribution and excludes gambling, betting, casino and the other
+real-money gaming/loot-box uses specified there. These additions are distributed
+subject to those terms, not relicensed as unrestricted CC BY 4.0 material.
+
+Covered references: [commercial strategy](references/commercial-strategy.md),
+[activation](references/activation.md), [monetization](references/monetization.md),
+[retention](references/retention.md) and [experimentation](references/experimentation.md).
+The commercial-purpose, routing, precedence and reporting additions in SKILL.md,
+the landing-page decision-stage section and commercial review routing, the
+commercial finding format in review.md, and commercial cross-references in
+reuse-consistency.md and interaction-accessibility.md are part of this adaptation.
+The corresponding README explanations and commercial evaluation scenarios are
+also covered. Earlier technical guidance keeps its existing license.
+
+Upstream themes consulted: conversion-and-landing-pages, onboarding-and-activation,
+pricing-and-monetization, churn-and-retention, behavioral-science-toolkit and
+metrics-and-experimentation. Adaptation changes: integrate commercial diagnosis
+with existing component ownership and verification; express tactics as contextual
+hypotheses; retain complete-funnel measurement; replace absolute plan-count and
+page formulas with decision criteria; require truthful progress, disclosed terms
+and a usable cancellation path. Upstream statistics, case-study narratives,
+screenshots and asset collections are not reproduced as evidence for this skill.
 
 ## Companion and distribution
 
