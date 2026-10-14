@@ -1,7 +1,10 @@
-# Interface review
+# Interface and commercial review
 
 Read for reviews of a page, component, flow, change, or consistency; also for
 focused stress inspection of a component when requested or justified by a change.
+For standalone strategy, offer or sales reviews, use commercial findings below
+and [growth and sales](growth-sales.md); component tracing and rendering apply
+only when an interface is part of the requested scope.
 
 ## Resolve the unit
 
@@ -28,6 +31,7 @@ replacement elsewhere in the change before reporting the removal as a defect.
 | Motion, timing, interruption and reduced motion | [motion](motion.md) |
 | Public-page decision path | [landing pages](landing-pages.md) |
 | Commercial objective, audience, persuasion and growth priorities | [commercial strategy](commercial-strategy.md) |
+| Business constraint, offer, sales process and full strategic audit | [growth and sales](growth-sales.md) |
 | Commercial hierarchy, proof imagery, pricing emphasis and success feedback | [commercial visuals](commercial-visuals.md) |
 | Purchase/lead completion, perceived effort and trust | [checkout and forms](checkout.md) |
 | Dashboard decisions, context and role-specific actions | [dashboards](dashboards.md) |
@@ -97,13 +101,14 @@ map entries. Avoid another audit of unchanged surfaces without a causal reason.
 
 ## Commercial findings
 
-For a landing-page or commercial-flow review, read
-[commercial strategy](commercial-strategy.md) and the affected journey reference.
-Lead with the intended outcome, audience and inspected path. Present one
-prioritized report, combining usable-interface findings and commercial proposals.
+For a strategy, sales, offer, landing-page or commercial-flow review, read
+[commercial strategy](commercial-strategy.md) and the relevant specialty.
+Lead with the intended outcome, audience and inspected business evidence or path.
+Present one prioritized report with the relevant business and interface findings.
 Each actionable item contains:
 
-- **Location and evidence:** the element or step, observed problem and source;
+- **Location and evidence:** the segment, offer, channel, sales stage, element
+  or step, observed problem and source;
   label source-only or uninspected behavior explicitly.
 - **Commercial consequence:** how the barrier could affect qualified demand,
   activation, purchase or retained revenue; distinguish inference from measured loss.
@@ -112,8 +117,8 @@ Each actionable item contains:
 - **Priority and effort:** affected volume when known, consequence, evidence
   strength and implementation effort. Explain the order without invented lift
   percentages or numerical scoring unsupported by inputs.
-- **Validation:** the relevant functional check and, for a commercial hypothesis,
-  a success metric and suitable observation, research or experiment.
+- **Validation:** a success metric and suitable observation, research or
+  experiment; add functional checks when an interface or implementation is affected.
 
 Surface access and task blockers first; rank remaining opportunities against the
 commercial objective. Separate observed defects, hypotheses to test and optional

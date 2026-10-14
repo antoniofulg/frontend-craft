@@ -1,18 +1,24 @@
 # Frontend Craft
 
-Build and review interfaces for conversion, activation, monetization and retention.
-Frontend Craft connects the commercial objective to the user's journey, then
-reuses the product's components and verifies the implementation. It works alongside
-Impeccable or an existing project design system.
+Improve product strategy, sales and profitable growth, and build or review the
+interfaces that support them. Frontend Craft helps choose audiences, shape offers,
+validate demand, prioritize features, acquire customers, improve the sales process,
+price sustainably, activate users and retain or expand accounts.
 
-It addresses two recurring failures: replacing a domain interaction with a generic
-control, and inventing a new header, subtitle, or typography treatment for another
-page in the same dashboard. It checks actual usages and rendered behavior, not
-just whether the same component was imported.
+Strategy can stand alone with a product description, customer evidence and business
+metrics; no UI change or repository is required. When the chosen intervention
+involves an interface, the skill reuses the product's components and verifies the
+implementation alongside Impeccable or an existing project design system.
 
-For commercial work, the outcome guides what should change and why; implementation
-precedents guide how to build it. Existing patterns can change when a diagnosed
-barrier warrants it. Commercial recommendations remain hypotheses until measured.
+For interface work, it addresses two recurring failures: replacing a domain
+interaction with a generic control, and inventing a new header, subtitle, or
+typography treatment for another page in the same dashboard. It checks actual
+usages and rendered behavior, not just whether the same component was imported.
+
+For commercial work, the outcome guides what should change and why: the offer,
+channel, sales motion, price, roadmap, service or interface. Implementation
+precedents guide interface work. Commercial recommendations remain hypotheses
+until measured.
 
 ## Install
 
@@ -41,6 +47,12 @@ Examples use Codex syntax; other hosts may expose a slash command, a skill picke
 or natural-language invocation.
 
 ```text
+$frontend-craft Help me sell more. Diagnose the constraint from our product, audience, offer, sales and retention evidence; give me concrete next actions.
+$frontend-craft Audit the full product strategy across all twelve Revenue-Centric Design themes, including acquisition, economics and AI-era differentiation.
+$frontend-craft Shape an offer for this segment and draft its positioning, proof and next buying commitment.
+$frontend-craft Review our demo-to-proposal pipeline. Draft objection responses and a buyer-specific demo outline.
+$frontend-craft Compare our acquisition channels and propose a bounded test with cost assumptions and a continue/stop rule.
+$frontend-craft Assess our pricing, free-user costs and contribution; propose sustainable packages and a validation plan.
 $frontend-craft Map the dashboard's page families and assignment workflows.
 $frontend-craft Build the projects list using the existing dashboard patterns.
 $frontend-craft Review the task editor for reuse and consistency with sibling pages.
@@ -85,7 +97,9 @@ agent guidance when appropriate:
 
 > For frontend creation, changes, and reviews, use frontend-craft to identify
 > and verify applicable page-family and domain-component precedents. For commercial
-> work, first establish the outcome and diagnose the journey with frontend-craft.
+> strategy, sales and growth work, use frontend-craft to diagnose the business
+> constraint and propose concrete offer, acquisition, sales, pricing or product
+> actions. Interface implementation is conditional on the chosen intervention.
 > When using
 > Impeccable, keep its design direction and context files authoritative for the
 > approved visual scope, and apply frontend-craft's reuse and consistency checks.
@@ -111,8 +125,8 @@ usable with the project's contracts and its bundled references.
 
 The [skill entrypoint](skills/frontend-craft/SKILL.md) routes to focused references:
 mapping; reuse and consistency; components; interaction and accessibility; motion;
-commercial strategy; commercial visuals; landing pages; checkout; activation;
-monetization; retention; behavioral design; dashboards; product strategy;
+commercial strategy; growth and sales; commercial visuals; landing pages; checkout;
+activation; monetization; retention; behavioral design; dashboards; product strategy;
 positioning and distribution; experimentation; performance; visual details;
 charts; and reviews. Typical work reads
 the core and the relevant references, not a catalog of every rule. The core is stack-neutral;
@@ -168,11 +182,20 @@ tasks retain their original scope without a mandatory commercial workshop.
 
 ## Commercial coverage and selective loading
 
+Strategy and sales are first-class uses in 0.6.0. The
+[growth and sales guide](skills/frontend-craft/references/growth-sales.md) connects
+all twelve source themes to business decisions and supplies offer, discovery,
+demo, objection, proposal and sales-pipeline guidance. A full strategic audit
+assesses every theme; a focused request loads only the relevant specialties.
+The result can be a commercial decision and usable sales material without any
+component work, browser check or redesign.
+
 The expanded guidance connects twelve source themes to focused task references:
 
 | Task | Reference |
 | --- | --- |
 | Establish product context, commercial objective and stage | [Commercial strategy](skills/frontend-craft/references/commercial-strategy.md) |
+| Diagnose stalled growth, shape offers and improve sales | [Growth and sales](skills/frontend-craft/references/growth-sales.md) |
 | Review persuasion, proof and the visitor's decision | [Landing pages](skills/frontend-craft/references/landing-pages.md) |
 | Compose hierarchy, images, pricing emphasis and success feedback | [Commercial visuals](skills/frontend-craft/references/commercial-visuals.md) |
 | Improve completion, perceived effort, trust and qualification | [Checkout and forms](skills/frontend-craft/references/checkout.md) |
@@ -218,6 +241,8 @@ do not prove better agent decisions; report behavioral evidence separately.
 For 0.5.0, see the [upstream coverage map](evals/upstream-coverage.md) and
 [independent verification record](evals/verification-0.5.0.md). These are
 maintainer artifacts and are not loaded by the installed skill.
+They describe the 0.5.0 evaluation; the 0.6.0 strategy and sales changes have
+package and authoring checks, without new behavioral or commercial results.
 
 ## License and sources
 

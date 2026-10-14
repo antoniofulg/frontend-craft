@@ -1,8 +1,9 @@
 # Commercial strategy and product context
 
-Read for commercial interface creation or review: conversion, activation,
-monetization, expansion and retention. This reference owns the commercial brief
-and decision rules; journey references apply them to a particular surface.
+Read for product/business strategy, sales and growth decisions, as well as
+commercial interface creation or review. This reference owns the commercial
+brief and decision rules; specialties apply them to the requested business
+decision or journey. Strategy does not require a UI, repository or redesign.
 
 This commercial guidance adapts ideas from Richard ([@richardrx](https://x.com/richardrx)),
 as curated in [Revenue-Centric Design](https://github.com/heliocosta-dev/revenue-centric-design).
@@ -17,8 +18,10 @@ and explain the source restriction. Attribution and adaptation details are in
 
 Recover context before prescribing changes. Read applicable project instructions
 (`AGENTS.md` or equivalent), then the relevant product brief (`PRODUCT.md`,
-README, positioning/research documents or their actual equivalents), the page and
-its implemented destination. Use available analytics, support themes, sales
+README, positioning/research documents or their actual equivalents). For an
+interface request, inspect the page and its implemented destination. For a
+business request, inspect the offer, buying process and delivered customer result.
+Use available analytics, support themes, sales
 objections and user research when pertinent; file names are examples, not required
 artifacts. Read only the documents needed for this decision.
 
@@ -32,8 +35,9 @@ change the recommendation materially; otherwise state the assumption and proceed
 Recover the following facts. Keep them in the existing brief or response; a
 separate strategy document is unnecessary for a page review.
 
-- **Outcome:** purchase, qualified opportunity, activation, retained revenue or
-  expansion. Name the user action that contributes to it and the relevant cohort.
+- **Outcome:** purchase, qualified opportunity, activation, retained revenue,
+  contribution or expansion. Name the customer/business action that contributes
+  to it, the relevant cohort and the decision horizon.
 - **Audience:** user, buyer and approver where different; purchase trigger,
   current alternative, desired result, constraints and material objections.
 - **Decision stage:** discovering a problem, comparing approaches, evaluating
@@ -44,6 +48,9 @@ separate strategy document is unnecessary for a page review.
 - **Baseline:** what is known about entry, abandonment, payment and subsequent
   use; distinguish observed behavior from assumptions. Ask only for facts whose
   absence blocks the task. Missing analytics still permits a useful review.
+- **Economics and capacity:** for business-level decisions, recover price, delivery
+  and acquisition costs, sales effort, available budget/runway and delivery capacity
+  where known. Label missing inputs rather than inventing a healthy business model.
 
 For example, a demo page may need more qualified opportunities per visitor,
 while a self-serve product may need more visitors reaching a paid, useful result.
@@ -51,8 +58,9 @@ A higher form completion rate alone does not establish either outcome.
 
 ## Diagnose before selecting a tactic
 
-Trace entry context → promise → decision → action → delivered value. Inspect
-the requested path far enough to understand what the CTA actually produces.
+Trace audience/channel → promise/offer → buying decision → commitment → first
+value → repeated value → renewal/expansion. For assisted sales, include qualification,
+evaluation, proposal and procurement; for a page, inspect what its CTA produces.
 Identify where effort, uncertainty, missing proof or an offer mismatch could
 prevent the desired action. For a journey audit, capture the relevant screen/state,
 user task and consequence at each failure. Prioritize blockers and misleading
@@ -60,7 +68,9 @@ information ahead of cosmetic preferences; use the existing review severity scal
 Inspect sequence and value delivery before assuming a new visual style will help. Use drop-off data to locate a problem; use observed
 behavior, interviews or a suitable experiment to investigate its cause.
 
-Choose the relevant branch: [landing pages](landing-pages.md),
+For “sell more” or a broad product audit, use [growth and sales](growth-sales.md)
+to locate the constraint and choose business actions before prescribing a UI change.
+For a particular journey, choose the relevant branch: [landing pages](landing-pages.md),
 [activation](activation.md), [monetization](monetization.md) or
 [retention](retention.md). Load [experimentation](experimentation.md) when choosing
 metrics or a validation method. Interface observations alone establish neither
@@ -68,7 +78,10 @@ commercial uplift nor the cause of churn.
 
 ## Resolve commercial and implementation choices
 
-The commercial objective guides what to change and why. Existing components,
+The commercial objective guides what to change and why: audience, offer, channel,
+sales process, product scope, pricing, service or interface. Strategy proposals
+stand on customer and business evidence; implementation precedents become relevant
+when the chosen intervention changes an interface. Existing components,
 page families and Impeccable's direction guide how to express the change.
 When an established pattern obstructs the objective, propose a bounded exception
 with its evidence, expected mechanism and validation method. A familiar layout
@@ -85,11 +98,11 @@ existing family without an unrelated conversion workshop.
 
 Use product stage as a diagnostic prompt, then confirm the actual bottleneck:
 
-| Situation | First investigation | Useful design investment |
+| Situation | First investigation | Useful commercial or product investment |
 | --- | --- | --- |
-| New idea or MVP | Does this audience need and obtain the promised result? | Explain and demonstrate value; shorten the core task; defer speculative breadth |
-| Survival or weak activation | Where do prospective customers stop, and why? | Repair the highest-consequence journey failures; improve time-to-value and trust |
-| Traction | Is qualified demand arriving but failing to convert or activate? | Align acquisition promise, offer, landing page and first use |
+| New idea or MVP | Does this audience need the result and commit to paying for it? | Customer discovery, a credible offer and validating pilot; defer speculative breadth |
+| Survival or weak activation | Is the constraint demand, buying commitment, first value or cash? | Focus distribution/sales or repair the highest-consequence value failure; check runway |
+| Traction | Is qualified demand arriving but failing to buy or activate? | Align channel, offer, sales process and first use; resolve buying objections |
 | Established fit and expansion | Do customers repeatedly succeed and need more? | Deeper use, relevant discovery, collaboration and contextual upgrades |
 | Scale | Does fragmented execution slow teams or confuse customers? | Shared patterns, reliable states and a design system serving proven journeys |
 
@@ -116,7 +129,11 @@ These branches are optional; a page review need not load the entire toolkit.
 ## Deliver the decision
 
 For a plan, state the outcome, barrier, proposed change, supporting evidence and
-validation. For a review, use the commercial finding format in
+validation. A strategy plan can deliver a segment choice, differentiated offer,
+channel experiment, sales play, pricing scenario or roadmap decision. Use
+[growth and sales](growth-sales.md#deliver-actions-that-can-be-used) for strategic
+deliverables; no component inventory or rendered check is required for them.
+For a review, use the commercial finding format in
 [review](review.md#commercial-findings); do not produce a second report. For an
 implementation, report the shipped change and functional checks separately from
 commercial measurement that remains pending.

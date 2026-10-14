@@ -128,6 +128,24 @@ unverified causal claims and manufactured exit barriers are replaced with scoped
 hypotheses and stated tradeoffs. No upstream case-study statistics, screenshots
 or assets are reproduced as proof of expected product results.
 
+## Standalone strategy and sales in 0.6.0
+
+Version 0.6.0 makes the commercial scope independent of frontend implementation.
+The entrypoint, commercial strategy, positioning/distribution, monetization,
+experimentation and commercial review routing now support product/business
+decisions without requiring a page, repository or UI change. The existing twelve
+source themes remain the commercial foundation at the recorded upstream revision;
+the 0.5.0 coverage audit is a historical record, not a new 0.6.0 behavioral result.
+
+[Growth and sales](references/growth-sales.md) connects those themes to a broad
+commercial diagnosis and exhaustive strategic-audit routing. Offer composition,
+assisted-sales stages, discovery, demos, objections, proposals and usable action
+deliverables are Frontend Craft's additional application guidance, not newly
+attributed Richard quotations or upstream case results. This integrated commercial
+reference and the changed commercial routing/documentation are distributed under
+the same preserved source-available terms. No source screenshots, study statistics
+or updater pipeline were added, and the upstream license remains unchanged.
+
 ## Companion and distribution
 
 [Impeccable](https://github.com/pbakaus/impeccable) is an optional companion and
