@@ -1,10 +1,10 @@
 ---
 name: frontend-craft
-description: Build and review interfaces for conversion, activation, monetization and retention, grounded in the product's actual components and behavior. Use for landing-page audits, onboarding, pricing, upgrade and cancellation flows, sibling pages, component reviews and frontend mapping. Complements Impeccable's visual direction with commercial diagnosis, reuse and verification.
+description: Build and review product interfaces for conversion, activation, monetization and retention. Use for landing pages, checkout, onboarding, pricing, dashboards, feature adoption and product positioning, as well as component reuse and frontend mapping. Loads commercial strategy and visual guidance on demand alongside the project's design system.
 license: Mixed terms; see LICENSE and licenses/revenue-centric-design.txt
 metadata:
   author: Antonio Fulgêncio
-  version: "0.4.0"
+  version: "0.5.0"
 ---
 
 # Frontend Craft
@@ -24,7 +24,11 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 
 | Request | Read | Deliver |
 | --- | --- | --- |
+| Compose or assess commercial visual hierarchy, proof imagery, pricing emphasis or activation feedback | [commercial visuals](references/commercial-visuals.md) | Concrete composition changes tied to attention, comprehension and the commercial objective |
 | Improve conversion, activation, revenue or retention; assess audience, offer or behavioral choices | [commercial strategy](references/commercial-strategy.md), then the relevant journey reference below | A commercial objective, diagnosed decision barrier and scoped change hypothesis |
+| Select defaults, persuasion, post-purchase reassurance or migration/change behavior | [behavioral design](references/behavioral-design.md) | A contextual mechanism, user benefit and validation method |
+| Prioritize/prune features, improve adoption, differentiate a product or assess market movement | [product strategy](references/product-strategy.md) | Evidence-backed scope and adoption decisions tied to the target audience |
+| Choose a niche, sales motion, channel, referral approach or acquisition target | [positioning and distribution](references/positioning-distribution.md) | A bounded market or distribution hypothesis and its economic assumptions |
 | Map the frontend or refresh its inventory | [mapping](references/mapping.md) | A source-linked map with explicit coverage |
 | Plan, create, recreate, or change a page/component | [reuse and consistency](references/reuse-consistency.md) | Proposal or implementation grounded in matching precedents |
 | Design or change a component API/state owner | [components](references/components.md) | The smallest compatible extension of the actual owner |
@@ -34,6 +38,8 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Create or assess a marketing/landing page; redesign a public page | [landing pages](references/landing-pages.md), including its commercial and review routing | A persuasive decision path or prioritized conversion findings, preserving public contracts |
 | Improve first-run onboarding, empty-state guidance or activation | [activation](references/activation.md) | A shorter or clearer path to a measurable first useful result |
 | Design or review pricing, trials, checkout, upgrades or expansion | [monetization](references/monetization.md) | An understandable offer and a revenue hypothesis evaluated across the full funnel |
+| Improve purchase completion or lead-form effort, trust and qualification | [checkout and forms](references/checkout.md) | A clear, recoverable completion path with justified fields and visible terms |
+| Select dashboard priorities, role-specific insights and next actions | [dashboards](references/dashboards.md) | A panel connecting relevant evidence to a useful decision or action |
 | Diagnose churn or review renewal, cancellation and recovery flows | [retention](references/retention.md) | A cause-specific retention proposal and a usable exit path |
 | Choose success metrics, assess experiment results or plan commercial validation | [experimentation](references/experimentation.md) | Defined cohorts, denominators, success criteria and evidence limits |
 | Diagnose loading, responsiveness, layout shifts, or a performance regression | [performance](references/performance.md) | A traced cause and a comparable measurement with explicit evidence limits |
@@ -45,6 +51,11 @@ Load only matching references. A heading correction needs the nearest page
 precedents, not a whole-repository audit. An explicit review remains read-only
 unless fixing is also requested. With no actionable target, ask for the page,
 component, flow, or mapping scope instead of selecting an arbitrary last commit.
+
+Treat links as conditional routes, not a reading checklist. Reuse context already
+established in the session and follow only the sections needed for the decision.
+A landing-page review does not automatically load market sizing, roadmap or
+retention guidance; broaden only when the requested scope or evidence requires it.
 
 For planning-only requests, deliver the source-backed owners, intended composition,
 necessary differences and unresolved decisions. Stop before editing or claiming

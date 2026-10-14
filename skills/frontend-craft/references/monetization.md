@@ -5,6 +5,11 @@ account expansion. Apply [commercial strategy](commercial-strategy.md), includin
 its source terms. Review the approved offer and actual entitlements before
 changing presentation; distinguish interface changes from proposed price,
 billing or access-policy changes.
+For pricing-card composition, recommendation emphasis or price typography, read
+[commercial visuals](commercial-visuals.md#make-pricing-visually-comparable).
+
+For price setting, increases, willingness-to-pay research or the economics of
+free access, read [pricing economics](pricing-economics.md).
 
 ## Make the value comparison understandable
 
@@ -25,18 +30,44 @@ differences accessible even when they weaken the preferred plan's sales pitch.
 Explain the recommended option for this audience, and permit a different choice.
 Test labels or ordering against purchase incidence and plan fit separately:
 more selections of a high-priced tier may coincide with fewer purchases overall.
+Compare functional and aspirational names for this audience; neither always
+improves both purchase incidence and tier mix.
+
+Choose a dominant value progression, such as capacity, team scale or service
+level. Express mixed entitlements in comparable terms rather than treating tokens
+and support as interchangeable units. Inspect price distance between adjacent
+plans: a small incremental price for useful added value can favor the next tier.
+A high anchor must be a real offer; keep an available free plan discoverable when
+testing whether paid options should lead. Put the core outcome early in feature
+lists and a relevant differentiator near the decision; preserve readable limits
+and consistent comparison rows between plans.
 
 ## Trials and checkout
+
+For a reverse trial, provide a disclosed period of premium access followed by
+the stated free tier unless the user chooses to pay. Explain the end date,
+capability changes and treatment of existing work before the trial starts;
+preserve data under the approved policy and avoid silent paid enrollment.
+Evaluate first value, paid adoption and continued free use as separate outcomes.
 
 Compare no-card trials, card-required trials, freemium or usage-limited access
 against time needed to experience value, service cost, acquisition intent and
 purchase requirements. Set trial boundaries from the product's usage cadence
-and useful result rather than copying a competitor's day count.
+and useful result rather than copying a competitor's day count. Consider a
+usage-based boundary where the value unit is understandable, and allow for team
+procurement, security review and real-world waits. A rare or one-time job may
+fit a paid sample or direct purchase better than a recurring trial. A micro-win
+should demonstrate value without promising unpaid access beyond disclosed terms.
 
 Evaluate the entire funnel using comparable visitors or eligible accounts:
 entry → trial → useful result → payment → retained use. Card collection may
 increase trial-to-paid conversion while reducing trial starts enough to lower
 overall revenue. Keep qualification effects and billing failures visible.
+Compare payment methods against the target market: acceptance, recurring-payment
+authorization, fees, failures and recovery. For example, assess supported local
+recurring transfers and cards using actual cohorts; one method does not inherently
+produce better retention. Route integration details to current payment-provider
+documentation when implementation is in scope.
 
 Explain what is available now, what triggers charging, the amount and cadence,
 and how to cancel or change plans. Preserve approved terms and payment behavior.

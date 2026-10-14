@@ -28,6 +28,12 @@ replacement elsewhere in the change before reporting the removal as a defect.
 | Motion, timing, interruption and reduced motion | [motion](motion.md) |
 | Public-page decision path | [landing pages](landing-pages.md) |
 | Commercial objective, audience, persuasion and growth priorities | [commercial strategy](commercial-strategy.md) |
+| Commercial hierarchy, proof imagery, pricing emphasis and success feedback | [commercial visuals](commercial-visuals.md) |
+| Purchase/lead completion, perceived effort and trust | [checkout and forms](checkout.md) |
+| Dashboard decisions, context and role-specific actions | [dashboards](dashboards.md) |
+| Feature scope, adoption and differentiation | [product strategy](product-strategy.md) |
+| Audience fit, channels and sales motion | [positioning and distribution](positioning-distribution.md) |
+| Defaults, framing, confidence and change resistance | [behavioral design](behavioral-design.md) |
 | First useful result and onboarding abandonment | [activation](activation.md) |
 | Plans, trial, checkout and upgrade decisions | [monetization](monetization.md) |
 | Continued value, renewal and cancellation | [retention](retention.md) |

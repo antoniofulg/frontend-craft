@@ -103,6 +103,31 @@ page formulas with decision criteria; require truthful progress, disclosed terms
 and a usable cancellation path. Upstream statistics, case-study narratives,
 screenshots and asset collections are not reproduced as evidence for this skill.
 
+## Commercial expansion in 0.5.0
+
+[Commercial visuals](references/commercial-visuals.md),
+[checkout](references/checkout.md), [dashboards](references/dashboards.md),
+[behavioral design](references/behavioral-design.md),
+[product strategy](references/product-strategy.md),
+[pricing economics](references/pricing-economics.md),
+[positioning and distribution](references/positioning-distribution.md), and the
+expanded activation, monetization, retention, commercial strategy and
+experimentation references extend the adaptation above under the same preserved
+source-available terms. Their routing, README explanations and evaluation material
+share this scope. Version 0.4.1 was not released; the visual work is part of 0.5.0.
+The source is Richard (@richardrx), curated in Revenue-Centric Design at the
+recorded revision. All twelve upstream thematic references inform this expansion,
+including product-strategy-and-features, positioning-icp-and-gtm,
+ai-era-differentiation, dashboards-and-data-viz, checkout-and-forms and
+revenue-centric-design in addition to the themes listed above.
+
+The adaptation expresses mechanisms as decisions with context and evidence:
+attention hierarchy, offer economics, first and repeated value, feature adoption,
+distribution and differentiation. Fixed thresholds, mandatory plan counts,
+unverified causal claims and manufactured exit barriers are replaced with scoped
+hypotheses and stated tradeoffs. No upstream case-study statistics, screenshots
+or assets are reproduced as proof of expected product results.
+
 ## Companion and distribution
 
 [Impeccable](https://github.com/pbakaus/impeccable) is an optional companion and
