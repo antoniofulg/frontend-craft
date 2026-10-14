@@ -1,29 +1,37 @@
 ---
 name: frontend-craft
-description: Build and review product interfaces for conversion, activation, monetization and retention. Use for landing pages, checkout, onboarding, pricing, dashboards, feature adoption and product positioning, as well as component reuse and frontend mapping. Loads commercial strategy and visual guidance on demand alongside the project's design system.
+description: Improve product strategy, sales and profitable growth, and build or review the interfaces that support them. Use to sell more, validate demand, sharpen positioning and offers, choose acquisition channels, pricing or roadmap priorities, and improve conversion, activation, retention and expansion. Also covers frontend reuse, accessibility and implementation verification; strategy work can stand alone without a UI or codebase.
 license: Mixed terms; see LICENSE and licenses/revenue-centric-design.txt
 metadata:
   author: Antonio Fulgêncio
-  version: "0.5.0"
+  version: "0.6.0"
 ---
 
 # Frontend Craft
 
-Make the interface advance the user's task and the product's commercial outcome.
-For growth work, diagnose the journey before choosing a change; then discover
-existing owners, reuse what fits, and verify the result. Search by responsibility,
-not only component name. Consistency supports the outcome rather than freezing
-a pattern that prevents it.
+Help the product deliver useful value, win customers and grow profitably.
+Strategy and sales are standalone work: a useful recommendation can change the
+audience, offer, channel, sales process, price or roadmap without changing a screen.
+For growth work, diagnose the commercial constraint before choosing an intervention.
+When that intervention involves an interface, discover existing owners, reuse what
+fits and verify the result. Search by responsibility, not only component name.
+Consistency supports the outcome rather than freezing a pattern that prevents it.
 
 ## Resolve the request
 
-Read applicable project instructions and the requested scope. Detect the actual
-stack, component library, design contracts, and existing preview/check tools.
+Read applicable project instructions and the requested scope. For strategy, use
+the supplied product, customer and business evidence; a repository is optional.
+For interface work, detect the actual stack, component library, design contracts,
+and existing preview/check tools.
 Use the repository's workflow; this skill introduces no release authority or
 mandatory agent rounds. Tailwind and framework API manuals are outside its scope.
 
 | Request | Read | Deliver |
 | --- | --- | --- |
+| Sell more, improve the business strategy, diagnose stalled growth or audit the whole product | [commercial strategy](references/commercial-strategy.md), then [growth and sales](references/growth-sales.md) | A prioritized commercial diagnosis and concrete offer, acquisition, sales or product actions with validation |
+| Package an offer, handle buying objections, improve demos, proposals or a sales pipeline | [growth and sales](references/growth-sales.md), then the relevant specialty | Buyer-specific offer or sales material, a clear next commitment and downstream sales measures |
+| Differentiate an AI product, evaluate commoditization or choose a durable advantage | [product strategy](references/product-strategy.md), plus [positioning and distribution](references/positioning-distribution.md) when the market is unresolved | A defensible value advantage and a plan to test buyer preference |
+| Set prices, assess freemium economics, research willingness to pay or plan a price increase | [pricing economics](references/pricing-economics.md), then [monetization](references/monetization.md) for packaging | Price and access-policy scenarios tied to customer value, contribution and demand evidence |
 | Compose or assess commercial visual hierarchy, proof imagery, pricing emphasis or activation feedback | [commercial visuals](references/commercial-visuals.md) | Concrete composition changes tied to attention, comprehension and the commercial objective |
 | Improve conversion, activation, revenue or retention; assess audience, offer or behavioral choices | [commercial strategy](references/commercial-strategy.md), then the relevant journey reference below | A commercial objective, diagnosed decision barrier and scoped change hypothesis |
 | Select defaults, persuasion, post-purchase reassurance or migration/change behavior | [behavioral design](references/behavioral-design.md) | A contextual mechanism, user benefit and validation method |
@@ -47,21 +55,32 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Choose or review a chart | [charts](references/charts.md) | A truthful encoding and accessible access to the data |
 | Review a page, component, change, or consistency | [review](references/review.md) | Evidence-backed findings and verification limits |
 
-Load only matching references. A heading correction needs the nearest page
-precedents, not a whole-repository audit. An explicit review remains read-only
-unless fixing is also requested. With no actionable target, ask for the page,
-component, flow, or mapping scope instead of selecting an arbitrary last commit.
+Load only matching references. For a broad strategic audit, use the growth and
+sales coverage table to assess every commercial theme, reading the corresponding
+specialties where evidence or a decision requires them. Mark unknowns explicitly.
+A focused request needs only its relevant themes. A heading correction needs the
+nearest page precedents, not a whole-repository audit. An explicit review remains read-only
+unless fixing is also requested. A product, business problem or revenue objective
+is an actionable strategic target; it does not require a page or code change.
+With no identifiable target, ask for the product or requested interface scope
+instead of selecting an arbitrary last commit.
 
 Treat links as conditional routes, not a reading checklist. Reuse context already
 established in the session and follow only the sections needed for the decision.
 A landing-page review does not automatically load market sizing, roadmap or
 retention guidance; broaden only when the requested scope or evidence requires it.
 
-For planning-only requests, deliver the source-backed owners, intended composition,
-necessary differences and unresolved decisions. Stop before editing or claiming
-implementation checks passed; name the rendered checks needed for later execution.
+For strategy-only requests, deliver the commercial decision and its next actions,
+including usable sales or offer drafts when requested. For interface planning,
+deliver source-backed owners, intended composition, necessary differences and
+unresolved decisions. Planning does not claim implementation checks passed;
+name rendered checks only when the proposal involves an interface.
 
 ## Before implementation
+
+This section applies when the requested work includes interface implementation.
+Standalone commercial work follows the strategy and growth references and can
+finish with a business decision, research plan or sales deliverable.
 
 For commercial work, establish the objective and audience, diagnose the journey,
 and propose the change before selecting implementation precedents. Use
@@ -130,7 +149,12 @@ references and relevant official documentation; installation is not a prerequisi
 
 ## Before delivery
 
-Compare changed interfaces with the selected precedents in corresponding states
+For strategic work, report the diagnosed constraint, prioritized actions, usable
+deliverables, economic assumptions and how the next evidence will change the
+decision. A recommendation can be to improve distribution or sales rather than
+build another feature or redesign a page.
+
+For changed interfaces, compare with the selected precedents in corresponding states
 and viewport/theme conditions. A shared import does not prove visual consistency:
 inspect variant selection, wrapper composition, and local overrides too. Use the
 relevant checks and existing browser workflow; reuse unchanged valid evidence.

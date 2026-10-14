@@ -13,6 +13,8 @@ denominator, time window and segmentation before comparing numbers.
 
 | Decision | Candidate primary outcome | Necessary context |
 | --- | --- | --- |
+| Audience, offer or channel test | Paying customers or contribution per reached/eligible prospect | Comparable reach, qualification, acquisition/sales cost and observation window |
+| Assisted sales process | Won and paid qualified opportunities in a defined cohort | Stage conversion, no-decision/loss reasons, sales cycle, deal value and sales effort |
 | Landing-page or lead-form improvement | Qualified opportunities or paid customers per eligible visitor | Source/intent, qualification rule, completed downstream action |
 | Onboarding change | Eligible accounts reaching first value within a defined window | Time-to-value, non-completers and repeated useful use |
 | Pricing or checkout change | Revenue per eligible visitor/account over a stated window | Paid conversion, plan mix, refunds and relevant delivery costs |
@@ -34,7 +36,7 @@ not a forecast or universal threshold for this product.
 Use only the measures relevant to the decision; request missing inputs before
 presenting an economic estimate as fact.
 
-| Measure | What to inspect before prescribing an interface change |
+| Measure | What to inspect before prescribing a commercial or product change |
 | --- | --- |
 | Recurring revenue (MRR/ARR) | Revenue scale, billing interval and cohort; growth can coexist with weak retention or margin |
 | Acquisition cost (CAC) | Comparable spend scope and acquired paying cohort; cheap signups can conceal expensive qualified customers |

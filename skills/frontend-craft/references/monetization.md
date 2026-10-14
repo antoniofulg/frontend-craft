@@ -1,7 +1,8 @@
 # Pricing, trials and expansion
 
-Read for pricing pages, plan selection, trials, checkout, upgrade prompts and
-account expansion. Apply [commercial strategy](commercial-strategy.md), including
+Read for offer packaging, plan and trial strategy, pricing pages, checkout,
+upgrade prompts and account expansion. Commercial proposals can stand alone
+without a pricing-page change. Apply [commercial strategy](commercial-strategy.md), including
 its source terms. Review the approved offer and actual entitlements before
 changing presentation; distinguish interface changes from proposed price,
 billing or access-policy changes.

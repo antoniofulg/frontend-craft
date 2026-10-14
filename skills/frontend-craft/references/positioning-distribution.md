@@ -128,8 +128,11 @@ that the underlying offer delivers value.
 
 ## Deliver the requested decision
 
-Return the audience, diagnosed bottleneck, proposed page/journey or experiment,
+Return the audience, diagnosed bottleneck, proposed positioning, offer, channel,
+sales motion, journey or experiment,
 evidence and validation, with material economic assumptions visible. Use the
 existing [commercial review format](review.md#commercial-findings) where applicable.
 A strategy review proposes channels and offers; it does not itself authorize
 ad spend, outreach, price changes or changes to customer commitments.
+For concrete offer drafts, objection responses, demos or sales-process changes,
+use [growth and sales](growth-sales.md#improve-the-assisted-buying-process).
