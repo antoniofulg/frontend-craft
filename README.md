@@ -49,6 +49,9 @@ $frontend-craft Review this landing page for conversion. Prioritize concrete imp
 $frontend-craft Review onboarding from signup to the first useful result.
 $frontend-craft Assess this pricing page, trial and upgrade path against paid conversion and retained revenue.
 $frontend-craft Review cancellation reasons and propose changes that support continued value.
+$frontend-craft Make this dashboard help account managers decide what to do next.
+$frontend-craft Assess feature adoption and identify what to simplify for our target customers.
+$frontend-craft Compare self-serve and demo-led entry paths using our audience and acquisition economics.
 $frontend-craft Choose a chart for this dataset and provide accessible value lookup.
 ```
 
@@ -108,8 +111,10 @@ usable with the project's contracts and its bundled references.
 
 The [skill entrypoint](skills/frontend-craft/SKILL.md) routes to focused references:
 mapping; reuse and consistency; components; interaction and accessibility; motion;
-commercial strategy; landing pages; activation; monetization; retention;
-experimentation; performance; visual details; charts; and reviews. Typical work reads
+commercial strategy; commercial visuals; landing pages; checkout; activation;
+monetization; retention; behavioral design; dashboards; product strategy;
+positioning and distribution; experimentation; performance; visual details;
+charts; and reviews. Typical work reads
 the core and the relevant references, not a catalog of every rule. The core is stack-neutral;
 React recipes are explicitly conditional, and there is no Tailwind module.
 
@@ -137,6 +142,14 @@ No background scanner, runtime dependency, or project-wide refactor is installed
 
 ## Commercial reviews
 
+The [commercial visuals reference](skills/frontend-craft/references/commercial-visuals.md)
+turns the sales objective into hierarchy, relative contrast, whitespace, CTA
+placement, proof imagery, comparable pricing cards, visible onboarding progress
+and meaningful success feedback. It includes mobile inspection and contextual
+visual experiments, such as promotional price typography, with comprehension
+and accessibility checks. Impeccable is optional; existing brand tokens and
+approved direction still guide the visual expression.
+
 A landing-page review examines audience and decision stage, promise and proof,
 objections, offer, CTA and the requested path to a useful commercial action.
 The report locates each problem, explains its possible commercial consequence,
@@ -152,6 +165,32 @@ The commercial references cover behavioral choices such as defaults, progress,
 anchoring and gain/loss framing as contextual options. They do not prescribe a
 fixed landing-page formula or plan count. Narrow interface repairs and mapping
 tasks retain their original scope without a mandatory commercial workshop.
+
+## Commercial coverage and selective loading
+
+The expanded guidance connects twelve source themes to focused task references:
+
+| Task | Reference |
+| --- | --- |
+| Establish product context, commercial objective and stage | [Commercial strategy](skills/frontend-craft/references/commercial-strategy.md) |
+| Review persuasion, proof and the visitor's decision | [Landing pages](skills/frontend-craft/references/landing-pages.md) |
+| Compose hierarchy, images, pricing emphasis and success feedback | [Commercial visuals](skills/frontend-craft/references/commercial-visuals.md) |
+| Improve completion, perceived effort, trust and qualification | [Checkout and forms](skills/frontend-craft/references/checkout.md) |
+| Choose onboarding patterns and reach first value | [Activation](skills/frontend-craft/references/activation.md) |
+| Compare offers, trials, price economics and expansion | [Monetization](skills/frontend-craft/references/monetization.md) |
+| Diagnose departures and support repeated useful use | [Retention](skills/frontend-craft/references/retention.md) |
+| Choose contextual behavioral mechanisms | [Behavioral design](skills/frontend-craft/references/behavioral-design.md) |
+| Turn relevant dashboard data into decisions | [Dashboards](skills/frontend-craft/references/dashboards.md) |
+| Prioritize features, adoption and differentiation | [Product strategy](skills/frontend-craft/references/product-strategy.md) |
+| Assess audience, sales motion, channels and referrals | [Positioning and distribution](skills/frontend-craft/references/positioning-distribution.md) |
+| Evaluate commercial evidence and experiments | [Experimentation](skills/frontend-craft/references/experimentation.md) |
+
+The entrypoint routes by task; links do not require recursive loading of the
+whole catalog. Product context is recovered from applicable project instructions,
+briefs, actual behavior and available research. A focused page review uses the
+relevant journey and visual guidance; market sizing or roadmap work loads only
+when that decision is requested or needed. Mapping and narrow technical repairs
+continue to use their existing implementation references.
 
 ## Development and validation
 
@@ -175,6 +214,10 @@ Inspect the installed skill and references, then remove only that temporary
 directory. Behavioral evaluation tasks and their distinct failure criteria live in
 [evals/scenarios.md](evals/scenarios.md). Static checks and successful installation
 do not prove better agent decisions; report behavioral evidence separately.
+
+For 0.5.0, see the [upstream coverage map](evals/upstream-coverage.md) and
+[independent verification record](evals/verification-0.5.0.md). These are
+maintainer artifacts and are not loaded by the installed skill.
 
 ## License and sources
 

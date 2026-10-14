@@ -6,6 +6,9 @@ For creation or conversion review, first read
 [commercial strategy](commercial-strategy.md) for the objective, audience,
 behavioral choices and source terms. A narrow public-page repair only needs its
 affected contracts. Reviews also use [commercial findings](review.md#commercial-findings).
+For page creation or visual/conversion review, read
+[commercial visuals](commercial-visuals.md) for hierarchy, proof imagery, CTA
+placement and responsive composition; a copy-only edit need not load it.
 
 ## Establish the visitor's decision
 
@@ -36,8 +39,49 @@ comparison paths, policy links and necessary navigation.
 Evaluate the full requested path through the mobile form, checkout or booking
 confirmation where accessible. A button click is an intermediate metric when
 the objective is a qualified opportunity or purchase. Route plan/trial decisions
-to [monetization](monetization.md) and post-signup value to
+to [monetization](monetization.md), purchase/form completion to
+[checkout](checkout.md), and post-signup value to
 [activation](activation.md) only when they fall within the review scope.
+
+## Diagnose comprehension, qualification and trust
+
+Show the opening view briefly to a representative unfamiliar buyer, then ask
+what the product does, who it serves and why it matters. Record their actual
+answer; an agent's own interpretation is not a user test. Choose pain-led,
+outcome-led or category-led wording by awareness, then check comprehension.
+
+Separate cold traffic from followers, referrals and returning visitors when
+comparing conversion. Changed audience mix can change the rate without a page
+regression; investigate page, channel and offer together. Recover customer
+vocabulary and objections from sales conversations, interviews, support and
+reviews before copying a successful competitor's composition. In early products,
+a concrete buying objection and willingness to commit are stronger commercial
+evidence than compliments; route market validation to the positioning reference
+when that work is in scope.
+
+Qualify through specific use cases, honest fit/limits, visible pricing where
+appropriate, and a necessary qualification question. Compare qualified outcomes,
+closed deals and sales effort, not raw leads alone. Fewer leads at the same spend
+and same closed-deal count do not by themselves lower acquisition cost.
+
+Put relevant reassurance beside the CTA: actual next step, expected effort,
+cost and commitment. Match verbs to the journey, from exploring a demonstration
+to confirming a purchase. Claims such as time-to-result, no-card trials, refunds,
+free shipping and remaining inventory require supporting facts and readable
+conditions. Remove redundant steps while keeping an informed purchase decision.
+
+Prefer proof buyers can verify: named customers and roles, attributable reviews,
+relevant results with scope, demonstrations and case studies. Preserve authentic
+criticism and rating distributions; never manufacture a target star rating or
+infer that a recognizable logo proves a particular outcome. Offer concise proof
+near the opening promise and deeper evidence where buyers need it. Keep useful
+verification links; reduce distracting exits by relevance rather than banning
+all outbound links.
+
+For feature pages, front-load scannable benefits and an accessible demonstration
+when it helps explain the workflow. Keep detailed limits and technical evidence
+reachable for evaluators. The number of bullets, sections and repeated actions
+follows the decision, language and device rather than an arbitrary quota.
 
 ## Public redesign contracts
 
@@ -137,6 +181,12 @@ locate drop-off but does not by itself establish the cause. State missing data
 and distinguish a proposed experiment from a proven improvement. Do not predict
 percentage lifts, infer real-user speed from a single local trace, or treat
 insufficient traffic as a reason to skip a useful qualitative review.
+
+Treat loading and interaction performance as possible commercial bottlenecks.
+When slowness is observed or measured, use [performance](performance.md) to
+identify technical causes and [experimentation](experimentation.md) to evaluate
+the business outcome under comparable traffic. A lab grade or another company's
+reported lift is not evidence of this page's revenue impact.
 
 Prioritize concrete changes by likely user impact, supporting evidence and
 effort. Name the element, failure, proposed correction and what would validate
