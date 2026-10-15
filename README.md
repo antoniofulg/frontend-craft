@@ -20,6 +20,12 @@ channel, sales motion, price, roadmap, service or interface. Implementation
 precedents guide interface work. Commercial recommendations remain hypotheses
 until measured.
 
+For public-page creation and redesign, the skill connects visual identity to
+the subject's own material, compares compositions when direction is open, selects
+traceable imagery and considers useful product demonstrations. Rendered critique
+checks the result through the existing browser/Impeccable pass. Approved brand
+direction and operational UI conventions remain authoritative within their scope.
+
 ## Install
 
 From your consuming project's directory, install through the
@@ -58,6 +64,9 @@ $frontend-craft Build the projects list using the existing dashboard patterns.
 $frontend-craft Review the task editor for reuse and consistency with sibling pages.
 $frontend-craft Check the owner picker with long names, no results, and save failures.
 $frontend-craft Review this landing page for conversion. Prioritize concrete improvements by commercial impact, evidence and effort.
+$frontend-craft Create a landing-page concept from our product's actual output and assets. Compare suitable compositions within the approved brand.
+$frontend-craft Select and prepare imagery for this page. Verify representation, source terms, credits and mobile crops.
+$frontend-craft Assess whether an interactive demonstration would explain this offer better than a static example.
 $frontend-craft Review onboarding from signup to the first useful result.
 $frontend-craft Assess this pricing page, trial and upgrade path against paid conversion and retained revenue.
 $frontend-craft Review cancellation reasons and propose changes that support continued value.
@@ -125,8 +134,8 @@ usable with the project's contracts and its bundled references.
 
 The [skill entrypoint](skills/frontend-craft/SKILL.md) routes to focused references:
 mapping; reuse and consistency; components; interaction and accessibility; motion;
-commercial strategy; growth and sales; commercial visuals; landing pages; checkout;
-activation; monetization; retention; behavioral design; dashboards; product strategy;
+commercial strategy; growth and sales; commercial visuals; landing pages; imagery;
+checkout; activation; monetization; retention; behavioral design; dashboards; product strategy;
 positioning and distribution; experimentation; performance; visual details;
 charts; and reviews. Typical work reads
 the core and the relevant references, not a catalog of every rule. The core is stack-neutral;
@@ -153,6 +162,21 @@ record where the interface should remain static.
 Reviews report evidence and limitations; fixes require a request to implement them.
 Source-only inspection is not a claim that visual or keyboard behavior passed.
 No background scanner, runtime dependency, or project-wide refactor is installed.
+
+Public-page identity work uses verified subject details and a competitor-specificity
+check; it does not reopen direction for a narrow repair. The
+[imagery reference](skills/frontend-craft/references/imagery.md) covers existing,
+found and generated material, product captures, provenance/credits, responsive
+crops, footage and failure states. Composition alternatives use available material
+and actual content rather than invented proof. Interactive demonstrations are
+optional and must use honest data, relevant product behavior and accessible
+fallbacks. No image, motion or aesthetic quota applies.
+
+The [rendered critique](skills/frontend-craft/references/review.md#critique-the-rendered-composition)
+connects screenshots to located defects and concrete corrections. It reuses the
+existing inspection loop, checks the relevant viewports and scroll positions,
+and distinguishes functional/contract failures from preferences. It does not
+convert a screenshot judgment into a measured sales result.
 
 ## Commercial reviews
 
@@ -243,6 +267,12 @@ For 0.5.0, see the [upstream coverage map](evals/upstream-coverage.md) and
 maintainer artifacts and are not loaded by the installed skill.
 They describe the 0.5.0 evaluation; the 0.6.0 strategy and sales changes have
 package and authoring checks, without new behavioral or commercial results.
+
+The [0.7.0 verification record](evals/verification-0.7.0.md) covers the Taste v2
+source comparison, independent authoring rechecks, four fresh-context task probes
+(including actual synthetic-page screenshots), package checks and intentional
+remaining differences. These are bounded examples of decision behavior, not a
+comparative benchmark or evidence of commercial improvement.
 
 ## License and sources
 

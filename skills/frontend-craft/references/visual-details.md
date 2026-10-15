@@ -1,6 +1,6 @@
 # Visual implementation details
 
-Read only when the task involves nested corners, font features, mixed-direction
+Read only when the task involves nested corners, display typography, font features, mixed-direction
 text, wide-gamut color or gradient interpolation. Impeccable and the adopted
 design system own aesthetic choices; these are implementation options, not a new style.
 
@@ -26,6 +26,27 @@ can stabilize digit widths when supported. Add `lining-nums` only when appropria
 for that role. Align decimal values and use consistent locale formatting; equal
 digit widths alone do not align differently formatted numbers. Prose need not
 inherit tabular figures. See [numeric variants](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric).
+
+## Display typography and optical alignment
+
+Apply refinements within the approved type system. Confirm the actual loaded
+family, weights and language glyphs before tuning spacing; a fallback render may
+have different metrics. Match display and body roles to the font's intended use.
+Use size, weight and spacing to clarify hierarchy without introducing near-identical
+sizes or making every line equally emphatic. A display face that works in a hero
+may be unsuitable for instructions or long reading.
+
+Inspect tracking and line spacing at each relevant size rather than applying one
+display adjustment everywhere. Check accented letters, ascenders, descenders and
+italic overhang against adjacent lines and clipping containers. Author line breaks
+only when they preserve meaning across supported widths and translations; retain
+the logical reading order and let longer content adapt.
+
+Judge alignment optically as well as by boxes: round letters, diagonal edges and
+punctuation can appear inset even when their bounds align. Any small correction
+belongs to the affected display role and must remain sound with other strings,
+fonts and viewport sizes. Avoid global offsets or clipping that hide a symptom.
+Distinguish a deliberate expressive treatment from a visible legibility defect.
 
 ## Isolate embedded direction
 

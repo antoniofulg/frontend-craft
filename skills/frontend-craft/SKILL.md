@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/revenue-centric-design.txt
 metadata:
   author: Antonio Fulgêncio
-  version: "0.6.0"
+  version: "0.7.0"
 ---
 
 # Frontend Craft
@@ -44,6 +44,7 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Clarify labels, instructions, empty states, or errors | Impeccable's `clarify`, when available; [interaction and accessibility](references/interaction-accessibility.md) for behavior | Accurate wording for the actual action and recovery path |
 | Add, change, or review motion/gestures; choose a transition recipe | [motion](references/motion.md), including optional transitions-dev routing | Purposeful, interruptible movement or an intentional static response |
 | Create or assess a marketing/landing page; redesign a public page | [landing pages](references/landing-pages.md), including its commercial and review routing | A persuasive decision path or prioritized conversion findings, preserving public contracts |
+| Find, select, generate, crop or credit images/video; prepare a product demonstration | [imagery](references/imagery.md) | Relevant, traceable visual material with honest representation and verified delivery |
 | Improve first-run onboarding, empty-state guidance or activation | [activation](references/activation.md) | A shorter or clearer path to a measurable first useful result |
 | Design or review pricing, trials, checkout, upgrades or expansion | [monetization](references/monetization.md) | An understandable offer and a revenue hypothesis evaluated across the full funnel |
 | Improve purchase completion or lead-form effort, trust and qualification | [checkout and forms](references/checkout.md) | A clear, recoverable completion path with justified fields and visible terms |
@@ -51,7 +52,7 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Diagnose churn or review renewal, cancellation and recovery flows | [retention](references/retention.md) | A cause-specific retention proposal and a usable exit path |
 | Choose success metrics, assess experiment results or plan commercial validation | [experimentation](references/experimentation.md) | Defined cohorts, denominators, success criteria and evidence limits |
 | Diagnose loading, responsiveness, layout shifts, or a performance regression | [performance](references/performance.md) | A traced cause and a comparable measurement with explicit evidence limits |
-| Refine nested corners, font features, mixed-direction text, or advanced color | [visual details](references/visual-details.md) | A scoped technical refinement within the existing design |
+| Refine nested corners, display typography, font features, mixed-direction text, or advanced color | [visual details](references/visual-details.md) | A scoped technical refinement within the existing design |
 | Choose or review a chart | [charts](references/charts.md) | A truthful encoding and accessible access to the data |
 | Review a page, component, change, or consistency | [review](references/review.md) | Evidence-backed findings and verification limits |
 
@@ -159,6 +160,8 @@ and viewport/theme conditions. A shared import does not prove visual consistency
 inspect variant selection, wrapper composition, and local overrides too. Use the
 relevant checks and existing browser workflow; reuse unchanged valid evidence.
 Coordinate with Impeccable's inspection pass rather than adding a second polish loop.
+For visual creation/refinement, use the relevant [rendered critique](references/review.md#critique-the-rendered-composition)
+questions in that pass; a narrow behavioral repair does not need a page-wide critique.
 
 Report the useful result: reused/extended owners, deliberate differences, checks
 actually performed, and unresolved gaps. Source inspection supports source claims;

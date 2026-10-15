@@ -33,7 +33,7 @@ bundled here. Installed project copies may differ from their recorded upstream.
 | [Anthropic skills](https://github.com/anthropics/skills) | `8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4` | Purposeful content structure and consistent interface vocabulary |
 | [Emil Kowalski's skill](https://github.com/emilkowalski/skill) | `e8a175de22ae1e49370fc144c1f3bb9aeedf988d` | Motion purpose, frequency and interruption as design questions |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `v2.15.0` | Targeted interaction, chart and accessibility reference categories |
-| [Taste Skill](https://github.com/Leonxlnx/taste-skill) | `ce26fc25c0e5e8cab638f883de62d9a86ee5e45b` | Context-sensitive public-page composition |
+| [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Initial: `ce26fc25c0e5e8cab638f883de62d9a86ee5e45b`; v2.0.0 review: `2b44c81bbe36ac8a8a6bdd1c9ff593f28b8728f4` | Context-sensitive public-page composition; subject-specific identity, media workflow and rendered critique |
 | [Vercel agent skills](https://github.com/vercel-labs/agent-skills) | Local `react-composition-patterns` skill, metadata version `1.0.0` | Component composition and state-owner questions |
 | [Autonnel skills](https://github.com/autonnel/autonnel-skills) | Local `landing-page-conversion-audit`; revision not recorded | Evidence limits and visitor decision-path review |
 
@@ -145,6 +145,40 @@ attributed Richard quotations or upstream case results. This integrated commerci
 reference and the changed commercial routing/documentation are distributed under
 the same preserved source-available terms. No source screenshots, study statistics
 or updater pipeline were added, and the upstream license remains unchanged.
+
+## Public-page identity and media in 0.7.0
+
+[Taste Skill v2.0.0](https://github.com/Leonxlnx/taste-skill/tree/v2.0.0), by
+Leonxlnx, was inspected on 2026-10-15 at
+`2b44c81bbe36ac8a8a6bdd1c9ff593f28b8728f4`, alongside the initial revision above.
+The upstream is MIT licensed. Its new SKILL, imagery, critique, layout, copy,
+type, colour, motion and research references and draw/asset/inspection scripts informed this
+review; no upstream prose, code, templates, datasets, media or tools are bundled.
+
+Independently expressed additions cover five mechanisms: subject-derived visual
+identity and a competitor-specificity check; media inventory, sourcing, provenance,
+crops and delivery; concrete rendered critique and bounded corrections; comparison
+of composition candidates when direction is open; and optional useful product
+interactions with honest data and accessible fallbacks.
+Follow-up source review also informed scoped illustration craft and display-type
+refinements in imagery and [visual details](references/visual-details.md).
+
+[Imagery](references/imagery.md) is independently authored technical guidance under
+CC BY 4.0, as are the technical media routing, rendered-critique and visual-detail additions.
+Commercial additions in [landing pages](references/landing-pages.md) and
+[commercial visuals](references/commercial-visuals.md) extend the existing commercial
+references and retain their preserved source-available terms. The source scope
+above is unchanged; upstream Taste Skill research is not commercial validation.
+
+Adaptation boundaries: retain approved design and Impeccable ownership, narrow-task
+scope, real component owners and evidence limits. Composition alternatives are
+conditional, media and motion have no minimum counts, and aesthetic preferences
+are not universal correctness rules. The upstream's palette/type bans, two-line
+headline limit, fixed layout formulas, mandatory interaction and motion quotas,
+random draw and Awwwards scoring are not package requirements. Its study and
+blind model judgments motivate investigation, not a claim of measured superiority,
+conversion uplift or reliability for Frontend Craft. Maintainer evaluation records
+live outside the installed skill.
 
 ## Companion and distribution
 
