@@ -22,6 +22,35 @@ offered, why it matters, how it works, whether to trust it, what it costs where
 relevant, and what happens next. The sequence follows the decision; it is not a
 mandatory nine-section template or a fixed word-count formula.
 
+## Ground the visual concept in the subject
+
+For page creation or a redesign with an open visual direction, collect the
+material that can make this subject recognizable: its actual output, distinctive
+workflow, name, place, materials, constraints, rituals or customer vocabulary.
+Use verified details from the brief, product and assets; a numerical inventory
+quota is unnecessary. Distinguish facts from ideas still requiring confirmation.
+Reuse the existing product/design brief and Impeccable context rather than
+creating a parallel identity document.
+
+Connect one of those details to an organizing visual idea and the visitor's
+decision. For example, a dispatch product's actual handover record could organize
+a page about traceable deliveries; generic moving parcels do not explain that
+product's particular advantage. Explain the connection in a sentence and use it
+to select composition and evidence, not merely a hero decoration.
+
+Test the idea against a relevant known competitor: would swapping the name leave
+the argument and imagery equally accurate? If so, look for a more specific
+connection in the supplied evidence. State when no competitor evidence is
+available; a hypothetical name swap tests specificity, not verified market
+uniqueness. Keep familiar category cues that help buyers understand the offer.
+Carry the useful idea through later sections without forcing a motif where it
+hurts comprehension. Use [composition alternatives](commercial-visuals.md#compare-compositions-when-direction-is-open)
+when the visual decision remains open and [imagery](imagery.md) when media must
+be selected, sourced or prepared.
+
+With an approved direction, refine within it. A review can identify a generic
+execution and propose a change; a narrow repair does not reopen art direction.
+
 ## Match the argument to the decision
 
 Use the audience's awareness and traffic context from the commercial brief.
@@ -169,6 +198,31 @@ Check reading order, hierarchy, contrast, meaningful images, mobile composition
 and keyboard flow. Preserve the core offer when adapting layouts; avoid overlays
 or sticky actions that obstruct content or focus. Load the interaction reference
 for forms/controls and the motion reference if movement is involved.
+
+## Demonstrate value through a useful interaction
+
+Consider an interactive demonstration when the buying question depends on an
+input or an observable result: preview a real finish, explore an actual output,
+or calculate a quote using documented rules. Name the question it answers and
+compare the benefit with a clear static example. Choose the static example when
+interaction adds effort, unsupported behavior or maintenance without useful proof.
+An interaction is an option, not a requirement for every landing page.
+
+Reuse the real product owner or supported calculation where available. Use
+representative, explicitly illustrative data when appropriate; a prototype must
+not imply a live capability, current availability, actual quotation or saved order.
+Rates, eligibility and commercial terms come from verified inputs. Preserve the
+real primary destination; a demonstration must not impersonate checkout or submit
+customer data to an invented endpoint.
+
+Keep the result understandable with keyboard and touch, visible labels and
+feedback, and without relying on hover or motion. Supply an equivalent static
+example, explanation or reachable destination when scripting/media is unavailable;
+required disclosure and the main action remain accessible. Verify changed inputs,
+empty/invalid values, reset, slow/error states where relevant and the fallback.
+Use [interaction and accessibility](interaction-accessibility.md) and
+[motion](motion.md) only for the behavior involved. Report an unconnected demo as
+such; commercial benefit remains a hypothesis until evaluated.
 
 ## Review by evidence
 

@@ -61,5 +61,25 @@ These cases follow the attribution and source terms in
 | Assess an AI freemium offer | Eligible visitors, free/paid usage costs, conversion cohorts, contribution margin and uncertain later retention | Includes cost of serving free users and payback assumptions, compares complete-funnel economics and avoids declaring success from signup growth |
 | Review a reverse trial offer | Premium expiry, free fallback entitlements, stored work and billing policy | Explains downgrade and data consequences, avoids silently treating free fallback as paid renewal, measures first value and paid adoption separately |
 
+## Public-page identity and media cases
+
+These cases protect decisions introduced in 0.7.0. Evaluate the produced proposal,
+artifact and evidence against the task, not exact wording or a required read count.
+Use synthetic task data and isolated assets. Commercial cases retain the source
+terms described above. For a screenshot task, supply the actual screenshots;
+descriptions of them support only conditional analysis.
+
+| Task given to the agent | Required project evidence | Outcome to evaluate |
+| --- | --- | --- |
+| Plan a public page for a product with a distinctive handover record | Verified output sample, buyer objection, brand constraints and relevant competitor material | Derives a specific concept from the product evidence, compares materially different feasible compositions when needed and carries the argument beyond the hero; distinguishes hypothetical specificity from verified differentiation |
+| Create a concept with only a logo and sanitized product capture | Actual files, known capabilities, no product photography or image tool/network | Chooses a feasible composition and useful honest media/static explanation; invents no asset availability or client photography and reports unavailable sourcing |
+| Select an archival street image for a workshop page | Source item, creator/license metadata, historical date, modern workshop details and allowed crops | Distinguishes context from the client's premises/product, checks terms and crop, retains required provenance/credit and flags unresolved permissions instead of treating an aggregator result as permission |
+| Refine a public page with approved violet branding, borders and a three-line translated heading | Adopted direction, working page family, long localized copy and narrow requested change | Preserves approved identity and meaning, inspects actual wrapping/legibility and reports real defects without applying upstream aesthetic bans, media quotas or an unrequested redesign |
+| Plan an offer demonstration with verified adjustable inputs | Actual pricing formula, entitlements, primary destination and available product owner | Compares interaction with a static example, uses correct disclosed assumptions and the real owner where available, preserves the destination and plans keyboard/touch, invalid inputs and script-failure fallback checks |
+| Improve a simple page where interaction adds no information | One fixed price, short truthful offer, approved static illustration and working contact destination | Delivers a useful static composition without inventing a calculator, fake availability or minimum motion/image counts |
+| Review a render that passes source checks but hides information | Actual wide/narrow screenshots and intermediate scroll frames with clipping, wrong mobile crop, fallback font or sticky overlap; source available separately | Locates observed failures by viewport/state, diagnoses source afterward, prioritizes access/comprehension and proposes corrections; does not infer interaction behavior or dismiss a visible failure because source looks correct |
+| Inspect a minimal typographic page and a visually empty template | Actual screenshots, different content requirements and approved directions | Distinguishes intentional whitespace and complete content from missing substance; avoids treating every empty area, repeated operational row or absence of photographs as a defect |
+| Review a page with an existing Impeccable inspection pass | Existing design context, current rendered evidence and unresolved findings | Reuses valid evidence and the same correction loop, rechecks changed states and reports unresolved issues at the iteration limit without claiming a pass or starting a parallel design system |
+
 Package checks are separate: discovery, complete installation and resolving
 references are installer contracts, not evidence for these behavioral outcomes.

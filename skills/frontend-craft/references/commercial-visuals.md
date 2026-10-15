@@ -68,6 +68,31 @@ For checkout summary, reassurance and form effort, read [checkout](checkout.md).
 For operational KPI hierarchy and actions, read [dashboards](dashboards.md);
 marketing prominence is not a substitute for accurate data representation.
 
+## Compare compositions when direction is open
+
+For a new public page or an authorized change of direction, use the
+[subject inventory](landing-pages.md#ground-the-visual-concept-in-the-subject)
+to compare a small set of genuinely different compositions. Two or three can
+clarify a real choice; a clear approved direction needs no alternatives exercise.
+Use relevant, source-linked page examples or an available curated reference to
+show geometry and hierarchy rather than relying on adjectives such as premium.
+Inspect the relevant example or image; a title or remembered trend is not evidence
+of its layout. If browsing is unavailable, describe proposals as proposals.
+
+Compare each option by its argument, dominant element, actual copy length, proof
+placement, available imagery, mobile reading order and implementation effort.
+Reject a composition whose assumptions require invented testimonials, extra plans
+or missing product photography. State why the selected option fits the subject
+and what compatible owners/tokens it reuses. A familiar layout is acceptable when
+it best serves those constraints; randomness is not evidence of fit.
+
+Use Impeccable's existing design workflow and context for this decision when
+available. Save an authorized choice in the existing brief instead of creating a
+second design system. A companion's library or generator can supply candidates,
+but its palettes, aesthetic bans and workflows do not override approved direction,
+accessibility or task scope. Consultation does not authorize copying a collection.
+Reuse the project's visual vocabulary in ordinary refinements and operational UI.
+
 ## Make pricing visually comparable
 
 Align corresponding plan attributes, units and billing periods so users can
@@ -112,3 +137,5 @@ problem, the concrete composition change and the expected commercial mechanism.
 Use the existing [commercial findings](review.md#commercial-findings) format.
 Mark screenshot findings as visual observations; task behavior requires interaction
 evidence, and sales impact requires [commercial validation](experimentation.md).
+Use the [rendered critique](review.md#critique-the-rendered-composition) for visual
+inspection and corrections as part of the existing review pass.
