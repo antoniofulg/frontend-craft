@@ -47,6 +47,15 @@ directory, such as `~/Projects/frontend-craft`. The package uses the standard
 Impeccable, UI/UX Pro Max and transitions-dev are optional companions; none is
 bundled or installed automatically.
 
+To update only this skill in each consuming project for Codex and Claude Code,
+run the explicit install command again:
+
+```bash
+npx skills@latest add antoniofulg/frontend-craft --skill frontend-craft --agent codex claude-code --yes
+```
+
+Retain `--copy` if that project uses independent copies instead of symlinks.
+
 ## Use
 
 Examples use Codex syntax; other hosts may expose a slash command, a skill picker,
@@ -61,6 +70,9 @@ $frontend-craft Compare our acquisition channels and propose a bounded test with
 $frontend-craft Assess our pricing, free-user costs and contribution; propose sustainable packages and a validation plan.
 $frontend-craft Map the dashboard's page families and assignment workflows.
 $frontend-craft Build the projects list using the existing dashboard patterns.
+$frontend-craft Audit shared components and styles across the application. Report duplicated patterns, competing owners and coverage; keep the audit read-only.
+$frontend-craft Audit and consolidate duplicated components and style recipes across the application. Migrate matching consumers to shared owners, preserve explicit variants and report remaining gaps.
+$frontend-craft Implement this feature using established shared components, tokens and style recipes. Extend their supported variants when needed and verify affected consumers.
 $frontend-craft Review the task editor for reuse and consistency with sibling pages.
 $frontend-craft Check the owner picker with long names, no results, and save failures.
 $frontend-craft Review this landing page for conversion. Prioritize concrete improvements by commercial impact, evidence and effort.
@@ -86,6 +98,16 @@ For example, the map can connect “assign a task owner” to the existing searc
 member picker and its state owner, while connecting “dashboard list header” to
 the shared heading composition and its policy for descriptions. Component names
 and paths come from the consuming project, not from a fixed starter template.
+
+The [shared UI patterns guide](skills/frontend-craft/references/shared-ui-patterns.md)
+covers application-wide audits, authorized consolidation and reuse in future work.
+Audits remain read-only; a request to audit and consolidate authorizes migration
+within the requested scope. Reusable values belong in tokens, structure and
+behavior in components, and recurring appearance in components or semantic style
+recipes. Reuse existing owners before adding another layer; use explicit variants
+for intentional differences. Future work consumes these owners. Reports identify
+inspected and migrated coverage, remaining duplicates and overrides that could
+prevent shared changes from reaching consumers.
 
 ## Pair with Impeccable
 
@@ -133,13 +155,15 @@ usable with the project's contracts and its bundled references.
 ## What loads when
 
 The [skill entrypoint](skills/frontend-craft/SKILL.md) routes to focused references:
-mapping; reuse and consistency; components; interaction and accessibility; motion;
+mapping; reuse and consistency; shared UI patterns; components; interaction and accessibility; motion;
 commercial strategy; growth and sales; commercial visuals; landing pages; imagery;
 checkout; activation; monetization; retention; behavioral design; dashboards; product strategy;
 positioning and distribution; experimentation; performance; visual details;
 charts; and reviews. Typical work reads
-the core and the relevant references, not a catalog of every rule. The core is stack-neutral;
-React recipes are explicitly conditional, and there is no Tailwind module.
+the core and the relevant references, not a catalog of every rule. The core remains
+stack-neutral; React recipes and the shared UI patterns guide's Tailwind v4 guidance
+apply only to matching projects. Consult current documentation for framework and
+Tailwind APIs needed by the implementation.
 
 The expanded references cover forced colors and announcement priorities, disabled
 control semantics, state/action composition and refs, interaction-specific motion,
@@ -273,6 +297,11 @@ source comparison, independent authoring rechecks, four fresh-context task probe
 (including actual synthetic-page screenshots), package checks and intentional
 remaining differences. These are bounded examples of decision behavior, not a
 comparative benchmark or evidence of commercial improvement.
+
+The [0.8.0 verification record](evals/verification-0.8.0.md) covers shared UI
+ownership, application-wide audit and consolidation, and reuse during later
+feature work. It records package checks and isolated workflow probes, including
+shared-border propagation, with their inspection limits.
 
 ## License and sources
 

@@ -53,6 +53,20 @@ specialist reference. It does not bundle a third-party chart catalog. Motion
 timings, spring settings, corner geometry and color examples are contextual
 starting points rather than universal requirements or upstream design tokens.
 
+## Shared UI patterns in 0.8.0
+
+The [shared UI patterns guide](references/shared-ui-patterns.md) and its routing
+are independently authored technical guidance for auditing, consolidating and
+maintaining shared components, styles and tokens. They retain the technical
+guidance's CC BY 4.0 terms. Tailwind's official documentation on
+[reuse](https://tailwindcss.com/docs/styling-with-utility-classes#managing-duplication),
+[theme variables](https://tailwindcss.com/docs/theme),
+[custom styles](https://tailwindcss.com/docs/adding-custom-styles) and
+[directives](https://tailwindcss.com/docs/functions-and-directives) was consulted
+on 2026-10-17 through Context7 and the official site. The guide keeps those
+mechanisms conditional on the installed version and project conventions; it
+does not bundle a framework manual or impose a new design system.
+
 ## Contract and evidence additions in 0.3.0
 
 The public-redesign checklist, onboarding/authentication criteria, performance
