@@ -38,6 +38,11 @@ reason, or omitted in that family. Inspect the component's API and callers:
 an optional description prop does not authorize adding one to every new page.
 Link title tokens/classes and action slots rather than copying CSS values.
 
+For shared styles, record the family/role, owning scope, relevant state/theme
+entrypoints and example consumers so later requests can find where to change
+them. Use the [style coverage](shared-ui-patterns.md#style-coverage) matrix for a
+requested broad audit; keep ordinary mapping within its declared scope.
+
 For workflows, trace the states that can occur: initial, searching/loading,
 selected, pending save, success, empty, denied, failure, retry or cancellation.
 Keep only applicable states and note who owns each transition. Distinguish
@@ -82,7 +87,7 @@ Contracts: links to design, product terminology, tokens, and runtime instruction
 | Intention and synonyms | Entry/consumer | Component and state owner | Transitions/recovery | Variants | Evidence |
 
 ## Shared patterns
-| Pattern | Source symbol/file | Usage examples | Tokens/contract links | Status and exceptions |
+| Family/pattern | Owner source and scope | Usage examples | Tokens, states/themes and contract links | Status and exceptions |
 
 ## Gaps and conflicts
 What remains unknown, affected decisions, and evidence needed to resolve them.

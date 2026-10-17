@@ -1,10 +1,10 @@
 ---
 name: frontend-craft
-description: Improve product strategy, sales and profitable growth, and build or review the interfaces that support them. Use to sell more, validate demand, sharpen positioning and offers, choose acquisition channels, pricing or roadmap priorities, and improve conversion, activation, retention and expansion. Also audit and consolidate shared UI components, styles and tokens across an application, maintain frontend reuse, and verify accessibility and implementation; strategy work can stand alone without a UI or codebase.
+description: Improve product strategy, sales and profitable growth, and build or review the interfaces that support them. Use to sell more, validate demand, sharpen positioning and offers, choose acquisition channels, pricing or roadmap priorities, and improve conversion, activation, retention and expansion. Also audit, consolidate and update shared UI components, styles and tokens across an application, maintain frontend reuse, and verify accessibility and implementation; strategy work can stand alone without a UI or codebase.
 license: Mixed terms; see LICENSE and licenses/revenue-centric-design.txt
 metadata:
   author: Antonio Fulgêncio
-  version: "0.8.0"
+  version: "0.8.1"
 ---
 
 # Frontend Craft
@@ -38,7 +38,8 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Prioritize/prune features, improve adoption, differentiate a product or assess market movement | [product strategy](references/product-strategy.md) | Evidence-backed scope and adoption decisions tied to the target audience |
 | Choose a niche, sales motion, channel, referral approach or acquisition target | [positioning and distribution](references/positioning-distribution.md) | A bounded market or distribution hypothesis and its economic assumptions |
 | Map the frontend or refresh its inventory | [mapping](references/mapping.md) | A source-linked map with explicit coverage |
-| Audit reusable UI patterns, consolidate duplicated components/styles, or apply shared owners across an application | [shared UI patterns](references/shared-ui-patterns.md) | A source-linked gap inventory; when implementation is requested, migrated consumers, maintained ownership guidance and propagation checks |
+| Audit reusable UI patterns, consolidate duplicated components/styles, or apply shared owners across an application | [shared UI patterns](references/shared-ui-patterns.md) | Coverage of each style family, source-linked gaps and exceptions; when implementation is requested, migrated consumers, maintained ownership guidance and propagation checks |
+| Change shared styles, typography, colors, spacing, states, themes or layer conventions | [change a shared style](references/shared-ui-patterns.md#change-a-shared-style) | A change at the owner matching the requested scope, inherited by intended consumers with affected variants and propagation checks |
 | Plan, create, recreate, or change a page/component | [reuse and consistency](references/reuse-consistency.md) | Proposal or implementation grounded in matching precedents |
 | Design or change a component API/state owner | [components](references/components.md) | The smallest compatible extension of the actual owner |
 | Change controls, forms, onboarding, authentication, layout adaptation, or keyboard behavior | [interaction and accessibility](references/interaction-accessibility.md) | Usable behavior in the relevant states and environments |
@@ -112,6 +113,10 @@ intentional differences use its supported variants. Apply the
 introducing a shared pattern or resolving an override. Use that reference's audit
 and consolidation workflow for requested application-wide work; ordinary feature
 work follows established owners within its scope.
+Broad style audits account for every family in the
+[coverage matrix](references/shared-ui-patterns.md#style-coverage), including
+project-specific patterns and inspection gaps. Targeted style changes follow the
+shared-style route above and inspect their affected families and dependencies.
 
 Do not turn every task into initial mapping. Without a map, discover the narrow
 slice needed now; create a durable map when mapping is requested. During authorized
@@ -171,6 +176,7 @@ relevant checks and existing browser workflow; reuse unchanged valid evidence.
 For shared-pattern consolidation, account for all intended consumers in the
 declared scope and verify propagation through the shared owner; report remaining
 gaps rather than treating sampled renders as complete application coverage.
+Record family, state and theme inspection separately from source-traced adoption.
 Coordinate with Impeccable's inspection pass rather than adding a second polish loop.
 For visual creation/refinement, use the relevant [rendered critique](references/review.md#critique-the-rendered-composition)
 questions in that pass; a narrow behavioral repair does not need a page-wide critique.

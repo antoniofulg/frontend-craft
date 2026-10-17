@@ -26,7 +26,7 @@ replacement elsewhere in the change before reporting the removal as a defect.
 | Concern | Reference |
 | --- | --- |
 | Owner bypass, generic replacements, header/content drift | [reuse and consistency](reuse-consistency.md) |
-| Duplicated shared appearance, scattered tokens, or an application-wide reuse audit | [shared UI patterns](shared-ui-patterns.md) |
+| Style-family coverage, duplicated appearance, shared style updates or state/theme bypasses | [shared UI patterns](shared-ui-patterns.md) |
 | State ownership and component API | [components](components.md) |
 | Controls, forms, layout, typography, color, feedback | [interaction and accessibility](interaction-accessibility.md) |
 | Motion, timing, interruption and reduced motion | [motion](motion.md) |
