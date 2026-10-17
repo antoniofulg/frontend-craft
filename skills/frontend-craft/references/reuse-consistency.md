@@ -28,6 +28,16 @@ Match the project's construction order when it has one. Do not introduce a
 generic primitive to bypass a richer domain component, or extract a universal
 abstraction merely because two pages look similar.
 
+## Keep shared decisions in their owner
+
+Recurring appearance follows the same ownership rule as behavior: consume the
+shared component or style recipe and its tokens rather than copying its utility
+bundle into each page. Use its supported variants for intentional differences.
+Apply the [ownership contract](shared-ui-patterns.md#ownership-contract) when
+introducing a pattern or resolving an override. For a requested application-wide
+reuse audit or consolidation, use that reference's full workflow; ordinary page
+work stays within its relevant family and affected consumers.
+
 ## Compare the whole pattern
 
 | Surface | Compare with the matching family |
