@@ -72,6 +72,7 @@ $frontend-craft Map the dashboard's page families and assignment workflows.
 $frontend-craft Build the projects list using the existing dashboard patterns.
 $frontend-craft Audit shared components and styles across the application. Report duplicated patterns, competing owners and coverage; keep the audit read-only.
 $frontend-craft Audit and consolidate duplicated components and style recipes across the application. Migrate matching consumers to shared owners, preserve explicit variants and report remaining gaps.
+$frontend-craft Remove the standard card border and update its radius across the application through its shared owner. Preserve form controls and explicit variants, find bypasses and verify propagation.
 $frontend-craft Implement this feature using established shared components, tokens and style recipes. Extend their supported variants when needed and verify affected consumers.
 $frontend-craft Review the task editor for reuse and consistency with sibling pages.
 $frontend-craft Check the owner picker with long names, no results, and save failures.
@@ -102,12 +103,20 @@ and paths come from the consuming project, not from a fixed starter template.
 The [shared UI patterns guide](skills/frontend-craft/references/shared-ui-patterns.md)
 covers application-wide audits, authorized consolidation and reuse in future work.
 Audits remain read-only; a request to audit and consolidate authorizes migration
-within the requested scope. Reusable values belong in tokens, structure and
-behavior in components, and recurring appearance in components or semantic style
-recipes. Reuse existing owners before adding another layer; use explicit variants
-for intentional differences. Future work consumes these owners. Reports identify
-inspected and migrated coverage, remaining duplicates and overrides that could
-prevent shared changes from reaching consumers.
+within the requested scope. Its [style coverage](skills/frontend-craft/references/shared-ui-patterns.md#style-coverage)
+includes foundations, layout, controls/forms, navigation, surfaces/content,
+feedback, overlays/layering, icons/data visuals and motion. Reports account for
+coverage per family, including inspected, sampled and uninspected areas and
+families that do not apply.
+
+Reusable values belong in tokens, structure and behavior in components, and
+recurring appearance in components or semantic style recipes. Reuse existing
+owners before adding another layer; use explicit variants for intentional
+differences. [Shared style changes](skills/frontend-craft/references/shared-ui-patterns.md#change-a-shared-style)
+update the appropriate owner and its intended consumers, verify propagation and
+preserve unrelated families. Reports identify migrated consumers, remaining
+duplicates and overrides that could block propagation. Future work consumes
+these owners within the relevant application, family or domain scope.
 
 ## Pair with Impeccable
 
@@ -302,6 +311,11 @@ The [0.8.0 verification record](evals/verification-0.8.0.md) covers shared UI
 ownership, application-wide audit and consolidation, and reuse during later
 feature work. It records package checks and isolated workflow probes, including
 shared-border propagation, with their inspection limits.
+
+The [0.9.0 verification record](evals/verification-0.9.0.md) covers the nine-family
+style matrix, state/theme accounting and scoped style updates. It records a broad
+source audit and an isolated typography update that preserved unrelated roles;
+these probes do not establish rendered appearance or universal agent reliability.
 
 ## License and sources
 

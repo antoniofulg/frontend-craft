@@ -67,6 +67,15 @@ on 2026-10-17 through Context7 and the official site. The guide keeps those
 mechanisms conditional on the installed version and project conventions; it
 does not bundle a framework manual or impose a new design system.
 
+## Style coverage in 0.9.0
+
+The style-family matrix, state/environment accounting, ownership scopes and
+targeted style-update workflow extend the independently authored technical
+guidance under CC BY 4.0. They add coverage and change-management rules rather
+than new framework APIs, a visual prescription or copied upstream material.
+The existing conditional Tailwind guidance and its primary-source links remain
+applicable to matching installed versions.
+
 ## Contract and evidence additions in 0.3.0
 
 The public-redesign checklist, onboarding/authentication criteria, performance

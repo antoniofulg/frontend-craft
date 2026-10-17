@@ -37,6 +37,9 @@ Apply the [ownership contract](shared-ui-patterns.md#ownership-contract) when
 introducing a pattern or resolving an override. For a requested application-wide
 reuse audit or consolidation, use that reference's full workflow; ordinary page
 work stays within its relevant family and affected consumers.
+For a requested visual change across consumers, follow
+[change a shared style](shared-ui-patterns.md#change-a-shared-style) to select
+the owner at the intended scope and check its variants and propagation.
 
 ## Compare the whole pattern
 
