@@ -67,7 +67,7 @@ on 2026-10-17 through Context7 and the official site. The guide keeps those
 mechanisms conditional on the installed version and project conventions; it
 does not bundle a framework manual or impose a new design system.
 
-## Style coverage in 0.9.0
+## Style coverage in 0.8.1
 
 The style-family matrix, state/environment accounting, ownership scopes and
 targeted style-update workflow extend the independently authored technical

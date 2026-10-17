@@ -312,7 +312,7 @@ ownership, application-wide audit and consolidation, and reuse during later
 feature work. It records package checks and isolated workflow probes, including
 shared-border propagation, with their inspection limits.
 
-The [0.9.0 verification record](evals/verification-0.9.0.md) covers the nine-family
+The [0.8.1 verification record](evals/verification-0.8.1.md) covers the nine-family
 style matrix, state/theme accounting and scoped style updates. It records a broad
 source audit and an isolated typography update that preserved unrelated roles;
 these probes do not establish rendered appearance or universal agent reliability.

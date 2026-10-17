@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/revenue-centric-design.txt
 metadata:
   author: Antonio Fulgêncio
-  version: "0.9.0"
+  version: "0.8.1"
 ---
 
 # Frontend Craft

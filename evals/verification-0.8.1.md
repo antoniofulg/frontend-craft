@@ -1,6 +1,6 @@
 # Style coverage verification — 2026-10-17
 
-Scope: Frontend Craft 0.9.0 expands the shared-pattern reference with nine style
+Scope: Frontend Craft 0.8.1 expands the shared-pattern reference with nine style
 families, explicit state/environment coverage, ownership scopes and a targeted
 style-update workflow. Mapping, review, ordinary implementation and README routes
 point to those contracts. Two evaluation scenarios protect the distinct broad
