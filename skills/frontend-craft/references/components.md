@@ -1,7 +1,8 @@
 # Component ownership and composition
 
 Read when creating/extending a component API, moving UI state, or reviewing
-component boundaries. Apply framework details only after detecting the stack.
+component boundaries, async recovery or collection state. Apply framework details
+only after detecting the stack.
 
 ## Preserve the domain interaction
 
@@ -33,6 +34,79 @@ primitive library from its visual style or a familiar file name.
 For React, consult current version-specific documentation only for API choices
 actually needed. Do not introduce providers, memoization, framework migrations
 or server/client boundary changes as an automatic consequence of this skill.
+
+## Pending and ready composition
+
+Reuse the real domain composition and shared controls in both states. Prefer a
+narrow loading prop or pending value slot at the existing owner over a separate
+skeleton layout that approximates its internals. Loading policy and geometry
+belong in [performance](performance.md#skeletons-and-loading-states).
+
+Keep disabled inputs/selects in their actual labelled frame with an accessible
+name and the normal affordances. Telephone fields retain their country selector
+and number-input structure. Fixed buttons retain their label and dimensions;
+disable them only while their existing prerequisites require it. Do not replace
+a domain control with a generic box to represent pending data. Keep authority,
+submission and pending-value protection with the existing state owner; follow
+[loading feedback](interaction-accessibility.md#loading-feedback) for semantics.
+
+## Async state and recovery
+
+Apply to overlapping reads, writes or save recovery. Keep request lifecycle and
+commit authority with the existing data/form owner; a pending prop does not
+establish a second persistence owner.
+
+Associate reads and mutation feedback with their resource, query and authorization
+context. Only a completion that still belongs to the current view/request may
+update its values, errors or pending state. Keep confirmed outcomes with their
+actual resource owner. An older read's cleanup must not clear a newer request's busy
+state. Cancel obsolete work where supported and reject obsolete completions;
+debouncing alone does not establish response ordering. Refresh retention follows
+[performance](performance.md#reserve-now-paint-deliberately).
+
+Distinguish transport failure, validation/conflict rejection, confirmed success
+and an unknown mutation outcome. Aborting or losing a response is not proof that
+the server did not commit; client cancellation is not server undo. Check the
+transport's response contract: Fetch can resolve normally for HTTP errors.
+See [Fetch handling](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+
+Guard repeated activation and keyboard submission at the existing action owner.
+A disabled button alone cannot provide server duplicate protection. Retry a
+potentially applied mutation through its documented idempotency or reconciliation
+contract, rather than inventing a header or assuming resending POST is safe.
+An uncertain save can require checking the authoritative result before another
+attempt. See [HTTP retry semantics](https://www.rfc-editor.org/rfc/rfc9110.html#section-9.2.2).
+Verify duplicate protection through operation identity, unchanged retry payload
+and authoritative effects; raw network-request counts alone do not prove that
+the same logical action was committed twice.
+
+Keep optimistic changes provisional. Reverse only the failed operation's change,
+preserving newer edits and successful operations; otherwise reconcile with the
+authoritative state and expose the conflict. Honor existing version/conditional
+write checks. Preserve recoverable input; explanations and announcements follow
+[interaction feedback](interaction-accessibility.md#trace-a-complete-interaction).
+Add durable queues or automatic retries only when the product requires them.
+
+## Collections, sorting and selection
+
+Trace the existing query, URL and collection owner. Establish whether sorting
+and filtering cover all matching records or only the loaded subset; sorting one
+server page must not be presented as sorting the whole dataset. Define when
+filter, ordering or page-size changes reset/revalidate the page or cursor, and
+recover when deletion leaves the final page empty.
+
+Use stable record identity for selection and row actions, not positions that
+change after sorting or paging. Make selection scope explicit: visible rows,
+current page, explicit records or all matching results. Show its count and a
+clear path to deselect. Define persistence across page/query changes; selection
+of all matches remains bound to its intended query and authority rather
+than silently including new results. Bulk actions retain existing authorization
+and recovery. These are product contracts, not a universal selection policy.
+
+Request ordering and uncertain saves follow [async recovery](#async-state-and-recovery).
+Use [table semantics](interaction-accessibility.md#tables-and-interactive-grids)
+for accessible behavior, and [large collections](performance.md#large-collections)
+when rendering cost warrants investigation.
 
 ## React recipes, only for matching needs
 

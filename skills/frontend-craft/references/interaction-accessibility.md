@@ -1,20 +1,39 @@
 # Interaction and accessibility
 
-Read for changes to controls, forms, onboarding, authentication, feedback, responsive behavior, or an
-accessibility review. Check only applicable interactions, using the project's
+Read for controls, forms, tables, navigation/drafts, locale-sensitive values,
+onboarding, authentication, feedback, responsive behavior, or an accessibility
+review. Check only applicable interactions, using the project's
 accessibility target and current authoritative standards when exact criteria matter.
 
 ## Trace a complete interaction
 
-Identify entry, action, pending state, outcome and recovery. Preserve usable
-content during loading where possible; distinguish empty data from no search
-matches, failed loading, and lack of permission. A disabled control needs an
-understandable reason when that reason is not already apparent.
+Identify entry, action, pending state, outcome and recovery. Distinguish empty
+data from no search matches, failed loading, and lack of permission. A disabled
+control needs an understandable reason when that reason is not already apparent.
 
 Keep repeated actions safe while a request is pending. Preserve user input after
 failure; provide a concrete retry or correction path. Announce asynchronous
 outcomes where appropriate without repeatedly interrupting assistive technology.
-For optimistic UI, preserve the established rollback and conflict behavior.
+For request ordering, uncertain saves and optimistic rollback, use
+[async recovery](components.md#async-state-and-recovery).
+
+### Loading feedback
+
+Provide one useful announcement when loading begins; delay only decorative
+skeleton paint, not accessible status. Mark the affected region
+`aria-busy="true"` while its update is incomplete. Keep decorative skeleton
+shapes outside the accessibility tree. Place the status where it can announce
+despite updates assistive technology may defer while busy; clear busy on
+completion or failure. Verify the actual result with the project's
+assistive-technology checks. Reuse the announcement priority below rather than
+adding one live message per mask. See [WAI-ARIA busy](https://www.w3.org/TR/wai-aria-1.2/#aria-busy).
+
+Keep pending values from appearing editable or submittable before they are
+valid. Preserve authorization guards: an initial preview without known authority
+must not expose an active submit workflow or protected actions. An authorized
+form awaiting values can retain its form semantics and real disabled controls.
+Value masks and refresh retention follow [performance](performance.md#skeletons-and-loading-states);
+the actual control structure follows [components](components.md#pending-and-ready-composition).
 
 ### Choose announcement priority
 
@@ -43,6 +62,11 @@ and [alert guidance](https://www.w3.org/WAI/ARIA/apg/patterns/alert/).
   reveals and dragging must not be the sole path to essential operations.
 - Preserve navigation expectations, link destinations, and back behavior.
   A button performs an action; a link navigates, using the stack's conventions.
+  Changes to history or editable views also use [navigation resilience](#navigation-and-draft-resilience).
+- For affected conditional controls, verify actual visibility, focusability and
+  validation behavior in each state. Author CSS can override the default
+  rendering of `hidden`; DOM presence or that attribute alone is not readiness.
+  See [hidden semantics](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/hidden).
 
 ### Unavailable actions
 
@@ -55,6 +79,57 @@ Scope the attribute to the actual control rather than unintentionally disabling
 all focusable descendants. Provide an explanation reachable without hovering a
 disabled element. See [MDN aria-disabled](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled).
 
+### Tables and interactive grids
+
+Prefer a native table for tabular relationships; links, checkboxes and sort
+buttons can remain ordinary controls inside it. A grid is a deliberate composite
+keyboard interaction with managed focus and the relevant arrow-key/editing
+contract; adding `role="grid"` does not implement it. See [WAI table](https://www.w3.org/WAI/ARIA/apg/patterns/table/)
+and [grid patterns](https://www.w3.org/WAI/ARIA/apg/patterns/grid/).
+
+Preserve header/cell associations and useful table context at responsive widths.
+Use native headers with suitable scope, and explicit associations for complex
+headers; any card transformation must retain each value's context. Use operable
+sort controls and expose the actual sort direction on the relevant header with
+`aria-sort`. Explain multi-column sort priority separately; the attribute does
+not encode that sequence. Keep focus useful after sorting, paging or removing
+a row. See [WAI tables](https://www.w3.org/WAI/tutorials/tables/) and the
+[sortable-table example](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/).
+Selection and query scope follow [collections](components.md#collections-sorting-and-selection).
+
+## Navigation and draft resilience
+
+Apply when changing routes, history, multi-step forms or editable detail views.
+Preserve the URL/state contract: direct entry, reload, copied links and Back/
+Forward reach the intended view subject to current authorization. Put shareable
+view state in the existing URL owner; keep sensitive/transient drafts out of
+public URLs. Reuse the router/browser's history, scroll and focus behavior.
+Check the initial history entry too; avoid duplicate entries or lost query/hash
+state. Update the document title and choose a useful focus destination for a
+changed view, preserving meaningful restoration on return. Background refresh
+must not steal focus. See [history behavior](https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API)
+and [page titles](https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html).
+
+Keep the editable draft distinct from confirmed server state. Define save,
+discard and restoration behavior at the existing form owner; preserve recoverable
+work across supported transitions without overwriting newer input when an earlier
+save resolves. Persist drafts only under an established retention/privacy
+contract, scoped to their user and resource.
+
+Use leave warnings when the consequence justifies them, only while relevant
+unsaved changes exist. `beforeunload` is unreliable, especially on mobile; it
+cannot be the only protection against lost work. Existing autosave may use
+suitable lifecycle signals without claiming shutdown delivery is guaranteed.
+See [beforeunload limitations](https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event).
+
+A restored page can resume from memory without a new HTTP request. Recheck or
+clear stale/sensitive state through the existing auth/data owner on restoration
+when freshness or authority may have changed, including logout, expired sessions
+and identity/permission changes. Cache headers alone do not establish restored
+state freshness; preserve the project's cache/privacy policy. Verify return
+navigation with unsaved edits and failed saves where relevant. See
+[bfcache restoration](https://web.dev/articles/bfcache#update-stale-or-sensitive-data-after-bfcache-restore).
+
 ## Forms and feedback
 
 Use visible labels, instructions at the relevant point, and errors associated
@@ -63,9 +138,46 @@ the task; avoid scolding untouched fields or disrupting ongoing composition.
 Keep submitted values after a recoverable failure and focus errors deliberately.
 
 Use meaningful input types and autocomplete where applicable. Support paste
-and password managers. Match existing locale/date/number conventions and keep
-formatting separate from canonical values. Destructive operations need suitable
+and password managers. Use the [locale-sensitive value contract](#locale-sensitive-values-and-messages)
+for localized entry and formatting. Destructive operations need suitable
 protection proportional to their consequence, such as undo or confirmation.
+
+## Locale-sensitive values and messages
+
+Apply when affected values cross locale, currency, calendar or time-zone
+boundaries. Reuse existing formatters, translations and domain value contracts;
+this does not require another internationalization library.
+
+Keep language, display locale, currency and business time zone distinct. Browser
+language suggests presentation preferences, not a tenant's currency or scheduling
+zone. Preserve explicit user/business settings. See [locale inference](https://www.w3.org/International/questions/qa-accept-lang-locales).
+
+Separate localized display/editable text from canonical submitted values. Follow
+the existing parser contract for grouping, decimal separators and supported
+digits; report ambiguous pasted amounts without silently changing their meaning,
+and preserve recoverable input. Currency formatting does not convert its value.
+Derive the code, precision and rounding from the authoritative money contract;
+two decimal places and multiplication by 100 are not universal. See
+[Unicode number and currency data](https://www.unicode.org/reports/tr35/tr35-numbers.html).
+
+Translate complete messages with reorderable placeholders and the project's
+plural rules rather than concatenated fragments or an English singular/plural
+branch. Check relevant zero, fractional and plural categories. See
+[Unicode plurals](https://cldr.unicode.org/index/cldr-spec/plural-rules) and
+[composite messages](https://www.w3.org/International/articles/composite-messages/).
+
+Distinguish a calendar date, an instant and a scheduled local wall time. A birth
+date must not shift with the viewer's zone. An instant can display in an explicit
+zone; a future local appointment may need its named zone and recurrence intent.
+Do not normalize every date to UTC or treat a current offset as permanent zone
+rules. Keep conversion and daylight-saving gap/overlap resolution with the
+existing scheduling owner, showing/requesting clarification when its contract
+requires it. See [W3C time guidance](https://www.w3.org/TR/timezone/) (a draft note).
+
+Verify changed values through representative supported locales, submission
+round trips, currency precision and relevant midnight/DST boundaries. Reuse
+[translated-content checks](#forced-colors-and-translated-content) for expansion
+and [direction isolation](visual-details.md#isolate-embedded-direction).
 
 ## Onboarding and authentication
 

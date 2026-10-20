@@ -1,0 +1,573 @@
+{
+  "date": "2026-10-20",
+  "playwright": "1.64.0",
+  "chromium": "156.0.8078.4",
+  "scope": "Synthetic fixture browser exercises; not consumer-project acceptance",
+  "baseline": {
+    "condition": "baseline",
+    "browser": "Chromium",
+    "cases": [
+      {
+        "name": "editor: direct entry, Back/Forward and query preservation",
+        "status": "failed",
+        "message": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"fixture\"\nReceived: null",
+        "errors": [],
+        "api": {
+          "saveCalls": 0,
+          "commits": 0,
+          "payloads": []
+        }
+      },
+      {
+        "name": "editor: stale read cannot replace current record",
+        "status": "failed",
+        "message": "expect(locator).toHaveValue(expected) failed\n\nLocator:  getByLabel('Name', { exact: true })\nExpected: \"Alpha One\"\nReceived: \"Alpha Two\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveValue\" getByLabel('Name', { exact: true }) with timeout 5000ms\n  - waiting for getByLabel('Name', { exact: true })\n    14 \u00d7 locator resolved to <input id=\"name\" name=\"name\" autocomplete=\"off\"/>\n       - unexpected value \"Alpha Two\"\n",
+        "errors": [],
+        "api": {
+          "saveCalls": 0,
+          "commits": 0,
+          "payloads": []
+        }
+      },
+      {
+        "name": "editor: lost committed response, duplicate submission, newer draft",
+        "status": "failed",
+        "message": "expect(locator).toHaveValue(expected) failed\n\nLocator:  getByLabel('Name', { exact: true })\nExpected: \"Newer draft\"\nReceived: \"Submitted\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveValue\" getByLabel('Name', { exact: true }) with timeout 5000ms\n  - waiting for getByLabel('Name', { exact: true })\n    14 \u00d7 locator resolved to <input id=\"name\" name=\"name\" autocomplete=\"off\"/>\n       - unexpected value \"Submitted\"\n",
+        "errors": [
+          "Maximum call stack size exceeded"
+        ],
+        "api": {
+          "saveCalls": 3,
+          "commits": 1,
+          "payloads": [
+            {
+              "id": "one",
+              "name": "Submitted",
+              "version": 1,
+              "operationId": "eb0885bf-e519-4fc2-b17a-4d9a5b0eaf02"
+            },
+            {
+              "id": "one",
+              "name": "Submitted",
+              "version": 1,
+              "operationId": "759955a5-7860-4155-af25-7bcde1bbbaf3"
+            },
+            {
+              "id": "one",
+              "name": "Submitted",
+              "version": 1,
+              "operationId": "eb0885bf-e519-4fc2-b17a-4d9a5b0eaf02"
+            }
+          ]
+        }
+      },
+      {
+        "name": "editor: account change rejects late feedback",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      },
+      {
+        "name": "editor: return navigation refreshes authority and preserves supported draft",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      },
+      {
+        "name": "editor: simulated persisted restore revalidates authority",
+        "status": "failed",
+        "message": "expect(locator).toHaveValue(expected) failed\n\nLocator:  getByRole('combobox', { name: 'Account', exact: true })\nExpected: \"b\"\nReceived: \"a\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveValue\" getByRole('combobox', { name: 'Account', exact: true }) with timeout 5000ms\n  - waiting for getByRole('combobox', { name: 'Account', exact: true })\n    14 \u00d7 locator resolved to <select id=\"account\">\u2026</select>\n       - unexpected value \"a\"\n",
+        "errors": [],
+        "api": {
+          "saveCalls": 0,
+          "commits": 0,
+          "payloads": []
+        }
+      },
+      {
+        "name": "editor: older cleanup preserves newer pending state",
+        "status": "failed",
+        "message": "expect(locator).toHaveAttribute(expected) failed\n\nLocator:  locator('#editor')\nExpected: \"true\"\nReceived: \"\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveAttribute\" locator('#editor') with timeout 5000ms\n  - waiting for locator('#editor')\n    14 \u00d7 locator resolved to <form id=\"editor\">\u2026</form>\n       - unexpected value \"null\"\n",
+        "errors": [],
+        "api": {
+          "saveCalls": 0,
+          "commits": 0,
+          "payloads": []
+        }
+      },
+      {
+        "name": "editor: conflict retains draft and recovers authoritative version",
+        "status": "failed",
+        "message": "expect(locator).toHaveText(expected) failed\n\nLocator:  locator('#confirmed')\nExpected: \"Concurrent update\"\nReceived: \"Alpha One\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveText\" locator('#confirmed') with timeout 5000ms\n  - waiting for locator('#confirmed')\n    13 \u00d7 locator resolved to <p id=\"confirmed\">Alpha One</p>\n       - unexpected value \"Alpha One\"\n",
+        "errors": [
+          "Maximum call stack size exceeded"
+        ],
+        "api": {
+          "saveCalls": 1,
+          "commits": 0,
+          "payloads": [
+            {
+              "id": "one",
+              "name": "My corrected draft",
+              "version": 1,
+              "operationId": "841859f9-c582-492b-8c3f-534945e55bdd"
+            }
+          ]
+        }
+      },
+      {
+        "name": "collection: native headers, keyboard sorting, stable selected ids",
+        "status": "failed",
+        "message": "expect(locator).toHaveCount(expected) failed\n\nLocator:  getByRole('table')\nExpected: 1\nReceived: 0\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveCount\" getByRole('table') with timeout 5000ms\n  - waiting for getByRole('table')\n    14 \u00d7 locator resolved to 0 elements\n       - unexpected value \"0\"\n",
+        "errors": [],
+        "api": {
+          "saveCalls": 0,
+          "commits": 0,
+          "payloads": []
+        }
+      },
+      {
+        "name": "collection: filter page reset and stale query response",
+        "status": "failed",
+        "message": "expect(locator).toHaveCount(expected) failed\n\nLocator:  locator('tbody tr')\nExpected: 1\nReceived: 0\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveCount\" locator('tbody tr') with timeout 5000ms\n  - waiting for locator('tbody tr')\n    - locator resolved to 3 elements\n    - unexpected value \"3\"\n    13 \u00d7 locator resolved to 0 elements\n       - unexpected value \"0\"\n",
+        "errors": [],
+        "api": {
+          "saveCalls": 0,
+          "commits": 0,
+          "payloads": []
+        }
+      },
+      {
+        "name": "collection: mobile table and translated selection",
+        "status": "failed",
+        "message": "expect(locator).toContainText(expected) failed\n\nLocator: locator('#selection')\nExpected pattern: /selecionad/i\nReceived string:  \"1 item selected\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"toContainText\" locator('#selection') with timeout 5000ms\n  - waiting for locator('#selection')\n    14 \u00d7 locator resolved to <p id=\"selection\">1 item selected</p>\n       - unexpected value \"1 item selected\"\n",
+        "errors": [],
+        "api": {
+          "saveCalls": 0,
+          "commits": 0,
+          "payloads": []
+        }
+      },
+      {
+        "name": "collection: JPY and KWD localized amount submission round trips",
+        "status": "failed",
+        "message": "expect(locator).toContainText(expected) failed\n\nLocator: locator('#receipt')\nExpected substring: \"receipt\"\nReceived string:    \"{\\\"kind\\\":\\\"invalid\\\"}\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"toContainText\" locator('#receipt') with timeout 5000ms\n  - waiting for locator('#receipt')\n    - locator resolved to <output id=\"receipt\"></output>\n    - unexpected value \"\"\n    13 \u00d7 locator resolved to <output id=\"receipt\">{\"kind\":\"invalid\"}</output>\n       - unexpected value \"{\"kind\":\"invalid\"}\"\n",
+        "errors": [],
+        "api": {
+          "saveCalls": 0,
+          "commits": 0,
+          "payloads": []
+        }
+      },
+      {
+        "name": "collection: DST overlap confirmation and nonexistent wall time",
+        "status": "failed",
+        "message": "expect(locator).toBeHidden() failed\n\nLocator:  getByRole('combobox', { name: 'Occurrence', exact: true })\nExpected: hidden\nReceived: visible\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toBeHidden\" getByRole('combobox', { name: 'Occurrence', exact: true }) with timeout 5000ms\n  - waiting for getByRole('combobox', { name: 'Occurrence', exact: true })\n    14 \u00d7 locator resolved to <select id=\"occurrence\">\u2026</select>\n       - unexpected value \"visible\"\n",
+        "errors": [],
+        "api": {
+          "saveCalls": 0,
+          "commits": 0,
+          "payloads": []
+        }
+      }
+    ],
+    "passed": 2,
+    "total": 13
+  },
+  "repaired": {
+    "condition": "skill-repair",
+    "browser": "Chromium",
+    "cases": [
+      {
+        "name": "editor: direct entry, Back/Forward and query preservation",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      },
+      {
+        "name": "editor: stale read cannot replace current record",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      },
+      {
+        "name": "editor: lost committed response, duplicate submission, newer draft",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      },
+      {
+        "name": "editor: account change rejects late feedback",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      },
+      {
+        "name": "editor: return navigation refreshes authority and preserves supported draft",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      },
+      {
+        "name": "editor: simulated persisted restore revalidates authority",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          },
+          {
+            "persisted": true
+          }
+        ]
+      },
+      {
+        "name": "editor: older cleanup preserves newer pending state",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      },
+      {
+        "name": "editor: conflict retains draft and recovers authoritative version",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      },
+      {
+        "name": "collection: native headers, keyboard sorting, stable selected ids",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      },
+      {
+        "name": "collection: filter page reset and stale query response",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      },
+      {
+        "name": "collection: mobile table and translated selection",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      },
+      {
+        "name": "collection: JPY and KWD localized amount submission round trips",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      },
+      {
+        "name": "collection: DST overlap confirmation and nonexistent wall time",
+        "status": "passed",
+        "errors": [],
+        "pageShows": [
+          {
+            "persisted": false
+          }
+        ]
+      }
+    ],
+    "passed": 13,
+    "total": 13
+  },
+  "layout": [
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "controls": [
+        {
+          "name": "language",
+          "x": 99.75,
+          "width": 109,
+          "right": 208.75
+        },
+        {
+          "name": "currency",
+          "x": 94.703125,
+          "width": 71,
+          "right": 165.703125
+        },
+        {
+          "name": "search",
+          "x": 78.703125,
+          "width": 195,
+          "right": 273.703125
+        },
+        {
+          "name": "sort",
+          "x": 28,
+          "width": 116.390625,
+          "right": 144.390625
+        },
+        {
+          "name": "all",
+          "x": 156.578125,
+          "width": 136.484375,
+          "right": 293.0625
+        },
+        {
+          "name": "clear",
+          "x": 28,
+          "width": 127.75,
+          "right": 155.75
+        },
+        {
+          "name": "bulk",
+          "x": 167.9375,
+          "width": 100.140625,
+          "right": 268.078125
+        },
+        {
+          "name": "Selecionar Alpha (booking-3)",
+          "x": 37,
+          "width": 13,
+          "right": 50
+        },
+        {
+          "name": "Selecionar Beta (booking-2)",
+          "x": 37,
+          "width": 13,
+          "right": 50
+        },
+        {
+          "name": "Selecionar Delta (booking-4)",
+          "x": 37,
+          "width": 13,
+          "right": 50
+        },
+        {
+          "name": "previous",
+          "x": 28,
+          "width": 82.296875,
+          "right": 110.296875
+        },
+        {
+          "name": "next",
+          "x": 118.296875,
+          "width": 53.65625,
+          "right": 171.953125
+        },
+        {
+          "name": "amount",
+          "x": 84.953125,
+          "width": 195,
+          "right": 279.953125
+        },
+        {
+          "name": "birthday",
+          "x": 88.671875,
+          "width": 158,
+          "right": 246.671875
+        },
+        {
+          "name": "date",
+          "x": 158.265625,
+          "width": 158,
+          "right": 316.265625
+        },
+        {
+          "name": "time",
+          "x": 157.59375,
+          "width": 97.796875,
+          "right": 255.390625
+        },
+        {
+          "name": "submit",
+          "x": 28,
+          "width": 71.171875,
+          "right": 99.171875
+        }
+      ],
+      "birthday": "01/01/2000",
+      "selection": "1 item selecionado",
+      "hiddenOccurrence": "none"
+    },
+    {
+      "width": 1440,
+      "documentWidth": 1440,
+      "controls": [
+        {
+          "name": "language",
+          "x": 99.75,
+          "width": 109,
+          "right": 208.75
+        },
+        {
+          "name": "currency",
+          "x": 94.703125,
+          "width": 71,
+          "right": 165.703125
+        },
+        {
+          "name": "search",
+          "x": 78.703125,
+          "width": 195,
+          "right": 273.703125
+        },
+        {
+          "name": "sort",
+          "x": 28,
+          "width": 116.390625,
+          "right": 144.390625
+        },
+        {
+          "name": "all",
+          "x": 156.578125,
+          "width": 136.484375,
+          "right": 293.0625
+        },
+        {
+          "name": "clear",
+          "x": 305.25,
+          "width": 127.75,
+          "right": 433
+        },
+        {
+          "name": "bulk",
+          "x": 445.1875,
+          "width": 100.140625,
+          "right": 545.328125
+        },
+        {
+          "name": "Selecionar Alpha (booking-3)",
+          "x": 37,
+          "width": 13,
+          "right": 50
+        },
+        {
+          "name": "Selecionar Beta (booking-2)",
+          "x": 37,
+          "width": 13,
+          "right": 50
+        },
+        {
+          "name": "Selecionar Delta (booking-4)",
+          "x": 37,
+          "width": 13,
+          "right": 50
+        },
+        {
+          "name": "previous",
+          "x": 28,
+          "width": 82.296875,
+          "right": 110.296875
+        },
+        {
+          "name": "next",
+          "x": 118.296875,
+          "width": 53.65625,
+          "right": 171.953125
+        },
+        {
+          "name": "amount",
+          "x": 84.953125,
+          "width": 195,
+          "right": 279.953125
+        },
+        {
+          "name": "birthday",
+          "x": 88.671875,
+          "width": 158,
+          "right": 246.671875
+        },
+        {
+          "name": "date",
+          "x": 158.265625,
+          "width": 158,
+          "right": 316.265625
+        },
+        {
+          "name": "time",
+          "x": 157.59375,
+          "width": 97.796875,
+          "right": 255.390625
+        },
+        {
+          "name": "submit",
+          "x": 28,
+          "width": 71.171875,
+          "right": 99.171875
+        }
+      ],
+      "birthday": "01/01/2000",
+      "selection": "1 item selecionado",
+      "hiddenOccurrence": "none"
+    }
+  ],
+  "fixture_hashes": {
+    "away.html": "e447f709d15a4243d2d214a8987d4476481b661235a920a969b25432a6372d21",
+    "baseline/collection/CONTRACT.md": "3e1996e187b8da77ecc1ee670d796f4d79599a04a6b6ff1754e3bd7dee04fff3",
+    "baseline/collection/app.js": "a0653d4ceb6d86e5503632dab773121be223bb58393c134eff5b4678a28a4ed4",
+    "baseline/collection/index.html": "52763f5b5daf256d15065c237b7e4b4734582eee1679b5bb94f4869c70583b44",
+    "baseline/editor/CONTRACT.md": "6f596613ee9ba3b5619b51639cf644c9cd9c9c48613fab17bf7421824e8bfeeb",
+    "baseline/editor/app.js": "4a17362082e8370f7e05a86f7986d341633ca573f2264a175438d4a47a5abf0a",
+    "baseline/editor/index.html": "57e18237a0d519043630c1cb9c8db00c93c78a865a6924c23b2362c37da6eb1c",
+    "collection/CONTRACT.md": "3e1996e187b8da77ecc1ee670d796f4d79599a04a6b6ff1754e3bd7dee04fff3",
+    "collection/app.js": "b482c62785724935dfffedde183571c85313c9c2f507bfb16f700108b427e479",
+    "collection/index.html": "f5a6c87df9d0fb2528e6a75481075a7e046cb6eae58da6c463f9296213414c9d",
+    "editor/CONTRACT.md": "6f596613ee9ba3b5619b51639cf644c9cd9c9c48613fab17bf7421824e8bfeeb",
+    "editor/app.js": "9975c274ae3d07a8b9cffcec383d18079e355936409c14e98eee097f46f3f1ee",
+    "editor/index.html": "57e18237a0d519043630c1cb9c8db00c93c78a865a6924c23b2362c37da6eb1c",
+    "server.cjs": "ea3f20ade15a51b64de6e3e32ba83d282bfaeb3742728c1b06f2635cfa98b3e9",
+    "style.css": "5233554b5885cea4a5a6948cff7abe8bf331a15c7cc243e589ff130400356437",
+    "verify.cjs": "bd191983b35f47ca87c57282daeb1fe48ad441420adb1aa70bd8e1998f800890"
+  },
+  "limits": [
+    "Native bfcache admission not observed; persisted pageshow test is explicitly simulated.",
+    "Single browser engine; no screen-reader, provider/database, field CWV or search acceptance test.",
+    "Two fresh-context skill-guided fixture repairs; no unskilled-agent comparison."
+  ]
+}

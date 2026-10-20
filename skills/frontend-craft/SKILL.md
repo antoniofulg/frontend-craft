@@ -1,10 +1,10 @@
 ---
 name: frontend-craft
-description: Improve product strategy, sales and profitable growth, and build or review the interfaces that support them. Use to sell more, validate demand, sharpen positioning and offers, choose acquisition channels, pricing or roadmap priorities, and improve conversion, activation, retention and expansion. Also audit, consolidate and update shared UI components, styles and tokens across an application, maintain frontend reuse, and verify accessibility and implementation; strategy work can stand alone without a UI or codebase.
+description: Improve product strategy, sales and profitable growth, and build or review the interfaces that support them. Use to sell more, validate demand, sharpen positioning and offers, choose acquisition channels, pricing or roadmap priorities, and improve conversion, activation, retention and expansion. Also audit, consolidate and update shared UI components, styles and tokens, maintain frontend reuse, design loading states, improve public-page technical SEO and discovery, and verify accessibility and implementation; strategy work can stand alone without a UI or codebase.
 license: Mixed terms; see LICENSE and licenses/revenue-centric-design.txt
 metadata:
   author: Antonio Fulgêncio
-  version: "0.8.1"
+  version: "0.9.0"
 ---
 
 # Frontend Craft
@@ -42,10 +42,15 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Change shared styles, typography, colors, spacing, states, themes or layer conventions | [change a shared style](references/shared-ui-patterns.md#change-a-shared-style) | A change at the owner matching the requested scope, inherited by intended consumers with affected variants and propagation checks |
 | Plan, create, recreate, or change a page/component | [reuse and consistency](references/reuse-consistency.md) | Proposal or implementation grounded in matching precedents |
 | Design or change a component API/state owner | [components](references/components.md) | The smallest compatible extension of the actual owner |
+| Fix request races, uncertain saves, repeated submissions or optimistic recovery | [async recovery](references/components.md#async-state-and-recovery) | Context-safe state updates and recovery using the existing mutation contract |
+| Change tables, filters, sorting, paging or bulk selection | [collections](references/components.md#collections-sorting-and-selection), following its semantics/performance routes | Explicit query and selection scope with usable table behavior |
 | Change controls, forms, onboarding, authentication, layout adaptation, or keyboard behavior | [interaction and accessibility](references/interaction-accessibility.md) | Usable behavior in the relevant states and environments |
+| Change deep links, Back/Forward behavior, restored views or unsaved drafts | [navigation resilience](references/interaction-accessibility.md#navigation-and-draft-resilience) | Useful restoration with protected drafts and current authorization |
+| Change localized numbers, currencies, messages, dates or scheduled times | [locale-sensitive values](references/interaction-accessibility.md#locale-sensitive-values-and-messages) | Correct display, input round trips and explicit time/currency contracts |
 | Clarify labels, instructions, empty states, or errors | Impeccable's `clarify`, when available; [interaction and accessibility](references/interaction-accessibility.md) for behavior | Accurate wording for the actual action and recovery path |
 | Add, change, or review motion/gestures; choose a transition recipe | [motion](references/motion.md), including optional transitions-dev routing | Purposeful, interruptible movement or an intentional static response |
 | Create or assess a marketing/landing page; redesign a public page | [landing pages](references/landing-pages.md), including its commercial and review routing | A persuasive decision path or prioritized conversion findings, preserving public contracts |
+| Change public indexing, SSR content, metadata, canonicals, sitemaps or AI discovery | [technical SEO and discovery](references/technical-seo.md) | A coherent public-route contract with HTML/HTTP evidence and explicit deployment and search-acceptance limits |
 | Find, select, generate, crop or credit images/video; prepare a product demonstration | [imagery](references/imagery.md) | Relevant, traceable visual material with honest representation and verified delivery |
 | Improve first-run onboarding, empty-state guidance or activation | [activation](references/activation.md) | A shorter or clearer path to a measurable first useful result |
 | Design or review pricing, trials, checkout, upgrades or expansion | [monetization](references/monetization.md) | An understandable offer and a revenue hypothesis evaluated across the full funnel |
@@ -53,7 +58,8 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Select dashboard priorities, role-specific insights and next actions | [dashboards](references/dashboards.md) | A panel connecting relevant evidence to a useful decision or action |
 | Diagnose churn or review renewal, cancellation and recovery flows | [retention](references/retention.md) | A cause-specific retention proposal and a usable exit path |
 | Choose success metrics, assess experiment results or plan commercial validation | [experimentation](references/experimentation.md) | Defined cohorts, denominators, success criteria and evidence limits |
-| Diagnose loading, responsiveness, layout shifts, or a performance regression | [performance](references/performance.md) | A traced cause and a comparable measurement with explicit evidence limits |
+| Design or repair skeletons and loading states | [loading states](references/performance.md#skeletons-and-loading-states), following its component and accessibility routes | Stable real structure with unresolved values masked and pending/ready browser evidence |
+| Diagnose Core Web Vitals, responsiveness, loading performance, layout shifts, or a performance regression | [performance](references/performance.md) | A traced cause and a comparable measurement with explicit evidence limits |
 | Refine nested corners, display typography, font features, mixed-direction text, or advanced color | [visual details](references/visual-details.md) | A scoped technical refinement within the existing design |
 | Choose or review a chart | [charts](references/charts.md) | A truthful encoding and accessible access to the data |
 | Review a page, component, change, or consistency | [review](references/review.md) | Evidence-backed findings and verification limits |

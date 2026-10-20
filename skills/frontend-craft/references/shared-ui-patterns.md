@@ -66,7 +66,7 @@ Focused changes use relevant families and affected dependencies only.
 | Controls and forms | Buttons, links, inputs, selectors, labels, help/errors, control sizes and field composition | [Components](components.md), [interaction and accessibility](interaction-accessibility.md) |
 | Navigation | Tabs, breadcrumbs, menus, sidebars, pagination and active-location indicators | [Interaction and accessibility](interaction-accessibility.md) |
 | Surfaces and content | Cards, panels, dividers, grouped lists, table rows and prose/rich-text defaults, including generated or third-party content | [Reuse and consistency](reuse-consistency.md) |
-| Feedback | Badges, alerts, toasts, progress/loading indicators, skeletons and empty/error/success states | [Interaction and accessibility](interaction-accessibility.md), [motion](motion.md) |
+| Feedback | Badges, alerts, toasts, progress/loading indicators, skeletons and empty/error/success states | [Interaction and accessibility](interaction-accessibility.md), [loading states](performance.md#skeletons-and-loading-states), [motion](motion.md) |
 | Overlays and layering | Dialogs, drawers, popovers, tooltips, backdrops, stacking order/contexts, portal styles and clipping | [Components](components.md), [interaction and accessibility](interaction-accessibility.md) |
 | Icons and data visuals | Icon sizes/strokes/alignment, avatars and media geometry by role, chart palettes/legends and numeric typography | [Imagery](imagery.md), [charts](charts.md), [visual details](visual-details.md) |
 | Motion | Duration/easing tokens, transitions, enter/exit treatments and reduced-motion alternatives | [Motion](motion.md) |
