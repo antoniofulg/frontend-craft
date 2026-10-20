@@ -9,6 +9,9 @@ affected contracts. Reviews also use [commercial findings](review.md#commercial-
 For page creation or visual/conversion review, read
 [commercial visuals](commercial-visuals.md) for hierarchy, proof imagery, CTA
 placement and responsive composition; a copy-only edit need not load it.
+For crawling, indexing, initial public HTML, sitemap or AI discovery work, read
+[technical SEO and discovery](technical-seo.md). It owns those implementation
+checks; this reference owns the visitor's decision and public redesign inventory.
 
 ## Establish the visitor's decision
 

@@ -28,9 +28,14 @@ replacement elsewhere in the change before reporting the removal as a defect.
 | Owner bypass, generic replacements, header/content drift | [reuse and consistency](reuse-consistency.md) |
 | Style-family coverage, duplicated appearance, shared style updates or state/theme bypasses | [shared UI patterns](shared-ui-patterns.md) |
 | State ownership and component API | [components](components.md) |
+| Request races, mutation uncertainty and optimistic rollback | [async recovery](components.md#async-state-and-recovery) |
+| Table semantics, query scope, paging and bulk selection | [collections](components.md#collections-sorting-and-selection), then its applicable behavior routes |
 | Controls, forms, layout, typography, color, feedback | [interaction and accessibility](interaction-accessibility.md) |
+| History, drafts and restored-page freshness | [navigation resilience](interaction-accessibility.md#navigation-and-draft-resilience) |
+| Localized amounts/messages and calendar/time-zone values | [locale-sensitive values](interaction-accessibility.md#locale-sensitive-values-and-messages) |
 | Motion, timing, interruption and reduced motion | [motion](motion.md) |
 | Public-page decision path | [landing pages](landing-pages.md) |
+| Public indexing, SSR content, metadata, canonical/discovery URLs and response policies | [technical SEO and discovery](technical-seo.md) |
 | Media selection, representation, provenance, crops and delivery | [imagery](imagery.md) |
 | Commercial objective, audience, persuasion and growth priorities | [commercial strategy](commercial-strategy.md) |
 | Business constraint, offer, sales process and full strategic audit | [growth and sales](growth-sales.md) |
@@ -45,6 +50,7 @@ replacement elsewhere in the change before reporting the removal as a defect.
 | Continued value, renewal and cancellation | [retention](retention.md) |
 | Commercial metrics, causal claims and experiment design | [experimentation](experimentation.md) |
 | Loading, responsiveness, shifts or measured smoothness | [performance](performance.md) |
+| Skeleton fidelity and pending/ready geometry | [loading states](performance.md#skeletons-and-loading-states) |
 | Nested geometry, font features, bidi and advanced color | [visual details](visual-details.md) |
 | Chart encoding, truthful comparisons and data access | [charts](charts.md) |
 

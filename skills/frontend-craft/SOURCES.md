@@ -76,6 +76,80 @@ than new framework APIs, a visual prescription or copied upstream material.
 The existing conditional Tailwind guidance and its primary-source links remain
 applicable to matching installed versions.
 
+## Loading states and technical discovery
+
+The loading sections in [performance](references/performance.md),
+[components](references/components.md) and
+[interaction and accessibility](references/interaction-accessibility.md), and
+the [technical SEO guide](references/technical-seo.md), are independently authored
+technical guidance under CC BY 4.0. Their routing does not change the existing
+commercial-source terms or project publication, authorization and release owners.
+
+Lessons supplied by the maintainer were checked against the `my-court` project's
+`docs/product/STYLE-CONTRACT.md`, `docs/design/loading-states/README.md` and
+`index.html`, both `2026-10-20-loading-value-masks` reports, the product's
+`SEARCH-DISCOVERY.md`, four `2026-10-20-search-discovery` reports, and relevant
+`.adaptive-guidelines/ledger.md` entries. These are provenance identifiers, not
+installed dependencies; project artifacts, fixtures and code are not bundled.
+The project's paint delay, control dimensions, route scheme and cache policy
+remain local choices. Reported tile, price and reservation-alternative geometry
+mismatches remain open examples until verified; earlier bounded passes do not
+establish that those fixes occurred.
+
+Primary documentation linked beside the SEO rules was consulted on 2026-10-20:
+Google documentation on JavaScript, mobile rendering, crawlable links,
+pagination, faceted navigation, HTTP statuses/redirects, page experience,
+canonicals, sitemaps, robots directives, localized URLs, structured data,
+AI features and crawler verification; OpenAI's
+crawler documentation; and the HTML Standard's script-content restrictions.
+The optional `llms.txt` link describes a proposal, not a search-engine guarantee.
+[WAI-ARIA busy semantics](https://www.w3.org/TR/wai-aria-1.2/#aria-busy) and the
+existing WAI status-message guidance support the loading semantics. No framework
+API recipe was added; version-specific implementation still requires current
+official documentation, using Context7 first for library documentation.
+These sources support technical guidance, not measured ranking, commercial or
+agent-reliability improvements.
+
+The performance reference's Core Web Vitals targets and metric-specific diagnosis
+use Google's web.dev [Web Vitals overview](https://web.dev/articles/vitals) and
+its optimization guides for [LCP](https://web.dev/articles/optimize-lcp),
+[INP](https://web.dev/articles/optimize-inp) and
+[CLS](https://web.dev/articles/optimize-cls), consulted on 2026-10-20. This
+extends the existing technical evidence owner, without installing telemetry,
+prescribing a framework technique or claiming a site's field metrics were tested.
+
+## Async recovery, collections, navigation and localized data
+
+The additional sections in [components](references/components.md),
+[interaction and accessibility](references/interaction-accessibility.md) and
+[performance](references/performance.md) are independently authored technical
+guidance under CC BY 4.0. Existing project state, authorization, persistence,
+translation, scheduling and navigation owners remain authoritative. Sorting,
+selection and draft-retention policies are product contracts, not universal
+accessibility requirements.
+
+Primary sources consulted on 2026-10-20 are linked beside their rules: RFC 9110
+on mutation retry semantics; MDN Fetch, History and beforeunload documentation,
+queried through Context7; Google's web.dev bfcache restoration guidance; WAI's
+table/grid patterns, sortable-table example, header and virtualized-position
+guidance; W3C locale inference and composite-message guidance; and Unicode
+number/currency and plural data. W3C's time-zone document is a draft note used
+as guidance, not a normative scheduling requirement. Its examples do not replace
+the consuming project's date or daylight-saving disambiguation contract.
+
+Concurrency guards, operation-scoped rollback, explicit selection scope and
+restoration checks are engineering applications of those contracts; the sources
+do not prescribe one frontend architecture. APG examples require validation in
+the actual browser/assistive-technology environment. These additions do not add
+libraries, persistent drafts, retry infrastructure or telemetry as installation
+side effects, and source review does not prove runtime behavior.
+
+The 0.9.0 browser exercises further distinguished logical duplicate writes from
+repeated transport deliveries and exposed author CSS overriding a conditional
+field's `hidden` state. MDN's hidden-attribute documentation was queried through
+Context7 before adding that visibility caveat. These are bounded synthetic-fixture
+observations, with their limits recorded in the release verification artifact.
+
 ## Contract and evidence additions in 0.3.0
 
 The public-redesign checklist, onboarding/authentication criteria, performance

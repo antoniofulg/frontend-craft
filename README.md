@@ -1,5 +1,7 @@
 # Frontend Craft
 
+Current version: **0.9.0**. See the [release notes](CHANGELOG.md).
+
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
 validate demand, prioritize features, acquire customers, improve the sales process,
@@ -76,6 +78,8 @@ $frontend-craft Remove the standard card border and update its radius across the
 $frontend-craft Implement this feature using established shared components, tokens and style recipes. Extend their supported variants when needed and verify affected consumers.
 $frontend-craft Review the task editor for reuse and consistency with sibling pages.
 $frontend-craft Check the owner picker with long names, no results, and save failures.
+$frontend-craft Match these skeletons to the actual loaded components. Keep known labels and controls visible; verify pending and ready geometry.
+$frontend-craft Audit public-page SEO and discovery: initial HTML, canonical URLs, publication states and HTTP policies. Separate local proof from deployment and search acceptance.
 $frontend-craft Review this landing page for conversion. Prioritize concrete improvements by commercial impact, evidence and effort.
 $frontend-craft Create a landing-page concept from our product's actual output and assets. Compare suitable compositions within the approved brand.
 $frontend-craft Select and prepare imagery for this page. Verify representation, source terms, credits and mobile crops.
@@ -167,7 +171,7 @@ The [skill entrypoint](skills/frontend-craft/SKILL.md) routes to focused referen
 mapping; reuse and consistency; shared UI patterns; components; interaction and accessibility; motion;
 commercial strategy; growth and sales; commercial visuals; landing pages; imagery;
 checkout; activation; monetization; retention; behavioral design; dashboards; product strategy;
-positioning and distribution; experimentation; performance; visual details;
+positioning and distribution; experimentation; performance and loading states; technical SEO and discovery; visual details;
 charts; and reviews. Typical work reads
 the core and the relevant references, not a catalog of every rule. The core remains
 stack-neutral; React recipes and the shared UI patterns guide's Tailwind v4 guidance
@@ -184,6 +188,18 @@ Public redesigns also check URL/anchor, metadata/SEO, analytics, form and legal
 contracts. Onboarding and authentication guidance distinguishes WCAG requirements
 from ergonomic recommendations. A separate performance reference covers field
 versus local evidence, trace-based diagnosis and comparable before/after runs.
+Its [loading-state guidance](skills/frontend-craft/references/performance.md#skeletons-and-loading-states)
+connects value masks to real component composition, accessibility and browser geometry.
+The [technical SEO reference](skills/frontend-craft/references/technical-seo.md)
+owns public-route discovery, initial HTML, response policies and truthful metadata;
+publication and access control remain with their existing project owners.
+
+The existing component owner also covers overlapping requests, uncertain save
+outcomes, optimistic recovery, and collection query/selection scope. Interaction
+guidance covers native tables versus grids, history and draft restoration, and
+locale-sensitive amounts, messages and dates. Large-collection optimization stays
+with performance. These sections reuse project contracts and apply only to the
+affected behavior; they add no required library, offline queue or broad audit.
 
 Interface wording routes to Impeccable's `clarify` when available. Motion work
 can consult an installed `transitions-dev` for a selected recipe; Frontend Craft
@@ -316,6 +332,18 @@ The [0.8.1 verification record](evals/verification-0.8.1.md) covers the nine-fam
 style matrix, state/theme accounting and scoped style updates. It records a broad
 source audit and an isolated typography update that preserved unrelated roles;
 these probes do not establish rendered appearance or universal agent reliability.
+
+The [interaction resilience and localization record](evals/resilience-validation.md)
+covers the current four-area expansion, official-source research, independent
+authoring review, two source-only task probes and package/installation checks.
+It separates those results from pending browser and service verification.
+
+The [0.9.0 verification record](evals/verification-0.9.0.md) adds isolated browser
+exercises for async recovery, navigation, tables and localized submissions, with
+retained baseline/results and mobile/desktop screenshots. It records the
+conditional-field correction and distinguishes simulated restoration from
+native bfcache acceptance. Consumer-project and field/search outcomes remain
+outside those checks.
 
 ## License and sources
 

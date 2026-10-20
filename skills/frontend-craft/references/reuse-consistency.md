@@ -49,7 +49,7 @@ the owner at the intended scope and check its variants and propagation.
 | Header | Heading semantics, font/token source, size/weight, spacing, breadcrumbs and actions |
 | Supporting text | Whether subtitle/eyebrow/help exists, its purpose, placement and terminology |
 | Controls | Domain component, variants, selection/display behavior, validation and feedback |
-| Collections | Density, formatting, filters, sorting, selection, pagination and empty states |
+| Collections | Density, formatting, filters, sorting, selection, pagination and empty states; use the [collection contract](components.md#collections-sorting-and-selection) for query and selection scope |
 | State feedback | Loading, pending, success, failure, recovery, permission and disabled behavior |
 
 Inspect wrappers, class/style overrides and caller props, even when every page
