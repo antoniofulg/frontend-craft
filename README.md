@@ -188,6 +188,8 @@ Public redesigns also check URL/anchor, metadata/SEO, analytics, form and legal
 contracts. Onboarding and authentication guidance distinguishes WCAG requirements
 from ergonomic recommendations. A separate performance reference covers field
 versus local evidence, trace-based diagnosis and comparable before/after runs.
+Its optional [audit procedure](skills/frontend-craft/references/performance-audits.md)
+covers capability discovery, trace insights, request delivery and production bundles.
 Its [loading-state guidance](skills/frontend-craft/references/performance.md#skeletons-and-loading-states)
 connects value masks to real component composition, accessibility and browser geometry.
 The [technical SEO reference](skills/frontend-craft/references/technical-seo.md)

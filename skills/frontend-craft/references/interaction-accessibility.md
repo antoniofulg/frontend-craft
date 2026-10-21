@@ -1,9 +1,38 @@
 # Interaction and accessibility
 
-Read for controls, forms, tables, navigation/drafts, locale-sensitive values,
+Read for interface wording, controls, forms, tables, navigation/drafts, locale-sensitive values,
 onboarding, authentication, feedback, responsive behavior, or an accessibility
 review. Check only applicable interactions, using the project's
 accessibility target and current authoritative standards when exact criteria matter.
+
+## Content restraint
+
+Give each visible element a useful role in understanding, deciding, acting or
+recovering. Remove repetition that adds no needed context, instruction or evidence;
+judge usefulness against the actual task and audience, rather than word count.
+
+- **Copy:** remove subtitles that merely repeat headings and help text that
+  restates an obvious control. For example, `Manage your projects` beneath
+  `Projects` adds little unless it explains a real scope or action. Use plain,
+  specific labels grounded in the product's vocabulary.
+- **Feedback:** consolidate messages that report the same event without adding
+  useful context. A toast, banner and inline status need distinct purposes to
+  coexist. Preserve persistent errors and use the existing
+  [announcement contract](#choose-announcement-priority) for accessible feedback.
+- **Explanation:** keep constraints and consequences needed for a decision beside
+  the action. Put secondary detail behind accessible disclosure when useful;
+  retain instructions needed for unfamiliar tasks, recovery and informed consent.
+- **Controls and order:** justify sorting, filters, badges and secondary actions
+  through user tasks. Preserve meaningful or contracted collection order; do not
+  introduce alphabetical sorting merely because it is available. Changes to query
+  behavior follow [collections](components.md#collections-sorting-and-selection).
+- **Visual structure:** use existing hierarchy, spacing and grouping before adding
+  another card, border, icon or label. Follow approved tokens and design direction.
+
+When removing content or controls, verify that users can still identify the action,
+understand its consequences, perceive the outcome and recover. Preserve accessible
+names, required disclosures and safety confirmations. A cleaner screenshot alone
+does not establish that the reduced interface remains understandable or usable.
 
 ## Trace a complete interaction
 

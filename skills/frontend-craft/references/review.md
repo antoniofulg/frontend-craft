@@ -31,6 +31,7 @@ replacement elsewhere in the change before reporting the removal as a defect.
 | Request races, mutation uncertainty and optimistic rollback | [async recovery](components.md#async-state-and-recovery) |
 | Table semantics, query scope, paging and bulk selection | [collections](components.md#collections-sorting-and-selection), then its applicable behavior routes |
 | Controls, forms, layout, typography, color, feedback | [interaction and accessibility](interaction-accessibility.md) |
+| Redundant copy, duplicated feedback or unnecessary controls | [content restraint](interaction-accessibility.md#content-restraint) |
 | History, drafts and restored-page freshness | [navigation resilience](interaction-accessibility.md#navigation-and-draft-resilience) |
 | Localized amounts/messages and calendar/time-zone values | [locale-sensitive values](interaction-accessibility.md#locale-sensitive-values-and-messages) |
 | Motion, timing, interruption and reduced motion | [motion](motion.md) |
@@ -49,7 +50,7 @@ replacement elsewhere in the change before reporting the removal as a defect.
 | Plans, trial, checkout and upgrade decisions | [monetization](monetization.md) |
 | Continued value, renewal and cancellation | [retention](retention.md) |
 | Commercial metrics, causal claims and experiment design | [experimentation](experimentation.md) |
-| Loading, responsiveness, shifts or measured smoothness | [performance](performance.md) |
+| Loading, responsiveness, shifts, measured smoothness, request delivery or production bundles | [performance](performance.md), including its optional audit procedure |
 | Skeleton fidelity and pending/ready geometry | [loading states](performance.md#skeletons-and-loading-states) |
 | Nested geometry, font features, bidi and advanced color | [visual details](visual-details.md) |
 | Chart encoding, truthful comparisons and data access | [charts](charts.md) |
@@ -101,6 +102,9 @@ Choose the questions relevant to the surface:
 
 - **Focus and hierarchy:** what receives attention first, and does that match
   the user's task? Check competing emphasis, readable type and useful actions.
+- **Content restraint:** does each message or control add needed meaning? Apply
+  [content restraint](interaction-accessibility.md#content-restraint) and check
+  that removals preserve context, accessible feedback and recovery.
 - **Alignment and grouping:** do shared edges, spacing and proximity express
   actual relationships, including around removed elements?
 - **Substance and rhythm:** does each section answer a needed question with

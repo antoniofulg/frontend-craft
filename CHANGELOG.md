@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+- Add content restraint for redundant copy, duplicated feedback, excessive
+  explanation and unnecessary controls, with focused wording and review routes.
+- Add an optional performance audit procedure for capability discovery, trace and
+  request inspection, delivery policies and production-bundle analysis.
+- Extend performance routing without changing field/lab evidence standards,
+  accessibility ownership or comparable before/after measurement requirements.
+
 ## 0.9.0 — 2026-10-20
 
 This release expands reusable frontend guidance. Consuming projects update

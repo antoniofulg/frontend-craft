@@ -3,6 +3,11 @@
 Read for Core Web Vitals, loading, responsiveness, layout-shift or motion-performance work. Scope
 the investigation to the affected page and user action; use existing tooling.
 
+For a browser/network audit or production-bundle investigation, read the optional
+[performance audit procedure](performance-audits.md). It adds tool discovery,
+trace/request inspection and build analysis; the evidence and comparison rules
+in this guide remain authoritative. Loading-state repairs need not load it.
+
 ## Skeletons and loading states
 
 Inspect the actual loaded component before designing its pending state. Separate

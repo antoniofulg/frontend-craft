@@ -277,6 +277,29 @@ blind model judgments motivate investigation, not a claim of measured superiorit
 conversion uplift or reliability for Frontend Craft. Maintainer evaluation records
 live outside the installed skill.
 
+## Performance audit operations
+
+The optional [performance audit procedure](references/performance-audits.md) is
+independently authored technical guidance under CC BY 4.0. The maintainer's
+installed `web-perf` skill was comparison material on 2026-10-21; its source
+revision was unavailable. The compared `SKILL.md` had SHA-256
+`79c531e95ca4d96a7de920c28c127c2c09ec55cd452a92222267d2954580be23`.
+Only missing operational coverage was added. Fixed tool/API names, setup recipes,
+universal budgets, blanket rejection of zero estimated savings and a duplicate
+accessibility checklist were excluded. Existing performance evidence rules remain
+authoritative; the comparison does not establish measured site improvements.
+
+## Content restraint
+
+The maintainer-supplied `minimalist-ui` skill was comparison material on
+2026-10-21. The maintainer's recurring corrections motivated independently
+authored [content restraint](references/interaction-accessibility.md#content-restraint)
+guidance under CC BY 4.0. It extends existing interaction and review owners;
+the comparison skill's font bans, fixed palettes, layout recipes and mandatory
+animations were not incorporated. Approved design direction and accessibility
+remain authoritative. No upstream prose or assets are bundled, and no measured
+usability improvement is claimed.
+
 ## Companion and distribution
 
 [Impeccable](https://github.com/pbakaus/impeccable) is an optional companion and
