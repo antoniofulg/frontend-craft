@@ -91,3 +91,47 @@ descriptions of them support only conditional analysis.
 
 Package checks are separate: discovery, complete installation and resolving
 references are installer contracts, not evidence for these behavioral outcomes.
+
+## GTM measurement and automation cases
+
+These cases protect decisions that the former GTM companions handled. Evaluate
+actual recommendations or runnable changes, not reference-read counts or matching
+phrases. Use synthetic records and a safe integration boundary; a mocked provider
+does not establish that its live API works. The
+[coverage record](gtm-coverage-validation.md) separates static review from executed proof.
+
+| Task given to the agent | Required evidence | Observable outcome to evaluate |
+| --- | --- | --- |
+| Explain why CRM pipeline and billing revenue disagree | Two contacts share one account; a join duplicates one subscription; CRM has expected dates while billing has settled payments; delayed sync and different currencies | Traces the mismatch through identity, definitions and timing; reconciles each source without adding forecasts to cash or choosing the largest total |
+| Calculate payback and recurring growth | CAC 1,200; annual revenue/account 2,400; margin 0.75; starting MRR 10,000, new 2,000, expansion 500, reactivation 200, contraction 300, churn 400 | Gives eight months under constant-contribution assumptions; net MRR movement 2,000 and ending MRR 12,000; does not omit contraction, double count reactivation or call ARR cash |
+| Assess a sparse pipeline forecast | Frozen opportunity snapshots, later pushed close dates, different segment win rates and still-open deals | Separates coverage/velocity proxies from realized revenue; retains slippage and censoring, shows forecast assumptions and sensitivity instead of promising the weighted total |
+| Compare first-touch and influenced revenue | One deal has an ad, content, product use, a partner referral and an AI-assisted message; offline touches missing | Declares entity, lookback and allocation rules; deduplicates the deal, preserves source versus influence and labels attribution as observational rather than causal proof |
+| Measure an AI-assisted acquisition workflow | Attempted versus accepted work, model cost already inside delivery cost, reviewer labor, retries, booked versus held meetings and unknown incremental revenue | Counts each cost once, uses meaningful denominators and calls revenue/cost a ratio rather than profit ROI; exposes missing evidence for incremental return |
+| Define PQL scoring with little history | Strong usage, missing buyer authority, stale firmographics, bot page views and an opt-out | Separates fit/value/intent, holds uncertain records, proposes interpretable rules and validation rather than imported weights; preserves suppression and a useful self-service path |
+| Select a GTM platform for an existing CRM workflow | Current operator skills, volume/peaks, installed connectors, maintenance capacity, residency requirements and budget; no purchase authorization | Compares reuse, managed/self-hosted/custom options with current verified capabilities and total cost; provides a concrete decision without installing or purchasing tools |
+| Repair duplicate-event and uncertain-send recovery | Provider accepts a send then times out; duplicate webhook arrives; worker crashes before recording completion; provider offers a lookup/key contract | Reconciles the original external effect, uses durable state/idempotency at the right boundary and verifies no repeated send; does not mistake a local processed flag for exactly-once delivery |
+| Implement a qualification handoff that changes while queued | Approved synthetic workflow, absent owner, fallback queue, reply/opt-out before action, concurrent account update and ambiguous classification | Rechecks eligibility, preserves suppression, prevents conflicting actions, records assignment/acceptance/response separately and routes uncertain decisions for review |
+| Compare new scoring in shadow mode | Existing live sequence, sanitized representative events, changed scoring rules and unknown provider integration status | Produces a comparison with external effects disabled, checks changed decisions and recovery/rollback, and reports live-connector verification separately |
+| Build an internal lead-scoring queue | Existing application owners, CRM permissions, long reasons, stale evidence and safe bulk-action requirements | Extends suitable owners, exposes provenance and actionable failures, preserves keyboard/access control and verifies affected interface behavior without replacing the application's stack |
+| Design a commercial review and investigate worsening payback | Role-specific decisions, comparable cohorts, cost components, data freshness and delayed purchases | Selects useful leading/outcome measures, diagnoses components before assigning cause and returns actions with owners/dates; imposes no universal card count, leading/lagging ratio or meeting schedule |
+
+## Motion vocabulary cases
+
+These are naming tasks unless the request explicitly asks for implementation.
+Evaluate precision and scope, not exact phrasing or a required reference-read count.
+
+| Task given to the agent | Required evidence | Observable outcome to evaluate |
+| --- | --- | --- |
+| Name a sequence where list items appear at successive offsets | A verbal description with no codebase or design request | Names stagger concisely without adding a library, changing code or running a motion audit |
+| Identify one image becoming another | Ambiguous description, with no observation of shape or position change | Gives crossfade/morph/shared-element alternatives and their visible differences; does not claim a uniquely established mechanism |
+| Explain a moving reveal with a soft transparency edge | Description of a progressively visible region and graded opacity | Distinguishes masking from a hard clipping boundary without asserting browser support or choosing an implementation unasked |
+| Diagnose a claim that any height animation is layout thrashing | A height-changing component with no trace or geometry-read evidence | Separates layout animation from repeated forced layout, states the evidence needed and avoids claiming a measured bottleneck |
+| Name a pending placeholder without movement and a rolling number | Separate descriptions of static reserved content and digit transitions | Distinguishes skeleton from optional shimmer and number ticker from tabular figures; preserves the existing loading-state owner if implementation is requested |
+
+## Animation opportunity cases
+
+| Task given to the agent | Required evidence | Observable outcome to evaluate |
+| --- | --- | --- |
+| Find useful animation opportunities in an operational screen | Source owners, existing tokens, occasional disclosures, frequent keyboard actions, changing data, gestures and rendered state evidence | Accounts for relevant seam classes, ranks useful proposals and explains rejected candidates; preserves static options and makes no source edits in discovery mode |
+| Assess a screen where adding motion would delay frequent work | Immediate usable controls, stable readable data, adequate feedback and no evidenced continuity problem | Returns a justified no-change verdict rather than manufacturing suggestions or a rejection quota |
+| Propose motion for an existing destructive-action confirmation | Existing confirmation contract, reduced-motion preference, keyboard/touch paths and adopted tokens | Preserves confirmation semantics and a usable static alternative, gives a contextual proposal and does not introduce hold-to-confirm or a dependency without implementation scope |

@@ -1,6 +1,6 @@
 # Frontend Craft
 
-Current version: **0.9.0**. See the [release notes](CHANGELOG.md).
+Current version: **0.10.0**. See the [release notes](CHANGELOG.md).
 
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
@@ -167,9 +167,35 @@ usable with the project's contracts and its bundled references.
 
 ## What loads when
 
+For questions such as “what is the effect called when these items enter one
+after another?”, the optional [motion vocabulary](skills/frontend-craft/references/motion-vocabulary.md)
+provides reverse lookup and distinctions between close terms. Naming alone does
+not start implementation; the existing motion guide owns behavior and accessibility.
+
+The same guide's [opportunity discovery](skills/frontend-craft/references/motion.md#find-animation-opportunities)
+finds unanimated interactions that could benefit from motion and records where
+static behavior is preferable. It produces scoped proposals, not automatic edits.
+
+GTM operations are bundled, without requiring separate GTM skills. The
+[measurement guide](skills/frontend-craft/references/gtm-measurement.md) covers
+revenue/pipeline definitions, data reconciliation, attribution, qualification,
+AI/usage economics and commercial reviews. The
+[automation guide](skills/frontend-craft/references/gtm-automation.md) covers
+platform selection, enrichment, routing, agents, reliable integrations, monitoring,
+costs and internal tools. Read them for those tasks; ordinary frontend work keeps
+its existing focused routes. Platform/API details are verified against current
+official documentation when needed, rather than frozen into vendor tables.
+
+```text
+$frontend-craft Reconcile our CRM and billing scorecard. Define pipeline, payback and attribution rules, then identify decisions we can support with this data.
+$frontend-craft Design our lead enrichment and sales handoff workflow. Include qualification, ownership, failure recovery, costs and a safe verification plan.
+$frontend-craft Implement the approved CRM workflow using our existing stack. Verify duplicate events, uncertain sends, opt-outs and owner changes before rollout.
+```
+
 The [skill entrypoint](skills/frontend-craft/SKILL.md) routes to focused references:
 mapping; reuse and consistency; shared UI patterns; components; interaction and accessibility; motion;
 commercial strategy; growth and sales; commercial visuals; landing pages; imagery;
+GTM measurement and automation;
 checkout; activation; monetization; retention; behavioral design; dashboards; product strategy;
 positioning and distribution; experimentation; performance and loading states; technical SEO and discovery; visual details;
 charts; and reviews. Typical work reads
@@ -346,6 +372,11 @@ retained baseline/results and mobile/desktop screenshots. It records the
 conditional-field correction and distinguishes simulated restoration from
 native bfcache acceptance. Consumer-project and field/search outcomes remain
 outside those checks.
+
+The [0.10.0 verification record](evals/verification-0.10.0.md) covers the GTM
+replacement map, 91-term motion vocabulary, performance audits, content restraint
+and marketing-copy additions. It records package, discovery, installation and
+calculation checks separately from unrun agent scenarios and live integrations.
 
 ## License and sources
 

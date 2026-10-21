@@ -5,6 +5,11 @@ results. Apply the objective and source terms in
 [commercial strategy](commercial-strategy.md). Functional interface verification
 and commercial outcome measurement answer different questions.
 
+For revenue/pipeline measures, CRM reconciliation, attribution models,
+qualification scores or operating reviews, read [GTM measurement](gtm-measurement.md).
+It extends this evidence contract; it does not turn attributed credit or a
+workflow success rate into causal proof of revenue improvement.
+
 ## Define the measurement
 
 Choose one primary outcome for the decision, then the diagnostic and guardrail

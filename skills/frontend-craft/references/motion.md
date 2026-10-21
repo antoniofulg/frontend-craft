@@ -1,6 +1,12 @@
 # Motion
 
-Read when adding, changing, or reviewing movement and transitions.
+Read when finding opportunities for motion, or adding, changing and reviewing
+movement and transitions.
+
+For a naming question or a vague description of an effect, use the optional
+[motion vocabulary](motion-vocabulary.md). Return the matching term without
+starting implementation or an audit. For requested implementation, this guide's
+purpose, behavior and accessibility rules remain authoritative.
 
 ## Establish purpose and precedent
 
@@ -12,6 +18,51 @@ An immediate static update is a valid result when motion adds no useful signal.
 Inspect comparable interactions and existing motion tokens. Match the token's
 semantic role, not just the nearest numeric duration. Follow Impeccable's approved
 motion direction and the project's density and interaction conventions.
+
+## Find animation opportunities
+
+Use this mode when asked what could benefit from animation or how a surface could
+feel more responsive. Keep discovery read-only unless implementation is also
+requested. Identify the page/application scope, real interaction owners, existing
+effects/tokens, product tone and likely frequency of use. Distinguish unanimated
+behavior from an existing effect that needs repair.
+
+Inspect the relevant seams below. Source searches for conditional visibility,
+activation handlers, disclosure controls, collection updates, gesture handlers
+and success/empty states locate candidates; absent animation syntax does not
+establish a usability problem. Observe the actual state/input sequence where
+available and identify any source-only uncertainty.
+
+| Seam | What might benefit; what to preserve |
+| --- | --- |
+| Activation feedback | Acknowledgment missing from a press or action; retain immediate response and existing keyboard/touch feedback. A scale change is one option, not a required button treatment. |
+| Confirmation/progress | A consequential action or progress state is hard to understand; do not replace the approved confirmation behavior with a hold gesture merely to create an animation. |
+| Appearing/disappearing content | Conditional regions, disclosures, route content or occasional collection changes jump without a useful connection; keep content readable and available without animation. |
+| Anchoring and dismissal | A panel loses its relationship to its trigger or exits in a confusing direction; follow the real geometry, primitive and dismissal contract. |
+| Group entrances | Related items arrive without a useful sequence; a small stagger may clarify grouping but must not delay interaction or repeated work. |
+| Gesture boundaries | Drag/release, reorder or dismissal loses continuity; use the existing gesture owner and retain cancellation and non-drag access. |
+| Rare explanatory or success moments | Motion could explain a result or acknowledge meaningful progress; preserve truthful state and avoid animation that competes with the user's next task. |
+
+Judge each candidate by purpose, frequency, response cost and function. Name the
+useful feedback, state/spatial connection or explanation; identify what currently
+confuses users and what the proposed movement would clarify. Frequent, keyboard-
+initiated or information-dense work needs particular restraint, but input method
+or an arbitrary daily count is not a blanket ban. Rare use alone does not justify
+decoration. Reject motion that delays readiness, moves data during inspection,
+obscures meaning or adds distraction without a useful signal. A static outcome is
+valid, including when no candidate survives.
+
+Return a short prioritized set of source-located opportunities: current behavior,
+evidence, purpose, expected frequency and a concrete proposal. Specify properties,
+direction/origin, duration/easing or spring behavior through the adopted tokens;
+include resolved values when established, and label unverified tuning as a proposal.
+Reuse the interaction recipes below only as contextual starting points. Include
+interruption, reduced-motion/static alternatives and input/focus implications.
+For scoped sweeps, account for inspected, inapplicable and uninspected seam classes;
+record meaningful rejected candidates and their reasons without inventing a quota.
+End with the most useful next action or a no-change verdict. A proposal does not
+implement code or require a separate planning skill; authorized implementation
+continues through this guide and the existing project workflow.
 
 ## Implement the smallest mechanism
 

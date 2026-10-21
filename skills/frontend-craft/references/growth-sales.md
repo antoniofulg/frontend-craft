@@ -58,6 +58,10 @@ with a reason instead of silently skipping it.
 | Metrics and experimentation | What would establish improved demand, sales, contribution and retained value? | [Experimentation](experimentation.md) |
 
 Coverage retains useful source mechanisms with contextual and evidence limits.
+When the requested audit includes GTM operations, assess measurement/data trust,
+qualification and handoff ownership, workflow reliability and cost using
+[GTM measurement](gtm-measurement.md) and [GTM automation](gtm-automation.md).
+An audit can recommend a manual repair; it need not implement automation.
 An upstream benchmark or case result is not a promise for this product. For a
 named mechanism, explain what it changes, when it fits and how to evaluate it;
 the mechanism's name alone is not a recommendation.
@@ -121,6 +125,14 @@ existing authorization. A strategy request alone is not an instruction to contac
 customers, spend money or change live commercial commitments.
 
 ## Deliver actions that can be used
+
+For qualification, owner assignment, response expectations and stalled handoffs,
+use [sales handoffs](gtm-automation.md#qualification-routing-and-handoffs). For
+enrichment, CRM workflows, GTM agents or internal sales tools, use
+[GTM automation](gtm-automation.md). For pipeline definitions, reconciliation,
+attribution, scoring and operating reviews, use [GTM measurement](gtm-measurement.md).
+These routes support both planning and explicitly requested implementation;
+an offer draft or a narrow interface repair need not load them.
 
 Return the diagnosed constraint and prioritized actions tied to the commercial
 objective. Each action states the segment, evidence, proposed move, expected

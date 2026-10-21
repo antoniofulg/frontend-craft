@@ -51,6 +51,8 @@ replacement elsewhere in the change before reporting the removal as a defect.
 | Plans, trial, checkout and upgrade decisions | [monetization](monetization.md) |
 | Continued value, renewal and cancellation | [retention](retention.md) |
 | Commercial metrics, causal claims and experiment design | [experimentation](experimentation.md) |
+| Revenue/pipeline definitions, attribution, CRM quality or PQL scoring | [GTM measurement](gtm-measurement.md) |
+| Enrichment, sales handoffs, revenue workflows or GTM agents | [GTM automation](gtm-automation.md) |
 | Loading, responsiveness, shifts, measured smoothness, request delivery or production bundles | [performance](performance.md), including its optional audit procedure |
 | Skeleton fidelity and pending/ready geometry | [loading states](performance.md#skeletons-and-loading-states) |
 | Nested geometry, font features, bidi and advanced color | [visual details](visual-details.md) |

@@ -47,6 +47,12 @@ Keep currencies, periods and the treatment of free-user costs consistent; count
 those costs once. Read [retention](retention.md#connect-retention-to-acquisition-payback)
 when departures occur before payback.
 
+Payback units follow the contribution interval. If using annual revenue per
+account `A` and gross-margin fraction `g`, the constant-contribution approximation
+in months is `12 × CAC / (A × g)`. A zero or negative contribution has no finite
+payback under that approximation. This is not observed cash recovery; use the
+actual cohort cash flows when timing or retention makes the approximation unsuitable.
+
 ## Research and change prices deliberately
 
 Segment interviews by job, buying authority, alternatives and budget. Probe recent

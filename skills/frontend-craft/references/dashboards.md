@@ -6,6 +6,11 @@ or analytics home. Apply objective, audience and source terms from
 choosing or changing data encodings; this reference owns the decisions the
 screen supports, while charts owns faithful representation.
 
+For commercial pipeline, revenue, attribution or data-health definitions, use
+[GTM measurement](gtm-measurement.md); for revenue-operation queues and workflow
+monitors, also use [internal revenue tools](gtm-automation.md#apply-the-pattern-to-the-actual-motion).
+Keep the role and interaction guidance here as the interface owner.
+
 ## Choose the role and recurring task
 
 Identify who opens the screen, their important problems, decisions and available

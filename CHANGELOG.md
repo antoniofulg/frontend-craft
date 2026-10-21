@@ -1,7 +1,19 @@
 # Changelog
 
-## Unreleased
+## 0.10.0 — 2026-10-21
 
+This release expands standalone commercial operations and optional frontend
+references. Existing project owners and selective loading remain authoritative.
+
+- Add optional reverse lookup for 91 motion terms, with explicit distinctions
+  between visual effects, interaction patterns and rendering/performance concepts.
+- Add read-only animation-opportunity discovery with seam coverage, contextual
+  proposals and explicit reasons to keep interactions static.
+- Cover GTM measurement and engineering through optional bundled references:
+  revenue/pipeline metrics, attribution and data quality; enrichment, qualification,
+  handoffs, platform selection, agents, integration reliability, cost and internal tools.
+- Extend operational routing and correct annual-to-monthly payback units while
+  retaining existing commercial evidence, interface and authorization owners.
 - Add focused marketing-copy routing and guidance for editing scope, brand voice,
   naturalness and factual refresh, reusing existing claim and public-page owners.
 - Add content restraint for redundant copy, duplicated feedback, excessive
@@ -10,6 +22,11 @@
   request inspection, delivery policies and production-bundle analysis.
 - Extend performance routing without changing field/lab evidence standards,
   accessibility ownership or comparable before/after measurement requirements.
+
+Validation and remaining evidence limits are recorded in
+[the 0.10.0 verification record](evals/verification-0.10.0.md). Live CRM/provider
+workflows, field performance and fresh-agent evaluations of the new GTM/naming
+cases remain untested; no commercial or runtime improvement is claimed.
 
 ## 0.9.0 — 2026-10-20
 

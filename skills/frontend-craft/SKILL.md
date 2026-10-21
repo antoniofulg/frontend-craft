@@ -1,17 +1,18 @@
 ---
 name: frontend-craft
-description: Improve product strategy, sales and profitable growth, and build or review the interfaces that support them. Use to sell more, validate demand, sharpen positioning and offers, write and edit marketing copy, choose acquisition channels, pricing or roadmap priorities, and improve conversion, activation, retention and expansion. Also audit, consolidate and update shared UI components, styles and tokens, maintain frontend reuse, simplify interface content and feedback, design loading states, audit web performance and production bundles, improve public-page technical SEO and discovery, and verify accessibility and implementation; strategy work can stand alone without a UI or codebase.
+description: Improve product strategy, sales and profitable growth, and build or review the interfaces that support them. Use to sell more, validate demand, sharpen positioning and offers, write and edit marketing copy, choose acquisition channels, pricing or roadmap priorities, and improve conversion, activation, retention and expansion. Also define GTM metrics and attribution, design or implement CRM enrichment, sales handoffs and revenue automation, audit, consolidate and update shared UI components, styles and tokens, maintain frontend reuse, simplify interface content and feedback, find animation opportunities and name motion effects, design loading states, audit web performance and production bundles, improve public-page technical SEO and discovery, and verify accessibility and implementation; commercial work can stand alone without a UI or codebase.
 license: Mixed terms; see LICENSE and licenses/revenue-centric-design.txt
 metadata:
   author: Antonio Fulgêncio
-  version: "0.9.0"
+  version: "0.10.0"
 ---
 
 # Frontend Craft
 
 Help the product deliver useful value, win customers and grow profitably.
-Strategy and sales are standalone work: a useful recommendation can change the
-audience, offer, channel, sales process, price or roadmap without changing a screen.
+Strategy, sales and GTM operations are standalone work: a useful recommendation
+can change the audience, offer, channel, sales process, price or roadmap without
+changing a screen.
 For growth work, diagnose the commercial constraint before choosing an intervention.
 When that intervention involves an interface, discover existing owners, reuse what
 fits and verify the result. Search by responsibility, not only component name.
@@ -30,6 +31,8 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | --- | --- | --- |
 | Sell more, improve the business strategy, diagnose stalled growth or audit the whole product | [commercial strategy](references/commercial-strategy.md), then [growth and sales](references/growth-sales.md) | A prioritized commercial diagnosis and concrete offer, acquisition, sales or product actions with validation |
 | Package an offer, handle buying objections, improve demos, proposals or a sales pipeline | [growth and sales](references/growth-sales.md), then the relevant specialty | Buyer-specific offer or sales material, a clear next commitment and downstream sales measures |
+| Define GTM metrics, pipeline forecasts, attribution, CRM data health, PQL scoring or commercial review scorecards | [GTM measurement](references/gtm-measurement.md), following its relevant evidence routes | Reconciled definitions and cohort/period calculations, evidence limits and accountable next decisions |
+| Design, implement or repair GTM automation, enrichment, CRM workflows, sales handoffs, GTM agents or internal revenue tools | [GTM automation](references/gtm-automation.md), following its relevant measurement and interface routes | An actionable workflow or runnable change with explicit state/actions, ownership, costs, recovery and verification |
 | Differentiate an AI product, evaluate commoditization or choose a durable advantage | [product strategy](references/product-strategy.md), plus [positioning and distribution](references/positioning-distribution.md) when the market is unresolved | A defensible value advantage and a plan to test buyer preference |
 | Set prices, assess freemium economics, research willingness to pay or plan a price increase | [pricing economics](references/pricing-economics.md), then [monetization](references/monetization.md) for packaging | Price and access-policy scenarios tied to customer value, contribution and demand evidence |
 | Compose or assess commercial visual hierarchy, proof imagery, pricing emphasis or activation feedback | [commercial visuals](references/commercial-visuals.md) | Concrete composition changes tied to attention, comprehension and the commercial objective |
@@ -49,6 +52,8 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Change localized numbers, currencies, messages, dates or scheduled times | [locale-sensitive values](references/interaction-accessibility.md#locale-sensitive-values-and-messages) | Correct display, input round trips and explicit time/currency contracts |
 | Clarify labels, instructions, empty states or errors; reduce redundant content, duplicated feedback or unnecessary controls | [content restraint](references/interaction-accessibility.md#content-restraint); Impeccable's `clarify`, when available, for wording | Concise task-relevant content with necessary context, accessible feedback and recovery preserved |
 | Add, change, or review motion/gestures; choose a transition recipe | [motion](references/motion.md), including optional transitions-dev routing | Purposeful, interruptible movement or an intentional static response |
+| Find animation opportunities or assess where a page/application should remain static | [opportunity discovery](references/motion.md#find-animation-opportunities) | Prioritized source-located proposals, rejected candidates and coverage limits; discovery remains read-only |
+| Identify a described animation, name a motion effect or clarify motion terminology | [motion vocabulary](references/motion-vocabulary.md) | The best matching term and concise explanation, with distinctions or uncertainty when needed |
 | Write, edit, refresh or rewrite marketing copy, headlines or CTAs; improve brand voice or naturalness | [marketing copy](references/landing-pages.md#write-edit-and-refresh-marketing-copy), following only its relevant brief and claim routes | Usable copy within the requested editing scope, with consistent voice and supported claims |
 | Create or assess a marketing/landing page; redesign a public page | [landing pages](references/landing-pages.md), including its commercial and review routing | A persuasive decision path or prioritized conversion findings, preserving public contracts |
 | Change public indexing, SSR content, metadata, canonicals, sitemaps or AI discovery | [technical SEO and discovery](references/technical-seo.md) | A coherent public-route contract with HTML/HTTP evidence and explicit deployment and search-acceptance limits |
@@ -79,6 +84,12 @@ Treat links as conditional routes, not a reading checklist. Reuse context alread
 established in the session and follow only the sections needed for the decision.
 A landing-page review does not automatically load market sizing, roadmap or
 retention guidance; broaden only when the requested scope or evidence requires it.
+
+GTM measurement and automation are bundled capabilities; they require no separate
+GTM skill. Load those references for the corresponding operational work, not for
+ordinary frontend changes. Automation implementation uses its own reference and
+the repository's engineering/release workflow; interface implementation also uses
+the reuse and accessibility rules below.
 
 For strategy-only requests, deliver the commercial decision and its next actions,
 including usable sales or offer drafts when requested. For interface planning,

@@ -317,6 +317,78 @@ conversion estimates were not incorporated. Voice edits preserve facts and do no
 invent personal anecdotes or customer evidence. Stylistic cues are not authorship
 tests, and no measured writing, usability or commercial improvement is claimed.
 
+## GTM measurement and automation
+
+The maintainer's local `gtm-engineering` and `gtm-metrics` skills, both metadata
+version `1.0.0`, were comparison material on 2026-10-21. Their metadata identifies
+Chad Boyda's `agent-gtm-skills` as the original source and Felipe Rodrigues
+(`felipfr`) as modifier. The engineering implementation guide and quick reference
+were included in the comparison. Upstream commit revisions were unavailable;
+the maintainer coverage record preserves SHA-256 identifiers for all four files.
+
+The [measurement](references/gtm-measurement.md) and
+[automation](references/gtm-automation.md) references are independently authored
+under CC BY 4.0. They supply the operational subject coverage without copying
+source prose, examples, code, vendor tables or catalogs, or requiring another
+GTM skill. Existing linked commercial references retain their source-available
+terms; these additions do not relicense them. Existing frontend, accessibility,
+commercial-evidence and implementation/release owners remain authoritative.
+
+The scope includes platform selection and workflow implementation, using current
+official documentation at the point of a concrete vendor/API decision. Source
+vendor prices, feature counts, model rankings, universal benchmarks, fixed scoring
+weights and claimed savings were replaced with contextual selection/measurement
+rules. Role responsibilities are retained; salary, job-market and adoption claims
+are not operational requirements. Attribution remains credit allocation rather
+than proof of causality, and engineering completion is distinct from commercial gains.
+
+Primary sources consulted on 2026-10-21 are linked beside the relevant rules:
+ChartMogul's recurring-revenue movement taxonomy and Google's explanations of
+attribution credit versus incremental conversions. No vendor API recipe or
+industry threshold is asserted. Payback conversion, cost allocation and other
+calculations use explicit units and local reporting definitions; these are not
+claims that a project's financial data or live integrations were verified.
+
+## Motion vocabulary
+
+The maintainer's local `animation-vocabulary` entrypoint was comparison material
+on 2026-10-21; it declares no version. Its SHA-256 identifier was
+`40d2b27adfdfeb0570a9f20e7d0255109d9233c50603878bcd0dcd04c923fd94`.
+The [motion vocabulary](references/motion-vocabulary.md) is independently authored
+technical guidance under CC BY 4.0, covering all 91 named terms without copying
+source definitions, examples, invocation scripts or a separate vocabulary website.
+
+The comparison informed reverse lookup, concise answers and disambiguation.
+Fixed readiness replies, verbatim-quotation requirements and restrictions to a
+closed glossary were not incorporated. Existing motion, accessibility and
+performance owners remain authoritative. The reference distinguishes layout
+animation from forced-layout thrashing, skeletons from shimmer, timing curves from
+spatial paths and descriptive effects from browser APIs. It makes no universal
+frame-rate target or hardware/compositing guarantee.
+
+Browser terminology was checked through the configured Context7 MCP against MDN
+on 2026-10-21. Primary links beside the rules cover clipping/masking, view
+transitions, optimization hints and forced style/layout work. No implementation
+or browser-support claim follows from naming an effect.
+
+## Animation opportunity discovery
+
+The maintainer's local `find-animation-opportunities` skill was comparison
+material on 2026-10-21; its entrypoint declares no version and had SHA-256
+`f2db8db5950ef7ed2ebd0ec73f83534c36742f2aef8b5b9b03d8a953064b027d`.
+The independently authored [discovery mode](references/motion.md#find-animation-opportunities)
+is technical guidance under CC BY 4.0. It covers reconnaissance, unanimated
+interaction seams, purpose/frequency/response/function judgments, concrete
+proposals, rejected candidates and read-only handoff without another motion skill.
+
+The source's readiness reply, recipe snippets, fixed timing/easing values,
+candidate/rejection quotas and categorical keyboard/frequency bans were not
+incorporated. Existing project tokens, confirmation semantics, accessibility and
+reduced-motion rules remain authoritative; removing motion is a valid alternative.
+Source searches locate candidates, while observed behavior and measurement
+support defect or performance claims. No source recipe or rendered validation
+is bundled or implied by this comparison.
+
 ## Companion and distribution
 
 [Impeccable](https://github.com/pbakaus/impeccable) is an optional companion and
