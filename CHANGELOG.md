@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add focused marketing-copy routing and guidance for editing scope, brand voice,
+  naturalness and factual refresh, reusing existing claim and public-page owners.
 - Add content restraint for redundant copy, duplicated feedback, excessive
   explanation and unnecessary controls, with focused wording and review routes.
 - Add an optional performance audit procedure for capability discovery, trace and

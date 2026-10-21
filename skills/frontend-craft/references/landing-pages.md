@@ -1,6 +1,6 @@
 # Landing pages
 
-Read for public marketing pages or reviews of a visitor's conversion journey.
+Read for public marketing pages, marketing copy or reviews of a visitor's conversion journey.
 Keep operational dashboard patterns separate from marketing composition.
 For creation or conversion review, first read
 [commercial strategy](commercial-strategy.md) for the objective, audience,
@@ -12,6 +12,12 @@ placement and responsive composition; a copy-only edit need not load it.
 For crawling, indexing, initial public HTML, sitemap or AI discovery work, read
 [technical SEO and discovery](technical-seo.md). It owns those implementation
 checks; this reference owns the visitor's decision and public redesign inventory.
+
+For writing, editing or refreshing marketing text, use
+[marketing copy](#write-edit-and-refresh-marketing-copy). Product labels, errors
+and operational feedback use [content restraint](interaction-accessibility.md#content-restraint)
+and the existing Impeccable `clarify` route. A focused text edit does not require
+visual-composition or full commercial-strategy work.
 
 ## Establish the visitor's decision
 
@@ -162,6 +168,53 @@ from a product capability already available. Keep the promise, supporting proof,
 CTA destination and post-click experience aligned; an honest narrower promise
 is preferable to an unsupported stronger one. Flag contradictions with approved
 copy rather than silently changing commercial facts.
+
+## Write, edit and refresh marketing copy
+
+Establish editing scope from the request and supplied text: polishing wording,
+refreshing facts or rewriting the argument. A wording edit preserves the intended
+message, offer, qualifications and next action. A rewrite can change the argument
+within the requested scope; flag a needed positioning or offer decision rather
+than silently making it. For new copy or changed claims, use the
+[commercial brief and claim inventory](#commercial-brief-and-claim-inventory).
+Reuse established context; ask only for missing facts that block accurate copy.
+
+### Voice and naturalness
+
+Use the existing brand guidance and approved writing samples to identify voice:
+formality, vocabulary, rhythm and acceptable humor. Keep the voice recognizable
+while adapting tone to the audience and situation. Product names, domain terms
+and legal meaning remain stable. Neutral technical or legal prose can be the
+appropriate voice; do not inject personality merely to make it sound human.
+
+Replace inflated praise, vague authority and formulaic filler with the supported
+mechanism, example or outcome. Changing synonyms alone does not make a vague
+claim useful. Keep author notes, editing commentary and chatbot offers out of
+publishable copy. Preserve factual scope and meaningful uncertainty; never add
+personal experience, customer quotations or numbers for a more natural voice.
+Treat stylistic patterns as editing cues, not evidence of who wrote the text;
+punctuation bans and fixed sentence or paragraph counts are not quality measures.
+
+### Refresh factual content
+
+Check affected capabilities, prices, terms, examples, statistics and links against
+current product behavior and dated evidence. Retain accurate historical dates and
+qualifications; changing a date alone does not refresh the underlying evidence.
+When the core promise still holds, update the affected details. A changed
+audience, offer or argument can justify a rewrite within the authorized scope.
+Name unresolved facts instead of filling gaps with plausible claims. Content age
+or declining traffic alone does not establish that the wording caused a problem.
+
+### Recheck the edited copy
+
+Select checks for the actual change: clarity, voice, claim support and consistency
+between the promise, CTA and destination. Read changed lines in their surrounding
+context so a smoother sentence does not lose a limit or contradict nearby text.
+For implemented text changes, verify affected wrapping and controls through the
+existing interface checks; use [public-page contracts](#public-redesign-contracts)
+when those contracts change. Return usable copy and material unresolved facts;
+explain consequential choices without annotating every line or requiring a fixed
+sequence of editorial passes. Editorial review does not prove higher conversion.
 
 ## Narrative and alternatives
 

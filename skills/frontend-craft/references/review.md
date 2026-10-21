@@ -36,6 +36,7 @@ replacement elsewhere in the change before reporting the removal as a defect.
 | Localized amounts/messages and calendar/time-zone values | [locale-sensitive values](interaction-accessibility.md#locale-sensitive-values-and-messages) |
 | Motion, timing, interruption and reduced motion | [motion](motion.md) |
 | Public-page decision path | [landing pages](landing-pages.md) |
+| Marketing wording, brand voice, naturalness or stale commercial copy | [marketing copy](landing-pages.md#write-edit-and-refresh-marketing-copy) |
 | Public indexing, SSR content, metadata, canonical/discovery URLs and response policies | [technical SEO and discovery](technical-seo.md) |
 | Media selection, representation, provenance, crops and delivery | [imagery](imagery.md) |
 | Commercial objective, audience, persuasion and growth priorities | [commercial strategy](commercial-strategy.md) |

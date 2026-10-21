@@ -300,6 +300,23 @@ animations were not incorporated. Approved design direction and accessibility
 remain authoritative. No upstream prose or assets are bundled, and no measured
 usability improvement is claimed.
 
+## Marketing copy editing
+
+Installed `copy-editing` and `copywriting` skills, both metadata version `2.1.0`,
+and `humanizer` version `2.8.2` were comparison material on 2026-10-21. Their
+upstream revisions were not recorded. The independently authored
+[marketing-copy guidance](references/landing-pages.md#write-edit-and-refresh-marketing-copy)
+adds editing scope, voice matching, naturalness and factual refresh to the existing
+commercial owner and retains that guide's existing source terms. Existing audience,
+proof, CTA and claim-inventory guidance remains authoritative. No source prose,
+examples or reference catalogs are bundled.
+
+Fixed editorial sweeps, simulated expert-score gates, prescribed page templates,
+punctuation and paragraph quotas, automatic refresh schedules and unsupported
+conversion estimates were not incorporated. Voice edits preserve facts and do not
+invent personal anecdotes or customer evidence. Stylistic cues are not authorship
+tests, and no measured writing, usability or commercial improvement is claimed.
+
 ## Companion and distribution
 
 [Impeccable](https://github.com/pbakaus/impeccable) is an optional companion and
