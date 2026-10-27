@@ -1,10 +1,12 @@
 # Behavioral design and research blind spots
 
-Read when a task involves defaults, persuasion, choice overload, commitment,
-change resistance or novice confusion. Use the commercial brief already recovered;
+Read when a task involves user behavior, defaults, progress, reciprocity,
+customization, loss framing, price contrast, choice overload, change resistance
+or novice confusion. Use the commercial brief already recovered;
 [commercial strategy](commercial-strategy.md) owns that brief and the applicable
-[source terms](../licenses/revenue-centric-design.txt). This reference adapts
-Richard's principles curated in Revenue-Centric Design; see [sources](../SOURCES.md).
+[source terms](../licenses/revenue-centric-design.txt). Existing commercial guidance
+adapts Richard's principles curated in Revenue-Centric Design; the user-behavior
+additions and research provenance are recorded in [sources](../SOURCES.md).
 
 ## Verify the barrier before choosing a mechanism
 
@@ -22,17 +24,35 @@ Dogfooding catches defects but cannot substitute for a newcomer observation.
 ## Select a mechanism with a measurable consequence
 
 Use these as candidate explanations and experiments, not guaranteed effects.
-Name a mechanism only when it helps explain a concrete proposal.
+Select a mechanism for an observed decision barrier, not a checklist of biases
+to insert into every interface. State the user benefit, proposed change, truthful
+product basis, success measure and trust/recovery guardrail.
+
+### User behavior and decision-making
+
+| Principle | When and how to apply | Boundary | Verify |
+| --- | --- | --- | --- |
+| **Smart defaults** — a preselection can reduce effort and signal a recommendation | Repeated low-risk setup where confirmed context or a saved preference supports the choice; prefill the team's known timezone or a relevant template | Keep the value visible, editable and reversible. Use active choice when a wrong assumption has material cost, privacy or security consequences; a default is not consent to marketing, extra sharing or paid add-ons | Check valid completion, corrections and wrong-value submissions, not just default acceptance; inspect full financial consequences where relevant |
+| **Goal-gradient effect** — perceived proximity to a meaningful goal can motivate continued effort | Show completed milestones and the remaining path to first value; credit an account or import step that actually succeeded | Keep setup completion distinct from achieved value. A head start must identify real completed work or a genuine disclosed bonus; never fabricate “20% complete,” inflate the task list or imply that a step count measures remaining time | Check eligible users reaching the useful outcome, abandonment by step and time-to-value, including non-completers |
+| **Reciprocity** — receiving useful help can influence willingness to respond | Let users inspect a useful report, preview or trial result before an optional signup, sales or upgrade request | Make the value useful on its stated terms and the next commitment optional. Disclose necessary inputs, trial expiry, billing and gates before effort; receiving value creates no obligation or permission to contact someone | Check whether users understand and can use the result, then qualified follow-through, opt-outs and complaints rather than raw lead count |
+| **IKEA effect** — successful contribution to a result can increase its perceived value | Offer a small, relevant customization that produces a usable artifact, such as adapting a starter dashboard to the user's task | Support a working template or skip path when personalization is optional. Preserve drafts and reversibility; disclose paid publication/export before work. Added chores or sunk effort are not user value, and incomplete work does not establish ownership or retention | Check successful artifact creation, effort and abandonment as well as subsequent meaningful use; separate optional participation from evidence of a causal benefit |
+| **Loss aversion** — a real loss relative to a reference point can carry more weight than a comparable gain | Explain an actual trial expiry, downgrade or cancellation consequence with scope, date and available alternatives | Distinguish access changes, stored data and deletion using the real policy. Preserve cancellation/export and free entitlements; describe facts neutrally rather than inventing disappearing work, scarcity or guilt | Check comprehension, appropriate plan choice, retained useful use, refunds, complaints and completed cancellation; fewer exits alone is not success |
+| **Contrast effect** — alternatives or a preceding reference can change perceived value | Compare genuine plans or an optional add-on against a relevant baseline using the same currency, billing period and seat/usage assumptions | Contrast, anchoring on an initial reference and decoy choices are related, not interchangeable. Expensive-first ordering is a hypothesis, not a rule; use real available offers, visible totals and meaningful differences instead of inflated anchors or hidden cheaper options | Check price comprehension, suitable plan selection and downstream value/refunds across display orders; higher selected price or add-on uptake alone is insufficient |
+
+Goal proximity and an endowed head start are distinct: research on bonus reward
+credits does not justify reporting uncompleted product work as complete.
+Participation, customization and conversion are not proof of product value.
+For implementation, follow the relevant journey owner below and
+[interaction and accessibility](interaction-accessibility.md); changing presentation
+does not authorize new data collection, billing or entitlement rules.
+
+### Other decision and research mechanisms
 
 | Mechanism | Candidate application | Boundary and evidence to watch |
 | --- | --- | --- |
-| Defaults and anchoring | Start configuration, seats or billing cadence from a defensible audience need | Make choices and full financial consequences visible and editable; evaluate corrections, refunds and satisfaction alongside acceptance |
-| Relative comparison | Compare plans with real alternatives in consistent units | Use meaningful differences; assess plan fit and retained revenue, not just promoted-tier selection |
 | Choice reduction | Prioritize the next useful action; group or progressively disclose secondary decisions | Retain needed alternatives; select stages and option count from the task, then check completion and backtracking |
-| Progress and commitment | Show completed work and the remaining path to a useful outcome | Credit actual progress; do not invent percentages or impose work merely to create investment |
 | Salience and distinctiveness | Give the action suited to the user's intent clear visual priority | Preserve legibility and understandable alternatives; destructive-action prominence follows the confirmation and recovery contract |
 | Post-choice confidence | After signup or purchase, confirm what was chosen and offer the next useful step | Use actual fulfillment details and relevant proof; measure first value and remorse/refunds, rather than reassurance clicks |
-| Gain/loss framing | Explain a concrete benefit or an actual consequence of changing access | State scope and timing accurately; distinguish loss of access from deletion and preserve cancellation/export paths |
 | Numeric specificity | Use a measured number when its precision helps substantiate a claim | Match precision to the source, date and uncertainty; never invent digits to appear credible |
 | Change resistance | Let customers preview or compare a new workflow, or test an import alongside their current system | Make trial boundaries and data handling clear; preserve recovery and evaluate errors, task success and sustained adoption |
 

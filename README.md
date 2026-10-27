@@ -1,6 +1,6 @@
 # Frontend Craft
 
-Current version: **0.10.0**. See the [release notes](CHANGELOG.md).
+Current version: **0.11.0**. See the [release notes](CHANGELOG.md).
 
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
@@ -204,6 +204,12 @@ stack-neutral; React recipes and the shared UI patterns guide's Tailwind v4 guid
 apply only to matching projects. Consult current documentation for framework and
 Tailwind APIs needed by the implementation.
 
+The [user behavior and decision-making section](skills/frontend-craft/references/behavioral-design.md#user-behavior-and-decision-making)
+covers smart defaults, goal gradient, reciprocity, the IKEA effect, loss aversion
+and contrast. Each principle includes a contextual application, a trust boundary
+and validation criteria. Load it for those decisions, not every frontend change;
+progress, pricing and access consequences must reflect the actual product.
+
 The expanded references cover forced colors and announcement priorities, disabled
 control semantics, state/action composition and refs, interaction-specific motion,
 commercial claims and messaging alternatives, font/bidi/color details, and chart
@@ -377,6 +383,11 @@ The [0.10.0 verification record](evals/verification-0.10.0.md) covers the GTM
 replacement map, 91-term motion vocabulary, performance audits, content restraint
 and marketing-copy additions. It records package, discovery, installation and
 calculation checks separately from unrun agent scenarios and live integrations.
+
+The [0.11.0 verification record](evals/verification-0.11.0.md) covers the six
+user-behavior principles, package/discovery checks, isolated installations and
+three supplied-context model probes. It distinguishes those decisions from
+autonomous reference routing, live usability and commercial outcome evidence.
 
 ## License and sources
 

@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/revenue-centric-design.txt
 metadata:
   author: Antonio Fulgêncio
-  version: "0.10.0"
+  version: "0.11.0"
 ---
 
 # Frontend Craft
@@ -37,7 +37,7 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Set prices, assess freemium economics, research willingness to pay or plan a price increase | [pricing economics](references/pricing-economics.md), then [monetization](references/monetization.md) for packaging | Price and access-policy scenarios tied to customer value, contribution and demand evidence |
 | Compose or assess commercial visual hierarchy, proof imagery, pricing emphasis or activation feedback | [commercial visuals](references/commercial-visuals.md) | Concrete composition changes tied to attention, comprehension and the commercial objective |
 | Improve conversion, activation, revenue or retention; assess audience, offer or behavioral choices | [commercial strategy](references/commercial-strategy.md), then the relevant journey reference below | A commercial objective, diagnosed decision barrier and scoped change hypothesis |
-| Select defaults, persuasion, post-purchase reassurance or migration/change behavior | [behavioral design](references/behavioral-design.md) | A contextual mechanism, user benefit and validation method |
+| Apply user-behavior principles: smart defaults, goal gradient, reciprocity, IKEA effect, loss aversion or contrast; assess persuasion, reassurance or change resistance | [behavioral design](references/behavioral-design.md#select-a-mechanism-with-a-measurable-consequence), including its user behavior and decision-making section | A barrier-specific mechanism, concrete user benefit, honest application and validation with trust guardrails |
 | Prioritize/prune features, improve adoption, differentiate a product or assess market movement | [product strategy](references/product-strategy.md) | Evidence-backed scope and adoption decisions tied to the target audience |
 | Choose a niche, sales motion, channel, referral approach or acquisition target | [positioning and distribution](references/positioning-distribution.md) | A bounded market or distribution hypothesis and its economic assumptions |
 | Map the frontend or refresh its inventory | [mapping](references/mapping.md) | A source-linked map with explicit coverage |
