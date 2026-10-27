@@ -1,12 +1,21 @@
 # Changelog
 
-## Unreleased
+## 0.11.0 — 2026-10-27
+
+This release expands optional user-behavior guidance within the existing
+behavioral-design owner. Selective loading and existing product contracts remain
+authoritative.
 
 - Expand the existing behavioral-design reference with a user behavior and
   decision-making section covering smart defaults, goal gradient, reciprocity,
   the IKEA effect, loss aversion and contrast. Add contextual applications,
   trust boundaries, validation criteria, research provenance and focused routing;
   retain truthful progress, explicit consent, comparable prices and usable exits.
+
+Validation and remaining evidence limits are recorded in
+[the 0.11.0 verification record](evals/verification-0.11.0.md). Supplied-context
+model probes are not an autonomous-routing benchmark or evidence of usability,
+conversion or retention gains.
 
 ## 0.10.0 — 2026-10-21
 
