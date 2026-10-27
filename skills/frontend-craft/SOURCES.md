@@ -389,6 +389,30 @@ Source searches locate candidates, while observed behavior and measurement
 support defect or performance claims. No source recipe or rendered validation
 is bundled or implied by this comparison.
 
+## User behavior and decision-making
+
+The maintainer's six-principle video summary supplied on 2026-10-27 prompted the
+[user behavior section](references/behavioral-design.md#user-behavior-and-decision-making).
+No video URL, title or creator was supplied; the video itself was not inspected.
+The guidance is independently expressed, integrates with the existing behavioral
+owner and retains that commercial reference's preserved source-available terms.
+
+Research consulted for mechanism definitions and limits, not product lift forecasts:
+
+| Principle | Research reference | Consultation scope |
+| --- | --- | --- |
+| Smart defaults | Jachimowicz, Duncan, Weber and Johnson (2019), [When and Why Defaults Influence Decisions](https://www.hbs.edu/faculty/Pages/item.aspx?num=56568) | Author-institution abstract of the meta-analysis; effects vary across contexts |
+| Goal gradient | Kivetz, Urminsky and Zheng (2006), [The Goal-Gradient Hypothesis Resurrected](https://www.columbia.edu/~rk566/Session4/Goal-Gradient_Illusionary_Goal_Progress.pdf) | Author-hosted paper, including the abstract and bonus-stamp example; proximity and endowed progress are distinguished |
+| Reciprocity | Regan (1971), [Effects of a favor and liking on compliance](https://www.sciencedirect.com/science/article/pii/0022103171900254) | Search-indexed publication record and partial abstract only; publisher access was blocked |
+| IKEA effect | Norton, Mochon and Ariely (2012), [The IKEA Effect: When Labor Leads to Love](https://www.hbs.edu/faculty/Pages/item.aspx?num=41121) | Author-institution abstract; successful completion is a boundary, not a guarantee of retention |
+| Loss aversion | Kahneman and Tversky (1979), [Prospect Theory: An Analysis of Decision under Risk](https://www.econometricsociety.org/publications/econometrica/1979/03/01/prospect-theory-analysis-decision-under-risk) | Publisher abstract of decision-making under risk, not a test of upgrade copy |
+| Contrast | Simonson and Tversky (1992), [Choice in Context: Tradeoff Contrast and Extremeness Aversion](https://www.gsb.stanford.edu/faculty-research/publications/choice-context-tradeoff-contrast-extremeness-aversion) | Author-institution abstract about choice-set context, not proof that expensive-first ordering improves outcomes |
+
+This is not a systematic review or a replication assessment. No study statistics,
+video wording, artificial setup progress, obligation-based consent, manufactured
+losses or universal pricing order are adopted as product requirements. User-benefit
+and trust guardrails are application decisions, not claims tested by those papers.
+
 ## Companion and distribution
 
 [Impeccable](https://github.com/pbakaus/impeccable) is an optional companion and

@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- Expand the existing behavioral-design reference with a user behavior and
+  decision-making section covering smart defaults, goal gradient, reciprocity,
+  the IKEA effect, loss aversion and contrast. Add contextual applications,
+  trust boundaries, validation criteria, research provenance and focused routing;
+  retain truthful progress, explicit consent, comparable prices and usable exits.
+
 ## 0.10.0 — 2026-10-21
 
 This release expands standalone commercial operations and optional frontend

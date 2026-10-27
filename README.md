@@ -204,6 +204,12 @@ stack-neutral; React recipes and the shared UI patterns guide's Tailwind v4 guid
 apply only to matching projects. Consult current documentation for framework and
 Tailwind APIs needed by the implementation.
 
+The [user behavior and decision-making section](skills/frontend-craft/references/behavioral-design.md#user-behavior-and-decision-making)
+covers smart defaults, goal gradient, reciprocity, the IKEA effect, loss aversion
+and contrast. Each principle includes a contextual application, a trust boundary
+and validation criteria. Load it for those decisions, not every frontend change;
+progress, pricing and access consequences must reflect the actual product.
+
 The expanded references cover forced colors and announcement priorities, disabled
 control semantics, state/action composition and refs, interaction-specific motion,
 commercial claims and messaging alternatives, font/bidi/color details, and chart
