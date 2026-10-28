@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.12.0 — 2026-10-28
+
+- Add contextual halo-effect, cognitive-load/processing-fluency and peak-end
+  guidance, with trust boundaries, validation criteria and research provenance.
+- Refine opening-view composition, total task effort, first-impression observation,
+  micro-interaction feedback and useful journey endings without prescribing a
+  premium aesthetic or mandatory animation.
+- Combine review routes by named surface and requested lens. Onboarding reviews
+  consult activation guidance and available project philosophy even without
+  analytics; delegated reviewers inherit the relevant context and evidence limits.
+- Extend behavioral evaluation cases and exercise reference loading separately
+  from package validity; consumer installations remain maintainer-controlled.
+- Add actionable blocked/limit states, authoritative undo and outcome-aware
+  payment recovery within existing owners; preserve real reset policies,
+  recoverable work, safe payment reconciliation and private support handoffs.
+- Extend scoped journey consistency and end-to-end recovery verification, and
+  add evidence-bounded service-recovery guidance without guaranteed trust or
+  commercial-lift claims.
+- Deepen the visual, motion, memory, recovery and instruction-loading guidance
+  with primary research and standards. Separate perception from task performance
+  and delayed recall, qualify repeated-failure and baseline comparisons, and
+  retain selective loading with source-freshness and host-aware handoffs.
+
+Release checks and remaining limits are recorded in
+[the 0.12.0 verification record](evals/verification-0.12.0.md). Detailed authoring,
+research and behavioral evidence is in
+[the review-routing evaluation](evals/review-routing-validation.md).
+
 ## 0.11.0 — 2026-10-27
 
 This release expands optional user-behavior guidance within the existing

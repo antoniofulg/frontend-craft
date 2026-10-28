@@ -11,9 +11,12 @@ purpose, behavior and accessibility rules remain authoritative.
 ## Establish purpose and precedent
 
 Name what motion helps the user understand: acknowledgement, a state change,
-spatial continuity, progress or a rare celebratory moment. Consider frequency:
-frequent operational actions should not accumulate waiting or distraction.
-An immediate static update is a valid result when motion adds no useful signal.
+spatial continuity, progress or a rare celebratory moment. A micro-interaction
+can provide immediate, non-animated feedback; routine acknowledgements are not
+automatically memorable peaks. Distinguish meaningful achievement from a hover
+response. Consider frequency: frequent operational actions should not accumulate
+waiting or distraction. An immediate static update is a valid result when motion
+adds no useful signal.
 
 Inspect comparable interactions and existing motion tokens. Match the token's
 semantic role, not just the nearest numeric duration. Follow Impeccable's approved
@@ -90,6 +93,11 @@ Honor reduced-motion preferences by reducing/removing unnecessary displacement,
 parallax and repeated movement. Preserve the information through stable labels,
 icons or gentle changes when appropriate. Reduced motion is not permission to
 retain a distracting effect under a different name.
+Check nonessential interaction motion separately from automatic movement or
+updates: [2.3.3 (AAA)](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html)
+and [2.2.2 (A)](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html)
+have different scope. Follow the adopted target; a reduced-motion CSS branch
+alone does not prove conformance.
 
 Restrict hover-only motion to suitable pointing devices and keep the action
 usable on touch and keyboard. Essential meaning must remain when animation is
@@ -185,6 +193,16 @@ and scrub frame by frame. Identify the problematic state/frame and input sequenc
 then recheck at normal speed and with reduced motion. Slow playback diagnoses
 composition and continuity, not real-time performance. Name unavailable inspection
 tools and untested states rather than reporting a visual pass.
+
+For a claimed motion benefit, name the task: detecting feedback, following an
+object, interpreting change or completing repeated work. Compare an equally
+informative static alternative with equivalent content and balanced order where
+feasible. Inspect realistic repeated actions; record correct interpretation,
+errors and task time including animation, accumulated waiting and loss of place.
+Report preference separately using the
+[measurement distinctions](behavioral-design.md#separate-perception-performance-and-recall).
+No observed target benefit leaves the claim unestablished, with uncertainty
+reported; a visually preferred effect is not automatically more usable.
 
 ### Review checklist
 

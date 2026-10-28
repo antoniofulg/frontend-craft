@@ -1,12 +1,19 @@
 # Onboarding and activation
 
-Read when improving first-run onboarding, empty states or the journey from
-signup to useful product use. Apply the brief and reuse terms in
-[commercial strategy](commercial-strategy.md); load
-[interaction and accessibility](interaction-accessibility.md#onboarding-and-authentication)
-when implementing or inspecting controls and recovery.
-For empty-state composition, visible progress or first-result feedback, read
+Read when creating, changing or reviewing first-run onboarding, empty states or
+the journey from signup to useful product use, including visual and commercial
+reviews without analytics or reported drop-off. Apply the brief and reuse terms
+in [commercial strategy](commercial-strategy.md). Reviews follow the cumulative
+surface/lens routes in [review](review.md#apply-only-relevant-lenses); first-value
+philosophy and guidance/pattern choice are part of onboarding review, not merely
+control checks or funnel measurement. Use the relevant project product, design
+and onboarding guidance already recovered before proposing a different approach.
+Load [interaction and accessibility](interaction-accessibility.md#onboarding-and-authentication)
+when implementing or inspecting controls and recovery. For empty-state composition,
+visible progress or first-result feedback, read
 [commercial visuals](commercial-visuals.md#show-the-path-and-acknowledge-useful-progress).
+A narrow copy, motion or control repair stays within its affected contracts;
+it does not require a whole-funnel activation audit.
 
 ## Define the first useful result
 
@@ -14,6 +21,13 @@ Describe an observable result the user came to obtain, and the event or evidence
 that shows it happened. Account creation, tour completion and time spent are
 intermediate activity unless they actually deliver that result. For collaborative
 products, distinguish individual setup from the team's first useful outcome.
+
+In a review, assess whether the sequence and chosen guidance help this audience
+obtain that result, using the [pattern choices](#select-a-pattern-for-the-audience-and-task)
+below. Missing analytics does not remove this question: trace the available
+product behavior and project intent, distinguish an inferred result from an
+observed outcome, and name what remains uninspected. A polished welcome screen
+or completed checklist alone does not demonstrate useful value.
 
 Define time-to-value with a start event, end event and eligible cohort. Report
 how many users never reach the result as well as timing among those who do;

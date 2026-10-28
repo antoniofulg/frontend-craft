@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/revenue-centric-design.txt
 metadata:
   author: Antonio Fulgêncio
-  version: "0.11.0"
+  version: "0.12.0"
 ---
 
 # Frontend Craft
@@ -37,17 +37,17 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Set prices, assess freemium economics, research willingness to pay or plan a price increase | [pricing economics](references/pricing-economics.md), then [monetization](references/monetization.md) for packaging | Price and access-policy scenarios tied to customer value, contribution and demand evidence |
 | Compose or assess commercial visual hierarchy, proof imagery, pricing emphasis or activation feedback | [commercial visuals](references/commercial-visuals.md) | Concrete composition changes tied to attention, comprehension and the commercial objective |
 | Improve conversion, activation, revenue or retention; assess audience, offer or behavioral choices | [commercial strategy](references/commercial-strategy.md), then the relevant journey reference below | A commercial objective, diagnosed decision barrier and scoped change hypothesis |
-| Apply user-behavior principles: smart defaults, goal gradient, reciprocity, IKEA effect, loss aversion or contrast; assess persuasion, reassurance or change resistance | [behavioral design](references/behavioral-design.md#select-a-mechanism-with-a-measurable-consequence), including its user behavior and decision-making section | A barrier-specific mechanism, concrete user benefit, honest application and validation with trust guardrails |
+| Apply user-behavior principles: defaults, progress, reciprocity, IKEA effect, loss aversion, contrast, halo effect, cognitive load/fluency or peak-end; assess persuasion, change resistance or service-recovery claims | [behavioral design](references/behavioral-design.md#select-a-mechanism-with-a-measurable-consequence), including its user behavior and decision-making section | A barrier-specific mechanism, concrete user benefit, honest application and validation with trust guardrails |
 | Prioritize/prune features, improve adoption, differentiate a product or assess market movement | [product strategy](references/product-strategy.md) | Evidence-backed scope and adoption decisions tied to the target audience |
 | Choose a niche, sales motion, channel, referral approach or acquisition target | [positioning and distribution](references/positioning-distribution.md) | A bounded market or distribution hypothesis and its economic assumptions |
 | Map the frontend or refresh its inventory | [mapping](references/mapping.md) | A source-linked map with explicit coverage |
 | Audit reusable UI patterns, consolidate duplicated components/styles, or apply shared owners across an application | [shared UI patterns](references/shared-ui-patterns.md) | Coverage of each style family, source-linked gaps and exceptions; when implementation is requested, migrated consumers, maintained ownership guidance and propagation checks |
 | Change shared styles, typography, colors, spacing, states, themes or layer conventions | [change a shared style](references/shared-ui-patterns.md#change-a-shared-style) | A change at the owner matching the requested scope, inherited by intended consumers with affected variants and propagation checks |
-| Plan, create, recreate, or change a page/component | [reuse and consistency](references/reuse-consistency.md) | Proposal or implementation grounded in matching precedents |
+| Plan, create, recreate or change a page/component; compare journey handoffs and returns | [reuse and consistency](references/reuse-consistency.md) | Proposal, implementation or scoped comparison grounded in matching precedents and journey contracts |
 | Design or change a component API/state owner | [components](references/components.md) | The smallest compatible extension of the actual owner |
-| Fix request races, uncertain saves, repeated submissions or optimistic recovery | [async recovery](references/components.md#async-state-and-recovery) | Context-safe state updates and recovery using the existing mutation contract |
+| Fix request races, uncertain saves, repeated submissions, optimistic recovery or undo | [async recovery](references/components.md#async-state-and-recovery), including [undo and reversibility](references/components.md#undo-and-reversibility) when offered | Context-safe state updates and recovery using the existing mutation contract |
 | Change tables, filters, sorting, paging or bulk selection | [collections](references/components.md#collections-sorting-and-selection), following its semantics/performance routes | Explicit query and selection scope with usable table behavior |
-| Change controls, forms, onboarding, authentication, layout adaptation, or keyboard behavior | [interaction and accessibility](references/interaction-accessibility.md) | Usable behavior in the relevant states and environments |
+| Change controls, forms, onboarding, authentication, blocked/limit states, layout adaptation or keyboard behavior | [interaction and accessibility](references/interaction-accessibility.md), including [limits and unavailable states](references/interaction-accessibility.md#limits-and-unavailable-states) when applicable | Usable behavior in the relevant states and environments |
 | Change deep links, Back/Forward behavior, restored views or unsaved drafts | [navigation resilience](references/interaction-accessibility.md#navigation-and-draft-resilience) | Useful restoration with protected drafts and current authorization |
 | Change localized numbers, currencies, messages, dates or scheduled times | [locale-sensitive values](references/interaction-accessibility.md#locale-sensitive-values-and-messages) | Correct display, input round trips and explicit time/currency contracts |
 | Clarify labels, instructions, empty states or errors; reduce redundant content, duplicated feedback or unnecessary controls | [content restraint](references/interaction-accessibility.md#content-restraint); Impeccable's `clarify`, when available, for wording | Concise task-relevant content with necessary context, accessible feedback and recovery preserved |
@@ -58,9 +58,9 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Create or assess a marketing/landing page; redesign a public page | [landing pages](references/landing-pages.md), including its commercial and review routing | A persuasive decision path or prioritized conversion findings, preserving public contracts |
 | Change public indexing, SSR content, metadata, canonicals, sitemaps or AI discovery | [technical SEO and discovery](references/technical-seo.md) | A coherent public-route contract with HTML/HTTP evidence and explicit deployment and search-acceptance limits |
 | Find, select, generate, crop or credit images/video; prepare a product demonstration | [imagery](references/imagery.md) | Relevant, traceable visual material with honest representation and verified delivery |
-| Improve first-run onboarding, empty-state guidance or activation | [activation](references/activation.md) | A shorter or clearer path to a measurable first useful result |
+| Create, change or review first-run onboarding, empty-state guidance or activation | [activation](references/activation.md) | A justified path and guidance pattern leading to the first useful result; measured outcomes where available |
 | Design or review pricing, trials, checkout, upgrades or expansion | [monetization](references/monetization.md) | An understandable offer and a revenue hypothesis evaluated across the full funnel |
-| Improve purchase completion or lead-form effort, trust and qualification | [checkout and forms](references/checkout.md) | A clear, recoverable completion path with justified fields and visible terms |
+| Review payment recovery or improve purchase completion, lead-form effort, trust or qualification | [checkout and forms](references/checkout.md) | A clear, recoverable completion path with justified fields and visible terms |
 | Select dashboard priorities, role-specific insights and next actions | [dashboards](references/dashboards.md) | A panel connecting relevant evidence to a useful decision or action |
 | Diagnose churn or review renewal, cancellation and recovery flows | [retention](references/retention.md) | A cause-specific retention proposal and a usable exit path |
 | Choose success metrics, assess experiment results or plan commercial validation | [experimentation](references/experimentation.md) | Defined cohorts, denominators, success criteria and evidence limits |
@@ -68,22 +68,30 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Audit web performance or production bundles; diagnose Core Web Vitals, responsiveness, loading, request chains, layout shifts or a performance regression | [performance](references/performance.md), with its optional audit procedure | A traced cause and a comparable measurement with explicit evidence limits |
 | Refine nested corners, display typography, font features, mixed-direction text, or advanced color | [visual details](references/visual-details.md) | A scoped technical refinement within the existing design |
 | Choose or review a chart | [charts](references/charts.md) | A truthful encoding and accessible access to the data |
-| Review a page, component, change, or consistency | [review](references/review.md) | Evidence-backed findings and verification limits |
+| Review a page, component, journey, change, or consistency | [review](references/review.md), following its cumulative surface and lens routes | Evidence-backed findings and verification limits |
 
-Load only matching references. For a broad strategic audit, use the growth and
-sales coverage table to assess every commercial theme, reading the corresponding
-specialties where evidence or a decision requires them. Mark unknowns explicitly.
-A focused request needs only its relevant themes. A heading correction needs the
-nearest page precedents, not a whole-repository audit. An explicit review remains read-only
-unless fixing is also requested. A product, business problem or revenue objective
-is an actionable strategic target; it does not require a page or code change.
+Select references cumulatively: identify every named surface/journey and every
+requested lens, then load their matching routes. Generic review supplements,
+rather than replaces, the surface owner; use the review reference's applicable
+landing-page/onboarding routes for those reviews. For a broad strategic audit,
+use the growth and sales coverage table to assess every commercial theme,
+reading the corresponding specialties where evidence or a decision requires
+them. Mark unknowns explicitly. A focused request needs only its relevant themes.
+A heading, copy, motion or control repair needs its affected contracts and nearest
+precedents, not a whole-funnel or whole-repository audit. An explicit review
+remains read-only unless fixing is also requested. A product, business problem
+or revenue objective is an actionable strategic target; it does not require a
+page or code change.
 With no identifiable target, ask for the product or requested interface scope
 instead of selecting an arbitrary last commit.
 
-Treat links as conditional routes, not a reading checklist. Reuse context already
-established in the session and follow only the sections needed for the decision.
-A landing-page review does not automatically load market sizing, roadmap or
-retention guidance; broaden only when the requested scope or evidence requires it.
+Treat links as conditional routes, not a reading checklist. Read the sections
+needed for selected surfaces and lenses, including applicable constraints and
+caveats, not the whole catalog. Reuse material while it remains available and
+current; reopen affected sections when their source changed, relevant context
+was lost, or a new task branch applies. A landing-page review does not
+automatically load market sizing, roadmap or retention guidance; broaden only
+when the requested scope or evidence requires it.
 
 GTM measurement and automation are bundled capabilities; they require no separate
 GTM skill. Load those references for the corresponding operational work, not for
@@ -198,6 +206,8 @@ Record family, state and theme inspection separately from source-traced adoption
 Coordinate with Impeccable's inspection pass rather than adding a second polish loop.
 For visual creation/refinement, use the relevant [rendered critique](references/review.md#critique-the-rendered-composition)
 questions in that pass; a narrow behavioral repair does not need a page-wide critique.
+Changed recovery paths also use [recovery verification](references/review.md#verify-a-recovery-path),
+including narrow behavioral changes, without starting a page-wide visual critique.
 
 Report the useful result: reused/extended owners, deliberate differences, checks
 actually performed, and unresolved gaps. Source inspection supports source claims;

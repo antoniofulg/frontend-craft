@@ -20,6 +20,10 @@ the intended decision priority. A saturated button can still disappear among
 equally saturated cards. Reduce competing emphasis before increasing every
 element's size. Keep secondary actions visible at a lower emphasis appropriate
 to their role; essential navigation and disclosures remain usable.
+Use spacing to expose real relationships: keep labels with controls and proof
+with the claim it supports, while separating distinct groups and priorities.
+Judge density changes by findability, comprehension and correct action, not the
+quantity of empty space or resemblance to a premium brand.
 
 Use the project's tokens and approved visual direction to express this hierarchy.
 Impeccable can supply art direction; this skill still makes composition decisions
@@ -28,11 +32,15 @@ authorized scope, rather than generating an unrelated palette or font system.
 
 ## Compose the promise, proof and action
 
-Make the opening view communicate the offer, intended audience and next step.
-Group the promise with a relevant demonstration and place the CTA where the
-reading sequence makes its purpose clear. Avoid forcing everything into one
-viewport at the expense of legibility. Common scanning patterns are hypotheses
-about attention, not fixed coordinates for every language, device or audience.
+Give the opening view one dominant message, concise supporting context, a clearly
+prioritized next action and a relevant presentation of the actual product or
+outcome. Typography, spacing, imagery and navigation should support that focus.
+Match explanation to audience familiarity: a recognized product may lead with its
+name; an unfamiliar offer needs its value explained. Choose the composition for
+the subject, not a centered Apple-style template, mandatory giant image or fixed
+element/word count. Preserve legibility rather than forcing everything into one
+viewport. Common scanning patterns are hypotheses about attention, not fixed
+coordinates for every language, device or audience.
 
 Use section rhythm, headings and spacing to make objections and answers easy
 to find. Put an applicable result, testimonial or reassurance beside the decision
@@ -118,11 +126,21 @@ example preview can show the destination; distinguish it visibly from real
 account activity. Keep the current step, completed work and remaining necessary
 effort understandable without making the screen a tour of every feature.
 
-At a meaningful first result, make success perceptible and show the next useful
-action. A changed result view, concise summary or proportional celebration can
-reinforce achievement. Preserve accurate data; an animated rising chart needs
-actual values that support the shape. Follow [activation](activation.md) for the
-result definition and [motion](motion.md) for interruption and reduced motion.
+At a meaningful first result, make the actual outcome perceptible and show the
+next useful action. Carry this through the requested journey endpoint, not
+automatically the page footer: communicate accurately what happens next and leave
+a useful end state. A changed result view, concise summary or proportional
+celebration can reinforce achievement. Preserve accurate data; an animated rising
+chart needs actual values that support the shape. Follow [activation](activation.md)
+for the result definition, [checkout](checkout.md) for purchase completion and
+[motion](motion.md) for interruption and reduced motion. See
+[user behavior and decision-making](behavioral-design.md#user-behavior-and-decision-making)
+for the peak-end principle and its limits.
+
+For failed, cancelled or unresolved endings, show the actual outcome, preserved
+work and available next action. Acknowledging an attempt is not confirming success.
+Keep useful completion information available after celebration; decoration must
+not delay access to the result or recovery.
 
 ## Inspect composition and validate the hypothesis
 

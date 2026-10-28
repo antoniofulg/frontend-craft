@@ -9,7 +9,9 @@ accessibility target and current authoritative standards when exact criteria mat
 
 Give each visible element a useful role in understanding, deciding, acting or
 recovering. Remove repetition that adds no needed context, instruction or evidence;
-judge usefulness against the actual task and audience, rather than word count.
+judge usefulness against total task effort and audience, rather than word count.
+Reducing visible content must not increase guessing, memory demands or unnecessary
+disclosure steps. Keep needed detail and recovery reachable when they are useful.
 
 - **Copy:** remove subtitles that merely repeat headings and help text that
   restates an obvious control. For example, `Manage your projects` beneath
@@ -45,6 +47,26 @@ failure; provide a concrete retry or correction path. Announce asynchronous
 outcomes where appropriate without repeatedly interrupting assistive technology.
 For request ordering, uncertain saves and optimistic rollback, use
 [async recovery](components.md#async-state-and-recovery).
+
+### Limits and unavailable states
+
+Explain what is blocked, its verified cause and scope, what remains available
+and the next supported action. Distinguish renewable quotas/rate limits, fixed
+plan caps, expired sessions, permission restrictions and service outages; they
+do not share a universal retry or upgrade remedy. If the cause is unknown, say so.
+Show reset/restoration timing only from the authoritative policy or service,
+with an unambiguous date and time zone when relevant; otherwise state that timing
+is unavailable rather than inventing a reset or restoration ETA.
+A server-advised wait such as `Retry-After` does not establish a business quota
+reset or guarantee restoration. When the wait expires, recheck availability
+through the existing owner rather than announcing recovery from elapsed time.
+
+Keep eligible work and access available under the existing authorization and
+[draft contract](#navigation-and-draft-resilience). Offer reauthentication,
+waiting, correction, an eligible alternative or existing support as appropriate
+to the actual cause. A recovery path must not become a forced upsell.
+Keep the explanation reachable beside the affected action and announce changed
+outcomes through [announcement priority](#choose-announcement-priority).
 
 ### Loading feedback
 
@@ -162,14 +184,23 @@ navigation with unsaved edits and failed saves where relevant. See
 ## Forms and feedback
 
 Use visible labels, instructions at the relevant point, and errors associated
-with the affected field. Explain how to recover. Choose validation timing for
-the task; avoid scolding untouched fields or disrupting ongoing composition.
-Keep submitted values after a recoverable failure and focus errors deliberately.
+with the affected field. Identify the detected error in text and give known
+correction suggestions unless security or purpose would be jeopardized
+([3.3.1 A](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html),
+[3.3.3 AA](https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html)).
+Choose validation timing for the task; avoid scolding untouched fields or
+disrupting composition. Keep submitted values after recoverable failure and
+focus errors deliberately.
 
 Use meaningful input types and autocomplete where applicable. Support paste
 and password managers. Use the [locale-sensitive value contract](#locale-sensitive-values-and-messages)
-for localized entry and formatting. Destructive operations need suitable
-protection proportional to their consequence, such as undo or confirmation.
+for localized entry and formatting. Destructive operations need protection
+proportional to their consequence: use [real undo](components.md#undo-and-reversibility)
+where supported, or appropriate confirmation.
+For submissions covered by the adopted
+[3.3.4 (AA)](https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-legal-financial-data.html)
+target, provide a reversible, checked, or review/confirm/correct safeguard as
+appropriate. The criterion does not require undo or confirmation on every save.
 
 ## Locale-sensitive values and messages
 
