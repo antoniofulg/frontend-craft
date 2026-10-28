@@ -83,9 +83,15 @@ to [monetization](monetization.md), purchase/form completion to
 
 ## Diagnose comprehension, qualification and trust
 
-Show the opening view briefly to a representative unfamiliar buyer, then ask
-what the product does, who it serves and why it matters. Record their actual
-answer; an agent's own interpretation is not a user test. Choose pain-led,
+Show the opening view briefly to a representative unfamiliar buyer and record
+visual impressions separately from offer comprehension under realistic reading
+conditions. Rapid-exposure appeal ratings do not establish safety, usability or
+buying intent. Ask what the product does, who it serves, why it matters and what
+the next action will do. Record actual answers and perceived quality/credibility.
+Distinguish brand familiarity, category knowledge and workflow experience:
+an unfamiliar brand does not imply an inexperienced user. Compare newcomer and
+practiced groups when both matter. An agent's interpretation is not user evidence;
+without representative feedback, label benefits as hypotheses. Choose pain-led,
 outcome-led or category-led wording by awareness, then check comprehension.
 
 Separate cold traffic from followers, referrals and returning visitors when

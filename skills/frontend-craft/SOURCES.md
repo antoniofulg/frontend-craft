@@ -413,6 +413,112 @@ video wording, artificial setup progress, obligation-based consent, manufactured
 losses or universal pricing order are adopted as product requirements. User-benefit
 and trust guardrails are application decisions, not claims tested by those papers.
 
+## Premium-web psychology
+
+The maintainer's summary of a video described as "The Psychology of Premium
+Websites," attributed to Sam Crawford, and an Apple screenshot prompted the halo,
+cognitive-load/processing-fluency and peak-end additions in the existing
+[behavioral owner](references/behavioral-design.md#user-behavior-and-decision-making).
+No video URL was supplied; the video itself and its exact publication metadata
+were not independently inspected.
+The screenshot is illustrative context, not evidence of usability, product quality
+or commercial outcomes. Neither source establishes a universal Apple-style
+composition or a reason to replicate its assets.
+
+Research consulted on 2026-10-28 supports mechanism definitions within the access
+and study limits below. Interface applications, trust boundaries and proposed
+checks are independently authored hypotheses, not UI findings or conversion-lift
+claims from these sources.
+
+| Mechanism | Research reference | Consultation scope |
+| --- | --- | --- |
+| Halo effect | Nisbett and Wilson (1977), [The halo effect: Evidence for unconscious alteration of judgments](https://deepblue.lib.umich.edu/items/da93fb79-74ef-4ff0-a1fe-da088de2dc42) | Search-indexed introduction from the university-hosted paper defines global evaluation influencing particular judgments; direct repository/page and PDF access returned HTTP 403, and APA access returned a challenge. The full study was not inspected; this is not evidence that visual polish establishes product quality or actual usability |
+| Cognitive load | Sweller (1988), [Cognitive Load During Problem Solving: Effects on Learning](https://doi.org/10.1207/s15516709cog1202_4) | Publisher-deposited abstract inspected through [Crossref](https://api.crossref.org/works/10.1207/s15516709cog1202_4); Wiley and ScienceDirect access returned HTTP 403. The abstract concerns problem-solving demands, processing capacity and schema acquisition, not a test of sparse interfaces or onboarding steps |
+| Processing fluency | Reber, Schwarz and Winkielman (2004), [Processing Fluency and Aesthetic Pleasure: Is Beauty in the Perceiver's Processing Experience?](https://pages.ucsd.edu/~pwinkiel/reber-schwarz-winkielman-beauty-PSPR-2004.pdf) | Author-hosted paper inspected through its definitions of perceptual/conceptual fluency, reviewed contrast/clarity evidence, and expectation/attribution qualifications. This theoretical review relates processing ease to aesthetic evaluation; it does not establish actual comprehension, task success or a universal visual formula |
+| Peak-end rule and remembered experience | Kahneman, Fredrickson, Schreiber and Redelmeier (1993), [When More Pain Is Preferred to Less: Adding a Better End](https://doi.org/10.1111/j.1467-9280.1993.tb00589.x); Fredrickson and Kahneman (1993), [Duration neglect in retrospective evaluations of affective episodes](https://pubmed.ncbi.nlm.nih.gov/8355141/) | First paper's publisher-deposited abstract inspected through [Crossref](https://api.crossref.org/works/10.1111/j.1467-9280.1993.tb00589.x); direct SAGE access returned HTTP 403. Second paper's abstract inspected through PubMed/NCBI; a university-hosted PDF yielded no usable extracted text. These cover aversive cold-water episodes and pleasant/aversive film clips, respectively, not proof that micro-interactions are emotional peaks or that better UI endings increase conversion |
+| Rapid visual impressions | Lindgaard, Fernandes, Dudek and Brown (2006), [Attention web designers: You have 50 milliseconds to make a good first impression!](https://www.makinggood.ac.nz/media/1265/lindegaardetal_2006_attention.pdf), DOI 10.1080/01449290500330448 | Empirical; original paper via academic mirror, methods/results inspected. Mean visual-appeal ratings were strongly related across brief exposure durations, with weaker individual agreement at the shortest exposure. Screenshot judgments do not establish comprehension, safety, buying intent or a universal decision deadline |
+| Complexity and category familiarity | Tuch et al. (2012), [The role of visual complexity and prototypicality regarding first impression of websites](https://research.google.com/pubs/archive/38315.pdf), DOI 10.1016/j.ijhcs.2012.06.003 | Empirical; institution-hosted manuscript inspected. Perceived complexity and corporate-site prototypicality interacted in beauty ratings of passive screenshots. Layout/color effects were not isolated; this is not a whitespace formula or proof that familiar brands and unfamiliar workflows are equivalent |
+| Website aesthetics versus performance | Thielsch, Haines and Flacke (2019), [Experimental investigation on the effects of website aesthetics on user performance in different virtual tasks](https://pmc.ncbi.nlm.nih.gov/articles/PMC6388663/), DOI 10.7717/peerj.6516 | Empirical; open-access article inspected. Perceived ratings improved without significant accuracy/time effects across the tested search, creative and transfer tasks. One medical-information setting and substantial attrition limit transfer; nonsignificance does not establish universal equivalence |
+| A contrasting aesthetics/performance result | Sonderegger and Sauer (2010), [The influence of design aesthetics in usability testing: Effects on user performance and perceived usability](https://folia.unifr.ch/documents/302271/files/Sonderegger_Sauer2010.pdf), DOI 10.1016/j.apergo.2009.09.002 | Empirical; original manuscript inspected. Attractive simulated phones improved perceived usability and task measures in two tasks with adolescents. Limited task/population and possible familiarity/prototypicality confounds prevent a universal aesthetics or web-sales claim |
+| Text whitespace | Chaparro et al. (2004), [Reading Online Text: A Comparison of Four White Space Layouts](https://portfolio.erau.edu/en/publications/reading-online-text-a-comparison-of-four-white-space-layouts/) | Empirical; institutional abstract only, original server unavailable. Margins affected reading measures and satisfaction; leading affected preference without a reading-performance effect. Text margins/leading do not establish a whole-page minimalism rule or numeric commercial lift |
+| Task-specific motion benefit | Heer and Robertson (2007), [Animated Transitions in Statistical Data Graphics](https://idl.uw.edu/papers/animated-transitions), DOI 10.1109/TVCG.2007.70539 | Empirical; author-hosted full paper inspected. Animation helped graphical tracking, but value-change results varied and more elaborate staging was not always better. Masked chart tasks do not establish general button-feedback, repeated-work or conversion benefits |
+| Motion preference/performance tradeoff | Robertson et al. (2008), [Effectiveness of Animation in Trend Visualization](https://pubmed.ncbi.nlm.nih.gov/18988980/), DOI 10.1109/TVCG.2008.125 | Empirical; PubMed abstract only. Animation was enjoyable and fast for presentation but error-prone; static alternatives were faster for analysis and small multiples more accurate. Trend interpretation is not a universal micro-interaction result |
+| Interactive peak/end limits | Gutwin et al. (2016), [Peak-End Effects on Player Experience in Casual Games](https://www.cs.mcgill.ca/~jeromew/data/COMP766/CHI2016/p5608-gutwin.pdf), DOI 10.1145/2858036.2858419 | Empirical; original paper via university mirror, methods/results/limitations inspected. Sequencing affected remembered challenge consistently, while fun/interest/replay-preference effects appeared in only one of three games. Small studies, immediate ratings and stated preference do not establish observed retention |
+| Complex experience and recall interval | Strijbosch et al. (2019), [From Experience to Memory: On the Robustness of the Peak-and-End-Rule for Complex, Heterogeneous Experiences](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.01705/full), DOI 10.3389/fpsyg.2019.01705 | Empirical; full text inspected. Peak valence best predicted immediate remembered valence; average valence best predicted approximately one-week evaluations, and end valence was not significant. One student VR-narrative study with retrospectively reconstructed affect, not causal proof about checkout or onboarding |
+
+This bounded consultation is not a systematic review, replication assessment or
+validation of a particular page. No study text, statistics, screenshot assets or
+video wording are reproduced. The additions extend the existing commercial
+behavioral reference under its preserved
+[source-available terms](licenses/revenue-centric-design.txt); independently
+expressing them does not relicense that owner. Existing technical guidance,
+including linked content restraint, retains CC BY 4.0. The research references
+and their own access/publication terms do not replace either package scope.
+
+## Service recovery and operational quality
+
+A maintainer-supplied video summary prompted the additions for blocked states,
+undo, payment recovery, journey consistency and recovery evidence, plus the
+conditional service-recovery discussion in the existing behavioral owner. No
+video URL, title or creator was supplied for this summary; the video and its
+Undertone and crypto-card examples were not independently inspected. Their
+reported account, deposit or perception changes are not adopted as causal
+evidence or product forecasts.
+
+On 2026-10-28, the [University of Lisbon publication record and abstract](https://researchportal.ulisboa.pt/en/publications/service-recovery-paradox-a-meta-analysis/)
+for de Matos, Henrique and Rossi (2007), *Service Recovery Paradox: A Meta-Analysis*,
+DOI [10.1177/1094670507303012](https://doi.org/10.1177/1094670507303012), was
+consulted. The abstract reports a positive aggregate effect on satisfaction,
+nonsignificant aggregate effects on repurchase intentions, word-of-mouth and
+corporate image, and variation with study characteristics. Nonsignificance is
+not proof of zero effect. Publisher access returned HTTP 403; the full paper was
+not inspected. This bounded consultation does not establish effects on trust,
+deposits, conversion or retention for a particular interface.
+
+Additional recovery studies were consulted on the same date:
+
+| Source | Evidence and access | Finding and transfer limit |
+| --- | --- | --- |
+| McCollough, Berry and Yadav (2000), [An Empirical Investigation of Customer Satisfaction after Service Failure and Recovery](https://doi.org/10.1177/109467050032002) | Original abstract reproduced in OpenAlex inspected; publisher returned HTTP 403 and full text was not inspected | Two scenario experiments reported satisfaction below error-free service even with high recovery performance. A counterexample to guaranteed restoration, not a universal outcome or observed revenue result |
+| Maxham and Netemeyer (2002), [A Longitudinal Study of Complaining Customers' Evaluations of Multiple Service Failures and Recovery Efforts](https://doi.org/10.1509/jmkg.66.4.57.18512) | Publisher-indexed abstract excerpts and [OpenAlex abstract metadata](https://api.openalex.org/works/W1970492996?select=title,doi,publication_year,abstract_inverted_index) inspected; full text inaccessible | Repeated-measures field research reported paradoxical increases after one failure but not two. Satisfaction, recommendation likelihood and repurchase intent are not transactions; absence of a paradox does not by itself establish below-baseline outcomes |
+| Magnini et al. (2007), [The service recovery paradox: justifiable theory or smoldering myth?](https://digitalcommons.longwood.edu/business_facpubs/210/), DOI 10.1108/08876040710746561 | University-hosted abstract of role-play experiments inspected; full publisher text returned HTTP 403 | Paradoxical satisfaction was more likely under limited severity, no prior failure and particular perceived causes. Student participants and one setting do not justify deterministic thresholds or externalizing blame |
+
+The operational instructions are independently authored application contracts,
+not requirements tested by that meta-analysis. Linked technical owners retain
+CC BY 4.0; additions to the existing checkout and behavioral commercial owners
+retain their preserved source-available terms. No source wording, statistics,
+video assets or executable recipes are bundled; existing mixed terms remain.
+
+## Operational standards and usability heuristics
+
+The following were consulted on 2026-10-28 as standards or expert guidance,
+not empirical proof of premium appeal or commercial uplift:
+
+| Source and type | Consulted contract and boundary |
+| --- | --- |
+| W3C [WCAG 2.2](https://www.w3.org/TR/WCAG22/), Recommendation and informative Understanding pages | Relevant error identification/suggestion, serious-submission protection, consistent identification/help, status and motion criteria inspected. 3.3.4 AA permits reversible, checked, or review/confirm/correct protection; it does not universally require undo or dialogs. 2.3.3 is AAA and differs from 2.2.2 A. Apply the adopted target and applicable exceptions; Understanding text is informative |
+| WAI APG [Alert](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) and [Modal Dialog](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/), implementation guidance | Patterns inspected for focus, announcements and consequential actions. APG recommendations are not themselves WCAG success criteria, nor a requirement to put confirmation on every save |
+| [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html), [RFC 6585](https://www.rfc-editor.org/rfc/rfc6585.html) and [RFC 9457](https://www.rfc-editor.org/rfc/rfc9457.html), HTTP standards | Relevant retry, accepted-status, Retry-After/429 and problem-detail/privacy sections inspected. Acceptance and elapsed waiting do not establish business completion or quota renewal; occurrence IDs and diagnostic URLs are not automatically safe to share |
+| Nielsen (1994, reviewed 2024), [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/), original-author expert heuristics | Visible status, user control, prevention/recovery and consistent meanings support inspection questions, not controlled causal claims, fixed UI recipes or conversion forecasts |
+| PCI Security Standards Council [FAQ 1319](https://www.pcisecuritystandards.org/faqs/1319/), official interpretive guidance | CVV collection is tied to authorization when necessary; retention after authorization is prohibited, even encrypted. This is not a blanket claim about all payment fields. Support payloads and permitted UI drafts still follow the actual security/privacy contract |
+
+## Instruction and reference-loading evidence
+
+Research and official format/host documentation were consulted on 2026-10-28:
+
+| Source and type | Inspected scope, finding and boundary |
+| --- | --- |
+| Liu et al. (2024), [Lost in the Middle: How Language Models Use Long Contexts](https://aclanthology.org/2024.tacl-1.9/), DOI 10.1162/tacl_a_00638, peer-reviewed empirical research | Full text inspected. Position affected retrieval/QA in tested older models, with different behavior by model/task. It does not establish a universal instruction-length/placement rule or modern coding-agent compliance |
+| Gloaguen et al. (2026), [Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?](https://arxiv.org/html/2602.11988v3), empirical preprint revised 2026-09-29 | Full text inspected. Tested context files did not generally improve task success and increased work/cost; generated/developer files and documentation availability differed. No clear length-outcome dependency was established. Benchmarks of Python issue resolution do not prove effects on this skill, frontend quality or every host/model |
+| [Agent Skills specification](https://agentskills.io/specification.md), format/design contract | Metadata, activated instructions and on-demand resources inspected. Progressive disclosure is a packaging recommendation, not proof that a host selects or follows the correct references |
+| Anthropic [Create custom subagents](https://code.claude.com/docs/en/sub-agents.md#what-loads-at-startup), vendor contract | Startup/inheritance sections inspected. Worker context depends on actual host/mode; this supports checking inheritance and supplying missing sources, not assuming universal isolation or inheritance |
+
+These sources motivate testing task-relevant instructions rather than assuming
+more prose helps. Conditional routes, freshness checks and source handoffs are
+independently authored safeguards, not measured reliability gains. Explicit skill
+invocation, automatic host activation and delegated execution require separate
+evidence; this package does not install a new loader or enforce file reads.
+
 ## Companion and distribution
 
 [Impeccable](https://github.com/pbakaus/impeccable) is an optional companion and

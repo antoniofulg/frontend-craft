@@ -61,6 +61,16 @@ family calls for explanatory content, not as a decorative completion of a header
 Use the same name for the same action throughout a flow; distinguish actions
 with different consequences even when their buttons share styling.
 
+For the requested journey, trace handoffs and supported return/resume paths over
+time. Compare equivalent actions by object/scope, commitment point, resulting
+state and recovery, not appearance alone. Keep status, offer and
+[limit meanings](interaction-accessibility.md#limits-and-unavailable-states)
+consistent with their owners. Explain legitimate changes of authority, policy or
+outcome on return rather than retaining stale promises. Exercise transitions via
+the existing [navigation/draft contract](interaction-accessibility.md#navigation-and-draft-resilience).
+Preserve meaningful family variants; this scoped comparison does not require a
+whole-product audit or new synchronization/persistence infrastructure.
+
 ## Exceptions and evolution
 
 For conversion, activation, monetization or retention work, apply the objective

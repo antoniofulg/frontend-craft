@@ -55,12 +55,39 @@ padlock is not evidence of payment security; guarantees and certifications must
 match the real offer. Keep reassurance readable without crowding the order
 summary or covering it with an upsell.
 
+## Recover the payment outcome
+
+Distinguish a known failure, processing or unknown outcome, and confirmed success.
+A timeout does not establish that an order is unpaid or that no charge occurred.
+Where the existing contract distinguishes order acceptance, payment authorization/
+capture, cancellation and refund completion, preserve those meanings. An accepted
+refund request is not a completed refund.
+For a known input rejection, identify the correction; offer another payment
+method only when appropriate to the confirmed problem. For processing or an
+uncertain outcome, check authoritative payment/order status and reconcile before
+another charge attempt, including a changed payment method, through the existing
+[idempotency and async contract](components.md#async-state-and-recovery).
+Do not invent retry headers, workers or payment infrastructure.
+
+Preserve valid non-sensitive inputs through the existing payment contract, never
+by storing CVV or card data. State charges, success and refund status only when
+confirmed; keep a successful payment from returning to a charge action.
+For unresolved exceptions, offer a verified existing support channel with only
+approved non-secret reference IDs, known status and necessary context. Exclude
+card details, credentials, payment tokens and raw sensitive payloads; do not
+invent support response times or collect diagnostic data indiscriminately.
+Approved identifiers or diagnostic URLs can still be sensitive; share them only
+through the authorized channel under the existing privacy contract.
+Explain the current outcome and next action using
+[interaction feedback](interaction-accessibility.md#trace-a-complete-interaction).
+
 ## Verify completion, not merely clicks
 
 Exercise the supported mobile flow, review totals after changes, field errors,
 back navigation, payment failure/retry and confirmation through approved test
-mechanisms. Check whether repeated submission risks duplicate orders or charges;
-never place a live purchase solely to verify a design. Confirmation should state
+mechanisms. Verify confirmed success stays successful after reload, Back and
+return from authentication; check repeated submission for duplicate orders/charges.
+Never place a live purchase solely to verify a design. Confirmation should state
 what succeeded, fulfillment/access timing and the next useful action.
 
 Report the affected step, observed friction or risk, proposed change and how to

@@ -1,6 +1,6 @@
 # Frontend Craft
 
-Current version: **0.11.0**. See the [release notes](CHANGELOG.md).
+Current version: **0.12.0**. See the [release notes](CHANGELOG.md).
 
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
@@ -167,6 +167,16 @@ usable with the project's contracts and its bundled references.
 
 ## What loads when
 
+Review routing combines the named surfaces with every requested lens; the generic
+review guide is not a substitute for the relevant journey guidance. The
+[review preflight](skills/frontend-craft/references/review.md#apply-only-relevant-lenses)
+owns those combinations. Landing-page and onboarding reviews use their respective
+surface owners, even without analytics or a known abandonment problem. A combined
+visual and commercial review applies both lenses to both named surfaces and
+recovers relevant project guidance, including an existing onboarding philosophy.
+Delegated reviewers receive that same context; spawning agents does not establish
+coverage. Narrow copy, control and motion repairs remain scoped.
+
 For questions such as “what is the effect called when these items enter one
 after another?”, the optional [motion vocabulary](skills/frontend-craft/references/motion-vocabulary.md)
 provides reverse lookup and distinctions between close terms. Naming alone does
@@ -205,10 +215,26 @@ apply only to matching projects. Consult current documentation for framework and
 Tailwind APIs needed by the implementation.
 
 The [user behavior and decision-making section](skills/frontend-craft/references/behavioral-design.md#user-behavior-and-decision-making)
-covers smart defaults, goal gradient, reciprocity, the IKEA effect, loss aversion
-and contrast. Each principle includes a contextual application, a trust boundary
-and validation criteria. Load it for those decisions, not every frontend change;
-progress, pricing and access consequences must reflect the actual product.
+covers smart defaults, goal gradient, reciprocity, the IKEA effect, loss aversion,
+contrast, halo effects, cognitive load and processing fluency, peak-end judgments
+and service recovery. Each principle includes a contextual application, a trust boundary
+and validation criteria. Load it for those decisions, not every frontend change.
+Perceived polish is not evidence of product quality; progress, pricing and access
+consequences must reflect the actual product.
+
+Operational quality includes actionable [limit and unavailable-state feedback](skills/frontend-craft/references/interaction-accessibility.md#limits-and-unavailable-states),
+authoritative [undo](skills/frontend-craft/references/components.md#undo-and-reversibility)
+and outcome-aware [payment recovery](skills/frontend-craft/references/checkout.md#recover-the-payment-outcome).
+Scoped reviews check journey handoffs, returns and actual recovery effects, not
+only error-screen appearance. Service-recovery claims remain contextual
+hypotheses, not promises that failure increases trust or revenue.
+
+Research-backed checks separate visual appeal, perceived ease, task performance,
+remembered experience and commercial outcomes rather than treating them as one
+quality score. [Sources](skills/frontend-craft/SOURCES.md#premium-web-psychology)
+record empirical findings, standards, heuristics and preprints with their access
+and transfer limits. More instruction text is not assumed to improve agent work;
+selected routes and freshness must still be exercised.
 
 The expanded references cover forced colors and announcement priorities, disabled
 control semantics, state/action composition and refs, interaction-specific motion,
@@ -270,6 +296,12 @@ and meaningful success feedback. It includes mobile inspection and contextual
 visual experiments, such as promotional price typography, with comprehension
 and accessibility checks. Impeccable is optional; existing brand tokens and
 approved direction still guide the visual expression.
+
+Opening-view guidance prioritizes one dominant message, supporting context, a
+clear next action and a relevant product or outcome presentation. Explanation
+depends on audience familiarity, not an Apple-style layout formula. Content
+restraint considers total task effort, not just visible element count; useful
+feedback and clear journey endings need not be animated.
 
 A landing-page review examines audience and decision stage, promise and proof,
 objections, offer, CTA and the requested path to a useful commercial action.
@@ -345,6 +377,10 @@ directory. Behavioral evaluation tasks and their distinct failure criteria live 
 [evals/scenarios.md](evals/scenarios.md). Static checks and successful installation
 do not prove better agent decisions; report behavioral evidence separately.
 
+The [review-routing and recovery evaluation](evals/review-routing-validation.md)
+records fresh-context landing/onboarding/recovery probes and their actual
+reference reads, separately from package checks and supplied-context probes.
+
 For 0.5.0, see the [upstream coverage map](evals/upstream-coverage.md) and
 [independent verification record](evals/verification-0.5.0.md). These are
 maintainer artifacts and are not loaded by the installed skill.
@@ -388,6 +424,11 @@ The [0.11.0 verification record](evals/verification-0.11.0.md) covers the six
 user-behavior principles, package/discovery checks, isolated installations and
 three supplied-context model probes. It distinguishes those decisions from
 autonomous reference routing, live usability and commercial outcome evidence.
+
+The [0.12.0 verification record](evals/verification-0.12.0.md) covers cumulative
+surface/lens routing, evidence-bounded design psychology, operational recovery
+and the broader research additions. It separates authoring and model-probe
+evidence from release package checks and unmeasured live/commercial outcomes.
 
 ## License and sources
 

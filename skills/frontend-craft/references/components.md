@@ -69,6 +69,9 @@ and an unknown mutation outcome. Aborting or losing a response is not proof that
 the server did not commit; client cancellation is not server undo. Check the
 transport's response contract: Fetch can resolve normally for HTTP errors.
 See [Fetch handling](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+Keep the last authoritative result distinct from the current draft and provisional
+operation. Label an older confirmed result as last confirmed, not necessarily
+current. An accepted asynchronous request is not proof of completed business work.
 
 Guard repeated activation and keyboard submission at the existing action owner.
 A disabled button alone cannot provide server duplicate protection. Retry a
@@ -86,6 +89,24 @@ authoritative state and expose the conflict. Honor existing version/conditional
 write checks. Preserve recoverable input; explanations and announcements follow
 [interaction feedback](interaction-accessibility.md#trace-a-complete-interaction).
 Add durable queues or automatic retries only when the product requires them.
+
+## Undo and reversibility
+
+Offer undo only when the existing domain contract can reverse an operation's
+effect or reliably prevent its deferred commitment. Make its scope and any
+supported deadline clear at the action. Restore through the existing state/
+persistence authority and [async recovery contract](#async-state-and-recovery),
+preserving newer edits and successful actions rather than a whole stale snapshot.
+Toast dismissal and client request abort alone are not authoritative undo.
+
+Acknowledge reversal only after it is confirmed; expose pending, failed or unknown
+outcomes accurately. If undo expires or fails, explain the last confirmed state,
+what remains unresolved and any supported recovery through
+[interaction feedback](interaction-accessibility.md#trace-a-complete-interaction).
+Retain a safe retry only while the contract permits it; remove or disable an
+expired action without implying restoration. Disclose irreversible consequences
+before commitment and use suitable protection rather than offering false undo.
+Do not add persistence merely to manufacture reversibility.
 
 ## Collections, sorting and selection
 

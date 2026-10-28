@@ -13,6 +13,13 @@ established change-scope rules; include relevant working-tree edits explicitly.
 Do not silently choose the last commit or expand a page review into a whole-repo
 audit. A missing target requires a small clarification, not a fabricated verdict.
 
+Before choosing review criteria, discover and read available project surface,
+product and design guidance, including an existing onboarding philosophy when
+onboarding is in scope. Follow actual project links/paths and reuse context
+already established, including Impeccable's resolved documents; do not repeat
+setup, require a nonexistent document or invent its location. Use adopted
+constraints to assess the surface, and label material gaps or conflicts.
+
 Trace changed components into actual consumers, prioritizing those with affected
 variants and states. Shared shells/tokens can warrant broader sampling. State
 what was examined and what remained outside the inspected scope.
@@ -23,31 +30,43 @@ replacement elsewhere in the change before reporting the removal as a defect.
 
 ## Apply only relevant lenses
 
+Select cumulatively: identify every named surface/journey, then every requested
+review lens, and read each matching reference below. Generic review is not a
+substitute for a surface owner. Landing-page and onboarding reviews always use
+their respective surface rows; visual/conversion and commercial lenses add their
+overlays. A mixed review covers both surfaces and all requested lenses.
+Cumulative means covering applicable routes, not reading every reference in full.
+Follow further pointers when their conditions apply; broaden when a finding
+exposes another relevant contract.
+Narrow heading, copy, motion or control repairs use only affected contracts;
+they do not trigger a whole-funnel audit or unrelated market, roadmap or retention
+guidance.
+
 | Concern | Reference |
 | --- | --- |
-| Owner bypass, generic replacements, header/content drift | [reuse and consistency](reuse-consistency.md) |
+| Owner bypass, generic replacements, header/content drift or journey handoff/return inconsistency | [reuse and consistency](reuse-consistency.md) |
 | Style-family coverage, duplicated appearance, shared style updates or state/theme bypasses | [shared UI patterns](shared-ui-patterns.md) |
 | State ownership and component API | [components](components.md) |
-| Request races, mutation uncertainty and optimistic rollback | [async recovery](components.md#async-state-and-recovery) |
+| Request races, mutation uncertainty, optimistic rollback or actual undo | [async recovery](components.md#async-state-and-recovery), [undo](components.md#undo-and-reversibility) when offered |
 | Table semantics, query scope, paging and bulk selection | [collections](components.md#collections-sorting-and-selection), then its applicable behavior routes |
-| Controls, forms, layout, typography, color, feedback | [interaction and accessibility](interaction-accessibility.md) |
+| Controls, forms, layout, typography, color, feedback or blocked/limit states | [interaction and accessibility](interaction-accessibility.md) |
 | Redundant copy, duplicated feedback or unnecessary controls | [content restraint](interaction-accessibility.md#content-restraint) |
 | History, drafts and restored-page freshness | [navigation resilience](interaction-accessibility.md#navigation-and-draft-resilience) |
 | Localized amounts/messages and calendar/time-zone values | [locale-sensitive values](interaction-accessibility.md#locale-sensitive-values-and-messages) |
 | Motion, timing, interruption and reduced motion | [motion](motion.md) |
-| Public-page decision path | [landing pages](landing-pages.md) |
+| Landing-page review: visitor decision path, including visual-only reviews | [landing pages](landing-pages.md) |
 | Marketing wording, brand voice, naturalness or stale commercial copy | [marketing copy](landing-pages.md#write-edit-and-refresh-marketing-copy) |
 | Public indexing, SSR content, metadata, canonical/discovery URLs and response policies | [technical SEO and discovery](technical-seo.md) |
 | Media selection, representation, provenance, crops and delivery | [imagery](imagery.md) |
-| Commercial objective, audience, persuasion and growth priorities | [commercial strategy](commercial-strategy.md) |
+| Commercial review or objective, audience, persuasion and growth priorities | [commercial strategy](commercial-strategy.md) |
 | Business constraint, offer, sales process and full strategic audit | [growth and sales](growth-sales.md) |
-| Commercial hierarchy, proof imagery, pricing emphasis and success feedback | [commercial visuals](commercial-visuals.md) |
-| Purchase/lead completion, perceived effort and trust | [checkout and forms](checkout.md) |
+| Visual/conversion review of landing pages or onboarding; commercial hierarchy, proof imagery, pricing emphasis and success feedback | [commercial visuals](commercial-visuals.md) |
+| Purchase/lead completion, perceived effort, trust or payment outcome recovery | [checkout and forms](checkout.md) |
 | Dashboard decisions, context and role-specific actions | [dashboards](dashboards.md) |
 | Feature scope, adoption and differentiation | [product strategy](product-strategy.md) |
 | Audience fit, channels and sales motion | [positioning and distribution](positioning-distribution.md) |
-| Defaults, framing, confidence and change resistance | [behavioral design](behavioral-design.md) |
-| First useful result and onboarding abandonment | [activation](activation.md) |
+| Defaults, framing, confidence, halo effect, cognitive load/fluency, peak-end, change resistance or service-recovery claims | [behavioral design](behavioral-design.md) |
+| Onboarding review: first-useful-result philosophy, guidance/pattern choice and path to value, even without analytics | [activation](activation.md) |
 | Plans, trial, checkout and upgrade decisions | [monetization](monetization.md) |
 | Continued value, renewal and cancellation | [retention](retention.md) |
 | Commercial metrics, causal claims and experiment design | [experimentation](experimentation.md) |
@@ -62,6 +81,14 @@ Use the project's correctness/security/performance workflow for concerns outside
 these lenses. Name a material concern and its owner rather than claiming a full
 technical audit. If slowness matters, load the performance reference and measure
 under stated conditions before reporting a performance failure.
+
+If the project workflow delegates review, pass the exact slice, applicable
+constraints and relevant surface/lens file paths and sections, with readable
+content or access. Use the host's actual inheritance behavior; supply missing
+context rather than assuming the parent's reads transfer. Reviewers return
+source-linked findings and inspection gaps, not just a completed task label.
+The coordinator checks combined coverage of every requested surface/lens and
+reports evidence gaps. Delegation is optional, not a required review round.
 
 ## Stress a real component
 
@@ -103,11 +130,18 @@ conclusions conditional where actual rendered evidence is missing.
 
 Choose the questions relevant to the surface:
 
-- **Focus and hierarchy:** what receives attention first, and does that match
-  the user's task? Check competing emphasis, readable type and useful actions.
-- **Content restraint:** does each message or control add needed meaning? Apply
-  [content restraint](interaction-accessibility.md#content-restraint) and check
-  that removals preserve context, accessible feedback and recovery.
+- **Focus and hierarchy:** is the first impression coherent with the audience,
+  promise and approved direction, and does initial attention match the user's
+  task? Check competing emphasis, readable type and useful actions; apparent
+  polish does not establish trustworthiness or product quality.
+- **Content restraint:** how much interpretation is needed to understand the
+  result, relationships and next action? Does each message or control add needed
+  meaning? Apply [content restraint](interaction-accessibility.md#content-restraint)
+  and preserve context, accessible feedback and recovery; fewer elements alone
+  do not prove lower cognitive effort.
+  For claimed fluency/usability benefits, identify the audience and distinguish
+  [perception, performance and recall](behavioral-design.md#separate-perception-performance-and-recall);
+  a rating or screenshot alone does not establish improved task performance.
 - **Alignment and grouping:** do shared edges, spacing and proximity express
   actual relationships, including around removed elements?
 - **Substance and rhythm:** does each section answer a needed question with
@@ -124,6 +158,14 @@ Choose the questions relevant to the surface:
   zoom/long text, horizontal clipping and intermediate scroll positions. Check
   missing media and disabled/reduced motion when they can hide essential content.
 
+For a journey review, inspect the relevant high-effort/high-salience moments,
+useful outcome and ending: is the result real, acknowledged and usable, and is
+the next step clear? Use [recovery verification](#verify-a-recovery-path) when
+interruptions or failures are in scope. Screenshots support composition
+observations, not successful completion, users' remembered experience or a
+peak-end effect; those need interaction and, for claims about users,
+behavioral/research evidence.
+
 For each material issue, name the screenshot, viewport/state, visible consequence
 and concrete correction in the existing finding format. Diagnose rendering
 causes in source after observing the result; implementation intent cannot cancel
@@ -139,6 +181,30 @@ remain. Limit open-ended aesthetic iteration to three rounds; report material
 issues still unresolved, without treating the limit as a pass. A read-only review
 ends with findings and does not enter the fix loop.
 
+## Verify a recovery path
+
+When changing or reviewing a recovery path, exercise the relevant interruption
+or failure through correction, safe retry/reconciliation or
+[undo](components.md#undo-and-reversibility) to the confirmed outcome and resumed
+useful task using existing approved facilities. Check retained input, newer work,
+duplicate effects and the return destination where applicable. Follow the
+[async contract](components.md#async-state-and-recovery) and, for payments,
+[outcome recovery](checkout.md#recover-the-payment-outcome).
+
+Require evidence of the actual effect and accessible outcome feedback.
+Screenshots establish presentation and source inspection establishes source
+facts; a fixture establishes only the behavior exercised, not authoritative
+service restoration. If the service remains unavailable or its outcome cannot
+be established safely, report the last verified state and unresolved dependency,
+not a recovery pass. Use appropriate existing escalation for unresolved cases.
+Outage relief or a celebratory error animation is not restoration.
+
+For a recovery-benefit claim, distinguish improvement over the failed state,
+restoration of a prior level and outperformance of an error-free comparison.
+Name the comparison supported by evidence and include unresolved/repeated
+failures rather than selecting only successfully recovered users; apply
+[behavioral measurement](behavioral-design.md#separate-perception-performance-and-recall).
+
 ## Consolidate findings
 
 Each finding includes location, evidence, user consequence, and the smallest
@@ -151,11 +217,13 @@ Distinguish contract violations from optional improvements and personal taste.
 For a change review, classify introduced, regression and pre-existing issues;
 keep unrelated pre-existing work out of the change verdict.
 
-Return a compact report: inspected scope, prioritized findings, justified
-differences, checks performed and gaps. Coverage can be verified, source-only,
-or not inspected. A clean result means no confirmed findings in that scope,
-not blanket product approval. Evidence collection failures are limitations,
-not defects in the UI. Use the repository's report when one already exists.
+Return a compact report: inspected scope, briefly identified applied guidance,
+prioritized findings, justified differences, checks performed and gaps, including
+uninspected scope. Coverage can be verified, source-only, or not inspected. A
+clean result means no confirmed findings in that scope, not blanket product
+approval. Evidence collection failures are limitations, not defects in the UI.
+Use the repository's report when one already exists; no separate guidance ledger
+is needed.
 
 Review alone does not authorize fixes. When fixes are requested, repair the
 owning cause, recheck failing states and relevant consumers, and update affected
