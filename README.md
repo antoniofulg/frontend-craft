@@ -430,6 +430,11 @@ surface/lens routing, evidence-bounded design psychology, operational recovery
 and the broader research additions. It separates authoring and model-probe
 evidence from release package checks and unmeasured live/commercial outcomes.
 
+The [0.13.0 verification record](evals/verification-0.13.0.md) covers the
+generated-interface and marketing defaults, region classification and measurement
+validity. It records package checks only; no agent scenarios or rendered pages
+were exercised for this release.
+
 ## License and sources
 
 Copyright 2026 Antonio Fulgêncio. This package has [mixed license terms](LICENSE).

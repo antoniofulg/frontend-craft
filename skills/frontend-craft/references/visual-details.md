@@ -42,6 +42,12 @@ italic overhang against adjacent lines and clipping containers. Author line brea
 only when they preserve meaning across supported widths and translations; retain
 the logical reading order and let longer content adapt.
 
+Cap continuous body copy at about 60–75 characters per line. Prefer
+`text-wrap: balance` for short titles and `text-wrap: pretty` for descriptions
+over manual breaks. Keep display tracking no tighter than about −0.04em, body
+tracking at the default and wide tracking for short labels only; light display
+weights need a face loaded for that purpose. Avoid justified or all-caps body text.
+
 Judge alignment optically as well as by boxes: round letters, diagonal edges and
 punctuation can appear inset even when their bounds align. Any small correction
 belongs to the affected display role and must remain sound with other strings,

@@ -13,6 +13,12 @@ judge usefulness against total task effort and audience, rather than word count.
 Reducing visible content must not increase guessing, memory demands or unnecessary
 disclosure steps. Keep needed detail and recovery reachable when they are useful.
 
+Test each candidate by removal: if users would discover the same thing by using
+the interface, the line costs a read on every visit and can go. If nobody would
+find out, it stays with its reason. Count accumulation too: more than three text
+blocks before the first content, or a headline, intro and first label saying the
+same thing, means the page is explaining itself.
+
 - **Copy:** remove subtitles that merely repeat headings and help text that
   restates an obvious control. For example, `Manage your projects` beneath
   `Projects` adds little unless it explains a real scope or action. Use plain,

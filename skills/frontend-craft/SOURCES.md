@@ -502,6 +502,29 @@ not empirical proof of premium appeal or commercial uplift:
 | Nielsen (1994, reviewed 2024), [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/), original-author expert heuristics | Visible status, user control, prevention/recovery and consistent meanings support inspection questions, not controlled causal claims, fixed UI recipes or conversion forecasts |
 | PCI Security Standards Council [FAQ 1319](https://www.pcisecuritystandards.org/faqs/1319/), official interpretive guidance | CVV collection is tied to authorization when necessary; retention after authorization is prohibited, even encrypted. This is not a blanket claim about all payment fields. Support payloads and permitted UI drafts still follow the actual security/privacy contract |
 
+## Generated-interface review
+
+[Visant skills](https://github.com/pedrojaques99/visant-skills-public), MIT,
+recorded reference `9e1d4d3303a1017679085ad3501db4edf7c9606c`. Its
+`visant-killer` skill and its references were comparison material on 2026-10-29.
+They informed the independently expressed [generated-interface defaults](references/review.md#check-generated-interface-defaults),
+region classification, existence, data-truth and measurement-validity questions,
+root-first ranking and the content-restraint removal test. Its scanners, report and scoring
+ritual, tier question counts, component registry, house-skill dependencies and
+Tailwind-specific prohibitions were not incorporated; no upstream prose, code or
+assets are bundled. No endorsement is implied.
+
+[antiwebslop](https://github.com/cesaroeduardo/antiwebslop), Cesar Eduardo,
+MIT, recorded reference `2bed29c1b4592f874be62402bddc6287ea632698`, described
+by its author as unfinished. Its `SKILL.md` and references were comparison
+material on 2026-10-29 for the independently expressed
+[generated marketing defaults](references/landing-pages.md#question-generated-marketing-defaults),
+the reading surface type and the text-setting notes in
+[display typography](references/visual-details.md#display-typography-and-optical-alignment).
+Its numeric design dials, per-project `DESIGN.md`, reply-voice rules, motion
+pattern catalog, lint script and editor hook were not incorporated; no upstream
+prose, code or assets are bundled. No endorsement is implied.
+
 ## Instruction and reference-loading evidence
 
 Research and official format/host documentation were consulted on 2026-10-28:
