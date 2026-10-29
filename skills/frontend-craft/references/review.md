@@ -24,6 +24,16 @@ Trace changed components into actual consumers, prioritizing those with affected
 variants and states. Shared shells/tokens can warrant broader sampling. State
 what was examined and what remained outside the inspected scope.
 
+Classify each inspected region by its job: acquisition (a visitor who is not yet
+a customer), repeated work (a task done daily) or trust (money, permissions,
+identity or destructive actions). Classify by region, not file: a billing row
+inside a listing is a trust region. Emphasis and persuasion suited to acquisition
+slow repeated work; density suited to repeated work can under-explain a trust
+decision. For each element in scope, name what it helps the user understand,
+decide, do or recover from, or the business result it affects. An element that
+names nothing is a removal candidate under
+[content restraint](interaction-accessibility.md#content-restraint).
+
 Read the removed and added sides of a diff. A lost focus cue or disabled state
 may be a regression even when the final screenshot looks clean. Check for a
 replacement elsewhere in the change before reporting the removal as a defect.
@@ -130,6 +140,11 @@ conclusions conditional where actual rendered evidence is missing.
 
 Choose the questions relevant to the surface:
 
+- **Existence:** if this element or screen were removed, who would notice and
+  what would they do instead? An element that exists because data was available,
+  rather than because a decision needs it, is a removal candidate. When the honest
+  finding is that a screen should be merged or removed, report that instead of
+  polishing it.
 - **Focus and hierarchy:** is the first impression coherent with the audience,
   promise and approved direction, and does initial attention match the user's
   task? Check competing emphasis, readable type and useful actions; apparent
@@ -157,6 +172,14 @@ Choose the questions relevant to the surface:
 - **Adaptation and collisions:** check mobile reading order, sticky regions,
   zoom/long text, horizontal clipping and intermediate scroll positions. Check
   missing media and disabled/reduced motion when they can hide essential content.
+  Measure horizontal overflow on the document, not one element, at the narrowest
+  supported viewport after fonts load, and again after each fix; a clipping parent
+  can hide an element's overflow or cut its text. Check every supported theme,
+  especially the one the team uses least.
+- **Data truth:** render the best and worst real records, not only empty or
+  ideal fixtures, and run data-backed views with requests failing. A failed
+  request painted as zero or empty is indistinguishable from a real zero; a zero
+  denominator shown as `0%` claims a measurement that does not exist.
 
 For a journey review, inspect the relevant high-effort/high-salience moments,
 useful outcome and ending: is the result real, acknowledged and usable, and is
@@ -180,6 +203,33 @@ one. Stop when the relevant issues are resolved or only optional preferences
 remain. Limit open-ended aesthetic iteration to three rounds; report material
 issues still unresolved, without treating the limit as a pass. A read-only review
 ends with findings and does not enter the fix loop.
+
+## Check generated-interface defaults
+
+These defaults recur in generated and template interfaces. They pass linters
+because they are decisions, not syntax. A match is a finding to confirm at its
+source and in the rendered state, not an automatic defect: approved direction, a
+marketing piece, an overlay on imagery or a contrast reference can justify the
+exception. Record that reason beside the code or in the finding.
+
+| Default | Consequence | Prefer |
+| --- | --- | --- |
+| Hover that scales a card, tile or button | Reads as template motion; the enlarged box can cover neighbors and ignores reduced motion | A color, border or shadow change inside the existing box |
+| Hover growth over neighboring content | Hover runs over text instead of revealing | Reserve the space at rest and grow inside it |
+| Best state (glow, preview, open menu) only on hover | Absent on touch, keyboard and screenshots | Render the useful state at rest; hover intensifies it |
+| Text arrows (`→`) or hand-drawn SVG as interface icons | Glyphs drift with font metrics and have no weight or size control | The project's icon library |
+| Transitions of all properties | Animates layout and properties nobody chose | List the animated properties; timing follows [motion](motion.md) |
+| Blur or translucency on ordinary cards | Compositing cost with nothing behind to read through | A solid surface token; keep blur for overlays on content |
+| Emphasis token used for hover, borders or chrome | Emphasis becomes noise; check the token's role first | The neutral hover/border role from [shared owners](shared-ui-patterns.md#ownership-contract) |
+| Fixed `active`/`highlighted` value in an item factory | Every item lights up, so none stands out | Derive it from the real state; one highlight per region |
+| Every figure in its own hue | No color means anything | Neutral values; color only for real exceptions such as overdue or over limit |
+| Monospace for currency or ordinary numbers | Reads as a terminal; clashes with the type system | Tabular figures in the body font; monospace for IDs and code |
+| Spinner that collapses its container | Layout jumps; nothing to read while waiting | [Loading states](performance.md#skeletons-and-loading-states) that keep the structure |
+| Two entry points for the same data on one screen | Users pick by chance when they write to different places | One entry point, or labels that state the difference |
+| Non-wrapping label in an overlay inside a clipping parent | Text is cut, often only once fonts load | Constrain its width and let it wrap |
+| Clickable element without a pointer cursor | A CSS reset removed the affordance | One rule in the shared owner for interactive roles |
+| Title, intro and label repeating the page chrome | The page explains itself instead of showing content | [Content restraint](interaction-accessibility.md#content-restraint) |
+| Showcase in a fake frame, with "hover me" captions or stacked variations | The explanation hides the piece | One piece large and centered, with a quiet selector |
 
 ## Verify a recovery path
 
@@ -210,6 +260,9 @@ failures rather than selecting only successfully recovered users; apply
 Each finding includes location, evidence, user consequence, and the smallest
 correction. Reuse findings cite the existing owner and the competing usage.
 Group symptoms sharing a cause; fix the shared source where appropriate.
+For a large target, rank shared shells, primitives and containers by consumers
+affected times findings before fixing pages: one wrong owner produces many
+identical leaf findings that point at the wrong file.
 
 Rank by impact: blocking a task, loss of essential access/information, or data
 loss risk first; impaired comprehension/efficiency next; isolated polish last.

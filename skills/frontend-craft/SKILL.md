@@ -68,7 +68,7 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Audit web performance or production bundles; diagnose Core Web Vitals, responsiveness, loading, request chains, layout shifts or a performance regression | [performance](references/performance.md), with its optional audit procedure | A traced cause and a comparable measurement with explicit evidence limits |
 | Refine nested corners, display typography, font features, mixed-direction text, or advanced color | [visual details](references/visual-details.md) | A scoped technical refinement within the existing design |
 | Choose or review a chart | [charts](references/charts.md) | A truthful encoding and accessible access to the data |
-| Review a page, component, journey, change, or consistency | [review](references/review.md), following its cumulative surface and lens routes | Evidence-backed findings and verification limits |
+| Review a page, component, journey, change, or consistency; audit an interface that looks generated or templated | [review](references/review.md), following its cumulative surface and lens routes and its [generated-interface defaults](references/review.md#check-generated-interface-defaults) | Evidence-backed findings and verification limits |
 
 Select references cumulatively: identify every named surface/journey and every
 requested lens, then load their matching routes. Generic review supplements,

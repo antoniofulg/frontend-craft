@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+- Add a review table of generated-interface defaults with consequences,
+  preferred replacements and justified exceptions.
+- Classify reviewed regions as acquisition, repeated work or trust, and ask each
+  element and screen to justify its existence.
+- Verify document-level overflow after fonts load, every supported theme, best and
+  worst real records and failing requests; rank shared owners before page fixes.
+- Add a removal test and accumulation count to content restraint.
+
 ## 0.12.0 — 2026-10-28
 
 - Add contextual halo-effect, cognitive-load/processing-fluency and peak-end

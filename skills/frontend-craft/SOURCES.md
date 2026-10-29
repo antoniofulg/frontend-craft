@@ -502,6 +502,19 @@ not empirical proof of premium appeal or commercial uplift:
 | Nielsen (1994, reviewed 2024), [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/), original-author expert heuristics | Visible status, user control, prevention/recovery and consistent meanings support inspection questions, not controlled causal claims, fixed UI recipes or conversion forecasts |
 | PCI Security Standards Council [FAQ 1319](https://www.pcisecuritystandards.org/faqs/1319/), official interpretive guidance | CVV collection is tied to authorization when necessary; retention after authorization is prohibited, even encrypted. This is not a blanket claim about all payment fields. Support payloads and permitted UI drafts still follow the actual security/privacy contract |
 
+## Generated-interface review
+
+[Visant skills](https://github.com/pedrojaques99/visant-skills-public), MIT,
+recorded reference `9e1d4d3303a1017679085ad3501db4edf7c9606c`. Its
+`visant-killer` skill and references `slop-catalog.md`, `declutter.md` and
+`devils-advocate.md` were comparison material on 2026-10-29. They informed the
+independently expressed [generated-interface defaults](references/review.md#check-generated-interface-defaults),
+region classification, existence and data-truth questions, root-first ranking
+and the content-restraint removal test. Its scanners, report and scoring
+ritual, tier question counts, component registry, house-skill dependencies and
+Tailwind-specific prohibitions were not incorporated; no upstream prose, code or
+assets are bundled. No endorsement is implied.
+
 ## Instruction and reference-loading evidence
 
 Research and official format/host documentation were consulted on 2026-10-28:
