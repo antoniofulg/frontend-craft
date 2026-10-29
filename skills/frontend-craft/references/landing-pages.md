@@ -261,6 +261,33 @@ and keyboard flow. Preserve the core offer when adapting layouts; avoid overlays
 or sticky actions that obstruct content or focus. Load the interaction reference
 for forms/controls and the motion reference if movement is involved.
 
+## Question generated marketing defaults
+
+Generated public pages converge on the same decoration. Avoid these by default
+when creating a page and report them in a review, unless the approved brand or
+brief justifies the choice; record that reason. Applying this list does not make
+a page specific; use the [subject grounding](#ground-the-visual-concept-in-the-subject)
+for that.
+
+| Default | Prefer |
+| --- | --- |
+| Purple/indigo gradients, colored glows or gradient-text headlines | The brand's own color in flat fills; emphasis from weight, size or one accent word |
+| Glassmorphism on cards and nav; blurred blobs or orbs behind the hero | Opaque surfaces separated by value; real imagery, product UI or plain space |
+| Cream background with terracotta accents and a stock serif ("AI editorial") | A warmth or editorial voice derived from the brand, with a committed type and grid |
+| Saturated neon on pure black | An off-black canvas, a few surface steps and one accent at reduced chroma |
+| Centered hero, two equal buttons, then three equal icon cards; every section the same label, heading, subtitle and grid | A composition chosen from the content; section density and width that vary with each section's job |
+| A bento grid or nested cards used because they are fashionable | Tiles only for real, different content; group with space before adding a box |
+| Stickers, "New" pills, version labels, scroll cues or avatar stacks on the hero; a label above every heading; decorative 01/02/03 | One job for the first viewport; announcements as a plain link; numbers only where order matters |
+| A row of large unsourced numbers, invented logos or testimonials | Real, attributable [proof](#make-each-element-earn-its-place), or omit the section |
+| Emoji as bullets or badges; an icon tile above every feature heading | Real list markers, typography or screenshots; icons where they speed recognition |
+| A fake product interface built from styled boxes | The actual product, or a truthful [demonstration](imagery.md) |
+| "Unlock", "Supercharge", "Seamless", "Elevate"; "Get started" as the only CTA | What the product does, for whom; a CTA naming the action and its object |
+| One radius and shadow on everything; a hairline border with a wide shadow | Radius by role, elevation only for floating layers |
+| One-word italic serif in the headline; crushed display tracking; weightless display weights | Emphasis from the sentence; tracking and weight tuned per [display typography](visual-details.md#display-typography-and-optical-alignment) |
+
+On reading surfaces such as docs or help, put the content in the first viewport
+instead of a full-height hero.
+
 ## Demonstrate value through a useful interaction
 
 Consider an interactive demonstration when the buying question depends on an

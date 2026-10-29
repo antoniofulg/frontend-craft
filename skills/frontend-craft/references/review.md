@@ -25,11 +25,12 @@ variants and states. Shared shells/tokens can warrant broader sampling. State
 what was examined and what remained outside the inspected scope.
 
 Classify each inspected region by its job: acquisition (a visitor who is not yet
-a customer), repeated work (a task done daily) or trust (money, permissions,
-identity or destructive actions). Classify by region, not file: a billing row
-inside a listing is a trust region. Emphasis and persuasion suited to acquisition
-slow repeated work; density suited to repeated work can under-explain a trust
-decision. For each element in scope, name what it helps the user understand,
+a customer), repeated work (a task done daily), reading (docs, help, long-form)
+or trust (money, permissions, identity or destructive actions). Classify by
+region, not file: a billing row inside a listing is a trust region. Emphasis and
+persuasion suited to acquisition slow repeated work and bury reading content;
+density suited to repeated work can under-explain a trust decision. Repeated-work
+surfaces keep their established kit unless a redesign was requested. For each element in scope, name what it helps the user understand,
 decide, do or recover from, or the business result it affects. An element that
 names nothing is a removal candidate under
 [content restraint](interaction-accessibility.md#content-restraint).
@@ -176,6 +177,12 @@ Choose the questions relevant to the surface:
   supported viewport after fonts load, and again after each fix; a clipping parent
   can hide an element's overflow or cut its text. Check every supported theme,
   especially the one the team uses least.
+- **Measurement validity:** confirm the measured state before trusting a result.
+  Read the viewport width from the page, not the tool's resize response; wait
+  for a hydration signal from the app rather than `readyState`; compare the
+  element count with the page opened by hand, because a driver timeout can return
+  a partial page without error. Zero findings with no content is a failed
+  measurement, not a clean screen.
 - **Data truth:** render the best and worst real records, not only empty or
   ideal fixtures, and run data-backed views with requests failing. A failed
   request painted as zero or empty is indistinguishable from a real zero; a zero
@@ -230,6 +237,12 @@ exception. Record that reason beside the code or in the finding.
 | Clickable element without a pointer cursor | A CSS reset removed the affordance | One rule in the shared owner for interactive roles |
 | Title, intro and label repeating the page chrome | The page explains itself instead of showing content | [Content restraint](interaction-accessibility.md#content-restraint) |
 | Showcase in a fake frame, with "hover me" captions or stacked variations | The explanation hides the piece | One piece large and centered, with a quiet selector |
+| Badges or pills on every card | Labels stop meaning anything | A badge only when it filters or changes a decision |
+| Dividers between blocks that spacing already separates | Visual noise doing spacing's job | Space and alignment; lines for tables and dense lists |
+| Four or more opacity steps of one color in a block | Hierarchy by transparency is an untokenized color | Two or three text roles from the tokens |
+
+Public pages have their own decorative defaults; see
+[landing pages](landing-pages.md#question-generated-marketing-defaults).
 
 ## Verify a recovery path
 

@@ -1,14 +1,20 @@
 # Changelog
 
-## Unreleased
+## 0.13.0 — 2026-10-29
 
 - Add a review table of generated-interface defaults with consequences,
-  preferred replacements and justified exceptions.
-- Classify reviewed regions as acquisition, repeated work or trust, and ask each
-  element and screen to justify its existence.
+  preferred replacements and justified exceptions, plus a public-page table of
+  generated marketing defaults to avoid unless the brief justifies them.
+- Classify reviewed regions as acquisition, repeated work, reading or trust, and
+  ask each element and screen to justify its existence.
 - Verify document-level overflow after fonts load, every supported theme, best and
-  worst real records and failing requests; rank shared owners before page fixes.
-- Add a removal test and accumulation count to content restraint.
+  worst real records, failing requests and the validity of the measurement
+  itself; rank shared owners before page fixes.
+- Add a removal test and accumulation count to content restraint, and body
+  measure, wrapping and tracking notes to display typography.
+
+Release checks and remaining limits are recorded in
+[the 0.13.0 verification record](evals/verification-0.13.0.md).
 
 ## 0.12.0 — 2026-10-28
 
