@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.14.0 — 2026-10-30
+
+- Add subscription-paywall guidance: review the paywall within its surrounding
+  flow, restate the user's stated outcome before the price, compare a
+  single-action trial paywall against multi-plan choice, show an honest trial
+  timeline and per-period price equivalents beside the charged amount, and route
+  paywall proof to the landing-page proof rules.
+- Treat published paywall case studies as patterns to test rather than expected
+  lift; route onboarding paywalls from activation.
+
+Release checks and remaining limits are recorded in
+[the 0.14.0 verification record](evals/verification-0.14.0.md).
+
 ## 0.13.0 — 2026-10-29
 
 - Add a review table of generated-interface defaults with consequences,

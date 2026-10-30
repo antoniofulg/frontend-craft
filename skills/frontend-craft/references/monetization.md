@@ -78,6 +78,36 @@ effort while retaining information needed to deliver or qualify the offer.
 Use [interaction and accessibility](interaction-accessibility.md) for controls;
 this reference does not supply payment-integration instructions.
 
+## Design subscription paywalls as part of the flow
+
+Review the paywall with the screens before and after it: entry, goal or intent
+questions, any personalized result, the payment request, confirmation and the
+first post-purchase step. A paywall shown before the user can see what the
+product would do for them asks for commitment without a reason; placement is a
+hypothesis to test, not a fixed onboarding position.
+
+Before the price, restate the outcome the user said they wanted, using their own
+inputs. A projection must follow from what they entered and the product's real
+method; label estimates and avoid promised life results the product cannot
+deliver.
+
+A single-action paywall can present one default plan and one trial button while
+keeping the other plans reachable. Compare it with a multi-plan paywall on trial
+starts, plan fit, trial-to-paid conversion and refunds; fewer choices can raise
+starts while steering users to an unsuitable plan.
+
+For a trial, a short timeline can show access today, a reminder before charging
+and the charge date with the amount. Promise a reminder only when it is actually
+sent under the user's notification settings. A per-day or per-week equivalent
+may make an annual price easier to compare with familiar spending; keep the
+amount charged and the billing period beside it, as with monthly equivalents.
+Place attributable proof near the decision under the
+[landing-page proof rules](landing-pages.md#make-each-element-earn-its-place).
+
+Published paywall results are usually single-company case studies without a
+disclosed control, sample or retention window. Use them as patterns to test
+through the [full-funnel comparison](#trials-and-checkout), not as expected lift.
+
 ## Offer expansion when the need is present
 
 Locate a relevant moment: repeated useful use, an approaching capacity limit,
