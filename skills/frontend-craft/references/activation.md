@@ -67,7 +67,8 @@ screen or largest percentage drop is not automatically the largest opportunity.
 Qualification can justify effort when it improves fit or delivery. Explain the
 tradeoff and measure qualified outcomes; neither minimum field count nor a
 mandatory onboarding sequence is universally best. Route trial/card decisions
-to [monetization](monetization.md#trials-and-checkout).
+to [monetization](monetization.md#trials-and-checkout) and a paywall inside
+onboarding to [subscription paywalls](monetization.md#design-subscription-paywalls-as-part-of-the-flow).
 
 ## Select a pattern for the audience and task
 

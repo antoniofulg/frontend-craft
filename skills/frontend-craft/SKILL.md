@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/revenue-centric-design.txt
 metadata:
   author: Antonio Fulgêncio
-  version: "0.13.0"
+  version: "0.14.0"
 ---
 
 # Frontend Craft
@@ -59,7 +59,7 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Change public indexing, SSR content, metadata, canonicals, sitemaps or AI discovery | [technical SEO and discovery](references/technical-seo.md) | A coherent public-route contract with HTML/HTTP evidence and explicit deployment and search-acceptance limits |
 | Find, select, generate, crop or credit images/video; prepare a product demonstration | [imagery](references/imagery.md) | Relevant, traceable visual material with honest representation and verified delivery |
 | Create, change or review first-run onboarding, empty-state guidance or activation | [activation](references/activation.md) | A justified path and guidance pattern leading to the first useful result; measured outcomes where available |
-| Design or review pricing, trials, checkout, upgrades or expansion | [monetization](references/monetization.md) | An understandable offer and a revenue hypothesis evaluated across the full funnel |
+| Design or review pricing, trials, subscription paywalls, checkout, upgrades or expansion | [monetization](references/monetization.md) | An understandable offer and a revenue hypothesis evaluated across the full funnel |
 | Review payment recovery or improve purchase completion, lead-form effort, trust or qualification | [checkout and forms](references/checkout.md) | A clear, recoverable completion path with justified fields and visible terms |
 | Select dashboard priorities, role-specific insights and next actions | [dashboards](references/dashboards.md) | A panel connecting relevant evidence to a useful decision or action |
 | Diagnose churn or review renewal, cancellation and recovery flows | [retention](references/retention.md) | A cause-specific retention proposal and a usable exit path |
