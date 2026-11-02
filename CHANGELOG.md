@@ -1,5 +1,23 @@
 # Changelog
 
+## Unreleased
+
+- Add an on-demand design-system review and creation/evolution workflow within
+  the existing `frontend-craft` skill. Ground foundations, semantic roles,
+  component/block selection and rules with reasons in real product tasks.
+- Reuse existing ownership, audit, mapping and propagation guidance; distinguish
+  proposals from implemented contracts and keep ordinary UI edits scoped.
+- Add design-system behavioral scenarios and fresh-context routing probes.
+- Add an agent-guided screen-repair sequence within the existing review owner:
+  preserve a before state, measure role-level drift, state the product brief,
+  repair by consequence and verify preserved content and interactions.
+- Adapt Enmera's MIT-licensed agent instructions with attribution and the full
+  notice; do not integrate its checker, hooks, generator or issue-count targets.
+
+Checks and evidence limits are recorded in
+[the design-system workflow validation](evals/design-system-validation.md) and
+[the agentic repair validation](evals/agentic-repair-validation.md).
+
 ## 0.14.0 — 2026-10-30
 
 - Add subscription-paywall guidance: review the paywall within its surrounding

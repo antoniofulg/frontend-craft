@@ -4,6 +4,9 @@ Read to audit reuse gaps, consolidate duplicated components or styles, migrate
 an application to shared patterns, or change shared styles. For ordinary feature
 work, use the ownership contract when choosing or extending a shared owner; the full audit is conditional
 on the requested scope.
+For explicit design-system review, creation or evolution, use
+[design systems](design-systems.md) for selection rules and authoring; this guide
+owns the audit, consolidation and propagation mechanics.
 
 ## Scope and authority
 

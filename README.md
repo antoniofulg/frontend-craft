@@ -72,11 +72,14 @@ $frontend-craft Compare our acquisition channels and propose a bounded test with
 $frontend-craft Assess our pricing, free-user costs and contribution; propose sustainable packages and a validation plan.
 $frontend-craft Map the dashboard's page families and assignment workflows.
 $frontend-craft Build the projects list using the existing dashboard patterns.
+$frontend-craft Review our design system for agent usability. Prioritize gaps in semantic roles, component selection, states, documentation and adoption; keep the review read-only.
+$frontend-craft Propose a design system for these workspace screens using our approved identity and installed stack. Define needed foundations, component/block contracts and owner documentation; do not implement yet.
 $frontend-craft Audit shared components and styles across the application. Report duplicated patterns, competing owners and coverage; keep the audit read-only.
 $frontend-craft Audit and consolidate duplicated components and style recipes across the application. Migrate matching consumers to shared owners, preserve explicit variants and report remaining gaps.
 $frontend-craft Remove the standard card border and update its radius across the application through its shared owner. Preserve form controls and explicit variants, find bypasses and verify propagation.
 $frontend-craft Implement this feature using established shared components, tokens and style recipes. Extend their supported variants when needed and verify affected consumers.
 $frontend-craft Review the task editor for reuse and consistency with sibling pages.
+$frontend-craft Repair this generated-looking screen using our existing brand and shared owners. Preserve content and behavior; inspect before/after layouts and exercise the changed interactions.
 $frontend-craft Check the owner picker with long names, no results, and save failures.
 $frontend-craft Match these skeletons to the actual loaded components. Keep known labels and controls visible; verify pending and ready geometry.
 $frontend-craft Audit public-page SEO and discovery: initial HTML, canonical URLs, publication states and HTTP policies. Separate local proof from deployment and search acceptance.
@@ -121,6 +124,16 @@ update the appropriate owner and its intended consumers, verify propagation and
 preserve unrelated families. Reports identify migrated consumers, remaining
 duplicates and overrides that could block propagation. Future work consumes
 these owners within the relevant application, family or domain scope.
+
+The [design-system workflow](skills/frontend-craft/references/design-systems.md)
+adds explicit review and creation/evolution branches within the same skill.
+Reviews assess whether an agent can select real supported components and roles,
+and prioritize improvements without editing files. Creation/evolution grounds
+foundations, semantic roles and reusable compositions in concrete product tasks,
+then documents selection rules, reasons and real examples. Proposals remain
+proposals; authorized implementation includes adoption and verification.
+Existing visual direction stays authoritative. Ordinary UI work consumes the
+system instead of generating another one.
 
 ## Pair with Impeccable
 
@@ -177,6 +190,13 @@ recovers relevant project guidance, including an existing onboarding philosophy.
 Delegated reviewers receive that same context; spawning agents does not establish
 coverage. Narrow copy, control and motion repairs remain scoped.
 
+Whole-screen repair uses the [agentic repair workflow](skills/frontend-craft/references/review.md#repair-a-generated-looking-screen):
+observe a comparable before state, measure relevant rhythm/shape, recover a short
+product-specific brief, repair by user consequence, preserve contracts and verify
+the result through the existing browser/Impeccable loop. It adds no design
+checker, hooks, generator, issue-count targets or separate skill installation.
+Review-only requests remain read-only; narrow edits do not start a screen redesign.
+
 For questions such as “what is the effect called when these items enter one
 after another?”, the optional [motion vocabulary](skills/frontend-craft/references/motion-vocabulary.md)
 provides reverse lookup and distinctions between close terms. Naming alone does
@@ -203,7 +223,7 @@ $frontend-craft Implement the approved CRM workflow using our existing stack. Ve
 ```
 
 The [skill entrypoint](skills/frontend-craft/SKILL.md) routes to focused references:
-mapping; reuse and consistency; shared UI patterns; components; interaction and accessibility; motion;
+mapping; design systems; reuse and consistency; shared UI patterns; components; interaction and accessibility; motion;
 commercial strategy; growth and sales; commercial visuals; landing pages; imagery;
 GTM measurement and automation;
 checkout; activation; monetization; retention; behavioral design; dashboards; product strategy;
@@ -381,6 +401,15 @@ The [review-routing and recovery evaluation](evals/review-routing-validation.md)
 records fresh-context landing/onboarding/recovery probes and their actual
 reference reads, separately from package checks and supplied-context probes.
 
+The [design-system workflow record](evals/design-system-validation.md) records
+fresh-context review, creation-proposal and narrow-label probes, including actual
+reference reads and the distinction between file-level routing and section-only
+loading. These source-only probes do not establish rendered system quality.
+
+The [agentic repair record](evals/agentic-repair-validation.md) covers a rendered
+whole-screen repair and a narrow-label boundary probe, including preserved
+interactions and source/tool limitations. No design checker was integrated.
+
 For 0.5.0, see the [upstream coverage map](evals/upstream-coverage.md) and
 [independent verification record](evals/verification-0.5.0.md). These are
 maintainer artifacts and are not loaded by the installed skill.
@@ -448,6 +477,11 @@ in 0.4.0 adapts Richard's (@richardrx) ideas from Revenue-Centric Design and is
 subject to its [full source-available terms](skills/frontend-craft/licenses/revenue-centric-design.txt),
 including attribution and the restriction on betting, casino, gambling and the
 real-money gaming/loot-box applications specified there.
+
+The agentic screen-repair additions adapt Enmera's MIT-licensed instructions,
+with the [full upstream notice](skills/frontend-craft/licenses/enmera-ai-design-check.txt)
+retained and the [adaptation boundary](skills/frontend-craft/SOURCES.md#agentic-screen-repair)
+recorded. The upstream checker, generator, hooks and example code are not bundled.
 
 [Source notes](skills/frontend-craft/SOURCES.md) identify the adaptation scope,
 upstream revision and changes. No third-party skill bundle, recipe library,

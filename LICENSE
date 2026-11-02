@@ -10,6 +10,12 @@ Retain attribution and indicate modifications when sharing adapted material.
 Source attribution is provided in skills/frontend-craft/SOURCES.md and is
 distributed with the skill.
 
+The agentic screen-repair additions adapt Enmera's ai-design-fix instructions.
+Retain the upstream MIT copyright and permission notice in:
+skills/frontend-craft/licenses/enmera-ai-design-check.txt
+The source revision and adaptation boundary are recorded in SOURCES.md within
+the distributed skill. Other technical and commercial source terms are unchanged.
+
 Commercial guidance introduced in 0.4.0 adapts Revenue-Centric Design, based
 on Richard's (@richardrx) work. Those additions are subject to the full
 source-available terms in:

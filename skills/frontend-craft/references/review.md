@@ -1,7 +1,7 @@
 # Interface and commercial review
 
 Read for reviews of a page, component, flow, change, or consistency; also for
-focused stress inspection of a component when requested or justified by a change.
+authorized whole-screen repair and focused component stress inspection.
 For standalone strategy, offer or sales reviews, use commercial findings below
 and [growth and sales](growth-sales.md); component tracing and rendering apply
 only when an interface is part of the requested scope.
@@ -55,6 +55,7 @@ guidance.
 
 | Concern | Reference |
 | --- | --- |
+| Design-system quality or agent usability: semantic roles, component/block selection and documented contracts | [design systems](design-systems.md), using its review branch |
 | Owner bypass, generic replacements, header/content drift or journey handoff/return inconsistency | [reuse and consistency](reuse-consistency.md) |
 | Style-family coverage, duplicated appearance, shared style updates or state/theme bypasses | [shared UI patterns](shared-ui-patterns.md) |
 | State ownership and component API | [components](components.md) |
@@ -210,6 +211,68 @@ one. Stop when the relevant issues are resolved or only optional preferences
 remain. Limit open-ended aesthetic iteration to three rounds; report material
 issues still unresolved, without treating the limit as a pass. A read-only review
 ends with findings and does not enter the fix loop.
+
+## Repair a generated-looking screen
+
+Use for an explicit request to repair, polish or de-template a whole screen.
+A review alone stops at findings. A narrow label, control or motion fix keeps its
+affected contracts and consumers; it does not start this whole-screen sequence.
+This workflow adapts Enmera's agent guidance; its [MIT notice](../licenses/enmera-ai-design-check.txt)
+is retained. It uses the project's preview/browser workflow, not an external
+design checker, token generator, editor hook or finding-count target.
+
+1. **Keep a trustworthy before state.** Retain comparable screenshots and the
+   relevant source state through existing review facilities, outside production
+   routes/assets. Record scope, viewport, theme and state. Include reachable open
+   menus and pending/error states where affected so a cleaner default frame
+   cannot hide lost content or behavior.
+2. **Diagnose the rendered cause.** Use [rendered critique](#critique-the-rendered-composition)
+   and [generated defaults](#check-generated-interface-defaults), then trace the
+   owners. When spacing, alignment or shape drifts, record actual gaps, padding,
+   row heights, edges and radii for comparable roles. Match the adopted scale and
+   explain intentional differences; numerical equality and a universal 4 px grid
+   are not goals. Rank access and task/trust failures before decoration.
+3. **State the repair brief.** Briefly recover the user's job, the screen's
+   supported promise or outcome, the real content/result that demonstrates it,
+   and what must stay: brand, wording, data, actions, destinations and behavior.
+   Reuse existing product/design context, including Impeccable's direction; do
+   not create a parallel brief file or reopen settled art direction. Resolve a
+   consequential missing choice before changing it; an authorized repair needs
+   no additional approval ritual.
+4. **Repair by consequence across the affected screen.** Apply the relevant
+   passes below at existing owners rather than finishing one decorative tile
+   while the same cause remains elsewhere. Follow actual dependencies; the
+   passes are a priority guide, not a requirement to modify every layer.
+
+   | Pass | Required decision |
+   | --- | --- |
+   | Access and task truth | Preserve readable content, focus/input access and usable narrow layouts; verify that figures, status and feedback match actual state using [interaction](interaction-accessibility.md) and [component contracts](components.md). |
+   | Wording and hierarchy | Keep approved meaning, labels, numbers and comparisons accurate; change copy only within authorized scope. Prioritize the task's action and distinguish useful context from repetition. |
+   | Shared rhythm and treatment | Resolve measured spacing/type/shape drift at the owning tokens, component or recipe through [shared ownership](shared-ui-patterns.md#ownership-contract); preserve real variants and local placement. |
+   | Composition and product evidence | Keep operational conventions familiar. For public-page proof, use the subject's real output through [landing-page composition](landing-pages.md#ground-the-visual-concept-in-the-subject), [imagery](imagery.md) or a [useful demonstration](landing-pages.md#demonstrate-value-through-a-useful-interaction); a static example can suffice. |
+   | Decoration and movement | Retain working brand treatments and meaningful interactions; simplify only what obscures the task or evidence. Use [motion](motion.md) when movement helps; animation and showcase stages are not prerequisites for a convincing page. |
+
+5. **Compare what must survive.** Check before/after wording, names, figures,
+   links, section/reading order and features, including controls revealed only
+   after interaction. Preserve them unless their change was requested or is
+   needed to fix the stated defect. Keep the approved identity; if a brand
+   treatment conflicts with accessibility, show the measured conflict and resolve
+   a supported accessible treatment rather than freezing a known access failure
+   or silently rebranding. Adapt reference techniques to this product instead of
+   importing the reference's copy, palette, layout sequence or showcase object.
+6. **Prove the correction in the same loop.** Reinspect corresponding
+   states/themes and wide/narrow layouts, with long supported-language content
+   where relevant. Exercise changed actions, keyboard access and failure recovery;
+   fit content by wrapping, stacking or intentional contained scrolling, not by
+   shrinking essential text, removing data or clipping overflow. Follow the
+   existing [critique iteration limit](#critique-the-rendered-composition) and
+   [recovery evidence](#verify-a-recovery-path), not a second polish loop. Report
+   concrete before/after consequences and what was preserved, together with
+   checks and remaining gaps; a lower issue count is not proof of better design.
+
+A screen without material defects need not be redesigned. Keep sound choices
+and stop once the requested corrections are evidenced; report any unavailable
+rendering or unresolved decision without claiming a visual or behavioral pass.
 
 ## Check generated-interface defaults
 
