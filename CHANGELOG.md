@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.15.0 — 2026-11-02
 
 - Add an on-demand design-system review and creation/evolution workflow within
   the existing `frontend-craft` skill. Ground foundations, semantic roles,
@@ -14,9 +14,10 @@
 - Adapt Enmera's MIT-licensed agent instructions with attribution and the full
   notice; do not integrate its checker, hooks, generator or issue-count targets.
 
-Checks and evidence limits are recorded in
-[the design-system workflow validation](evals/design-system-validation.md) and
-[the agentic repair validation](evals/agentic-repair-validation.md).
+Release package checks and remaining limits are recorded in
+[the 0.15.0 verification record](evals/verification-0.15.0.md). Detailed workflow
+evidence is in [the design-system validation](evals/design-system-validation.md)
+and [the agentic repair validation](evals/agentic-repair-validation.md).
 
 ## 0.14.0 — 2026-10-30
 

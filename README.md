@@ -1,6 +1,6 @@
 # Frontend Craft
 
-Current version: **0.14.0**. See the [release notes](CHANGELOG.md).
+Current version: **0.15.0**. See the [release notes](CHANGELOG.md).
 
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
@@ -468,6 +468,10 @@ The [0.14.0 verification record](evals/verification-0.14.0.md) covers the
 subscription-paywall additions to monetization and the activation route. It
 records package checks only; no agent scenarios or rendered paywalls were
 exercised for this release.
+
+The [0.15.0 verification record](evals/verification-0.15.0.md) covers the
+design-system and agentic screen-repair release, isolated Codex/Claude Code copy
+installation and the retained source-only/browser evidence with its limits.
 
 ## License and sources
 
