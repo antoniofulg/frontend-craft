@@ -53,6 +53,18 @@ specialist reference. It does not bundle a third-party chart catalog. Motion
 timings, spring settings, corner geometry and color examples are contextual
 starting points rather than universal requirements or upstream design tokens.
 
+## Agent-usable design systems
+
+[Rico's article, “Build the design system and skills your agent can follow”](https://x.com/_heyrico/status/2116953958279479760),
+read on 2026-11-01, informed the distinction between primitive values, semantic
+roles, selectable components, recurring domain blocks and rules with reasons.
+The [design-system workflow](references/design-systems.md) is independently
+expressed technical guidance integrated with this package's existing ownership,
+mapping and verification contracts. No article prose, token values, component
+catalog or code examples are bundled. Its sample aesthetic, library choices and
+blanket rules are not defaults here. The article is practitioner experience,
+not evidence of measured agent reliability or a universal design-system method.
+
 ## Shared UI patterns in 0.8.0
 
 The [shared UI patterns guide](references/shared-ui-patterns.md) and its routing
@@ -524,6 +536,32 @@ the reading surface type and the text-setting notes in
 Its numeric design dials, per-project `DESIGN.md`, reply-voice rules, motion
 pattern catalog, lint script and editor hook were not incorporated; no upstream
 prose, code or assets are bundled. No endorsement is implied.
+
+## Agentic screen repair
+
+[Enmera's ai-design-check repository](https://github.com/enmerasoftware/ai-design-check),
+MIT, recorded reference `9ef8300772554df810ea126b670ff4edac8de034`, consulted on
+2026-11-02. The `skills/design-fix/SKILL.md` agent workflow and its `proof.md`,
+`motions.md` and previously inspected `scales.md` references informed this
+comparison. The adapted [screen-repair section](references/review.md#repair-a-generated-looking-screen)
+retains the [full Enmera MIT notice](licenses/enmera-ai-design-check.txt).
+
+Adaptations: preserve a comparable before state; measure role-level spacing and
+shape when relevant; state a short product-specific repair brief; fix by user
+consequence across the affected screen; compare content and behavior; verify in
+the existing rendered/interaction loop. Existing landing-page, imagery, motion,
+component and shared-owner references remain authoritative for their subjects.
+The upstream's product-proof and motion-stage recipes were comparison material,
+not copied implementations or mandatory new page patterns.
+
+Not incorporated: the rule catalog, static checker, editor hooks, CLI commands,
+token/font generator, numeric finding targets, video tooling, bundled example
+code/assets, universal spacing/style prescriptions, automatic motion stages,
+blanket brand-foreground preservation despite inaccessible contrast, or a new
+approval checkpoint for an already authorized repair. This is an agent-guided
+workflow, not an integration or redistribution of the upstream skill package.
+Practitioner experience motivates the procedure; it does not establish measured
+agent reliability, visual superiority or commercial lift.
 
 ## Instruction and reference-loading evidence
 
