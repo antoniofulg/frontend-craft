@@ -88,6 +88,7 @@ guidance.
 | Skeleton fidelity and pending/ready geometry | [loading states](performance.md#skeletons-and-loading-states) |
 | Nested geometry, font features, bidi and advanced color | [visual details](visual-details.md) |
 | Chart encoding, truthful comparisons and data access | [charts](charts.md) |
+| Filters, configurators, outcome previews and decision aids | [choice surfaces](components.md#choice-surfaces-and-decision-support) |
 
 Use the project's correctness/security/performance workflow for concerns outside
 these lenses. Name a material concern and its owner rather than claiming a full

@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.16.0 — 2026-11-04
+
+- Add choice-surface guidance for filters, configurators and other surfaces where
+  people weigh trade-offs: comparable constraints, outcome previews, zero-result
+  recovery, control selection, distributions and decision aids based on real rules.
+- Require counts to share the query, scope and authorization of the results they
+  promise; treat other products' patterns as precedents to test, not evidence.
+- Add a routing row, a review lens and three behavioral scenarios, including one
+  where a proposed histogram should be rejected.
+
+Release package checks and remaining limits are recorded in
+[the 0.16.0 verification record](evals/verification-0.16.0.md).
+
 ## 0.15.0 — 2026-11-02
 
 - Add an on-demand design-system review and creation/evolution workflow within

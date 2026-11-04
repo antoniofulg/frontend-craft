@@ -129,6 +129,53 @@ Use [table semantics](interaction-accessibility.md#tables-and-interactive-grids)
 for accessible behavior, and [large collections](performance.md#large-collections)
 when rendering cost warrants investigation.
 
+## Choice surfaces and decision support
+
+Use for filters, search refinement, configurators and other surfaces where people
+weigh trade-offs. Start from the decision: what they are choosing, which constraints
+trade against each other and what they need to know before committing. Treat each
+aid below as a hypothesis for that decision; fewer controls and more data are both
+unproven until the person can choose with less backtracking. Add context that could
+change a choice and remove what only reports that data exists.
+
+- **Keep trade-offs comparable.** Place constraints people weigh together on one
+  surface, and reserve separate pages for independent or lengthy tasks. Back-and-forth
+  between steps to compare values is the signal to look for. Use an inline panel when
+  results stay visible, and a sheet or dialog when space requires one; it follows the
+  existing [overlay and focus contracts](interaction-accessibility.md#controls-and-navigation)
+  and keeps filter state with the [collection owner](#collections-sorting-and-selection).
+- **Preview the outcome.** Apply changes immediately when results are visible and the
+  query is affordable. When results are hidden or batched, state the consequence on
+  the commit action, such as "Show 41 homes". The count comes from the same query,
+  scope and authorization as the results it promises. While a count resolves, mark
+  the previous value pending and discard [out-of-order responses](#async-state-and-recovery);
+  label an estimate as one. Announce settled counts through the existing
+  [announcement contract](interaction-accessibility.md#choose-announcement-priority).
+- **Recover from dead ends.** On zero results, name the active constraints and offer
+  the relaxation that restores results. Option counts use the preview's query scope.
+  When a facet's options combine as alternatives, count them with the other active
+  filters applied and that facet's own selection excluded.
+- **Match the control to the value.** Use visible options for short known sets, a
+  range with exact-value inputs for continuous values, and a stepper for small
+  adjustments from a sensible default. Keep every option reachable by keyboard and
+  touch, and use [locale-aware values](interaction-accessibility.md#locale-sensitive-values-and-messages).
+- **Show the distribution when it changes the choice.** A histogram on a price range
+  helps when values cluster or trade off against the range; a short option list with
+  counts usually says enough. Follow [truthful encoding](charts.md), state what the
+  bars count, and expose the same information in text. The control stays fully
+  usable when the distribution is loading, sparse or unavailable.
+- **Connect decision aids to real rules.** A calculator earns its place when the
+  input maps to a documented calculation and its result narrows the choice, such as
+  a budget mapped onto the price range. State assumptions, label estimates, let
+  people browse without completing it and let them override its result. Treat
+  financial or personal inputs as sensitive, retained or tracked only under the
+  product's existing data policy.
+
+Other products' patterns are precedents to test against this audience and decision;
+their prevalence is not evidence, and project contracts stay authoritative. Verify
+with the task: compare backtracking, zero-result rate, completion and whether people
+can explain why they chose. Check real, sparse and slow data at narrow and wide widths.
+
 ## React recipes, only for matching needs
 
 ### Coordinated parts: one state/action contract

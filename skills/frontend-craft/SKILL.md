@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/
 metadata:
   author: Antonio Fulgêncio
-  version: "0.15.0"
+  version: "0.16.0"
 ---
 
 # Frontend Craft
@@ -49,6 +49,7 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Design or change a component API/state owner | [components](references/components.md) | The smallest compatible extension of the actual owner |
 | Fix request races, uncertain saves, repeated submissions, optimistic recovery or undo | [async recovery](references/components.md#async-state-and-recovery), including [undo and reversibility](references/components.md#undo-and-reversibility) when offered | Context-safe state updates and recovery using the existing mutation contract |
 | Change tables, filters, sorting, paging or bulk selection | [collections](references/components.md#collections-sorting-and-selection), following its semantics/performance routes | Explicit query and selection scope with usable table behavior |
+| Design or review filters, configurators or other surfaces where users weigh trade-offs | [choice surfaces](references/components.md#choice-surfaces-and-decision-support), following its collection, chart and accessibility routes | Context, controls and outcome previews tied to the decision, with truthful counts and evidence limits |
 | Change controls, forms, onboarding, authentication, blocked/limit states, layout adaptation or keyboard behavior | [interaction and accessibility](references/interaction-accessibility.md), including [limits and unavailable states](references/interaction-accessibility.md#limits-and-unavailable-states) when applicable | Usable behavior in the relevant states and environments |
 | Change deep links, Back/Forward behavior, restored views or unsaved drafts | [navigation resilience](references/interaction-accessibility.md#navigation-and-draft-resilience) | Useful restoration with protected drafts and current authorization |
 | Change localized numbers, currencies, messages, dates or scheduled times | [locale-sensitive values](references/interaction-accessibility.md#locale-sensitive-values-and-messages) | Correct display, input round trips and explicit time/currency contracts |
