@@ -563,6 +563,20 @@ workflow, not an integration or redistribution of the upstream skill package.
 Practitioner experience motivates the procedure; it does not establish measured
 agent reliability, visual superiority or commercial lift.
 
+## Choice surfaces
+
+A maintainer-supplied summary of a practitioner video, comparing junior through
+staff designs of food-delivery and home-search screens, was comparison material on
+2026-11-04; its title and URL are not recorded, and the video itself was not
+inspected. It motivated the independently expressed
+[choice-surface section](references/components.md#choice-surfaces-and-decision-support):
+comparable trade-offs, outcome previews, control selection, distributions and
+decision aids. Query scope, authorization, recovery, accessibility and data-policy
+conditions are author judgment. Not incorporated: seniority levels as a review
+standard, the claim that fold placement does not matter, a preference for custom
+icons over photography, or any research tool. It does not establish measured
+usability or commercial lift.
+
 ## Instruction and reference-loading evidence
 
 Research and official format/host documentation were consulted on 2026-10-28:
