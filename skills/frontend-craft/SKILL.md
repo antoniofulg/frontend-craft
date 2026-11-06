@@ -45,12 +45,13 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Create, establish or evolve a design system | [design systems](references/design-systems.md), using its creation/evolution branch | A scoped proposal or implemented foundations, semantic roles, component/block contracts and owner documentation, with adoption and verification evidence |
 | Audit reusable UI patterns, consolidate duplicated components/styles, or apply shared owners across an application | [shared UI patterns](references/shared-ui-patterns.md) | Coverage of each style family, source-linked gaps and exceptions; when implementation is requested, migrated consumers, maintained ownership guidance and propagation checks |
 | Change shared styles, typography, colors, spacing, states, themes or layer conventions | [change a shared style](references/shared-ui-patterns.md#change-a-shared-style) | A change at the owner matching the requested scope, inherited by intended consumers with affected variants and propagation checks |
+| Redesign or replace an existing form, flow or screen | [redesign parity](references/review.md#prove-redesign-parity), then [reuse and consistency](references/reuse-consistency.md) | A code-derived inventory, current-versus-new render and a parity table listing removals first |
 | Plan, create, recreate or change a page/component; compare journey handoffs and returns | [reuse and consistency](references/reuse-consistency.md) | Proposal, implementation or scoped comparison grounded in matching precedents and journey contracts |
 | Design or change a component API/state owner | [components](references/components.md) | The smallest compatible extension of the actual owner |
 | Fix request races, uncertain saves, repeated submissions, optimistic recovery or undo | [async recovery](references/components.md#async-state-and-recovery), including [undo and reversibility](references/components.md#undo-and-reversibility) when offered | Context-safe state updates and recovery using the existing mutation contract |
 | Change tables, filters, sorting, paging or bulk selection | [collections](references/components.md#collections-sorting-and-selection), following its semantics/performance routes | Explicit query and selection scope with usable table behavior |
 | Design or review filters, configurators or other surfaces where users weigh trade-offs | [choice surfaces](references/components.md#choice-surfaces-and-decision-support), following its collection, chart and accessibility routes | Context, controls and outcome previews tied to the decision, with truthful counts and evidence limits |
-| Change controls, forms, onboarding, authentication, blocked/limit states, layout adaptation or keyboard behavior | [interaction and accessibility](references/interaction-accessibility.md), including [limits and unavailable states](references/interaction-accessibility.md#limits-and-unavailable-states) when applicable | Usable behavior in the relevant states and environments |
+| Change controls, forms, onboarding, authentication, blocked/limit states, layout adaptation, keyboard shortcuts or keyboard behavior | [interaction and accessibility](references/interaction-accessibility.md), including [limits and unavailable states](references/interaction-accessibility.md#limits-and-unavailable-states) when applicable | Usable behavior in the relevant states and environments |
 | Change deep links, Back/Forward behavior, restored views or unsaved drafts | [navigation resilience](references/interaction-accessibility.md#navigation-and-draft-resilience) | Useful restoration with protected drafts and current authorization |
 | Change localized numbers, currencies, messages, dates or scheduled times | [locale-sensitive values](references/interaction-accessibility.md#locale-sensitive-values-and-messages) | Correct display, input round trips and explicit time/currency contracts |
 | Clarify labels, instructions, empty states or errors; reduce redundant content, duplicated feedback or unnecessary controls | [content restraint](references/interaction-accessibility.md#content-restraint); Impeccable's `clarify`, when available, for wording | Concise task-relevant content with necessary context, accessible feedback and recovery preserved |
@@ -135,6 +136,9 @@ it does not require a new growth strategy.
 4. Choose reuse, extension, or new implementation using the reuse reference.
    State the important choice briefly, naming the source and any real gap.
    New requirements can justify a difference; document its boundary.
+5. Read the [build checklist](references/review.md#check-a-build-before-delivery)
+   before building, so its applicable rules shape the first version rather than
+   a later repair.
 
 Keep recurring UI decisions in one shared owner: the existing component, style
 recipe or token responsible for that concern. Consumers inherit its defaults;
@@ -199,7 +203,8 @@ deliverables, economic assumptions and how the next evidence will change the
 decision. A recommendation can be to improve distribution or sales rather than
 build another feature or redesign a page.
 
-For changed interfaces, compare with the selected precedents in corresponding states
+For changed interfaces, run the [build checklist](references/review.md#check-a-build-before-delivery)
+and fix each "no" at its shared owner. Compare with the selected precedents in corresponding states
 and viewport/theme conditions. A shared import does not prove visual consistency:
 inspect variant selection, wrapper composition, and local overrides too. Use the
 relevant checks and existing browser workflow; reuse unchanged valid evidence.

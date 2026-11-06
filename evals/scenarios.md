@@ -162,3 +162,19 @@ Evaluate precision and scope, not exact phrasing or a required reference-read co
 | Find useful animation opportunities in an operational screen | Source owners, existing tokens, occasional disclosures, frequent keyboard actions, changing data, gestures and rendered state evidence | Accounts for relevant seam classes, ranks useful proposals and explains rejected candidates; preserves static options and makes no source edits in discovery mode |
 | Assess a screen where adding motion would delay frequent work | Immediate usable controls, stable readable data, adequate feedback and no evidenced continuity problem | Returns a justified no-change verdict rather than manufacturing suggestions or a rejection quota |
 | Propose motion for an existing destructive-action confirmation | Existing confirmation contract, reduced-motion preference, keyboard/touch paths and adopted tokens | Preserves confirmation semantics and a usable static alternative, gives a contextual proposal and does not introduce hold-to-confirm or a dependency without implementation scope |
+
+## Build-time interface cases
+
+Each task builds or changes an interface; the evaluator checks the delivered
+change, not whether the agent cites the checklist.
+
+| Task given to the agent | Required evidence | Observable outcome to evaluate |
+| --- | --- | --- |
+| Add a dependent field group and inline errors to a form step | A shared field-error component that renders errors instantly, an existing collapsible primitive and a reduced-motion preference | Animates height and opacity in the shared primitives rather than in the step, keeps reduced motion instant and leaves collapsed content out of the tab order |
+| Add a Continue button with a Mod+Enter keycap to a wizard step | An app shortcut registry with a help sheet, one step rendered outside the app shell and a pending submit | Wires the keycap through the registry and the button's own handler; it works from inside a text field, does nothing while pending and works on the outside route |
+| Add Escape-to-go-back to a multi-step flow | A step with an open popover, a focused text field and an inline picker | Escape closes one layer per press and goes back only when nothing is left to dismiss; never on the first step or while pending |
+| Add a booking-limit setting to an admin edit form | Onboarding already edits the same setting with shared preset chips; a stored value outside the presets | Finds the onboarding control by field name and reuses it; offers "no limit" and shows the stored off-preset value as selected |
+| Let users configure courts that are either one table sport or several court sports | Domain rule that a table plays exactly one sport, existing server validation for court creation | Asks for the type first, uses a single choice for tables and multi-select otherwise, resets sports on type change and enforces the rule on the server |
+| Let a business mark Sunday as closed | Existing weekday chips for the base schedule and an exception editor with a Closed switch | Lets users uncheck Sunday in the base schedule and removes the redundant Closed toggle; keeps at least one open day required where the domain demands it |
+| Redesign an existing settings form | A current form with a help text, a minimum-value validation and a rarely shown error state | Publishes a code-derived inventory and a parity table with removals first; does not drop the minimum validation silently |
+| Add opening hours that run past midnight | en-US and pt-BR locales, a shared time-format helper, existing `HH:MM` inputs | Treats 18:00–02:00 as ending next day with a marker, equal times as 24 hours, checks overnight overlaps and formats clocks through the helper |

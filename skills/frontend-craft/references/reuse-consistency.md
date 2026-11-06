@@ -28,6 +28,23 @@ Match the project's construction order when it has one. Do not introduce a
 generic primitive to bypass a richer domain component, or extract a universal
 abstraction merely because two pages look similar.
 
+### Same setting, same control
+
+Search for every place that edits the same setting, not only the same page
+family: onboarding, admin create/edit, settings and bulk editors are siblings
+for that field. Reuse one shared control for the setting everywhere it is
+edited; preset chips in one place and a bare number input in another is a
+defect. Why: users learn a setting once, and two controls drift in validation,
+units and allowed values.
+
+A shared preset control always offers the domain's "no limit" or empty choice
+when the setting allows one, and shows a current value that falls outside the
+presets (45 min among 30/60/90) as selected instead of hiding it.
+
+Check: search the codebase for the setting's field name, schema key and label.
+Every editor uses the same control, and an off-preset stored value renders as
+selected.
+
 ## Keep shared decisions in their owner
 
 Recurring appearance follows the same ownership rule as behavior: consume the
@@ -40,6 +57,15 @@ work stays within its relevant family and affected consumers.
 For a requested visual change across consumers, follow
 [change a shared style](shared-ui-patterns.md#change-a-shared-style) to select
 the owner at the intended scope and check its variants and propagation.
+
+Interactive elements look interactive: each has hover, active and
+`focus-visible` states. Build them from the design system's button, link or
+control with its variant and size. A raw `<button>` or `<a>` with a custom class
+usually lacks those states, and restyling classes on the shared Button bypass
+its states the same way; add or reuse a variant or size instead. Why: a control
+without hover and focus feedback reads as static text, and keyboard users lose
+their place. Check: search the changed scope for raw interactive elements and
+class overrides on the shared control; hover, press and tab to each one.
 
 ## Compare the whole pattern
 
@@ -90,7 +116,10 @@ the necessary difference. Preserve unrelated appearances and workflows.
 
 Explicit redesign changes the visual authority for its approved scope. Retain
 compatible domain behavior and composition; do not let the old map silently
-override the new direction. Refresh affected map entries after implementation.
+override the new direction. Before changing an existing form or flow, prove
+[redesign parity](review.md#prove-redesign-parity); prefer an existing pattern
+to a new one and keep the scope to the problem asked. Refresh affected map
+entries after implementation.
 
 ## Prove the result
 

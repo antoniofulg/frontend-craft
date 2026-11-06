@@ -16,6 +16,44 @@ matches. Extend its documented variation point instead of copying its internals.
 Inspect the component library actually installed; do not assume its underlying
 primitive library from its visual style or a familiar file name.
 
+## Model the real domain
+
+Shape controls after the real object, not after the form that happens to be easy
+to build. Why: a control that allows states the real world cannot have produces
+invalid records and forces users to work around the interface.
+
+- **Cardinality decides the control.** When the real object has exactly one value
+  (a table plays one sport), use a single choice; when it has several, use
+  multi-select. One list uses one kind of control; a mix of checkboxes and radios
+  in the same group hides which rule applies.
+- **Type first, then its options.** When a choice changes what else is valid,
+  ask for it first and show only the options that type allows. Changing the type
+  resets its dependent options to that type's defaults. Enforce the same rule on
+  the server; the interface is not the only writer.
+- **Defaults match the common real case.** Preselect what most real instances
+  have, such as every sport a multisport court supports, keeping it visible and
+  editable under [smart defaults](behavioral-design.md#user-behavior-and-decision-making).
+- **Edit directly instead of through exceptions.** When the base value can express
+  a case (closed on Sunday is Sunday unchecked), let users change it there rather
+  than adding an exception plus a toggle. An exception means only "different from
+  the default"; remove toggles that duplicate the base. Keep at least one valid
+  option selected when the domain requires one.
+
+Check: for each choice, name the real object's cardinality and dependencies, and
+confirm the control, the reset on type change and the server validation agree.
+
+## Summaries and live previews
+
+A preview or overview beside a form shows the whole entity being built: grouped
+inventory, the full week, every step's status. One slice (only Monday) hides
+whether the rest is right. Group repeated items so its height grows with the
+number of categories, not of items. In dense summaries, show short localized
+display labels ("Sand 1"), keep any name the user set explicitly, and leave
+stored names unchanged; the shortening is display only.
+
+Check: fill the form with realistic maximum content and confirm the preview
+shows every part of the entity without growing per item.
+
 ## Keep the smallest useful API
 
 - Keep state with the narrowest owner that coordinates its real consumers.
