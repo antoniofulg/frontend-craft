@@ -185,7 +185,7 @@ Choose by distance, size, frequency and input method, then inspect the real resu
 | Press/hover feedback | CSS transition, 80–140 ms, `ease-out` | Fast reversal; hover enhancement only on capable pointers |
 | Popover/menu | Opacity plus small anchored transform, 120–220 ms, `ease-out` | Remain anchored; preserve primitive focus and dismissal behavior |
 | Dialog/drawer | Short displacement/fade, 180–300 ms, decelerating entrance | Exit can be shorter; focus and input state must match visibility |
-| Expand/collapse | Content-sized transition, 150–250 ms, `ease-in-out` | Retarget when content changes; avoid clipping focused descendants |
+| Expand/collapse | Content-sized transition, 150–250 ms, `ease-in-out` | Retarget when content changes; avoid clipping focused descendants. Inside a form or panel, use the form conditional reveal row |
 | Form conditional reveal | Height plus fade, 150–200 ms, `ease-out` | [Default treatment](#reveal-conditional-content-smoothly) through the shared primitive |
 | Toast | Modest translate/fade, 150–220 ms | Repeated items update/reflow coherently; essential information survives dismissal |
 | Drag/snap | Damped spring following gesture velocity | Constrain movement, settle predictably and provide a non-drag action |

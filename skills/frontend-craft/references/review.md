@@ -282,7 +282,8 @@ rendering or unresolved decision without claiming a visual or behavioral pass.
 
 Run this checklist on every interface you build or change, and on interface
 reviews, for the applicable rows. Each answer is yes, no or not applicable.
-When building, fix each "no" at its shared owner before delivery; in a review,
+When building, fix each "no" at its shared owner before delivery and report the
+consumers that inherit the fix; in a review,
 report each "no" as a finding. The linked rule holds the reason and how to check it.
 
 | Check | Rule |
@@ -290,14 +291,15 @@ report each "no" as a finding. The linked rule holds the reason and how to check
 | Does every conditional reveal (field errors, dependent fields, collapsible panels) ease height and opacity through its shared primitive, instantly under reduced motion? | [conditional reveals](motion.md#reveal-conditional-content-smoothly) |
 | Does every visible keycap or shortcut label trigger its action from anywhere in its scope, including inside a text field, through the same validation and disabled/pending path as a click? | [keyboard shortcuts](interaction-accessibility.md#keyboard-shortcuts) |
 | When the app has a shortcut registry, is every shortcut registered through it, so it appears in the shortcut help, including on routes outside the app shell? | [keyboard shortcuts](interaction-accessibility.md#keyboard-shortcuts) |
-| In a multi-step flow, does Mod+Enter run the primary action, does Escape dismiss one layer at a time before going back, never from the first step or while pending, and can single-key shortcuts be turned off or remapped and stay inactive while typing? | [multi-step keyboard flow](interaction-accessibility.md#multi-step-keyboard-flow) |
+| In a multi-step flow, does Mod+Enter run the primary action from anywhere in the step, and does Escape dismiss one layer per press before going back, never from the first step or while pending? | [multi-step keyboard flow](interaction-accessibility.md#multi-step-keyboard-flow) |
+| Can every single-key shortcut be turned off or remapped, and does it stay inactive while typing? | [keyboard shortcuts](interaction-accessibility.md#keyboard-shortcuts) |
 | Does every interactive element have hover, active and focus-visible states from the design-system control, with no raw restyled `<button>`? | [interactive states](reuse-consistency.md#keep-shared-decisions-in-their-owner) |
 | Is each setting edited with the same shared control everywhere it appears, offering "no limit" where allowed and showing off-preset values? | [same setting, same control](reuse-consistency.md#same-setting-same-control) |
 | Does each choice match the real object's cardinality, with type chosen before its options, a reset on type change and the same rule on the server? | [model the real domain](components.md#model-the-real-domain) |
-| Do defaults match the common real case, and can base values express cases without an extra exception and toggle, with at least one valid option kept where required? | [model the real domain](components.md#model-the-real-domain) |
+| Do defaults match the common real case, and do users edit the base value directly (uncheck a day) instead of adding an exception with its own toggle, keeping at least one valid option where required? | [model the real domain](components.md#model-the-real-domain) |
 | Do time ranges handle next-day closes, 24-hour days and overnight overlaps, with clock times formatted by one locale helper? | [locale-sensitive values](interaction-accessibility.md#locale-sensitive-values-and-messages) |
 | Does a summary or live preview show the whole entity, grouped by category, with short display labels that keep names the user set and leave stored names unchanged? | [summaries and live previews](components.md#summaries-and-live-previews) |
-| For a redesign of an existing form or flow, does the delivery include a code-derived inventory (with `path:line`), a side-by-side render and a parity table with every removal listed first? | [redesign parity](#prove-redesign-parity) |
+| When the change redesigns or replaces an existing form, flow or screen, does the delivery include a code-derived inventory (with `path:line`), a side-by-side render and a parity table with every removal listed first? | [redesign parity](#prove-redesign-parity) |
 
 Verify each "yes" in the running interface where one is available; mark a
 source-only answer as such, without reporting it as passed.

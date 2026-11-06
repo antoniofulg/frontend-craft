@@ -142,8 +142,9 @@ teaches users the interface lies, and they stop trying the shortcuts that work.
   resolve in one place; without one, keep bindings in one shared owner. A route
   rendered outside the app shell needs its own provider; check that the
   shortcut works there too.
-- **Single-key shortcuts meet WCAG 2.1.4.** Give users a way to turn them off
-  or remap them, or make them active only while their component has focus
+- **Single-key shortcuts meet WCAG SC 2.1.4 (A).** Let users turn them off or
+  remap them to include a modifier key, or make them active only while their
+  component has focus
   ([character key shortcuts, A](https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts.html)).
   Also ignore them while focus is in a text field, so typing never triggers them.
 
@@ -159,6 +160,7 @@ defines others:
 
 - **Primary action:** Mod+Enter (⌘ on macOS, Ctrl elsewhere)
   runs the step's primary action, such as Continue or Save, from anywhere in the step.
+  Render its keycap for the platform too (⌘ on macOS, Ctrl elsewhere).
 - **Escape is layered.** Let an open dialog, menu or popover primitive handle
   its own Escape and stop propagation; the step acts only on unhandled presses.
   Each press undoes the innermost layer only: close the
@@ -295,10 +297,11 @@ For opening hours, shifts and other daily time ranges, model the real day:
   unless the domain models 24 hours separately; elsewhere, follow the domain's rule. Validate overlaps across midnight, including a late range
   that runs into the next day's first range.
 - Format displayed clock times through one shared locale helper built on
-  `Intl.DateTimeFormat` rather than per-locale patterns, so 12-hour
-  locales (en-US) and 24-hour locales (pt-BR) render consistently on every screen.
-  Keep input and stored values in the canonical `HH:MM` form; the locale changes
-  only how they are displayed.
+  `Intl.DateTimeFormat`, not per-locale patterns, so 12-hour locales (en-US)
+  and 24-hour locales (pt-BR) render consistently on every screen. Format each
+  `HH:MM` on a fixed reference date with `timeZone: 'UTC'`, so a daylight-saving
+  gap never shifts a wall time. Keep input and stored values in the canonical
+  `HH:MM` form; the locale changes only how they are displayed.
 
 Why: without these rules, a venue open 18:00–02:00 cannot be entered, and the same
 hour reads `6:00 PM` on one screen and `18:00` on the next.
