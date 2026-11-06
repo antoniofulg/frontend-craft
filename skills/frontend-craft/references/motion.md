@@ -40,7 +40,7 @@ available and identify any source-only uncertainty.
 | --- | --- |
 | Activation feedback | Acknowledgment missing from a press or action; retain immediate response and existing keyboard/touch feedback. A scale change is one option, not a required button treatment. |
 | Confirmation/progress | A consequential action or progress state is hard to understand; do not replace the approved confirmation behavior with a hold gesture merely to create an animation. |
-| Appearing/disappearing content | Conditional regions, disclosures, route content or occasional collection changes jump without a useful connection; keep content readable and available without animation. Form conditional reveals have a [default treatment](#reveal-conditional-content-smoothly). |
+| Appearing/disappearing content | Conditional regions, disclosures, route content or occasional collection changes jump without a useful connection; keep content readable and available without animation. Form conditional reveals have a [default treatment](#reveal-conditional-content-smoothly); discovery still weighs frequency before proposing it. |
 | Anchoring and dismissal | A panel loses its relationship to its trigger or exits in a confusing direction; follow the real geometry, primitive and dismissal contract. |
 | Group entrances | Related items arrive without a useful sequence; a small stagger may clarify grouping but must not delay interaction or repeated work. |
 | Gesture boundaries | Drag/release, reorder or dismissal loses continuity; use the existing gesture owner and retain cancellation and non-drag access. |
@@ -85,7 +85,7 @@ Coordinate visual state with accessible visibility and interaction state.
 
 ### Reveal conditional content smoothly
 
-When implementing or changing a conditional reveal inside a form or panel (a
+When implementing or changing a conditional reveal inside a form (a
 validation message, a dependent field group, a collapsible section), animate it
 by default. Change the height smoothly (a `grid-template-rows` transition from
 `0fr` to `1fr`, whose child needs `min-height: 0; overflow: hidden`, or the
@@ -185,7 +185,7 @@ Choose by distance, size, frequency and input method, then inspect the real resu
 | Press/hover feedback | CSS transition, 80–140 ms, `ease-out` | Fast reversal; hover enhancement only on capable pointers |
 | Popover/menu | Opacity plus small anchored transform, 120–220 ms, `ease-out` | Remain anchored; preserve primitive focus and dismissal behavior |
 | Dialog/drawer | Short displacement/fade, 180–300 ms, decelerating entrance | Exit can be shorter; focus and input state must match visibility |
-| Expand/collapse | Content-sized transition, 150–250 ms, `ease-in-out` | Retarget when content changes; avoid clipping focused descendants. Inside a form or panel, use the form conditional reveal row |
+| Expand/collapse | Content-sized transition, 150–250 ms, `ease-in-out` | Retarget when content changes; avoid clipping focused descendants. Inside a form, use the form conditional reveal row |
 | Form conditional reveal | Height plus fade, 150–200 ms, `ease-out` | [Default treatment](#reveal-conditional-content-smoothly) through the shared primitive |
 | Toast | Modest translate/fade, 150–220 ms | Repeated items update/reflow coherently; essential information survives dismissal |
 | Drag/snap | Damped spring following gesture velocity | Constrain movement, settle predictably and provide a non-drag action |
@@ -241,8 +241,6 @@ reported; a visually preferred effect is not automatically more usable.
 - Are exiting/hidden surfaces excluded from interaction at the correct time,
   with focus restored according to their primitive's contract?
 - Can keyboard, touch and reduced-motion users obtain the same outcome?
-- Do form conditional reveals pass the
-  [build checklist](review.md#check-a-build-before-delivery) row?
 - Do dynamic content and resize preserve legibility and spatial continuity?
 - If smoothness or responsiveness is claimed, was it inspected/measured under
   representative load rather than inferred from the animated property?

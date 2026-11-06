@@ -149,18 +149,18 @@ teaches users the interface lies, and they stop trying the shortcuts that work.
   Also ignore them while focus is in a text field, so typing never triggers them.
 
 Check: search the changed scope and its shared components for every rendered
-keycap, `kbd` or shortcut label. Press each from inside a text field, from the
+keycap, `kbd` or shortcut label. Press each modifier shortcut from inside a text field, from the
 surrounding scope and while the action is pending or disabled; the result
 matches the click. When adding a hint, add the binding in the same change.
 
 ### Multi-step keyboard flow
 
-In a wizard or multi-step form, keep these defaults unless the project already
-defines others:
+When adding keyboard actions to a wizard or multi-step form, use these defaults
+unless the project already defines others:
 
-- **Primary action:** Mod+Enter (⌘ on macOS, Ctrl elsewhere)
-  runs the step's primary action, such as Continue or Save, from anywhere in the step.
-  Render its keycap for the platform too (⌘ on macOS, Ctrl elsewhere).
+- **Primary action:** Mod+Enter runs the step's primary action, such as Continue
+  or Save, from anywhere in the step; render its keycap per platform (⌘ on
+  macOS, Ctrl elsewhere).
 - **Escape is layered.** Let an open dialog, menu or popover primitive handle
   its own Escape and stop propagation; the step acts only on unhandled presses.
   Each press undoes the innermost layer only: close the
