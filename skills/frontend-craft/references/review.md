@@ -62,6 +62,8 @@ guidance.
 | Request races, mutation uncertainty, optimistic rollback or actual undo | [async recovery](components.md#async-state-and-recovery), [undo](components.md#undo-and-reversibility) when offered |
 | Table semantics, query scope, paging and bulk selection | [collections](components.md#collections-sorting-and-selection), then its applicable behavior routes |
 | Controls, forms, layout, typography, color, feedback or blocked/limit states | [interaction and accessibility](interaction-accessibility.md) |
+| Keyboard shortcuts, keycap hints and multi-step keyboard flow | [keyboard shortcuts](interaction-accessibility.md#keyboard-shortcuts) |
+| Control choice, cardinality, defaults and dependent options against the real domain | [model the real domain](components.md#model-the-real-domain) |
 | Redundant copy, duplicated feedback or unnecessary controls | [content restraint](interaction-accessibility.md#content-restraint) |
 | History, drafts and restored-page freshness | [navigation resilience](interaction-accessibility.md#navigation-and-draft-resilience) |
 | Localized amounts/messages and calendar/time-zone values | [locale-sensitive values](interaction-accessibility.md#locale-sensitive-values-and-messages) |
@@ -253,7 +255,8 @@ design checker, token generator, editor hook or finding-count target.
    | Composition and product evidence | Keep operational conventions familiar. For public-page proof, use the subject's real output through [landing-page composition](landing-pages.md#ground-the-visual-concept-in-the-subject), [imagery](imagery.md) or a [useful demonstration](landing-pages.md#demonstrate-value-through-a-useful-interaction); a static example can suffice. |
    | Decoration and movement | Retain working brand treatments and meaningful interactions; simplify only what obscures the task or evidence. Use [motion](motion.md) when movement helps; animation and showcase stages are not prerequisites for a convincing page. |
 
-5. **Compare what must survive.** Check before/after wording, names, figures,
+5. **Compare what must survive.** For an existing form or flow, use the
+   [parity table](#prove-redesign-parity). Check before/after wording, names, figures,
    links, section/reading order and features, including controls revealed only
    after interaction. Preserve them unless their change was requested or is
    needed to fix the stated defect. Keep the approved identity; if a brand
@@ -274,6 +277,51 @@ design checker, token generator, editor hook or finding-count target.
 A screen without material defects need not be redesigned. Keep sound choices
 and stop once the requested corrections are evidenced; report any unavailable
 rendering or unresolved decision without claiming a visual or behavioral pass.
+
+## Check a build before delivery
+
+Run this checklist on the elements a build adds or alters, and on interface
+reviews, for the applicable rows. Each answer is yes, no or not applicable.
+When building, fix each "no" the change introduces at its shared owner and
+report the consumers that inherit the fix; report problems that were already
+there outside the change as gaps without fixing them. In a review, report each
+"no" as a finding. The linked rule holds the reason and how to check it.
+
+| Check | Rule |
+| --- | --- |
+| Does every conditional reveal in a form (field errors, dependent fields, collapsible sections) ease height and opacity through its shared primitive, instantly under reduced motion? | [conditional reveals](motion.md#reveal-conditional-content-smoothly) |
+| Does every visible keycap or shortcut label trigger its action from anywhere in its scope, including inside a text field for modifier shortcuts, through the same validation and disabled/pending path as a click? | [keyboard shortcuts](interaction-accessibility.md#keyboard-shortcuts) |
+| When the app has a shortcut registry, is every shortcut registered through it, so it appears in the shortcut help, including on routes outside the app shell? | [keyboard shortcuts](interaction-accessibility.md#keyboard-shortcuts) |
+| In a multi-step flow that offers keyboard step actions, does its primary-action shortcut (Mod+Enter by default) run from anywhere in the step, and does Escape dismiss one layer per press before going back, never from the first step or while pending? | [multi-step keyboard flow](interaction-accessibility.md#multi-step-keyboard-flow) |
+| Can every single-key shortcut be turned off, remapped or limited to its focused component, and does it stay inactive while typing? | [keyboard shortcuts](interaction-accessibility.md#keyboard-shortcuts) |
+| Does every interactive element have hover, active and focus-visible states from the design-system control, with no raw `<button>`/`<a>` or class overrides on the shared control? | [interactive states](reuse-consistency.md#keep-shared-decisions-in-their-owner) |
+| Is each setting edited with the same shared control everywhere it appears, offering "no limit" where allowed and showing off-preset values? | [same setting, same control](reuse-consistency.md#same-setting-same-control) |
+| Does each choice match the real object's cardinality, with type chosen before its options, a reset on type change and the same rule on the server? | [model the real domain](components.md#model-the-real-domain) |
+| Do defaults match the common real case, and do users edit the base value directly (uncheck a day) instead of adding an exception with its own toggle, keeping at least one valid option where required? | [model the real domain](components.md#model-the-real-domain) |
+| Do time ranges handle next-day closes, 24-hour days and overnight overlaps, with clock times formatted by one locale helper? | [locale-sensitive values](interaction-accessibility.md#locale-sensitive-values-and-messages) |
+| Does a summary or live preview show the whole entity, grouped by category, with short display labels that keep names the user set and leave stored names unchanged? | [summaries and live previews](components.md#summaries-and-live-previews) |
+| When the change redesigns or replaces an existing form, flow or screen, does the delivery include a code-derived inventory (with `path:line`), a side-by-side render and a parity table with every removal listed first? | [redesign parity](#prove-redesign-parity) |
+
+## Prove redesign parity
+
+Before redesigning or replacing an existing form, flow or screen that users rely on,
+prove that nothing is lost silently. Why: a redesign judged by how it looks
+drops fields, validation and help text that nobody notices until users need them.
+
+1. **Inventory from the code.** List every field, control, validation rule,
+   help or error text, state (empty, pending, error, disabled) and conditional
+   branch, each with its `path:line`. Derive it from source, not from a
+   screenshot, which shows only one state.
+2. **Render both.** Show the current and the proposed version side by side in
+   matching states, viewport and theme. When rendering is unavailable, say so
+   and compare source states.
+3. **Include a parity table** in the proposal or delivery report. Mark each
+   inventory item kept, moved, changed or removed, with the reason. List every
+   removal at the top, so the owner approves it explicitly.
+4. **Keep the scope.** Change only what the stated problem requires.
+
+Check: every inventory row has a status, and no item is missing from the new
+version without appearing in the removals list.
 
 ## Check generated-interface defaults
 

@@ -125,6 +125,56 @@ and [alert guidance](https://www.w3.org/WAI/ARIA/apg/patterns/alert/).
   rendering of `hidden`; DOM presence or that attribute alone is not readiness.
   See [hidden semantics](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/hidden).
 
+### Keyboard shortcuts
+
+A visible shortcut hint is a promise. Every keycap or shortcut label shown on a
+control must be wired to that control's action. Why: a hint that does nothing
+teaches users the interface lies, and they stop trying the shortcuts that work.
+
+- **Same path as a click.** The shortcut calls the control's own handler, so
+  validation, disabled and pending guards apply identically. A shortcut on a
+  disabled or pending control does nothing, as the click would.
+- **Works across its scope.** A form's modifier submit shortcut fires while focus is in
+  any of its fields, not only on the button. Scope it to the form, step or
+  dialog that owns the action, so two visible forms cannot both answer it.
+- **Registered, not ad hoc.** When the app has a shortcut registry or provider,
+  bind through it, so the shortcut appears in the shortcut help and conflicts
+  resolve in one place; without one, keep bindings in one shared owner. A route
+  rendered outside the app shell needs its own provider; check that the
+  shortcut works there too.
+- **Single-key shortcuts meet WCAG SC 2.1.4 (A).** Let users turn them off or
+  remap them to include a modifier key, or make them active only while their
+  component has focus
+  ([character key shortcuts, A](https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts.html)).
+  Also ignore them while focus is in a text field, so typing never triggers them.
+
+Check: search the changed scope and its shared components for every rendered
+keycap, `kbd` or shortcut label. Press each modifier shortcut from inside a text field, from the
+surrounding scope and while the action is pending or disabled; the result
+matches the click. When adding a hint, add the binding in the same change.
+
+### Multi-step keyboard flow
+
+When adding keyboard actions to a wizard or multi-step form, use these defaults
+unless the project already defines others:
+
+- **Primary action:** Mod+Enter runs the step's primary action, such as Continue
+  or Save, from anywhere in the step; render its keycap per platform (⌘ on
+  macOS, Ctrl elsewhere).
+- **Escape is layered.** Let an open dialog, menu or popover primitive handle
+  its own Escape and stop propagation; the step acts only on unhandled presses.
+  Each press undoes the innermost layer only: close the
+  open overlay or menu, then blur the focused text field, then close an inline
+  picker. Only with nothing left to dismiss does Escape go back a step. It
+  never goes back from the first step or while the step is pending. Why: an
+  Escape meant to close a popover must not throw away the step.
+- **Frequent step actions may get single keys**, such as adding a row or choosing
+  template 1–N. They follow the single-key rule above and are shown with their keycap.
+
+Check: open an overlay inside a step, focus a field inside it and press Escape
+repeatedly. Each press removes one layer, the step stays until the last press,
+and nothing happens on the first step or while submitting.
+
 ### Unavailable actions
 
 Use native `disabled` when native exclusion from focus and form submission fits
@@ -239,6 +289,22 @@ Do not normalize every date to UTC or treat a current offset as permanent zone
 rules. Keep conversion and daylight-saving gap/overlap resolution with the
 existing scheduling owner, showing/requesting clarification when its contract
 requires it. See [W3C time guidance](https://www.w3.org/TR/timezone/) (a draft note).
+
+For opening hours, shifts and other daily time ranges, model the real day:
+
+- A close at or before the open ends on the next day; mark it ("next day") beside
+  the close time. For opening hours, an equal open and close means open 24 hours
+  unless the domain models 24 hours separately; elsewhere, follow the domain's rule. Validate overlaps across midnight, including a late range
+  that runs into the next day's first range.
+- Format displayed clock times through one shared locale helper built on
+  `Intl.DateTimeFormat`, not per-locale patterns, so 12-hour locales (en-US)
+  and 24-hour locales (pt-BR) render consistently on every screen. Format each
+  `HH:MM` on a fixed reference date with `timeZone: 'UTC'`, so a daylight-saving
+  gap never shifts a wall time. Keep input and stored values in the canonical
+  `HH:MM` form; the locale changes only how they are displayed.
+
+Why: without these rules, a venue open 18:00–02:00 cannot be entered, and the same
+hour reads `6:00 PM` on one screen and `18:00` on the next.
 
 Verify changed values through representative supported locales, submission
 round trips, currency precision and relevant midnight/DST boundaries. Reuse

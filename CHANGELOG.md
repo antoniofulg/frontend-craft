@@ -1,5 +1,31 @@
 # Changelog
 
+## 0.17.0 — 2026-11-06
+
+- Add a build checklist that runs before building and before delivery: yes/no
+  checks for what a change adds or alters, fixed at the shared owner while
+  building and reported as findings in reviews; existing problems are reported
+  as gaps.
+- Animate form conditional reveals (field errors, dependent fields, collapsible
+  sections) through the shared primitive, with collapsed content made inert and
+  reduced motion instant.
+- Require every visible keycap to work through the control's own path and scope,
+  registered where a shortcut registry exists; single-key shortcuts follow
+  WCAG SC 2.1.4. Add layered Escape and primary-action defaults for multi-step flows.
+- Reuse one control for a setting wherever it is edited, with "no limit" and
+  off-preset values; give interactive elements hover, active and focus-visible
+  states from the design-system control.
+- Model the real domain: control by cardinality, type before dependent options,
+  server-side enforcement, realistic defaults and direct edits over exceptions.
+  Handle next-day and overnight time ranges with one locale clock helper, and
+  show whole-entity summaries.
+- Add a redesign parity gate: code-derived inventory, side-by-side render and a
+  parity table listing removals first.
+- Add nine build-time scenarios, including one where a narrow fix must stay narrow.
+
+Release package checks and remaining limits are recorded in
+[the 0.17.0 verification record](evals/verification-0.17.0.md).
+
 ## 0.16.0 — 2026-11-04
 
 - Add choice-surface guidance for filters, configurators and other surfaces where

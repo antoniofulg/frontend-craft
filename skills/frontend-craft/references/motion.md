@@ -40,7 +40,7 @@ available and identify any source-only uncertainty.
 | --- | --- |
 | Activation feedback | Acknowledgment missing from a press or action; retain immediate response and existing keyboard/touch feedback. A scale change is one option, not a required button treatment. |
 | Confirmation/progress | A consequential action or progress state is hard to understand; do not replace the approved confirmation behavior with a hold gesture merely to create an animation. |
-| Appearing/disappearing content | Conditional regions, disclosures, route content or occasional collection changes jump without a useful connection; keep content readable and available without animation. |
+| Appearing/disappearing content | Conditional regions, disclosures, route content or occasional collection changes jump without a useful connection; keep content readable and available without animation. Form conditional reveals have a [default treatment](#reveal-conditional-content-smoothly); discovery still weighs frequency before proposing it. |
 | Anchoring and dismissal | A panel loses its relationship to its trigger or exits in a confusing direction; follow the real geometry, primitive and dismissal contract. |
 | Group entrances | Related items arrive without a useful sequence; a small stagger may clarify grouping but must not delay interaction or repeated work. |
 | Gesture boundaries | Drag/release, reorder or dismissal loses continuity; use the existing gesture owner and retain cancellation and non-drag access. |
@@ -82,6 +82,33 @@ animating every property changed by a state update.
 Tie anchored surfaces to their trigger, preserving understandable entry and exit
 paths. Do not let hidden/exiting controls remain focusable or intercept input.
 Coordinate visual state with accessible visibility and interaction state.
+
+### Reveal conditional content smoothly
+
+When implementing or changing a conditional reveal inside a form (a
+validation message, a dependent field group, a collapsible section), animate it
+by default. Change the height smoothly (a `grid-template-rows` transition from
+`0fr` to `1fr`, whose child needs `min-height: 0; overflow: hidden`, or the
+shared collapsible primitive) with an opacity fade. Use the project's
+expand/collapse motion token; without one, 150–200 ms `ease-out`. Make it
+instant under `prefers-reduced-motion`. Why: content that pops in
+shoves the field under the pointer or caret, and users lose their place.
+
+Implement this once in the shared primitive (the field-error and collapsible
+owners) so every screen inherits it; a per-screen transition drifts and the
+next screen ships the jump again. When no shared primitive exists, extend the
+nearest owner; introduce a shared primitive through the
+[ownership contract](shared-ui-patterns.md#ownership-contract) when two or more
+consumers need it. A `0fr` row still renders its children: mark collapsed
+content `inert`, or switch it to `hidden` after the exit transition. Keep an
+error's `aria-describedby`/`aria-invalid` association and its existing
+[announcement path](interaction-accessibility.md#choose-announcement-priority),
+without delaying it until the animation ends.
+
+Check: search the changed scope for conditional renders of errors and
+dependent content (`&&`, ternaries, `v-if`, `{#if}`, `hidden`). Each one goes
+through the shared primitive and eases in and out; with reduced motion it
+switches instantly.
 
 ## Handle interruption and alternatives
 
@@ -158,7 +185,8 @@ Choose by distance, size, frequency and input method, then inspect the real resu
 | Press/hover feedback | CSS transition, 80–140 ms, `ease-out` | Fast reversal; hover enhancement only on capable pointers |
 | Popover/menu | Opacity plus small anchored transform, 120–220 ms, `ease-out` | Remain anchored; preserve primitive focus and dismissal behavior |
 | Dialog/drawer | Short displacement/fade, 180–300 ms, decelerating entrance | Exit can be shorter; focus and input state must match visibility |
-| Expand/collapse | Content-sized transition, 150–250 ms, `ease-in-out` | Retarget when content changes; avoid clipping focused descendants |
+| Expand/collapse | Content-sized transition, 150–250 ms, `ease-in-out` | Retarget when content changes; avoid clipping focused descendants. Inside a form, use the form conditional reveal row |
+| Form conditional reveal | Height plus fade, 150–200 ms, `ease-out` | [Default treatment](#reveal-conditional-content-smoothly) through the shared primitive |
 | Toast | Modest translate/fade, 150–220 ms | Repeated items update/reflow coherently; essential information survives dismissal |
 | Drag/snap | Damped spring following gesture velocity | Constrain movement, settle predictably and provide a non-drag action |
 

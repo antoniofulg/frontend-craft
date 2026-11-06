@@ -577,6 +577,17 @@ standard, the claim that fold placement does not matter, a preference for custom
 icons over photography, or any research tool. It does not establish measured
 usability or commercial lift.
 
+## Build-time interface checks
+
+The 0.17.0 build checklist and the rules it links (conditional reveals, keyboard
+shortcuts, multi-step keyboard flow, same-setting controls, interactive states,
+domain modeling, time ranges, summaries and redesign parity) are original
+author guidance. They generalize defects a maintainer found by hand while
+reviewing a consuming product's onboarding and admin screens; product names,
+commits and code are not bundled. The single-key rule cites WCAG 2.2 success
+criterion 2.1.4; clock formatting relies on
+[`Intl.DateTimeFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat). This guidance retains CC BY 4.0 with the other technical guidance.
+
 ## Instruction and reference-loading evidence
 
 Research and official format/host documentation were consulted on 2026-10-28:
