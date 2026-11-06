@@ -289,7 +289,7 @@ there outside the change as gaps without fixing them. In a review, report each
 
 | Check | Rule |
 | --- | --- |
-| Does every conditional reveal (field errors, dependent fields, collapsible panels) ease height and opacity through its shared primitive, instantly under reduced motion? | [conditional reveals](motion.md#reveal-conditional-content-smoothly) |
+| Does every conditional reveal in a form (field errors, dependent fields, collapsible sections) ease height and opacity through its shared primitive, instantly under reduced motion? | [conditional reveals](motion.md#reveal-conditional-content-smoothly) |
 | Does every visible keycap or shortcut label trigger its action from anywhere in its scope, including inside a text field for modifier shortcuts, through the same validation and disabled/pending path as a click? | [keyboard shortcuts](interaction-accessibility.md#keyboard-shortcuts) |
 | When the app has a shortcut registry, is every shortcut registered through it, so it appears in the shortcut help, including on routes outside the app shell? | [keyboard shortcuts](interaction-accessibility.md#keyboard-shortcuts) |
 | In a multi-step flow that offers keyboard step actions, does its primary-action shortcut (Mod+Enter by default) run from anywhere in the step, and does Escape dismiss one layer per press before going back, never from the first step or while pending? | [multi-step keyboard flow](interaction-accessibility.md#multi-step-keyboard-flow) |
@@ -304,7 +304,7 @@ there outside the change as gaps without fixing them. In a review, report each
 
 ## Prove redesign parity
 
-Before changing an existing form, flow or screen that users already rely on,
+Before redesigning or replacing an existing form, flow or screen that users rely on,
 prove that nothing is lost silently. Why: a redesign judged by how it looks
 drops fields, validation and help text that nobody notices until users need them.
 

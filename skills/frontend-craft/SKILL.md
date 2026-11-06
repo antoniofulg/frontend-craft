@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/
 metadata:
   author: Antonio Fulgêncio
-  version: "0.16.0"
+  version: "0.17.0"
 ---
 
 # Frontend Craft
@@ -204,7 +204,8 @@ decision. A recommendation can be to improve distribution or sales rather than
 build another feature or redesign a page.
 
 For changed interfaces, run the [build checklist](references/review.md#check-a-build-before-delivery)
-and fix each "no" at its shared owner. Compare with the selected precedents in corresponding states
+and fix each "no" the change introduces at its shared owner; report existing ones
+as gaps. Compare with the selected precedents in corresponding states
 and viewport/theme conditions. A shared import does not prove visual consistency:
 inspect variant selection, wrapper composition, and local overrides too. Use the
 relevant checks and existing browser workflow; reuse unchanged valid evidence.

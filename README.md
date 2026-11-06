@@ -1,6 +1,6 @@
 # Frontend Craft
 
-Current version: **0.16.0**. See the [release notes](CHANGELOG.md).
+Current version: **0.17.0**. See the [release notes](CHANGELOG.md).
 
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
@@ -476,6 +476,10 @@ installation and the retained source-only/browser evidence with its limits.
 The [0.16.0 verification record](evals/verification-0.16.0.md) covers the
 choice-surface additions to components, routing and review. It records package and
 installation checks only; the new scenarios were not exercised for this release.
+
+The [0.17.0 verification record](evals/verification-0.17.0.md) covers the build
+checklist and its rules for reveals, shortcuts, controls, domain modeling, time
+ranges, summaries and redesign parity, with four independent review rounds.
 
 ## License and sources
 

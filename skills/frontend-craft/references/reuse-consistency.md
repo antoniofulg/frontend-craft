@@ -116,7 +116,7 @@ the necessary difference. Preserve unrelated appearances and workflows.
 
 Explicit redesign changes the visual authority for its approved scope. Retain
 compatible domain behavior and composition; do not let the old map silently
-override the new direction. Before changing an existing form or flow, prove
+override the new direction. Before redesigning or replacing an existing form or flow, prove
 [redesign parity](review.md#prove-redesign-parity). Refresh affected map
 entries after implementation.
 

@@ -585,7 +585,8 @@ domain modeling, time ranges, summaries and redesign parity) are original
 author guidance. They generalize defects a maintainer found by hand while
 reviewing a consuming product's onboarding and admin screens; product names,
 commits and code are not bundled. The single-key rule cites WCAG 2.2 success
-criterion 2.1.4. This guidance retains CC BY 4.0 with the other technical guidance.
+criterion 2.1.4; clock formatting relies on
+[`Intl.DateTimeFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat). This guidance retains CC BY 4.0 with the other technical guidance.
 
 ## Instruction and reference-loading evidence
 
