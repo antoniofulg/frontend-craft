@@ -131,7 +131,8 @@ authoritative public content. Match the visible entity, offer and publication
 state; use the existing metadata owner to keep output coherent. Follow the
 [claim inventory](landing-pages.md#commercial-brief-and-claim-inventory) when
 commercial facts need support. Never invent reviews, ratings, offers, venue facts
-or capabilities to satisfy a schema validator.
+or capabilities to satisfy a schema validator. Tag and icon specifics for a launch
+are in [launch readiness](#check-public-launch-readiness).
 
 Serialize JSON-LD safely for its HTML script context. Plain JSON serialization
 does not by itself prevent an embedded closing script tag from ending the
@@ -167,13 +168,14 @@ for that claim; see [verifying Google crawlers](https://developers.google.com/se
 Use before a public site or a new public route ships, or when asked whether a
 generated site is production-ready. Answer each item yes, no or not applicable,
 with evidence from the deployed response or rendered page; a template that looks
-finished often fails here. Fix through the existing owner when implementation is
-requested; otherwise report gaps.
+finished often fails here. For a single new route, use only the rows it touches.
+Fix through the existing owner when implementation is requested; otherwise
+report gaps.
 
 | Item | Ready when |
 | --- | --- |
 | Origin | One HTTPS canonical origin on the owner's domain; HTTP and the alternate host redirect permanently to it |
-| Not-found page | Unknown URLs return `404` with a page in the site's own layout that says what happened and offers useful next steps (key links, search where it exists); see [status handling](#check-indexing-and-caching-through-real-http) |
+| Not-found page | Unknown URLs return [`404`](#check-indexing-and-caching-through-real-http). The page uses the site's own layout, says what happened and offers useful next steps (key links, search where it exists) |
 | Titles and descriptions | Each indexable page has its own title and description drawn from its content, per [truthful metadata](#publish-truthful-metadata) |
 | Social previews | `og:title`, `og:description`, an absolute `og:image` URL (commonly 1200 × 630) and `twitter:card` per shared page; checked in a platform's share preview tool |
 | Icons | The project's own favicon (SVG with an ICO fallback), a 180 × 180 `apple-touch-icon`, and manifest icons when the site is installable |
@@ -181,7 +183,7 @@ requested; otherwise report gaps.
 | Placeholder residue | No framework default title or icon, `href="#"` or dead links, `example.com`, lorem ipsum, invented testimonials or contact details, social links to a network's home page, or a hard-coded stale year |
 | Contact and trust | Contact details are real, supplied by the owner and reachable |
 | Legal pages | Privacy and terms pages exist and are linked wherever the site collects personal data or sells; their text comes from the owner or counsel, never generated as final |
-| Consent | Non-essential cookies and analytics wait for consent where the applicable law requires it; a site without them needs no banner; any banner keeps the primary action and focus reachable |
+| Consent | Non-essential cookies and analytics wait for consent where the applicable law requires it; a site without them has nothing to gate. A consent banner keeps the primary action and [focus](interaction-accessibility.md#controls-and-navigation) reachable |
 | Measurement | Analytics records the conversion events the [measurement contract](gtm-measurement.md#establish-the-measurement-contract) names, verified by firing them |
 | Forms and completion | Errors, success and the post-submit next step follow [completion](checkout.md#verify-completion-not-merely-clicks) |
 | Media and mobile | Alternative text per [imagery delivery](imagery.md#prepare-and-inspect-delivery); the narrow-viewport and [mobile web](interaction-accessibility.md#mobile-web) checks pass |
