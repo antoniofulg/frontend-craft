@@ -31,7 +31,7 @@ bundled here. Installed project copies may differ from their recorded upstream.
 | --- | --- | --- |
 | [Jakub Krehel's skills](https://github.com/jakubkrehel/skills) | `267330e1adfc66a718fb65fa6918c1f06d0a689e` | Interface inspection, domain review, explanation evidence, and relevant component stress axes |
 | [Anthropic skills](https://github.com/anthropics/skills) | `8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4` | Purposeful content structure and consistent interface vocabulary |
-| [Emil Kowalski's skill](https://github.com/emilkowalski/skill) | `e8a175de22ae1e49370fc144c1f3bb9aeedf988d` | Motion purpose, frequency and interruption as design questions |
+| [Emil Kowalski's skills](https://github.com/emilkowalski/skills) (MIT) | Initial: `e8a175de22ae1e49370fc144c1f3bb9aeedf988d`; 0.18.0 review: `5206a95` | Motion purpose, frequency and interruption as design questions; [0.18.0 motion and mobile web additions](#motion-coordination-performance-and-mobile-web) |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `v2.15.0` | Targeted interaction, chart and accessibility reference categories |
 | [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Initial: `ce26fc25c0e5e8cab638f883de62d9a86ee5e45b`; v2.0.0 review: `2b44c81bbe36ac8a8a6bdd1c9ff593f28b8728f4` | Context-sensitive public-page composition; subject-specific identity, media workflow and rendered critique |
 | [Vercel agent skills](https://github.com/vercel-labs/agent-skills) | Local `react-composition-patterns` skill, metadata version `1.0.0` | Component composition and state-owner questions |
@@ -587,6 +587,35 @@ reviewing a consuming product's onboarding and admin screens; product names,
 commits and code are not bundled. The single-key rule cites WCAG 2.2 success
 criterion 2.1.4; clock formatting relies on
 [`Intl.DateTimeFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat). This guidance retains CC BY 4.0 with the other technical guidance.
+
+## Motion coordination, performance and mobile web
+
+The 0.18.0 sections on [coordinating several moving elements](references/motion.md#coordinate-several-moving-elements),
+[diagnosing dropped frames](references/motion.md#diagnose-dropped-frames),
+[removing or reducing motion](references/motion.md#remove-or-reduce-motion),
+the two-phase gesture rules and [mobile web](references/interaction-accessibility.md#mobile-web)
+are independently expressed from the `choreograph`, `animation-performance`,
+`remove-animations`, `gestures` and `mobile-native` skills in
+[Emil Kowalski's skills](https://github.com/emilkowalski/skills) at commit `5206a95`
+(MIT). No text, recipes or code were copied. Not incorporated: the removal gate
+that deletes all keyboard-triggered or high-frequency motion (this skill keeps
+weighing purpose and frequency case by case), fixed daily-count thresholds, a
+universal 500 ms sheet curve, a global `user-select: none` on links and the
+`animate-expo`, `write-swift`, `ask-sonner` and `pick-ui-library` skills, which
+are platform- or library-specific. The Motion 14.2 acceleration note was checked
+against Motion's [changelog](https://motion.dev/changelog) and
+[performance page](https://motion.dev/docs/performance) on 2026-11-08.
+
+## Public launch readiness
+
+The 0.18.0 [launch-readiness pass](references/technical-seo.md#check-public-launch-readiness)
+was prompted by a maintainer-supplied screenshot of a 20-item "vibe-coded site"
+checklist on a social video by `luizsantos.ia`, seen on 2026-11-08; the video
+itself was not inspected. The table is original author guidance that reuses this
+skill's existing owners. Not incorporated: a CTA fixed at the top or sticky on
+mobile as a universal rule, alternative text on every image regardless of
+purpose, a cookie banner without non-essential cookies, and full-page loading
+screens.
 
 ## Instruction and reference-loading evidence
 

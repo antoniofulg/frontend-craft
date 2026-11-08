@@ -1,7 +1,7 @@
 # Technical SEO and discovery
 
 Read for public content rendering, metadata, indexing, canonical URLs, discovery
-endpoints or AI search access. Use only the affected sections for a small repair;
+endpoints, AI search access or a public site's launch readiness. Use only the affected sections for a small repair;
 this is not a mandatory site-wide audit. For a public redesign, preserve the
 [public contracts](landing-pages.md#public-redesign-contracts). Existing project
 instructions, publication/auth owners and deployment authority remain in force.
@@ -161,6 +161,36 @@ Inspect CDN/WAF policy independently of robots rules. A spoofed user-agent probe
 can test a response branch but cannot prove requests from real vendor networks
 pass a challenge. Use vendor verification guidance and deployment observations
 for that claim; see [verifying Google crawlers](https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot).
+
+## Check public launch readiness
+
+Use before a public site or a new public route ships, or when asked whether a
+generated site is production-ready. Answer each item yes, no or not applicable,
+with evidence from the deployed response or rendered page; a template that looks
+finished often fails here. Fix through the existing owner when implementation is
+requested; otherwise report gaps.
+
+| Item | Ready when |
+| --- | --- |
+| Origin | One HTTPS canonical origin on the owner's domain; HTTP and the alternate host redirect permanently to it |
+| Not-found page | Unknown URLs return `404` with a page in the site's own layout that says what happened and offers useful next steps (key links, search where it exists); see [status handling](#check-indexing-and-caching-through-real-http) |
+| Titles and descriptions | Each indexable page has its own title and description drawn from its content, per [truthful metadata](#publish-truthful-metadata) |
+| Social previews | `og:title`, `og:description`, an absolute `og:image` URL (commonly 1200 × 630) and `twitter:card` per shared page; checked in a platform's share preview tool |
+| Icons | The project's own favicon (SVG with an ICO fallback), a 180 × 180 `apple-touch-icon`, and manifest icons when the site is installable |
+| Discovery | `robots.txt` and the sitemap follow [URL discovery](#align-url-discovery-and-publication) and list only canonical public URLs |
+| Placeholder residue | No framework default title or icon, `href="#"` or dead links, `example.com`, lorem ipsum, invented testimonials or contact details, social links to a network's home page, or a hard-coded stale year |
+| Contact and trust | Contact details are real, supplied by the owner and reachable |
+| Legal pages | Privacy and terms pages exist and are linked wherever the site collects personal data or sells; their text comes from the owner or counsel, never generated as final |
+| Consent | Non-essential cookies and analytics wait for consent where the applicable law requires it; a site without them needs no banner; any banner keeps the primary action and focus reachable |
+| Measurement | Analytics records the conversion events the [measurement contract](gtm-measurement.md#establish-the-measurement-contract) names, verified by firing them |
+| Forms and completion | Errors, success and the post-submit next step follow [completion](checkout.md#verify-completion-not-merely-clicks) |
+| Media and mobile | Alternative text per [imagery delivery](imagery.md#prepare-and-inspect-delivery); the narrow-viewport and [mobile web](interaction-accessibility.md#mobile-web) checks pass |
+
+A fixed CTA position, a sticky mobile CTA or a full-page loading screen is not a
+readiness item; judge those through [landing pages](landing-pages.md) and
+[loading states](performance.md#skeletons-and-loading-states). Legal adequacy
+and jurisdictional compliance need the owner's legal review; report them as
+external actions.
 
 ## Report the evidence boundary
 

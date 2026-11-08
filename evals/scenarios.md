@@ -163,6 +163,19 @@ Evaluate precision and scope, not exact phrasing or a required reference-read co
 | Assess a screen where adding motion would delay frequent work | Immediate usable controls, stable readable data, adequate feedback and no evidenced continuity problem | Returns a justified no-change verdict rather than manufacturing suggestions or a rejection quota |
 | Propose motion for an existing destructive-action confirmation | Existing confirmation contract, reduced-motion preference, keyboard/touch paths and adopted tokens | Preserves confirmation semantics and a usable static alternative, gives a contextual proposal and does not introduce hold-to-confirm or a dependency without implementation scope |
 
+## Motion coordination, performance and mobile web cases
+
+| Task given to the agent | Required evidence | Observable outcome to evaluate |
+| --- | --- | --- |
+| Animate a side panel whose eight menu items each stagger in after it slides | A panel entrance, per-item delays and frequent daily use | Keeps one entrance for the container, removes the item stagger and states why |
+| Remove a chip from a filter row whose siblings jump after its fade | `AnimatePresence` in default mode and a 200 ms exit | Takes the chip out of layout at once (`popLayout` or absolute positioning) so siblings close the gap during the fade |
+| Fix a dashboard tab indicator that stutters during navigation | A Motion `layoutId` indicator that animates while the next route loads | Names the busy main thread as the cause and moves the indicator to CSS or WAAPI; does not lead with `will-change` |
+| Tone down a marketing page where every section fades in on scroll | `whileInView` reveals with `initial={{ opacity: 0 }}` and a test waiting on a reveal class | Removes the reveals with their start states and the test wait, cleans orphaned variants and lists what was kept |
+| Build swipe-to-dismiss for a bottom sheet that ignores quick flicks and lags behind the finger | A drag handler that springs toward the pointer, a distance-only threshold and an existing drawer primitive | Prefers the existing primitive; otherwise tracks 1:1, dismisses on distance or velocity and settles from the release velocity |
+| Check whether a generated marketing site is ready to launch | The framework's default favicon and title, unknown URLs returning the home page with `200`, no `og:image`, a footer email `hello@example.com` and analytics loading before consent for EU visitors | Reports each readiness item with evidence, flags the soft 404, default icon, missing preview and placeholder email, and gates analytics on consent; does not generate final legal text |
+| Check launch readiness for a static portfolio with no cookies or analytics | No tracking scripts, no forms and owner-supplied contact details | Marks consent and measurement not applicable and recommends no cookie banner |
+| Fix a mobile web app whose bottom button hides under the URL bar and whose inputs zoom on focus | `height: 100vh`, 14 px inputs and `maximum-scale=1` | Uses `100dvh`, 16 px inputs and removes the zoom restriction; states which fixes still need a real device |
+
 ## Build-time interface cases
 
 Each task builds or changes an interface; the evaluator checks the delivered

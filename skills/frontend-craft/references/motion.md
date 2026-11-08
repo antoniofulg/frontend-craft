@@ -1,7 +1,8 @@
 # Motion
 
-Read when finding opportunities for motion, or adding, changing and reviewing
-movement and transitions.
+Read when finding opportunities for motion, adding, changing, coordinating,
+removing and reviewing movement and transitions, or diagnosing animation that
+drops frames.
 
 For a naming question or a vague description of an effect, use the optional
 [motion vocabulary](motion-vocabulary.md). Return the matching term without
@@ -42,7 +43,7 @@ available and identify any source-only uncertainty.
 | Confirmation/progress | A consequential action or progress state is hard to understand; do not replace the approved confirmation behavior with a hold gesture merely to create an animation. |
 | Appearing/disappearing content | Conditional regions, disclosures, route content or occasional collection changes jump without a useful connection; keep content readable and available without animation. Form conditional reveals have a [default treatment](#reveal-conditional-content-smoothly); discovery still weighs frequency before proposing it. |
 | Anchoring and dismissal | A panel loses its relationship to its trigger or exits in a confusing direction; follow the real geometry, primitive and dismissal contract. |
-| Group entrances | Related items arrive without a useful sequence; a small stagger may clarify grouping but must not delay interaction or repeated work. |
+| Group entrances | Related items arrive without a useful sequence; a small stagger may clarify grouping but must not delay interaction or repeated work. [Coordinate](#coordinate-several-moving-elements) the group as one motion. |
 | Gesture boundaries | Drag/release, reorder or dismissal loses continuity; use the existing gesture owner and retain cancellation and non-drag access. |
 | Rare explanatory or success moments | Motion could explain a result or acknowledge meaningful progress; preserve truthful state and avoid animation that competes with the user's next task. |
 
@@ -77,7 +78,8 @@ for the chosen mechanism; do not assume every CSS animation runs off the main th
 Prefer properties that avoid unnecessary layout/paint when they fit the effect.
 For content-driven expansion where layout change is required, keep its scope
 bounded and inspect responsiveness. Specify transitioned properties rather than
-animating every property changed by a state update.
+animating every property changed by a state update. When an animation stutters,
+use [diagnose dropped frames](#diagnose-dropped-frames).
 
 Tie anchored surfaces to their trigger, preserving understandable entry and exit
 paths. Do not let hidden/exiting controls remain focusable or intercept input.
@@ -145,6 +147,131 @@ current rendered position. Hand release velocity to the settling mechanism when
 supported; preserve direction and continuity on interruption or reversal, with
 deliberate bounds rather than a reset to a canned starting frame. Exercise slow
 drags, fast releases, re-grabs and cancellation. Retain a non-drag action.
+
+A gesture has two phases. While the pointer is down, the element tracks it 1:1:
+write the position to a motion value or directly to the element's `transform`,
+with no easing, spring or React state per move event. Past a boundary, apply
+resistance (rubber-banding) rather than a hard stop. On release, physics takes
+over from that velocity. Commit a dismissal on distance **or**
+velocity so a short fast flick counts. A failed threshold snaps back quickly.
+Overshoot usually belongs to a released drag; the same surface closed by a button
+settles without bounce.
+
+Derive linked values (overlay opacity, a background scale) from the dragged
+value rather than animating them separately, so they stay in step through
+reversal and interruption. Anything a gesture can grab uses transitions or
+springs that retarget from the current state; `@keyframes` restart from their
+first frame. A press-and-hold fill progresses linearly because it shows elapsed
+time; releasing early reverses it quickly.
+
+For a sheet or drawer, prefer the installed primitive or an established drawer
+library over a hand-rolled gesture: momentum, linked overlay, velocity dismissal,
+focus containment and Escape take considerable edge-case work. Verify touch on a
+real device; trackpad simulation and device emulation misrepresent it.
+
+## Diagnose dropped frames
+
+Name the cause before changing code; each fix states which cause it addresses.
+Budget a frame at 16.7 ms on 60 Hz displays and 8.3 ms on 120 Hz ones, and judge
+on a mid-range phone, since a fast laptop hides most of these causes. Work down
+the list in order, which runs roughly from most to least common:
+
+1. **Property cost.** `transform` and `opacity` skip layout and paint. `filter`,
+   `clip-path` and `background-color` may also composite, with uneven browser
+   support. `box-shadow`, `border-radius` and `color` repaint every frame; `width`,
+   `height`, `padding`, `margin`, `top` and `left` also re-run layout, which can
+   move surrounding content. Swap to an equivalent cheaper property: `scale()`
+   for size changes, `translate()` for position, `opacity` for visibility and
+   a pre-rendered shadow layer's `opacity` for a growing shadow.
+   Expand `transition: all` to see what it actually animates.
+2. **Busy main thread.** `requestAnimationFrame`-driven animation competes with
+   scripts, so it drops frames while the page navigates, fetches or hydrates.
+   CSS transitions/animations and the Web Animations API can run off the main
+   thread for composited properties. Move motion that plays during heavy work
+   there. In Motion, independent transforms such as `x` and `y` are accelerated
+   from 14.2; work computed in JavaScript each frame, such as layout animations
+   (`layout`, `layoutId`), `onUpdate` and motion-value derivations, runs on the
+   main thread, and animated CSS variables are not accelerated. Check the
+   installed version's documentation.
+3. **Re-render per frame.** State updates inside `requestAnimationFrame`, pointer,
+   scroll or drag handlers re-render the component every frame. Write to a motion
+   value or the element's style through a ref.
+4. **Cost that grows with content.** A CSS custom property changed on a parent
+   recalculates style for every descendant that inherits it; set `transform` on
+   the moving element instead. Also check how many elements animate at once.
+5. **Expensive filters.** Animated `blur()` becomes costly quickly, especially in
+   Safari; keep it small (a few pixels is enough to soften a crossfade).
+6. **Layer hand-off.** A one-pixel shift at the start or end of a transform can
+   come from the browser promoting the element mid-animation. Only then add
+   `will-change: transform` to the animating element itself; each promoted layer
+   costs memory, and the hint fixes none of the causes above.
+
+Confirm with a recording: the Performance panel for dropped frames and long
+tasks, remote debugging on a real phone for device cost (desktop CPU throttling
+does not model a weak GPU). Report each finding with its location, cause, before
+and after, and whether it was verified from code or still needs a device
+recording. For page-level responsiveness, use [performance](performance.md).
+
+## Coordinate several moving elements
+
+When two or more elements move in response to one event, coordinate them as one
+motion. Most groups get simpler: cut moving parts first, then run the rest in
+parallel. Give each element a role before choosing timing:
+
+| Role | Treatment |
+| --- | --- |
+| Lead: what the user must notice | Starts first and travels furthest |
+| Support: secondary content | Follows with smaller, shorter motion |
+| Decoration: badges, dividers, accents | Fades in place or stays static |
+| Static: everything else | Does not animate |
+
+Two competing leads signal a hierarchy problem that motion cannot fix.
+
+Relate each pair deliberately:
+
+- **Together** when both belong to one object or moment, or when their order
+  carries no meaning. Sub-animations of one component share a duration and easing
+  family (set once through `MotionConfig` or a shared custom property).
+- **Overlap** (a stagger) when order carries meaning, such as reading order or
+  cause and effect. In product UI, keep steps around 30–80 ms and the whole group
+  near 300 ms or less; stagger the first few items and let the rest arrive
+  together. Vary distance and treatment by role; identical delays read as
+  mechanical. Public first-visit moments can take longer steps.
+- **Sequence** only when showing both at once looks broken: two dense views in a
+  container that resizes in both dimensions, or an element that would visibly
+  pass through another. Start the second just before the first ends.
+- **Carry**: when a child's motion cannot be controlled directly, move its parent.
+
+Choreography rules:
+
+- One entrance per container. A panel that slides in carries its content; its
+  children appear with it unless their order itself carries meaning.
+- An exiting element leaves the layout immediately (Motion's
+  `AnimatePresence mode="popLayout"`, whose exiting child forwards its ref inside
+  a positioned parent; or absolute positioning at its current place), so siblings
+  close the gap while it fades rather than after.
+- Swapping views in one container crossfades: the old view exits while the new
+  one enters.
+- Direction follows the user's model: forward moves content left, back moves it
+  right. Pass the direction to exiting elements (Motion's `custom` on both
+  `AnimatePresence` and the child), since an exit reads state when it starts.
+- Exits run simultaneously, shorter and simpler than entrances; an element leaves
+  the way it came in.
+- Secondary effects land on the event they belong to (a pulse on the click, not
+  on the preceding hover). A repeated action skips the buildup.
+- When a container resizes by varying amounts, scale the duration by distance
+  within a clamp so small changes do not flicker. With a few states, hand-tune
+  each transition.
+- Every element is usable as soon as it is visible; choreography never blocks a
+  control the user is reaching for.
+
+Interrupt each sequence: re-trigger it mid-flight, click Next twice, switch views
+quickly. Stop in-flight animations before starting new ones, await completion
+before chaining an idle loop, and keep keys stable so rapid swaps do not leave two
+children mounted. Under reduced motion, collapse the choreography: drop delays
+and movement and show the group together. Write the timeline (element, role,
+start, duration, motion, relationship) before implementing, then scrub a
+recording: a wave and a queue only look different frame by frame.
 
 ## Optional transitions-dev recipes
 
@@ -215,6 +342,36 @@ places where adding animation would delay frequent work, distract from reading,
 obscure a value or compete with another signal. An audit need not produce new
 animations and remains read-only unless implementation is requested.
 
+### Remove or reduce motion
+
+When asked to tone motion down, or when an audit verdict is remove or adjust,
+work by subtraction only: delete the motion or shrink it to a smaller version of
+the same effect (hover lift to a color change, a slide to a fade, a long
+duration shortened, a stagger collapsed, an infinite loop run once). Badly built
+motion that should stay gets reported for a separate fix. Keep motion that has a
+documented reason. If a reduction would lose the purpose, delete it instead.
+
+Removal is not find-and-replace. Before each deletion, check what depends on it:
+
+- **Hidden start states.** An `initial={{ opacity: 0 }}`, keyframe start frame or
+  reveal class that waits for an observer leaves the element invisible once its
+  animation is gone. Remove the start state with the animation.
+- **Code that waits.** `animationend`/`transitionend` listeners, `onExitComplete`
+  and timeouts sized to a duration keep delaying the UI. Move the work to the
+  moment the change happens.
+- **Unmount and focus timing.** Without an exit, `AnimatePresence` unmounts at
+  once; focus moved in an animation callback must move immediately.
+- **Masked layout jumps.** A `layout` or FLIP animation may hide a layout shift.
+  If removal exposes the jump, keep the animation and report the shift.
+- **Tests** that wait for animation classes or durations.
+
+Then remove what the removals orphaned: unreferenced `@keyframes`, animation
+utilities and tokens, `motion.*` elements without motion props, empty
+`AnimatePresence` wrappers, unused variants and imports. Propose, rather than
+perform, uninstalling a motion library that is no longer imported. Verify with
+the type checker and tests, grep every removed name, and report removals,
+reductions and the deliberately kept animations with the purpose that saved each.
+
 Inspect at normal speed first. When jumps, overlap, easing or exit cleanup are
 hard to diagnose, use the browser's animation tools or a recording at slow speed
 and scrub frame by frame. Identify the problematic state/frame and input sequence;
@@ -242,6 +399,8 @@ reported; a visually preferred effect is not automatically more usable.
   with focus restored according to their primitive's contract?
 - Can keyboard, touch and reduced-motion users obtain the same outcome?
 - Do dynamic content and resize preserve legibility and spatial continuity?
+- Does a group of moving elements read as one motion, with exiting elements out
+  of the layout and every visible control usable at once?
 - If smoothness or responsiveness is claimed, was it inspected/measured under
   representative load rather than inferred from the animated property?
 

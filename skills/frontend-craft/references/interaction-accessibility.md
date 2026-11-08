@@ -388,6 +388,34 @@ text enlargement and keyboard navigation: confirm labels, errors, focus and
 actions remain reachable. Do not shorten translated copy merely to hide clipping.
 For isolation of embedded names, read [visual details](visual-details.md).
 
+## Mobile web
+
+A web app used on a phone needs a few platform fixes that device emulation does
+not reproduce. Gate by capability through media queries, `env()` and viewport
+units; touch and mouse can coexist on one device, so avoid user-agent or
+width-based touch detection. Apply each fix where its reason applies:
+
+| Symptom | Fix and reason |
+| --- | --- |
+| Hover style sticks after a tap | Put hover styles inside `@media (hover: hover) and (pointer: fine)`; touch emulates a persistent `:hover`. Give press feedback through `:active` or pointer-down. Check the framework's hover variant before adding queries. |
+| Gray or blue flash on tap | `-webkit-tap-highlight-color: transparent`, once, only when every tappable element has its own `:active` state. |
+| Full-height layout overflows or hides bottom actions | `100vh` is the largest viewport. Use `100dvh` for app shells, drawers and bottom-pinned UI; `100svh` for heroes, which should not resize while scrolling. |
+| Page zooms into a focused input | iOS zooms inputs whose font size is below 16 px; set inputs to at least 16 px. Keep pinch zoom: never `user-scalable=no` or `maximum-scale=1`. |
+| Tap feels slow | Show feedback on pointer-down. A `width=device-width` viewport already removes the classic tap delay; `touch-action: manipulation` on controls covers remaining double-tap-zoom handling. |
+| Pull-to-refresh or scroll chaining fights the app | `overscroll-behavior` on the scroll container, or on `html, body` for an app shell where the browser's pull-to-refresh is unwanted; avoid `touchmove` with `preventDefault()`. |
+| Content hidden by the notch or home indicator | `viewport-fit=cover` in the viewport meta, then `env(safe-area-inset-*)` padding; without the meta the insets resolve to zero. |
+| Long-press selects a control's label | `user-select: none` with `-webkit-user-select: none` for Safari, on controls only, never on readable content. |
+| Custom horizontal gesture blocks vertical scroll | `touch-action: pan-y` on the horizontal gesture surface (the value names what the browser keeps); prefer native `scroll-snap` carousels, which need none. |
+| Browser chrome color mismatches the theme | One `theme-color` meta per `prefers-color-scheme`, matching the top of the page; update it on a class-based theme toggle. |
+
+On Android Chrome, `interactive-widget=resizes-content` in the viewport meta lets
+the software keyboard resize the layout viewport so bottom-pinned inputs follow
+it. Verify on real hardware over the LAN with remote inspection (Safari Web
+Inspector, `chrome://inspect`): sticky hover, tap highlight, viewport units, input
+zoom, overscroll, safe areas and the keyboard all differ from emulation. Report
+which fixes were verified from code and which need a device. Native mobile apps
+(React Native, Expo, Swift) are outside this guidance.
+
 ## Verification
 
 Use keyboard interaction, the accessibility tree, relevant screen-reader checks

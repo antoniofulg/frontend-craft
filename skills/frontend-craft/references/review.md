@@ -349,6 +349,7 @@ exception. Record that reason beside the code or in the finding.
 | Clickable element without a pointer cursor | A CSS reset removed the affordance | One rule in the shared owner for interactive roles |
 | Title, intro and label repeating the page chrome | The page explains itself instead of showing content | [Content restraint](interaction-accessibility.md#content-restraint) |
 | Showcase in a fake frame, with "hover me" captions or stacked variations | The explanation hides the piece | One piece large and centered, with a quiet selector |
+| Framework default title or favicon, `href="#"`, `example.com`, lorem ipsum or invented contact details on a public page | The site reads as an unfinished template and its links lead nowhere | Owner-supplied content and the [launch readiness](technical-seo.md#check-public-launch-readiness) pass |
 | Badges or pills on every card | Labels stop meaning anything | A badge only when it filters or changes a decision |
 | Dividers between blocks that spacing already separates | Visual noise doing spacing's job | Space and alignment; lines for tables and dense lists |
 | Four or more opacity steps of one color in a block | Hierarchy by transparency is an untokenized color | Two or three text roles from the tokens |
