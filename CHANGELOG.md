@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.18.0 — 2026-11-08
+
+- Coordinate several moving elements as one motion: lead/support/decoration
+  roles, together/overlap/sequence/carry relationships, one entrance per
+  container, exits removed from layout at once, direction-aware exits and
+  interruption checks.
+- Diagnose dropped frames by named cause: property cost tiers and cheaper swaps,
+  busy-main-thread drivers, per-frame re-renders, inherited custom properties,
+  blur cost and `will-change` as the last step, confirmed on a device recording.
+- Remove or reduce motion by subtraction, checking hidden start states, code
+  that waits on animations, unmount and focus timing and masked layout jumps,
+  then cleaning up orphans.
+- Split gestures into a 1:1 tracking phase and a velocity-seeded release, with
+  distance-or-velocity dismissal, rubber-banding, linked values and linear holds.
+- Add mobile web fixes: capability-gated hover, tap highlight, `dvh`/`svh`,
+  16 px inputs without disabling zoom, safe areas, overscroll, `touch-action`
+  and per-scheme `theme-color`, verified on real hardware.
+- Add a public launch-readiness pass: HTTPS canonical origin, a real 404 page,
+  per-page titles, descriptions and social previews, the project's own icons,
+  placeholder residue, real contact details, owner-supplied legal pages, consent
+  only where required, verified conversion events and links to the existing
+  form, imagery and mobile owners. Placeholder residue is also a
+  generated-interface default.
+- Add routing rows and eight behavioral scenarios.
+
+Release package checks and remaining limits are recorded in
+[the 0.18.0 verification record](evals/verification-0.18.0.md).
+
 ## 0.17.0 — 2026-11-06
 
 - Add a build checklist that runs before building and before delivery: yes/no
