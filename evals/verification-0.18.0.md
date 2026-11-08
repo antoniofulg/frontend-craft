@@ -26,8 +26,10 @@ as platform- or library-specific; see [SOURCES](../skills/frontend-craft/SOURCES
 
 ## Review process
 
-One review round ran, by a new agent with no access to the drafting context.
-It found no copied text and confirmed the platform claims for viewport units,
+Two review rounds ran, each by a new agent with no access to the drafting
+context or earlier reviews. Every finding was applied before release.
+
+Round 1 covered the motion and mobile web additions. It found no copied text and confirmed the platform claims for viewport units,
 safe areas, input zoom, `touch-action`, `overscroll-behavior` and `will-change`.
 Every finding was applied:
 
@@ -38,6 +40,15 @@ Every finding was applied:
 - Narrowed the removal and dropped-frame routing rows away from reduced-motion
   and page-level performance work.
 - Softened the button-close bounce rule and added a gesture scenario.
+
+Round 2 covered launch readiness and spot-checked the rest. It confirmed the tag,
+icon, status and redirect facts and that consent wording avoids legal advice:
+
+- Pointed the metadata section to the launch table so tag and icon specifics
+  have one owner.
+- Attached the status link to the 404 clause only and scoped single-route checks
+  to the rows they touch.
+- Reworded consent so a site without non-essential tracking has nothing to gate.
 
 ## Release package checks
 
@@ -51,13 +62,13 @@ Every finding was applied:
   directories whose digests matched the source tree.
 
 Final distributed skill-tree SHA-256 (36 files):
-`11a8b8bbf13517132320bc3828064a5afc40ff8d2d4f5608ae6ac5be1cd0ffde`.
+`77454b426254d8630a71a6e8bd73afbb9e06fb335e2f7e8943c8003303174e32`.
 The digest uses the same procedure as in 0.16.0, which reproduced the recorded
 0.17.0 digest from its tag.
 
 ## Limits
 
-The six new scenarios were written but not exercised, and no interface was
+The eight new scenarios were written but not exercised, and no interface was
 rendered; adherence in practice is unproven. Motion's
 [changelog](https://motion.dev/changelog) and
 [performance page](https://motion.dev/docs/performance) confirm accelerated
