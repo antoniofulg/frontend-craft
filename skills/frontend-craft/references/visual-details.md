@@ -1,7 +1,7 @@
 # Visual implementation details
 
 Read only when the task involves nested corners, display typography, font features, mixed-direction
-text, wide-gamut color or gradient interpolation. Impeccable and the adopted
+text, translucent surfaces, wide-gamut color or gradient interpolation. Impeccable and the adopted
 design system own aesthetic choices; these are implementation options, not a new style.
 
 ## Concentric corners
@@ -42,9 +42,10 @@ italic overhang against adjacent lines and clipping containers. Author line brea
 only when they preserve meaning across supported widths and translations; retain
 the logical reading order and let longer content adapt.
 
-Cap continuous body copy at about 60–75 characters per line. Prefer
-`text-wrap: balance` for short titles and `text-wrap: pretty` for descriptions
-over manual breaks. Keep display tracking no tighter than about −0.04em, body
+Cap continuous body copy at about 60–75 characters per line. Line height scales
+inversely with size: body text needs roomy leading (about 1.4–1.6), display sizes
+tighten toward 1.0–1.2. Prefer `text-wrap: balance` for short titles and
+`text-wrap: pretty` for descriptions over manual breaks. Keep display tracking no tighter than about −0.04em, body
 tracking at the default and wide tracking for short labels only; light display
 weights need a face loaded for that purpose. Avoid justified or all-caps body text.
 
@@ -62,6 +63,18 @@ it. Use a known `dir` for content whose direction is established; keep the logic
 text intact for selection and assistive technology. Isolation does not sanitize
 untrusted markup: retain normal escaping. Check LTR and RTL names next to dates,
 counts and punctuation. See [MDN bdi](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/bdi).
+
+## Translucent surfaces
+
+Use a blurred, tinted surface only where it tells the user what lies behind it:
+a bar over scrolling content, a sheet over a page. Match blur to size, since a
+wider surface needs a stronger blur to stay readable; never stack two light
+translucent layers; and keep text and controls on the surface above the
+contrast threshold against the worst content that can scroll behind it. Prefer
+a scroll-edge fade or tint over a hard divider at a translucent bar's edge.
+Translucency is costly to animate (see [dropped frames](motion.md#diagnose-dropped-frames))
+and falls back to a solid surface under `prefers-reduced-transparency`,
+`prefers-contrast: more` and forced colors. Ordinary cards and panels stay opaque.
 
 ## Wide gamut with a usable fallback
 
@@ -99,5 +112,7 @@ it is not automatically the desired appearance. Keep a supported fallback:
 
 Use the established theme tokens and verify text contrast along the gradient.
 For polar spaces, hue interpolation can change the path; inspect the actual
-result. Spatial gradient interpolation is distinct from animating a color over
+result. A fade that masks overflow (a scroll-edge fade, a "read more" gradient)
+needs several stops with eased alpha, or an eased mask, so the fade is invisible
+where it begins; a two-stop linear fade reads as a hard band. Spatial gradient interpolation is distinct from animating a color over
 time. See [MDN gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient).

@@ -23,6 +23,12 @@ Inspect comparable interactions and existing motion tokens. Match the token's
 semantic role, not just the nearest numeric duration. Follow Impeccable's approved
 motion direction and the project's density and interaction conventions.
 
+Motion carries the product's personality: a dense operational tool stays crisp
+and short, while a consumer or marketing surface can afford more travel and a
+little bounce. Keep one family of curves and durations per product; when
+hand-typed curves differ by a few hundredths across components, consolidate
+them into the existing tokens rather than adding another.
+
 ## Find animation opportunities
 
 Use this mode when asked what could benefit from animation or how a surface could
@@ -45,6 +51,7 @@ available and identify any source-only uncertainty.
 | Anchoring and dismissal | A panel loses its relationship to its trigger or exits in a confusing direction; follow the real geometry, primitive and dismissal contract. |
 | Group entrances | Related items arrive without a useful sequence; a small stagger may clarify grouping but must not delay interaction or repeated work. [Coordinate](#coordinate-several-moving-elements) the group as one motion. |
 | Gesture boundaries | Drag/release, reorder or dismissal loses continuity; use the existing gesture owner and retain cancellation and non-drag access. |
+| Scroll-triggered reveals | A public first-visit page may introduce sections once as they enter view, with the content readable without it; daily-use product UI gains nothing from reveals and loses scanning speed. |
 | Rare explanatory or success moments | Motion could explain a result or acknowledge meaningful progress; preserve truthful state and avoid animation that competes with the user's next task. |
 
 Judge each candidate by purpose, frequency, response cost and function. Name the
@@ -70,10 +77,16 @@ continues through this guide and the existing project workflow.
 
 ## Implement the smallest mechanism
 
-Use the existing CSS/platform mechanism for simple transitions. Use the installed
-motion library when gestures, coordinated layout, or exits need it. Adding a
-dependency requires a real capability gap. Check current library/browser behavior
-for the chosen mechanism; do not assume every CSS animation runs off the main thread.
+Climb the ladder only as far as the effect needs: a CSS transition for a state
+change; `@starting-style`, with `transition-behavior: allow-discrete` when
+`display` changes, for entering content without JavaScript, behind a
+mounted-attribute fallback where support is missing; a CSS animation when the
+page is busy during the motion; the Web Animations API for scripted sequences;
+the installed motion library when gestures, coordinated layout or exits need it.
+Adding a dependency requires a real capability gap. Check current library/browser
+behavior for the chosen mechanism; do not assume every CSS animation runs off the
+main thread. See [MDN @starting-style](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@starting-style)
+and [transition-behavior](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transition-behavior).
 
 Prefer properties that avoid unnecessary layout/paint when they fit the effect.
 For content-driven expansion where layout change is required, keep its scope
@@ -81,9 +94,15 @@ bounded and inspect responsiveness. Specify transitioned properties rather than
 animating every property changed by a state update. When an animation stutters,
 use [diagnose dropped frames](#diagnose-dropped-frames).
 
-Tie anchored surfaces to their trigger, preserving understandable entry and exit
-paths. Do not let hidden/exiting controls remain focusable or intercept input.
-Coordinate visual state with accessible visibility and interaction state.
+Tie anchored surfaces to their trigger: a popover or menu grows from the
+trigger's side (its `transform-origin`), while a centered dialog has no trigger
+geometry and fades and settles in place. Nothing enters from `scale(0)`; start
+near full size (about 0.9–0.97) with opacity so the surface appears rather than
+materializing from a point. Express offsets with `translate()` percentages,
+which are relative to the element's own size, so a drawer or toast needs no
+hardcoded pixel distance. Preserve understandable entry and exit paths. Do not
+let hidden/exiting controls remain focusable or intercept input. Coordinate
+visual state with accessible visibility and interaction state.
 
 ### Reveal conditional content smoothly
 
@@ -128,15 +147,24 @@ and [2.2.2 (A)](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html
 have different scope. Follow the adopted target; a reduced-motion CSS branch
 alone does not prove conformance.
 
-Restrict hover-only motion to suitable pointing devices and keep the action
-usable on touch and keyboard. Essential meaning must remain when animation is
-disabled, interrupted or unavailable.
+Some motion causes discomfort even when short: slow looping oscillation near
+0.2 Hz, sudden brightness or contrast jumps, and backgrounds or large surfaces
+that move across the whole viewport. Fade such surfaces instead of moving them.
+Where the design uses translucency or low-contrast layering, also honor
+`prefers-reduced-transparency` and `prefers-contrast: more` from the theme
+owner: solid surfaces and stronger borders replace blur and tint. See
+[MDN prefers-reduced-transparency](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency)
+and [prefers-contrast](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast).
+
+Restrict hover-only motion to `@media (hover: hover) and (pointer: fine)` and
+keep the action usable on touch and keyboard. Essential meaning must remain when
+animation is disabled, interrupted or unavailable.
 
 ## Gestures and continuity
 
 Prefer the installed primitive's gesture owner. For custom pointer handling,
-track the active `pointerId` and use `setPointerCapture` when the drag must continue
-outside the hit area. Clean up on `pointerup`, `pointercancel`, `lostpointercapture` and
+track the active `pointerId`, ignore pointers that arrive after the drag starts,
+and use `setPointerCapture` when the drag must continue outside the hit area. Clean up on `pointerup`, `pointercancel`, `lostpointercapture` and
 unmount; cancellation must not accidentally commit a dismissal. Choose scoped
 `touch-action` behavior before the gesture starts, retaining native scrolling and
 zoom where possible. See [MDN pointer events](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events).
@@ -147,6 +175,21 @@ current rendered position. Hand release velocity to the settling mechanism when
 supported; preserve direction and continuity on interruption or reversal, with
 deliberate bounds rather than a reset to a canned starting frame. Exercise slow
 drags, fast releases, re-grabs and cancellation. Retain a non-drag action.
+
+Start a drag only after about 10 px of travel, then commit to one axis so a
+vertical scroll and a horizontal swipe do not fight; before that threshold the
+contact is still a tap. On release, choose the resting target from where the
+velocity would carry the element, not from where it stopped: a short fast flick
+expresses the same intent as a long slow drag. Project the rest position from
+the release velocity under a constant deceleration (the platform scroll decay,
+about 0.998 per millisecond, is a reference), then snap to the nearest target
+from there; a flick of roughly 0.1 px/ms is a common starting threshold, tuned on
+the device. The velocity's sign decides between commit and return. When a
+release reverses an animation in flight, seed the new spring with the current
+velocity instead of cutting to zero, and run two-dimensional motion as
+independent X and Y springs so each axis settles on its own. See Apple's
+[Designing Fluid Interfaces](https://developer.apple.com/videos/play/wwdc2018/803/)
+for the projection and interruption model.
 
 A gesture has two phases. While the pointer is down, the element tracks it 1:1:
 write the position to a motion value or directly to the element's `transform`,
@@ -162,7 +205,9 @@ value rather than animating them separately, so they stay in step through
 reversal and interruption. Anything a gesture can grab uses transitions or
 springs that retarget from the current state; `@keyframes` restart from their
 first frame. A press-and-hold fill progresses linearly because it shows elapsed
-time; releasing early reverses it quickly.
+time; releasing early reverses it quickly. In general, let time stretch while the
+user is still deciding (a hold, a drag past a boundary) and snap on the system's
+response (release, commit, dismissal).
 
 For a sheet or drawer, prefer the installed primitive or an established drawer
 library over a hand-rolled gesture: momentum, linked overlay, velocity dismissal,
@@ -251,7 +296,8 @@ Choreography rules:
   a positioned parent; or absolute positioning at its current place), so siblings
   close the gap while it fades rather than after.
 - Swapping views in one container crossfades: the old view exits while the new
-  one enters.
+  one enters. A blur of a few pixels on both layers softens the moment both are
+  half visible, at the cost noted under [dropped frames](#diagnose-dropped-frames).
 - Direction follows the user's model: forward moves content left, back moves it
   right. Pass the direction to exiting elements (Motion's `custom` on both
   `AnimatePresence` and the child), since an exit reads state when it starts.
@@ -311,27 +357,48 @@ Choose by distance, size, frequency and input method, then inspect the real resu
 | --- | --- | --- |
 | Press/hover feedback | CSS transition, 80–140 ms, `ease-out` | Fast reversal; hover enhancement only on capable pointers |
 | Popover/menu | Opacity plus small anchored transform, 120–220 ms, `ease-out` | Remain anchored; preserve primitive focus and dismissal behavior |
+| Tooltip | Opacity plus a 2–4 px offset, 100–150 ms, `ease-out`, after a hover delay | Once one tooltip in a group is open, neighbors open at once without delay or animation; the delay returns when the pointer leaves the group |
+| Tab indicator | One indicator element translated between tabs, 150–250 ms, `ease-out` | When the active label also changes color, clip a duplicate of the list styled as active to the indicator's bounds instead of timing separate color transitions |
 | Dialog/drawer | Short displacement/fade, 180–300 ms, decelerating entrance | Exit can be shorter; focus and input state must match visibility |
 | Expand/collapse | Content-sized transition, 150–250 ms, `ease-in-out` | Retarget when content changes; avoid clipping focused descendants. Inside a form, use the form conditional reveal row |
 | Form conditional reveal | Height plus fade, 150–200 ms, `ease-out` | [Default treatment](#reveal-conditional-content-smoothly) through the shared primitive |
 | Toast | Modest translate/fade, 150–220 ms | Repeated items update/reflow coherently; essential information survives dismissal |
 | Drag/snap | Damped spring following gesture velocity | Constrain movement, settle predictably and provide a non-drag action |
 
-For timeline motion, try existing decelerating easing on entrance and a smooth
-in/out curve for an element already on screen. For a gesture that can be released
-mid-flight, a physical spring can preserve velocity more naturally. In an already
-installed Motion project, `{ type: "spring", stiffness: 420, damping: 38, mass: 1 }`
-is an illustrative starting configuration, not a token to add everywhere. Tune
-overshoot and settling on the actual component; avoid mixing physical parameters
-with duration-based settings without checking that library's precedence rules.
+Choose easing by what the element is doing: decelerating (`ease-out`) for
+anything entering or responding to the user, because the movement is fastest at
+the moment the user is watching; in/out for an element already on screen moving
+to another place; `linear` only for constant progress such as a hold fill or a
+marquee. Accelerating (`ease-in`) delays the visible start, so it feels slower
+than `ease-out` at the same duration; reserve it for exits that leave the
+viewport. The browser keywords are gentle; a steeper custom curve (an ease-out
+near `cubic-bezier(0.23, 1, 0.32, 1)`, an in/out near
+`cubic-bezier(0.77, 0, 0.175, 1)`) is an illustrative starting point to define
+once as a token, not a value to paste per component. Perceived speed matters as
+much as the clock: a 180 ms select feels faster than a 400 ms one, and a loading
+indicator that turns quickly reads as faster progress at the same wait.
+
+For a gesture that can be released mid-flight, a physical spring can preserve
+velocity more naturally. In an already installed Motion project,
+`{ type: "spring", stiffness: 420, damping: 38, mass: 1 }` is an illustrative
+starting configuration, not a token to add everywhere. Duration-based spring
+settings (a duration near 0.5 s with bounce 0.1–0.3) are easier to tune; keep
+most UI critically damped, with no bounce, and let bounce appear only where a
+gesture carried momentum into the release. A decorative element that follows
+the pointer interpolates toward it with a spring rather than binding the value
+directly; functional data never trails the pointer. Tune overshoot and settling
+on the actual component; avoid mixing physical parameters with duration-based
+settings without checking that library's precedence rules.
 See [Motion transitions](https://motion.dev/docs/react-transitions).
 
 For a drag-to-dismiss toast, use the existing library's gesture and dismissal
 contract. Distinguish intentional horizontal drag from vertical page scrolling,
 handle cancellation, and restore the item when the threshold is not met. Keep a
 keyboard/touch dismiss action; swipe is an enhancement. Pause an existing timeout
-while users interact where appropriate and ensure actionable information can be
-recovered. Announcements follow the [accessibility reference](interaction-accessibility.md),
+while users interact where appropriate, and while the tab is hidden, so a toast
+does not expire unseen; when stacked toasts expand on hover, bridge the gaps
+between them so moving between toasts does not collapse the stack. Ensure
+actionable information can be recovered. Announcements follow the [accessibility reference](interaction-accessibility.md),
 not the animation's completion. See [Motion drag](https://motion.dev/docs/react-drag).
 
 ## Motion audit and inspection
@@ -341,6 +408,11 @@ observed issue and recommendation: keep, adjust, remove or remain static. Includ
 places where adding animation would delay frequent work, distract from reading,
 obscure a value or compete with another signal. An audit need not produce new
 animations and remains read-only unless implementation is requested.
+
+Judge feel before judging values. Play the interaction at two to five times its
+duration and step through frames; a curve, a stagger and an exit read differently
+in slow motion. Check on a real phone, and look again the next day with fresh
+eyes before calling a tuning final.
 
 ### Remove or reduce motion
 

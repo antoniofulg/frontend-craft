@@ -28,6 +28,15 @@ Match the project's construction order when it has one. Do not introduce a
 generic primitive to bypass a richer domain component, or extract a universal
 abstraction merely because two pages look similar.
 
+Do not hand-roll a solved problem: focus-trapped dialogs, menus and popovers,
+toasts, command palettes, animated numbers and long-list virtualization carry
+accessibility and edge-case work that an installed, maintained library already
+does. Check the installed dependencies and existing owners first and recommend
+one option, not a menu; flag a competing library already installed instead of
+adding a third. Choose by accessibility handled, maintenance, bundle cost and
+fit with the project's styling, and say when a need falls outside what the
+known libraries cover.
+
 ### Same setting, same control
 
 Search for every place that edits the same setting, not only the same page
@@ -96,6 +105,25 @@ outcome on return rather than retaining stale promises. Exercise transitions via
 the existing [navigation/draft contract](interaction-accessibility.md#navigation-and-draft-resilience).
 Preserve meaningful family variants; this scoped comparison does not require a
 whole-product audit or new synchronization/persistence infrastructure.
+
+## Compare variants when direction is open
+
+When the user has not decided how a component should work, build a small set of
+genuinely different variants rather than one guess. Diverge on a named axis:
+layout, density, interaction model or motion. Two variants that differ only in
+color or copy are one variant. Each variant works fully with realistic content;
+a mock-up with placeholder text hides the differences that matter.
+
+View one variant at a time, at full size, inside the real page or a scratch
+surface that reproduces its context; side-by-side thumbnails distort density and
+hide interaction. Switch between them instantly (number or arrow keys outside
+text fields, a URL parameter that survives reload) so the comparison stays in
+working memory. For each, state when it wins and what it costs: a short table,
+not a verdict. After the user picks, a second round can diverge around that
+choice. Promote the chosen variant into the real owner and delete the others and
+the switcher; the scratch surface follows the
+[harness lifecycle](review.md#stress-a-real-component). Page-level compositions
+follow [compare compositions](commercial-visuals.md#compare-compositions-when-direction-is-open).
 
 ## Exceptions and evolution
 

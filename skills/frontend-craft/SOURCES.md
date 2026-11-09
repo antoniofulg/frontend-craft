@@ -31,7 +31,7 @@ bundled here. Installed project copies may differ from their recorded upstream.
 | --- | --- | --- |
 | [Jakub Krehel's skills](https://github.com/jakubkrehel/skills) | `267330e1adfc66a718fb65fa6918c1f06d0a689e` | Interface inspection, domain review, explanation evidence, and relevant component stress axes |
 | [Anthropic skills](https://github.com/anthropics/skills) | `8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4` | Purposeful content structure and consistent interface vocabulary |
-| [Emil Kowalski's skills](https://github.com/emilkowalski/skills) (MIT) | Initial: `e8a175de22ae1e49370fc144c1f3bb9aeedf988d`; 0.18.0 review: `5206a95` | Motion purpose, frequency and interruption as design questions; [0.18.0 motion and mobile web additions](#motion-coordination-performance-and-mobile-web) |
+| [Emil Kowalski's skills](https://github.com/emilkowalski/skills) (MIT) | Initial: `e8a175de22ae1e49370fc144c1f3bb9aeedf988d`; 0.18.0 review: `5206a95`; 0.19.0 review: `715c180` | Motion purpose, frequency and interruption as design questions; [0.18.0 motion and mobile web additions](#motion-coordination-performance-and-mobile-web); [0.19.0 worst-case data, motion craft and variant comparison](#worst-case-data-motion-craft-and-variant-comparison) |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `v2.15.0` | Targeted interaction, chart and accessibility reference categories |
 | [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Initial: `ce26fc25c0e5e8cab638f883de62d9a86ee5e45b`; v2.0.0 review: `2b44c81bbe36ac8a8a6bdd1c9ff593f28b8728f4` | Context-sensitive public-page composition; subject-specific identity, media workflow and rendered critique |
 | [Vercel agent skills](https://github.com/vercel-labs/agent-skills) | Local `react-composition-patterns` skill, metadata version `1.0.0` | Component composition and state-owner questions |
@@ -605,6 +605,37 @@ universal 500 ms sheet curve, a global `user-select: none` on links and the
 are platform- or library-specific. The Motion 14.2 acceleration note was checked
 against Motion's [changelog](https://motion.dev/changelog) and
 [performance page](https://motion.dev/docs/performance) on 2026-11-08.
+
+## Worst-case data, motion craft and variant comparison
+
+The 0.19.0 additions were compared against the remaining skills in
+[Emil Kowalski's skills](https://github.com/emilkowalski/skills) at commit
+`715c180` (MIT) on 2026-11-09: `break-ui`, `prototype`, `animate`,
+`review-animations`, `emil-design-eng`, `apple-design` and the repository's UI
+cheat sheet. The [value map, worst-case shapes and failure signatures](references/review.md#stress-a-real-component),
+the [per-field truncation rule](references/interaction-accessibility.md#layout-typography-and-color),
+the [variant comparison](references/reuse-consistency.md#compare-variants-when-direction-is-open),
+the mechanism ladder, easing selection, entrance origin, tooltip warm-up, spring
+tuning, drag threshold and momentum projection in [motion](references/motion.md),
+the discomfort triggers and `prefers-reduced-transparency`/`prefers-contrast`
+branches, and the [translucent surfaces](references/visual-details.md#translucent-surfaces)
+section are independently expressed; no text, catalog rows, recipes, picker code
+or plan templates were copied. The momentum projection and interruption model
+follow Apple's public [Designing Fluid Interfaces](https://developer.apple.com/videos/play/wwdc2018/803/)
+session, which `apple-design` also distills. Numeric curves, thresholds and
+scales are labelled as illustrative starting points because project tokens remain
+authoritative.
+
+Not incorporated: hard bans on animating keyboard-triggered or frequent actions
+and on `ease-in`, a universal 300 ms ceiling, a fixed press scale, a Block
+verdict on a single easing, hold-to-confirm for destructive actions (which
+conflicts with the approved-confirmation rule), the before/after review table,
+canned greeting responses, the prototype picker's chrome and invocation syntax,
+the `improve-animations` plan-file and reconcile workflow, system fonts by
+default, and the specific library recommendations of `pick-ui-library`; its
+library-agnostic rule against hand-rolling solved problems is adopted in
+[reuse and consistency](references/reuse-consistency.md#select-a-precedent-by-responsibility).
+MDN and Apple links beside the new rules were checked on 2026-11-09.
 
 ## Public launch readiness
 
