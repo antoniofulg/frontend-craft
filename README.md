@@ -1,6 +1,6 @@
 # Frontend Craft
 
-Current version: **0.18.0**. See the [release notes](CHANGELOG.md).
+Current version: **0.18.1**. See the [release notes](CHANGELOG.md).
 
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
@@ -484,6 +484,9 @@ ranges, summaries and redesign parity, with four independent review rounds.
 The [0.18.0 verification record](evals/verification-0.18.0.md) covers motion
 choreography, dropped-frame diagnosis, motion removal, gesture phases and mobile
 web fixes.
+
+The [0.18.1 verification record](evals/verification-0.18.1.md) covers the rule that
+rendered screenshots are review evidence, not automated tests or gate steps.
 
 ## License and sources
 

@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.18.1 — 2026-11-08
+
+- State once, in [rendered critique](skills/frontend-craft/references/review.md#critique-the-rendered-composition),
+  that rendered screenshots are review-time inspection evidence: take them with
+  the browser workflow, don't encode them as automated tests or gate steps, and
+  follow the project's test contract for automated proof.
+- Point the other screenshot and capture instructions in `SKILL.md`, review
+  repair, performance, mapping and design systems to that rule.
+
+Release package checks and remaining limits are recorded in
+[the 0.18.1 verification record](evals/verification-0.18.1.md).
+
 ## 0.18.0 — 2026-11-08
 
 - Coordinate several moving elements as one motion: lead/support/decoration
