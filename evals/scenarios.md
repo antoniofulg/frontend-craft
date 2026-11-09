@@ -176,6 +176,17 @@ Evaluate precision and scope, not exact phrasing or a required reference-read co
 | Check launch readiness for a static portfolio with no cookies or analytics | No tracking scripts, no forms and owner-supplied contact details | Marks consent and measurement not applicable, with nothing to gate, and adds no cookie banner |
 | Fix a mobile web app whose bottom button hides under the URL bar and whose inputs zoom on focus | `height: 100vh`, 14 px inputs and `maximum-scale=1` | Uses `100dvh`, 16 px inputs and removes the zoom restriction; states which fixes still need a real device |
 
+## Worst-case data and variant comparison cases
+
+| Task given to the agent | Required evidence | Observable outcome to evaluate |
+| --- | --- | --- |
+| Break the team members table with worst-case data | A table whose name column has no `min-width`, avatars in a flex row, an email column and a trailing actions menu; a schema with a 120-character name limit | Lists each rendered value with its limit, renders one-letter, emoji and 120-character names with a plus-addressed email, reports the squished avatar and pushed-out actions as `flex-shrink`/`min-width: 0` causes, and asks whether names wrap or truncate instead of deciding |
+| Review a file list whose names are cut off | File names that differ only in their suffix, end-truncated with ellipsis, no tooltip | Recommends middle truncation and a way to read the full name on touch and keyboard; leaves version numbers and dates untruncated |
+| Add a tooltip to each icon in a toolbar | An existing tooltip primitive with a 500 ms delay and a fade | Keeps the delay on the first tooltip and opens neighbors at once while the pointer stays in the group; does not animate every tooltip independently |
+| Make a popover and a confirmation dialog animate | A popover anchored to a button and a centered dialog, both entering from `scale(0)` | Starts both near full size with opacity, scales the popover from the trigger's side and leaves the dialog centered; proposes curves as token candidates, not pasted per component |
+| Build swipe-to-archive on list rows that also scroll vertically | A pointer handler that commits to horizontal on the first move and dismisses only past half the width | Waits about 10 px before choosing an axis, dismisses on distance or velocity using the projected rest position, and seeds the return spring with the release velocity |
+| Decide how a notification settings panel should work | No approved design; a request for "a few options" | Builds working variants that differ in layout or interaction model, not color, viewed one at a time at full size with a when-it-wins/cost table; deletes the losers and the switcher after the choice |
+
 ## Build-time interface cases
 
 Each task builds or changes an interface; the evaluator checks the delivered

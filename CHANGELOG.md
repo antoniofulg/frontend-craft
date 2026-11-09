@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.19.0 — 2026-11-09
+
+- Break a real component with worst-case data: list every rendered value with
+  its source and limit, cover worst-case shapes for people, identifiers,
+  numbers, time, media and collections, grade breaks by consequence, and map
+  each to a [failure signature](skills/frontend-craft/references/review.md#failure-signatures)
+  with its owner-level CSS fix.
+- Decide truncation per field (wrap, end, middle, clamp, never for numbers and
+  dates) with a way to read the full value; show absolute dates past about a
+  week; extend touch hit areas and cancel taps that drift.
+- Motion craft: a mechanism ladder with `@starting-style`, entrances from near
+  full size with popovers anchored to their trigger and dialogs centered,
+  tooltip warm-up and tab-indicator rows, easing chosen by what the element
+  does with illustrative custom curves, spring bounce limits, product
+  personality and token consolidation, toast timers paused in hidden tabs,
+  drag start threshold, momentum projection and velocity-seeded reversal,
+  discomfort triggers, `prefers-reduced-transparency` and `prefers-contrast`
+  branches, and a slow-motion feel check.
+- Visual details: translucent surfaces, line height by size and eased
+  overflow fades.
+- Reuse: do not hand-roll solved problems, and
+  [compare variants](skills/frontend-craft/references/reuse-consistency.md#compare-variants-when-direction-is-open)
+  on a named axis, one at a time at full size, when direction is open.
+- Two routing rows and six behavioral scenarios.
+
+Release package checks and remaining limits are recorded in
+[the 0.19.0 verification record](evals/verification-0.19.0.md).
+
 ## 0.18.1 — 2026-11-08
 
 - State once, in [rendered critique](skills/frontend-craft/references/review.md#critique-the-rendered-composition),

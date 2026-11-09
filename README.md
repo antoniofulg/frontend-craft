@@ -1,6 +1,6 @@
 # Frontend Craft
 
-Current version: **0.18.1**. See the [release notes](CHANGELOG.md).
+Current version: **0.19.0**. See the [release notes](CHANGELOG.md).
 
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
@@ -78,6 +78,8 @@ $frontend-craft Audit shared components and styles across the application. Repor
 $frontend-craft Audit and consolidate duplicated components and style recipes across the application. Migrate matching consumers to shared owners, preserve explicit variants and report remaining gaps.
 $frontend-craft Remove the standard card border and update its radius across the application through its shared owner. Preserve form controls and explicit variants, find bypasses and verify propagation.
 $frontend-craft Implement this feature using established shared components, tokens and style recipes. Extend their supported variants when needed and verify affected consumers.
+$frontend-craft Break the members table with worst-case data: one-letter and emoji names, a plus-addressed email, 1,000,000 items, every status at once. Report what broke, why, and the truncation decisions I need to make.
+$frontend-craft Build three working variants of the notification settings panel that differ in layout and interaction model, one at a time at full size, with a when-it-wins table.
 $frontend-craft Review the task editor for reuse and consistency with sibling pages.
 $frontend-craft Repair this generated-looking screen using our existing brand and shared owners. Preserve content and behavior; inspect before/after layouts and exercise the changed interactions.
 $frontend-craft Check the owner picker with long names, no results, and save failures.
@@ -487,6 +489,11 @@ web fixes.
 
 The [0.18.1 verification record](evals/verification-0.18.1.md) covers the rule that
 rendered screenshots are review evidence, not automated tests or gate steps.
+
+The [0.19.0 verification record](evals/verification-0.19.0.md) covers worst-case
+data stress, failure signatures, truncation, motion craft heuristics, translucent
+surfaces and variant comparison. It records package and installation checks only;
+the new scenarios were not exercised for this release.
 
 ## License and sources
 

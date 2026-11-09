@@ -290,6 +290,11 @@ rules. Keep conversion and daylight-saving gap/overlap resolution with the
 existing scheduling owner, showing/requesting clarification when its contract
 requires it. See [W3C time guidance](https://www.w3.org/TR/timezone/) (a draft note).
 
+Relative times ("3 minutes ago") suit recent activity. Past about a week, or
+wherever the exact day matters, show the absolute date, and expose it on hover
+or focus whenever the relative form is shown. Check the relative form at "now",
+in the future (clock skew) and across a day boundary in the viewer's zone.
+
 For opening hours, shifts and other daily time ranges, model the real day:
 
 - A close at or before the open ends on the next day; mark it ("next day") beside
@@ -359,7 +364,13 @@ into a universal CSS-pixel rule. See
 ## Layout, typography and color
 
 Verify long labels/names, localization, text scaling, zoom and narrow containers.
-Ensure important values can be recovered when truncated. For dense data that
+Decide truncation per field: wrap text that identifies the record; end-truncate
+secondary metadata; middle-truncate values that differ at the end, such as file
+names, emails on one domain, paths and hashes; clamp card previews to a line
+count; never truncate numbers, amounts or dates. Every truncated value keeps a
+way to read the whole value that works on touch and keyboard. For the layout
+causes behind clipped or squished content, use the
+[failure signatures](review.md#failure-signatures). For dense data that
 needs horizontal scrolling, keep the scroll affordance and essential controls
 discoverable rather than silently clipping content.
 
@@ -405,6 +416,7 @@ width-based touch detection. Apply each fix where its reason applies:
 | Pull-to-refresh or scroll chaining fights the app | `overscroll-behavior` on the scroll container, or on `html, body` for an app shell where the browser's pull-to-refresh is unwanted; avoid `touchmove` with `preventDefault()`. |
 | Content hidden by the notch or home indicator | `viewport-fit=cover` in the viewport meta, then `env(safe-area-inset-*)` padding; without the meta the insets resolve to zero. |
 | Long-press selects a control's label | `user-select: none` with `-webkit-user-select: none` for Safari, on controls only, never on readable content. |
+| Taps miss small targets or fire while the finger is already scrolling | Extend the hit area about 10 px beyond the visual target through padding or a pseudo-element, cancel a tap when the finger leaves the target before release, and treat contact as a tap until it has travelled about 10 px (see [gestures](motion.md#gestures-and-continuity)). |
 | Custom horizontal gesture blocks vertical scroll | `touch-action: pan-y` on the horizontal gesture surface (the value names what the browser keeps); prefer native `scroll-snap` carousels, which need none. |
 | Browser chrome color mismatches the theme | One `theme-color` meta per `prefers-color-scheme`, matching the top of the page; update it on a class-based theme toggle. |
 

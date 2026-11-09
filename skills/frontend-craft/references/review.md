@@ -107,29 +107,89 @@ reports evidence gaps. Delegation is optional, not a required review round.
 
 ## Stress a real component
 
-Derive scenarios from its public inputs, slots, states and real consumers:
+Derive scenarios from its public inputs, slots, states and real consumers.
+First list every rendered value, including header counts, badge text,
+timestamps, data-driven labels, tooltips, avatars and the list length, with its
+source, type, limit and whether it can be missing. Take limits from the real
+schema, API or database; where none exists, record the value as unbounded, and
+report a frontend limit that disagrees with the backend one.
 
 | Axis | Applicable examples |
 | --- | --- |
-| Content | Empty/long/unbreakable names, localization, missing optional media |
-| Quantity | No items, one item, realistic large collection, no search matches |
-| State | Selected, disabled, pending, denied, error/retry, repeated action |
-| Container | Actual narrow/wide hosts, dense layout, nested scroll/overlay |
-| Environment | Supported themes, forced colors, zoom/text scaling, keyboard/touch, reduced motion |
+| Content | Empty/long/unbreakable names, localization, missing optional media; the [worst-case shapes](#worst-case-value-shapes) below |
+| Quantity | No items, one item, realistic large collection, no search matches, exactly one page and one page plus one record |
+| State | Selected, disabled, pending, denied, error/retry, repeated action, every status value at once |
+| Container | Actual narrow/wide hosts, dense layout, nested scroll/overlay, a full-width component reused in a narrow sidebar |
+| Environment | Supported themes, forced colors, zoom/text scaling including a 200% root font size, 320 px and very wide viewports, keyboard/touch, hover-only actions on touch, RTL, reduced motion |
 
 Select relevant axes, not their Cartesian product. Render the actual imported
 component with synthetic realistic data in the project's fonts, tokens and
-providers. Use existing stories/preview/test facilities first. Container width
-does not substitute for viewport tests when media queries change behavior.
+providers: plausible values at the real limit, not random strings. Spread
+different failures across the first visible rows so one screen shows several.
+Change the data, not the CSS, until inspection is done. Use existing
+stories/preview/test facilities first. Container width does not substitute for
+viewport tests when media queries change behavior.
 
 A read-only review must not add routes or fixtures to the user's working tree.
 When a scratch harness is authorized, import the real component but use isolated
 fixture data; production entrypoints must never import the harness. Track its
 lifecycle and remove it afterward unless retention was requested. Do not leave
-servers or temporary pages running silently.
+servers or temporary pages running silently. A worst-case fixture the owner
+wants to keep becomes a regression fixture in the project's existing story or
+test facility, never a production route.
 
 Inspect rendered scenarios and report actual breaks. A source-only prediction
 is a risk to verify, not an observed overflow or successful keyboard journey.
+Grade each break by consequence: content or a control unreachable or unreadable;
+visibly wrong but usable; or holding today on an assumption the data can break.
+Record what held up, and list the product decisions the breaks expose (truncate
+or wrap, hide or disambiguate) separately from the fixes. Map each break to a
+[failure signature](#failure-signatures) before proposing CSS.
+
+### Worst-case value shapes
+
+Cover the shapes that apply to the component's values:
+
+- **People**: a one-letter or two-letter name, a name made of emoji with joiners,
+  surrounding whitespace, a missing name with only an email, two identical names
+  (needs a disambiguator), the current user in the list, and CJK or single-word
+  names whose initials cannot be derived from spaces. Derive initials from
+  grapheme clusters, not string index 0; fall back to an icon when no initials
+  exist, and to initials when the avatar image fails to load. Size avatars with
+  `object-fit: cover` and `flex-shrink: 0`.
+- **Identifiers and text**: a plus-addressed email, a UUID, a long URL or path,
+  a camera-style file name, a newline inside a single-line field, and a string
+  that looks like markup or a template, which must render literally.
+- **Numbers**: 0, 1 and 1,000,000; a float artifact such as `0.1 + 0.2`; a
+  percentage past its bounds; `null` and `NaN`; one value ten times larger than
+  its siblings; and a live value crossing a digit boundary (99 to 100) while
+  aligned or animated.
+- **Time**: a relative time at "now", in the future and across a day or
+  time-zone boundary; a zero or missing timestamp; a duration that never rolls
+  up into the next unit.
+- **Media**: a panoramic and a very tall image, a transparent logo on both
+  themes, a dark logo on a dark surface, and a slow image with no reserved
+  aspect ratio.
+- **Collections**: partial data across rows, every enum status at once, and a
+  record whose optional sections are all empty.
+
+### Failure signatures
+
+Map each observed break to its cause and the fix at the owner:
+
+| Symptom | Cause and fix |
+| --- | --- |
+| Avatar, icon or badge squished | The flex item shrinks; give it a fixed box with `flex-shrink: 0` and keep badge text on one line |
+| Text column pushes siblings off the row or overflows its grid cell | Flex and grid items default to `min-width: auto`; set `min-width: 0` on the text column or size the track with `minmax(0, 1fr)` |
+| Email, URL or hash refuses to wrap | Use `overflow-wrap: anywhere` on that value; `word-break: break-all` splits ordinary words too |
+| Trailing action pushed out of view | The middle column must yield; the action keeps its intrinsic width |
+| Avatar floats mid-height beside wrapped text | Align items to the start once the text can wrap to several lines |
+| Fixed-height container cuts a row mid-glyph | Add a scroll container or a fade affordance; never hide the overflow silently |
+| Stacked diacritics or descenders clipped | Tight `line-height` with `overflow: hidden`; loosen one or remove the clip |
+| Fixed-width button breaks under a translated label | Use `min-width` and let the label size the button |
+
+Truncation decisions follow the per-field rule in
+[layout, typography and color](interaction-accessibility.md#layout-typography-and-color).
 
 ## Critique the rendered composition
 
