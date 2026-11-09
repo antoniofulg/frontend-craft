@@ -61,7 +61,8 @@ safety follow [interaction and accessibility](interaction-accessibility.md#loadi
 ### Verify the transition in the browser
 
 Compare pending and ready element bounds, wrapping, overflow and screenshots at
-representative mobile/desktop widths and supported locales. Cover short and
+representative mobile/desktop widths and supported locales; screenshots are
+[review evidence](review.md#critique-the-rendered-composition). Cover short and
 slow responses. Measure brief paint windows inside the browser, using its clock,
 observers or animation frames as appropriate: test-runner round trips can consume
 the entire decorative delay before a held response is released.
