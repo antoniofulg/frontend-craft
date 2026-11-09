@@ -134,11 +134,13 @@ is a risk to verify, not an observed overflow or successful keyboard journey.
 ## Critique the rendered composition
 
 For page creation, visual refinement or a visual review, inspect screenshots of
-the actual rendered page through the existing browser/Impeccable pass. Include
-the opening view and the relevant full-page or scroll-position views at a wide
-and narrow viewport; include intermediate widths where the layout changes.
-Use project-supported sizes, states, themes and representative content. A
-screenshot alone cannot verify focus order, destinations, submission or motion;
+the actual rendered page through the existing browser/Impeccable pass: the
+opening view and relevant full-page or scroll-position views at a wide and narrow
+viewport, intermediate widths where the layout changes, and project-supported
+sizes, states, themes and representative content. Rendered screenshots are
+inspection evidence for this review. Take them with the browser workflow and
+don't encode them as automated tests or gate steps. Automated proof follows the
+project's test contract. A screenshot alone cannot verify focus order, destinations, submission or motion;
 exercise relevant behavior separately. If fresh rendering is unavailable, inspect
 supplied screenshots and report their viewport/state and freshness limits. Keep
 conclusions conditional where actual rendered evidence is missing.
@@ -224,9 +226,9 @@ This workflow adapts Enmera's agent guidance; its [MIT notice](../licenses/enmer
 is retained. It uses the project's preview/browser workflow, not an external
 design checker, token generator, editor hook or finding-count target.
 
-1. **Keep a trustworthy before state.** Retain comparable screenshots and the
-   relevant source state through existing review facilities, outside production
-   routes/assets. Record scope, viewport, theme and state. Include reachable open
+1. **Keep a trustworthy before state.** Retain comparable screenshots, taken as
+   [review evidence](#critique-the-rendered-composition), and the relevant source
+   state outside production routes/assets. Record scope, viewport, theme and state. Include reachable open
    menus and pending/error states where affected so a cleaner default frame
    cannot hide lost content or behavior.
 2. **Diagnose the rendered cause.** Use [rendered critique](#critique-the-rendered-composition)

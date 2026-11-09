@@ -53,8 +53,8 @@ the map. Preserve existing accessible names and interaction conventions.
 
 Label evidence as source-observed, rendered-observed, derived, or inferred.
 Include source paths/symbols and, for rendered observations, route, state,
-viewport, theme and capture/interaction evidence. Identify the inspected revision
-and any relevant dirty files. Do not store customer records or private screenshots
+viewport, theme and [capture](review.md#critique-the-rendered-composition)/interaction
+evidence. Identify the inspected revision and any relevant dirty files. Do not store customer records or private screenshots
 in reusable examples. Use synthetic content for reproducible inspection.
 
 Label the pattern as adopted (explicit contract/design decision), observed

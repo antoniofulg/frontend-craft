@@ -91,9 +91,10 @@ consumers and verification.
 7. **Apply and prove the system.** For authorized implementation, migrate included
    consumers through [consolidation](shared-ui-patterns.md#consolidate-when-implementation-is-requested)
    and [propagation verification](shared-ui-patterns.md#verify-propagation-and-keep-ownership-discoverable).
-   Use actual representative compositions, relevant states/themes and existing
-   previews. Verify behavior as well as appearance; a token table or screenshot
-   alone does not prove correct focus, pending/error recovery or current status.
+   Inspect actual representative compositions, relevant states/themes and existing
+   previews as [review evidence](review.md#critique-the-rendered-composition).
+   Verify behavior as well as appearance; a token table or screenshot alone does
+   not prove correct focus, pending/error recovery or current status.
    Report excluded consumers and missing proof rather than claiming full adoption.
 
 ## Document for the next consumer

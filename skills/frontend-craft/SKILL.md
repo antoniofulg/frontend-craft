@@ -213,7 +213,9 @@ and fix each "no" the change introduces at its shared owner; report existing one
 as gaps. Compare with the selected precedents in corresponding states
 and viewport/theme conditions. A shared import does not prove visual consistency:
 inspect variant selection, wrapper composition, and local overrides too. Use the
-relevant checks and existing browser workflow; reuse unchanged valid evidence.
+relevant checks and existing browser workflow, with screenshots as
+[review evidence](references/review.md#critique-the-rendered-composition); reuse
+unchanged valid evidence.
 For shared-pattern consolidation, account for all intended consumers in the
 declared scope and verify propagation through the shared owner; report remaining
 gaps rather than treating sampled renders as complete application coverage.
