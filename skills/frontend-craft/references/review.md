@@ -298,12 +298,14 @@ difference.
 state from a browser window whose size is the design's pixel size over its
 scale: a 2880 × 1800 frame exported at 2× needs a 1440 × 900 window. Never
 capture a wider window and resize the image: the page at the design's width
-lays out differently, and the resized picture hides it. The tell-tale is text:
-when a label the design also draws reads smaller in the picture, it was resized,
-and it is retaken. A picture that cuts off the state it shows fails until it is
-retaken with that state in view. Judge only the states a design draws. Other
-states, and existing screens the change leaves alone, are proven by tests or by
-exercising them, with no picture and no judge.
+lays out differently, and the resized picture hides it. Text gives a resize
+away: compare a label both images contain, and if the picture's is smaller,
+retake it. A picture must show its whole state; when part of it is cropped or
+scrolled away, retake it before judging. Judge only the states a design draws,
+each picture against its own state: what belongs to another state, or the
+click that led here, is not missing from this one. Other states, and existing
+screens the change leaves alone, are proven by tests or by exercising them,
+with no picture and no judge.
 
 **Give the judgement to someone who did not build it.** When the host can start
 a subagent, a fresh one judges. It receives the design, the pictures and the
@@ -313,24 +315,26 @@ reporting it. It judges the files it was given and does not open the app or take
 new captures. Without a subagent, the builder judges the same inputs before
 rereading source and reports that the judge was not independent.
 
-**Write the inventory first; it is the judgement.** List one row per thing the
-design draws: each region, control, label or sentence, chip, state mark, line,
-legend entry, and the arrangement of each region. Then mark every row `same` or
-`differs`, applying the departures list, and for `differs` say what the picture
-draws instead.
+**Write the inventory first; it is the judgement.** Before comparing, walk the
+design and give everything visible its own row: every region and how its
+contents are laid out, every control, every piece of text down to single
+labels, and every chip, status mark, rule and legend entry. Then compare row by
+row, with the departures list applied, recording `same` or `differs`; a
+`differs` row also records what the picture shows in its place.
 
 | Kind | `differs` when |
 | --- | --- |
-| Controls | a control the design draws is missing, or the picture adds one it does not draw |
-| Arrangement | the regions are not the same ones, in the same places, with the same nesting |
-| Copy | visible text the design fixes is wrong; a value that follows the capture date, such as today's date, is not |
-| Drawing | an element is drawn differently: a line, border, badge, bar shape, or the layout of a meter or form |
-| Render | content overlaps, is cut off, scrolls out of the window or is unreadable, or a component appears that the rest of the app does not use |
+| Controls | the picture lacks a control from the design, or has an extra one |
+| Arrangement | regions are added, missing, moved or nested differently |
+| Copy | fixed text in the design reads differently; text that depends on when the picture was taken, such as today's date, does not count |
+| Drawing | an element takes another form: a different rule, border or badge, bar shape, or meter or form layout |
+| Render | content collides, is clipped, falls outside the window or cannot be read, or a component appears that the app uses nowhere else |
 
-Exact spacing, shade and type weight are notes on a `same` row. One `differs`
-row means the screen diverges; otherwise it matches. The builder fixes what the
-rows name and nothing else, so a thing no row names is never checked: an
-incomplete inventory is an incomplete judgement. Report each picture with the
+Small gaps in spacing, color shade or font weight do not make a row
+`differs`; write them as a note beside `same`. A single `differs` row is enough
+for the screen to diverge; with none, it matches. Fixes follow the rows, and
+only the rows, so anything left off the inventory escapes the comparison
+entirely: a short inventory is a short judgement. Report each picture with the
 commit it was taken at, its verdict and its rows:
 
 | Element | Result | Picture draws |
@@ -339,13 +343,16 @@ commit it was taken at, its verdict and its rows:
 | card form: number, expiry and CVC on one row | differs | expiry and CVC on a second row |
 | `Update card` button, filled, under the form | differs | outlined button |
 
-**One more round, then the user.** The verdict holds only for the commit it
-names, so a fix pass that changes code needs a second round. Retake every picture
+**One more round, then the user.** A verdict describes the commit the pictures
+came from and no later one, so a fix pass that changes code needs a second
+round. Retake every picture
 at the new commit. The same judge, or a fresh one given the first inventory,
 reopens only the `differs` rows and marks each again; a `same` row that the new
-picture visibly breaks becomes `differs (regression)`. Nothing else is added or
-re-judged. There is no third round: report what still differs to the user, with
-its rows, instead of iterating.
+picture visibly breaks becomes `differs (regression)`. Rows that passed are not
+judged again and no new rows join. There is no third round: report what still
+differs to the user, with its rows, instead of iterating. These two rounds
+measure fidelity; they are separate from, and not counted in, the critique's
+aesthetic iteration limit.
 
 After the judgement, diagnose each differing row's cause in source, as in
 [rendered critique](#critique-the-rendered-composition); keeping the code from

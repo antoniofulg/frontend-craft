@@ -624,8 +624,10 @@ sees the design, pictures and departures but not code, diff or builder notes and
 takes no new captures; an inventory marked `same`/`differs` by kind is the whole
 judgement; undrawn states are proven by tests or interaction; the verdict is tied
 to a commit, with one regression-aware second round and no third. The text is
-independently expressed and changed from the source; the billing example rows
-follow the source's illustration. No endorsement is implied.
+adapted: condensed, reworded and reorganized around this skill's review
+sections, with a size example, a no-subagent fallback and the separation from
+the critique's iteration limit added; the billing example rows follow the
+source's illustration. No endorsement is implied.
 
 Not incorporated: the `.specs/` files and their formats (`plan.md`, `checks.md`,
 `screens.md`, `STATE.md` decisions and `AD-NNN` confirmations), the

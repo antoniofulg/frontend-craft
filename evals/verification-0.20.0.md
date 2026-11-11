@@ -35,11 +35,16 @@ Source comparison, attribution and exclusions are recorded in
   `npx --yes skills@1.7.5 add <source> --skill frontend-craft --agent codex claude-code --copy --yes`
   produced real `.agents/skills/frontend-craft` and `.claude/skills/frontend-craft`
   directories whose digests matched the source tree.
+- An independent read-only review compared the section with the source: no
+  contradictions or missing substance; it flagged near-verbatim sentences and an
+  overstated "independently expressed" claim, two omitted per-picture rules
+  (other states and the leading click are not gaps) and a possible conflation
+  with the critique's three-round limit. All were addressed before release.
 - The Tech Leads Club repository and CC BY 4.0 license links returned HTTP 200
   on 2026-11-11.
 
 Final distributed skill-tree SHA-256 (36 files):
-`6ed7f4994a163805e7b48c93be754ab13c68bf6fc9bf74cf22fa7ef018afe2f1`.
+`4487bff4fdc3bbb84732da295097cea328d45d0563fafea42ed4a778d8f3c107`.
 The digest uses sorted relative file paths, NUL, file bytes and NUL; the same
 procedure reproduced the recorded 0.19.0 digest from its tag.
 
