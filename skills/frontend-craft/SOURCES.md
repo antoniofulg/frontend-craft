@@ -32,6 +32,7 @@ bundled here. Installed project copies may differ from their recorded upstream.
 | [Jakub Krehel's skills](https://github.com/jakubkrehel/skills) | `267330e1adfc66a718fb65fa6918c1f06d0a689e` | Interface inspection, domain review, explanation evidence, and relevant component stress axes |
 | [Anthropic skills](https://github.com/anthropics/skills) | `8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4` | Purposeful content structure and consistent interface vocabulary |
 | [Emil Kowalski's skills](https://github.com/emilkowalski/skills) (MIT) | Initial: `e8a175de22ae1e49370fc144c1f3bb9aeedf988d`; 0.18.0 review: `5206a95`; 0.19.0 review: `715c180` | Motion purpose, frequency and interruption as design questions; [0.18.0 motion and mobile web additions](#motion-coordination-performance-and-mobile-web); [0.19.0 worst-case data, motion craft and variant comparison](#worst-case-data-motion-craft-and-variant-comparison) |
+| [Tech Leads Club agent skills](https://github.com/tech-leads-club/agent-skills) (`tlc-spec-lean` and `tlc-spec-driven`, CC BY 4.0) | `e74dc8a` | [0.20.0 binding-design comparison](#binding-design-comparison) |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `v2.15.0` | Targeted interaction, chart and accessibility reference categories |
 | [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Initial: `ce26fc25c0e5e8cab638f883de62d9a86ee5e45b`; v2.0.0 review: `2b44c81bbe36ac8a8a6bdd1c9ff593f28b8728f4` | Context-sensitive public-page composition; subject-specific identity, media workflow and rendered critique |
 | [Vercel agent skills](https://github.com/vercel-labs/agent-skills) | Local `react-composition-patterns` skill, metadata version `1.0.0` | Component composition and state-owner questions |
@@ -605,6 +606,36 @@ universal 500 ms sheet curve, a global `user-select: none` on links and the
 are platform- or library-specific. The Motion 14.2 acceleration note was checked
 against Motion's [changelog](https://motion.dev/changelog) and
 [performance page](https://motion.dev/docs/performance) on 2026-11-08.
+
+## Binding-design comparison
+
+The 0.20.0 [binding-design comparison](references/review.md#compare-a-render-with-a-binding-design)
+adapts the screen-verification method of `tlc-spec-lean` 2.2.0 and
+`tlc-spec-driven` 4.1.0 by Tech Leads Club, from
+[tech-leads-club/agent-skills](https://github.com/tech-leads-club/agent-skills)
+at commit `e74dc8a`, compared on 2026-11-11: `tlc-spec-lean/references/verify-screens.md`
+and rules 9–10 of `tlc-spec-lean/SKILL.md`. Both skills declare
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) in their metadata; the
+repository root carries an MIT notice. Adapted ideas: a supplied design binds
+unless called inspiration and only the user changes it; approved departures are
+listed before judging; each drawn state is captured at the design's pixel size
+over its scale, never resized, with smaller text as the tell-tale; a fresh judge
+sees the design, pictures and departures but not code, diff or builder notes and
+takes no new captures; an inventory marked `same`/`differs` by kind is the whole
+judgement; undrawn states are proven by tests or interaction; the verdict is tied
+to a commit, with one regression-aware second round and no third. The text is
+adapted: condensed, reworded and reorganized around this skill's review
+sections, with a size example, a no-subagent fallback and the separation from
+the critique's iteration limit added; the billing example rows follow the
+source's illustration. No endorsement is implied.
+
+Not incorporated: the `.specs/` files and their formats (`plan.md`, `checks.md`,
+`screens.md`, `STATE.md` decisions and `AD-NNN` confirmations), the
+`<capture>.running.png` naming, `walk` proofs, the `validate_verification.py`
+completion gate and any script, the Verifier role and its dispatch bookkeeping,
+and resuming the round-one subagent as a requirement. Pictures stay review
+evidence under the [rendered-critique rule](references/review.md#critique-the-rendered-composition),
+not gate steps.
 
 ## Worst-case data, motion craft and variant comparison
 

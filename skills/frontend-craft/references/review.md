@@ -67,6 +67,7 @@ guidance.
 | Redundant copy, duplicated feedback or unnecessary controls | [content restraint](interaction-accessibility.md#content-restraint) |
 | History, drafts and restored-page freshness | [navigation resilience](interaction-accessibility.md#navigation-and-draft-resilience) |
 | Localized amounts/messages and calendar/time-zone values | [locale-sensitive values](interaction-accessibility.md#locale-sensitive-values-and-messages) |
+| Matching a design supplied with the request, state by state | [binding design comparison](#compare-a-render-with-a-binding-design) |
 | Motion, timing, interruption and reduced motion | [motion](motion.md) |
 | Landing-page review: visitor decision path, including visual-only reviews | [landing pages](landing-pages.md) |
 | Marketing wording, brand voice, naturalness or stale commercial copy | [marketing copy](landing-pages.md#write-edit-and-refresh-marketing-copy) |
@@ -276,6 +277,86 @@ one. Stop when the relevant issues are resolved or only optional preferences
 remain. Limit open-ended aesthetic iteration to three rounds; report material
 issues still unresolved, without treating the limit as a pass. A read-only review
 ends with findings and does not enter the fix loop.
+
+## Compare a render with a binding design
+
+Use when a design came with the request (a mockup, frame, capture or live page)
+and the built screen must match it. [Rendered critique](#critique-the-rendered-composition)
+asks whether a screen is good; this asks whether it is the design. Run both when
+both apply. Why: a screen can pass critique, tests and a quick look while it
+overflows at the design's width or drops a control the design draws, because
+nobody compared the two element by element. The pictures here are review
+evidence too, not automated tests or gate steps.
+
+**Decide what binds.** A design supplied with the request binds unless the user
+called it inspiration, and only the user changes it. Removing, renaming or
+departing from something it draws is asked, not decided while building. Before
+judging, list every departure the user approved; that list is the only accepted
+difference.
+
+**Capture each state the design draws, at its size.** Take one picture per
+state from a browser window whose size is the design's pixel size over its
+scale: a 2880 × 1800 frame exported at 2× needs a 1440 × 900 window. Never
+capture a wider window and resize the image: the page at the design's width
+lays out differently, and the resized picture hides it. Text gives a resize
+away: compare a label both images contain, and if the picture's is smaller,
+retake it. A picture must show its whole state; when part of it is cropped or
+scrolled away, retake it before judging. Judge only the states a design draws,
+each picture against its own state: what belongs to another state, or the
+click that led here, is not missing from this one. Other states, and existing
+screens the change leaves alone, are proven by tests or by exercising them,
+with no picture and no judge.
+
+**Give the judgement to someone who did not build it.** When the host can start
+a subagent, a fresh one judges. It receives the design, the pictures and the
+departures list. It does not receive the code, the diff or the builder's notes:
+they carry the builder's reasoning and explain a difference away instead of
+reporting it. It judges the files it was given and does not open the app or take
+new captures. Without a subagent, the builder judges the same inputs before
+rereading source and reports that the judge was not independent.
+
+**Write the inventory first; it is the judgement.** Before comparing, walk the
+design and give everything visible its own row: every region and how its
+contents are laid out, every control, every piece of text down to single
+labels, and every chip, status mark, rule and legend entry. Then compare row by
+row, with the departures list applied, recording `same` or `differs`; a
+`differs` row also records what the picture shows in its place.
+
+| Kind | `differs` when |
+| --- | --- |
+| Controls | the picture lacks a control from the design, or has an extra one |
+| Arrangement | regions are added, missing, moved or nested differently |
+| Copy | fixed text in the design reads differently; text that depends on when the picture was taken, such as today's date, does not count |
+| Drawing | an element takes another form: a different rule, border or badge, bar shape, or meter or form layout |
+| Render | content collides, is clipped, falls outside the window or cannot be read, or a component appears that the app uses nowhere else |
+
+Small gaps in spacing, color shade or font weight do not make a row
+`differs`; write them as a note beside `same`. A single `differs` row is enough
+for the screen to diverge; with none, it matches. Fixes follow the rows, and
+only the rows, so anything left off the inventory escapes the comparison
+entirely: a short inventory is a short judgement. Report each picture with the
+commit it was taken at, its verdict and its rows:
+
+| Element | Result | Picture draws |
+| --- | --- | --- |
+| header: title `Billing`, close button on the right | same | |
+| card form: number, expiry and CVC on one row | differs | expiry and CVC on a second row |
+| `Update card` button, filled, under the form | differs | outlined button |
+
+**One more round, then the user.** A verdict describes the commit the pictures
+came from and no later one, so a fix pass that changes code needs a second
+round. Retake every picture
+at the new commit. The same judge, or a fresh one given the first inventory,
+reopens only the `differs` rows and marks each again; a `same` row that the new
+picture visibly breaks becomes `differs (regression)`. Rows that passed are not
+judged again and no new rows join. There is no third round: report what still
+differs to the user, with its rows, instead of iterating. These two rounds
+measure fidelity; they are separate from, and not counted in, the critique's
+aesthetic iteration limit.
+
+After the judgement, diagnose each differing row's cause in source, as in
+[rendered critique](#critique-the-rendered-composition); keeping the code from
+the judge applies to judging, not to fixing.
 
 ## Repair a generated-looking screen
 

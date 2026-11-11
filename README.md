@@ -1,6 +1,6 @@
 # Frontend Craft
 
-Current version: **0.19.0**. See the [release notes](CHANGELOG.md).
+Current version: **0.20.0**. See the [release notes](CHANGELOG.md).
 
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
@@ -308,6 +308,10 @@ connects screenshots to located defects and concrete corrections. It reuses the
 existing inspection loop, checks the relevant viewports and scroll positions,
 and distinguishes functional/contract failures from preferences. It does not
 convert a screenshot judgment into a measured sales result.
+When a design came with the request, the
+[binding-design comparison](skills/frontend-craft/references/review.md#compare-a-render-with-a-binding-design)
+adds a separate fidelity judgement: pictures at the design's size, a judge
+without the code and an inventory marked `same` or `differs`.
 
 ## Commercial reviews
 
@@ -494,6 +498,11 @@ The [0.19.0 verification record](evals/verification-0.19.0.md) covers worst-case
 data stress, failure signatures, truncation, motion craft heuristics, translucent
 surfaces and variant comparison. It records package and installation checks only;
 the new scenarios were not exercised for this release.
+
+The [0.20.0 verification record](evals/verification-0.20.0.md) covers comparing a
+render with a binding design: size-faithful captures, a judge without the code,
+the same/differs inventory and the two-round limit. It records package and
+installation checks only; the new scenarios were not exercised for this release.
 
 ## License and sources
 

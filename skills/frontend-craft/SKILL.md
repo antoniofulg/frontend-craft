@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/
 metadata:
   author: Antonio Fulgêncio
-  version: "0.19.0"
+  version: "0.20.0"
 ---
 
 # Frontend Craft
@@ -54,6 +54,7 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Design or review filters, configurators or other surfaces where users weigh trade-offs | [choice surfaces](references/components.md#choice-surfaces-and-decision-support), following its collection, chart and accessibility routes | Context, controls and outcome previews tied to the decision, with truthful counts and evidence limits |
 | Change controls, forms, onboarding, authentication, blocked/limit states, layout adaptation, keyboard shortcuts or keyboard behavior | [interaction and accessibility](references/interaction-accessibility.md), including [limits and unavailable states](references/interaction-accessibility.md#limits-and-unavailable-states) when applicable | Usable behavior in the relevant states and environments |
 | Fix a web app that feels wrong on a phone: sticky hover, tap flash, viewport height, input zoom, safe areas, overscroll | [mobile web](references/interaction-accessibility.md#mobile-web) | Capability-gated platform fixes with device verification stated |
+| Check that a built screen matches a design supplied with the request (mockup, frame, capture or live page) | [binding design comparison](references/review.md#compare-a-render-with-a-binding-design) | Pictures of each drawn state at the design's size, judged without the code by a fresh reviewer as a same/differs inventory; one fix round, then what still differs goes to the user |
 | Break a component or screen with worst-case data: long names, huge counts, empty lists, every status at once | [stress a real component](references/review.md#stress-a-real-component) | Observed breaks graded by consequence, their layout causes and the truncate/wrap decisions they expose; read-only unless a harness is authorized |
 | Change deep links, Back/Forward behavior, restored views or unsaved drafts | [navigation resilience](references/interaction-accessibility.md#navigation-and-draft-resilience) | Useful restoration with protected drafts and current authorization |
 | Change localized numbers, currencies, messages, dates or scheduled times | [locale-sensitive values](references/interaction-accessibility.md#locale-sensitive-values-and-messages) | Correct display, input round trips and explicit time/currency contracts |
@@ -218,6 +219,8 @@ inspect variant selection, wrapper composition, and local overrides too. Use the
 relevant checks and existing browser workflow, with screenshots as
 [review evidence](references/review.md#critique-the-rendered-composition); reuse
 unchanged valid evidence.
+When a binding design came with the request, also
+[compare the render with it](references/review.md#compare-a-render-with-a-binding-design).
 For shared-pattern consolidation, account for all intended consumers in the
 declared scope and verify propagation through the shared owner; report remaining
 gaps rather than treating sampled renders as complete application coverage.

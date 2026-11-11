@@ -176,6 +176,17 @@ Evaluate precision and scope, not exact phrasing or a required reference-read co
 | Check launch readiness for a static portfolio with no cookies or analytics | No tracking scripts, no forms and owner-supplied contact details | Marks consent and measurement not applicable, with nothing to gate, and adds no cookie banner |
 | Fix a mobile web app whose bottom button hides under the URL bar and whose inputs zoom on focus | `height: 100vh`, 14 px inputs and `maximum-scale=1` | Uses `100dvh`, 16 px inputs and removes the zoom restriction; states which fixes still need a real device |
 
+## Binding-design comparison cases
+
+| Task given to the agent | Required evidence | Observable outcome to evaluate |
+| --- | --- | --- |
+| Build the billing screen from the attached 2× frame | A 2880 × 1800 frame, a subagent-capable host and a screen whose layout changes below 1200 px | Captures from a 1440 × 900 window, not a wider window resized; gives a fresh judge the frame, pictures and departures list without code or diff, and reports an inventory of `same`/`differs` rows |
+| Judge a picture whose labels read smaller than the frame's | A capture taken at 1920 px and scaled down to the frame's width | Marks it a resized render, has it retaken at the design's size and does not judge the layout from it |
+| Build a settings screen from a mockup the user approved, dropping one section the user asked to remove | The mockup and the user's message removing the section | Lists the removal as the only departure before judging; does not mark the missing section `differs` and does not accept any other unlisted difference |
+| Fix the rows a first judgement marked `differs` | A round-one inventory with two `differs` rows and a fix commit that also shifts the header | Retakes every picture at the new commit, reopens only the two rows, marks the broken header `differs (regression)` and reports what still differs to the user after round two instead of starting a third |
+| Compare a dashboard with a design that draws only its loaded state | The design, a loaded-state picture and untested empty and error states | Judges the loaded state against the design and proves empty and error through tests or interaction, with no pictures or judge for them |
+| Implement a page from a reference the user called inspiration | A screenshot of another product labelled "for inspiration" | Does not run the binding comparison; uses rendered critique and the project's own contracts |
+
 ## Worst-case data and variant comparison cases
 
 | Task given to the agent | Required evidence | Observable outcome to evaluate |
