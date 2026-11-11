@@ -26,7 +26,7 @@ Source comparison, attribution and exclusions are recorded in
 ## Release package checks
 
 - `python3 -I scripts/validate_package.py`: passed.
-- Every fragment link in the repository (529) resolves to a target heading,
+- Every fragment link in the repository (533) resolves to a target heading,
   checked separately because the validator checks only that the file exists. The
   checker reported a deliberately broken fragment, so it does detect failures.
 - `npx --yes skills@1.7.5 add . --list`: discovered the `frontend-craft` skill
