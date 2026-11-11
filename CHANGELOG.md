@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.20.0 — 2026-11-11
+
+- [Compare a render with a binding design](skills/frontend-craft/references/review.md#compare-a-render-with-a-binding-design):
+  a design supplied with the request binds unless the user called it
+  inspiration, and approved departures are listed before judging; each state
+  the design draws is captured at its pixel size over its scale, never resized;
+  a fresh judge sees the design, pictures and departures but not code, diff or
+  builder notes; an inventory of `same`/`differs` rows by kind (controls,
+  arrangement, copy, drawing, render) is the judgement; undrawn states are
+  proven by tests or interaction; the verdict names its commit, with one
+  regression-aware second round before what still differs goes to the user.
+- Complements, rather than replaces, rendered critique; pictures remain review
+  evidence, not automated tests or gate steps.
+- One routing row, a link from the changed-interface delivery check, a review
+  lens row and six behavioral scenarios.
+
+Release package checks and remaining limits are recorded in
+[the 0.20.0 verification record](evals/verification-0.20.0.md).
+
 ## 0.19.0 — 2026-11-09
 
 - Break a real component with worst-case data: list every rendered value with
