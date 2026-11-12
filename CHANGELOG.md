@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.23.0 — 2026-11-11
+
+- Two optional, read-only Node helpers (no dependencies) now ship in
+  `skills/frontend-craft/scripts/`, adapted from Pedro Nauck's ui-craft (MIT,
+  notice already bundled): `check-contrast.mjs` reports the WCAG 2.2 ratio with AA
+  and AAA verdicts and APCA Lc (APCA-W3 0.0.98G-4g) for hex, `rgb()` and `oklch()`
+  pairs, singly or from JSON; `detect-token-drift.mjs` lists raw color literals
+  outside token files. Exit 0 pass, 1 failure or drift, 2 bad input.
+- Fixed in the adaptation: the APCA low clip (small contrasts reported a positive
+  Lc), dropped alpha (a translucent foreground is now composited, a translucent
+  background rejected), per-channel `oklch()` gamut clipping (now chroma
+  reduction), and drift false positives for comments, URL fragments, id
+  selectors and `hsl(var(--x))`-style token use.
+- Referenced as optional helpers, never gates, from the dark-theme contrast
+  paragraph in visual details, the color and contrast paragraph in interaction
+  and accessibility, and the shared UI patterns audit. A project's own lint or
+  codegen rule wins.
+- `scripts/test_skill_scripts.mjs` (`node --test`) checks both helpers against
+  WCAG and published APCA values and a token-drift fixture set. The package
+  validator now requires the two scripts.
+
 ## 0.22.0 — 2026-11-11
 
 - New [AI and agent interfaces](skills/frontend-craft/references/ai-interfaces.md)

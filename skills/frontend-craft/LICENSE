@@ -22,6 +22,8 @@ MIT-licensed ui-craft skill. Retain the upstream MIT copyright and permission
 notice in:
 licenses/pedronauck-skills.txt
 See SOURCES.md for the source revision and adaptation boundary.
+The helper scripts in scripts/ (contrast and token-drift checks, 0.23.0) are
+adapted from the same MIT-licensed ui-craft skill and covered by the same notice.
 Other technical and commercial source terms are unchanged.
 
 Commercial guidance introduced in 0.4.0 adapts Revenue-Centric Design, based

@@ -1,0 +1,2 @@
+.a { color: var(--fg); background: hsl(var(--bg)); border-color: transparent; }
+/* #fff in a comment */
