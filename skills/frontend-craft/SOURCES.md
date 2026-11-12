@@ -35,7 +35,9 @@ bundled here. Installed project copies may differ from their recorded upstream.
 | [Tech Leads Club agent skills](https://github.com/tech-leads-club/agent-skills) (`tlc-spec-lean` and `tlc-spec-driven`, CC BY 4.0) | `e74dc8a` | [0.20.0 binding-design comparison](#binding-design-comparison) |
 | [Compozy](https://github.com/compozy/compozy) (MIT) | `b153f4a` | [0.21.0 prototype doctrine](#prototype-doctrine) |
 | [Pedro Nauck's skills](https://github.com/pedronauck/skills) (`skills/mine/ui-craft`, MIT) | `682e738` | [0.22.0 AI interfaces and dark theme](#ai-interfaces-and-dark-theme); [0.23.0 helper scripts](#bundled-helper-scripts) |
-| [Corey Haines' marketingskills](https://github.com/coreyhaines31/marketingskills) (`skills/copywriting`, MIT) | `1f83744` | [0.24.0 shared marketing-copy guidance](#shared-marketing-copy-guidance) |
+| [Corey Haines' marketingskills](https://github.com/coreyhaines31/marketingskills) (`skills/copywriting`, MIT; 0.25.0 also `skills/product-marketing`) | `1f83744` | [0.24.0 shared marketing-copy guidance](#shared-marketing-copy-guidance); [0.25.0 shared offer brief](#shared-offer-brief) |
+| [mbfinotti sales-skills](https://github.com/mbfinotti/sales-skills) (`sales-icp-definition`, `deal-value-calc`, MIT) | `b2ed362` | [0.25.0 shared offer brief](#shared-offer-brief) |
+| [Anthropic knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) (`sales/skills/create-an-asset`, Apache-2.0) | `877a617` | [0.25.0 shared offer brief](#shared-offer-brief) |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `v2.15.0` | Targeted interaction, chart and accessibility reference categories |
 | [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Initial: `ce26fc25c0e5e8cab638f883de62d9a86ee5e45b`; v2.0.0 review: `2b44c81bbe36ac8a8a6bdd1c9ff593f28b8728f4` | Context-sensitive public-page composition; subject-specific identity, media workflow and rendered critique |
 | [Vercel agent skills](https://github.com/vercel-labs/agent-skills) | Local `react-composition-patterns` skill, metadata version `1.0.0` | Component composition and state-owner questions |
@@ -830,6 +832,43 @@ skill's existing owners. Not incorporated: a CTA fixed at the top or sticky on
 mobile as a universal rule, alternative text on every image regardless of
 purpose, a cookie banner without non-essential cookies, and full-page loading
 screens.
+
+## Shared offer brief
+
+The 0.25.0 [offer brief](references/offer-brief.md) is original text that adapts
+ideas from three MIT or Apache-2.0 skills, read on 2026-11-11 at the commits
+above (full hashes: `1f837447b20bb6f0e72d87b80ece1c221c362c7d`,
+`b2ed3628695e523919af440eab77648e16c5eea8`,
+`877a617b435ee2edfb002d9a3703c0a1a03aa1ba`). Notices are kept in
+[licenses/coreyhaines-marketingskills.txt](licenses/coreyhaines-marketingskills.txt),
+[licenses/mbfinotti-sales-skills.txt](licenses/mbfinotti-sales-skills.txt) and
+[licenses/anthropic-knowledge-work-plugins.txt](licenses/anthropic-knowledge-work-plugins.txt).
+The text is reworded and condensed, and the examples are original. The Apache-2.0
+material was changed: rewritten and reduced to the rules named below.
+
+- Corey Haines, `product-marketing`: buying roles (user, champion, decision maker,
+  financial buyer), competitive alternatives, objections and anti-fit, the four
+  forces of switching, verbatim customer language and proof points. Not
+  incorporated: the context-file protocol and changelog, brand-voice extraction
+  and the optional paid-ads section.
+- mbfinotti, `sales-icp-definition`: account fit, persona and buying trigger kept
+  as separate inputs; the hypothesis-not-rubric rule below roughly 50 closed
+  deals; disqualifiers mined from lost deals; account fit is not lead scoring.
+  `deal-value-calc`: provenance labels for numbers and the visible disclosure when
+  a headline rests on assumptions. The upstream wording is "buyer-supplied",
+  "benchmark" and "rep-assumed"; the brief says "seller-assumed". Not
+  incorporated: scoring weights, refresh cadence, ROI formulas, driver tables and
+  scenario modeling.
+- Anthropic, `create-an-asset`: claims only from approved or user-supplied
+  sources, an internal-versus-customer-facing check before rendering, no invented
+  metrics, logos or quotes, and untrusted content treated as data. Not
+  incorporated: connector and CRM operations, slide and page rendering rules.
+  The upstream license file leaves its copyright appendix unfilled and ends with
+  an unrelated stray fragment, which the bundled copy omits.
+
+The brief lives in `shared/offer-brief.md` and is copied into each consuming skill
+by `scripts/sync_shared.py`. The marketing-copy guide's brief section now points to
+it for audience and offer and keeps the claim-inventory table.
 
 ## Instruction and reference-loading evidence
 

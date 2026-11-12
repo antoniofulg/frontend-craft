@@ -1,0 +1,53 @@
+Copyright 2026 Antonio Fulgêncio
+
+The original Video Craft guidance is licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0).
+
+License: https://creativecommons.org/licenses/by/4.0/
+Legal code: https://creativecommons.org/licenses/by/4.0/legalcode.en
+
+Retain attribution and indicate modifications when sharing adapted material.
+See SOURCES.md in this directory for attribution, adaptation boundaries and the
+source revisions. The notices below apply to the material named; the rest of the
+guidance is original.
+
+The beat-sheet and signature-moves study method, the three-part video hook with
+its segment, motivation and format matrix, the scene structure of the demo
+script, and the content-atoms, testing and caption-tell guidance adapt Corey
+Haines' MIT-licensed marketingskills (video, ad-creative, sales-enablement and
+social skills). The shared offer brief (audience, trigger and persona framing,
+objections, switching forces and buyer language) adapts its product-marketing
+skill. Retain the upstream MIT copyright and permission notice in:
+licenses/coreyhaines-marketingskills.txt
+
+The social-channel guidance (profile as a promise, content intent by buyer
+stage, search, cadence and cross-posting) adapts, with corrections recorded in
+SOURCES.md, Pedro Nauck's MIT-licensed insta-master skill. Retain the upstream
+MIT copyright and permission notice in:
+licenses/pedronauck-skills.txt
+
+The HyperFrames handoff (storyboard format, vertical safe band, caption group
+sizes, render-purity rules and CLI behavior) describes HyperFrames by HeyGen,
+Inc., licensed under the Apache License 2.0. This skill states facts about the
+tool and its documented conventions in its own words and bundles no HyperFrames
+code. The license text is kept in:
+licenses/heygen-hyperframes.txt
+The repository has no NOTICE file at the recorded commit. The guidance here was
+changed from the upstream documentation: condensed, reordered, and combined with
+this skill's safety defaults.
+
+The shared offer brief also adapts the ICP definition and deal-value skills in
+mbfinotti's MIT-licensed sales-skills (account fit separated from persona and
+trigger, the hypothesis rule below about 50 closed deals, and provenance labels
+for numbers), and Anthropic's Apache-2.0 knowledge-work-plugins create-an-asset
+skill (approved sources only, an audience gate and no invented metrics). Retain
+the upstream notices in:
+licenses/mbfinotti-sales-skills.txt
+licenses/anthropic-knowledge-work-plugins.txt
+The Apache-2.0 material was changed: rewritten in this skill's own words and
+reduced to the rules named here.
+
+Design references that contributed an idea but whose text was not copied, and
+that are credited in SOURCES.md without a bundled notice: the edit-list idea
+credited to affaan-m/ecc (MIT, not read directly) and the consent-first reply
+rule credited to social-media-skills (MIT).

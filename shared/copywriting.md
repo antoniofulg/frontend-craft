@@ -7,10 +7,10 @@ not marketing copy; use the consuming skill's guidance for interface text.
 
 ## Commercial brief and claim inventory
 
-Before writing new copy, recover the audience's situation, desired outcome,
-current alternative, decision stage and material objections from supplied context.
-Distinguish user, buyer and approver when they need different evidence. Ask only
-for missing facts that would otherwise force an invented offer or claim.
+Before writing new copy, recover the audience, offer, trigger, decision stage,
+current alternative, objections and proof from the [offer brief](offer-brief.md); use it
+rather than restating it here. Reuse established context and ask only for
+missing facts that would otherwise force an invented offer or claim.
 
 Maintain a small working inventory for claims used in the copy. Return it in the
 response for planning or review; update an existing brief only when the requested
@@ -20,7 +20,8 @@ work authorizes editing it. Use this shape rather than a second marketing ledger
 | --- | --- | --- | --- |
 | Proposed promise, number, testimonial or guarantee | Supplied source, date/population and permission where relevant | Limits needed for an accurate reading | Supported, needs confirmation, or omit |
 
-A design example is not evidence for a customer count. Distinguish an aspiration
+Carry each number's provenance label from the offer brief; a seller-assumed
+figure is never a headline claim. A design example is not evidence for a customer count. Distinguish an aspiration
 from a product capability already available. Keep the promise, supporting proof,
 CTA destination and post-click experience aligned; an honest narrower promise
 is preferable to an unsupported stronger one. Flag contradictions with approved

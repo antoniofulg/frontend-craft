@@ -1,3 +1,4 @@
 {
-  "copywriting.md": ["frontend-craft"]
+  "copywriting.md": ["frontend-craft", "video-craft"],
+  "offer-brief.md": ["frontend-craft", "video-craft"]
 }

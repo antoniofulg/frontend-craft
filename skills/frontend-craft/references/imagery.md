@@ -132,6 +132,9 @@ information. Respect reduced-motion preferences, provide appropriate playback
 controls and keep the main content usable when autoplay is blocked or video fails.
 Follow [motion](motion.md) for movement and [interaction and accessibility](interaction-accessibility.md)
 for behavior. A static image is valid when footage adds no useful evidence.
+The `video-craft` skill, when installed, produces the video file itself: loop,
+encodes, poster and delivery manifest. This guide keeps the decision to use
+footage and its integration in the page.
 
 Before delivery, check the actual assets, crops, required credits and fallback
 states. List unresolved replacements or permissions and the checks not performed.

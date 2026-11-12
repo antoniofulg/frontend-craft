@@ -15,6 +15,18 @@ SHARED = ROOT / "shared"
 REQUIRED_SCRIPTS = {
     "frontend-craft": ["scripts/check-contrast.mjs", "scripts/detect-token-drift.mjs"],
 }
+# License notices a skill must bundle for adapted material, keyed by skill name.
+REQUIRED_LICENSES = {
+    "frontend-craft": [
+        "anthropic-knowledge-work-plugins.txt", "compozy.txt", "coreyhaines-marketingskills.txt",
+        "enmera-ai-design-check.txt", "mbfinotti-sales-skills.txt", "pedronauck-skills.txt",
+        "revenue-centric-design.txt",
+    ],
+    "video-craft": [
+        "anthropic-knowledge-work-plugins.txt", "coreyhaines-marketingskills.txt",
+        "heygen-hyperframes.txt", "mbfinotti-sales-skills.txt", "pedronauck-skills.txt",
+    ],
+}
 
 
 def load_sync():
@@ -45,7 +57,8 @@ def check_skill(skill):
         if not 1 <= len(fields.get("description", "")) <= 1024:
             errors.append(f"{skill.name}: description must contain 1–1024 characters")
     for required in [skill / "LICENSE", skill / "SOURCES.md",
-                     *(skill / name for name in REQUIRED_SCRIPTS.get(skill.name, []))]:
+                     *(skill / name for name in REQUIRED_SCRIPTS.get(skill.name, [])),
+                     *(skill / "licenses" / name for name in REQUIRED_LICENSES.get(skill.name, []))]:
         if not required.is_file():
             errors.append(f"Missing distribution file: {required.relative_to(ROOT)}")
     return errors
