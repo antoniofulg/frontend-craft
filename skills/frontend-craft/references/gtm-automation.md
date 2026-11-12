@@ -57,8 +57,8 @@ Maintain the smallest versioned instruction set the workflow needs:
   [positioning](positioning-distribution.md) and
   [qualification](gtm-measurement.md#match-funnels-and-qualification-to-the-motion).
 - Supported value propositions, objections, proof and next actions, using the
-  existing [claim inventory](landing-pages.md#commercial-brief-and-claim-inventory)
-  and [copy guidance](landing-pages.md#write-edit-and-refresh-marketing-copy).
+  existing [claim inventory](copywriting.md#commercial-brief-and-claim-inventory)
+  and [copy guidance](copywriting.md#write-edit-and-refresh-marketing-copy).
 - Personalization fields and their evidence, freshness, permitted use and tone.
   Business facts can support relevance; inferred private traits or invented pain
   points cannot. When evidence is missing, use an honest generic draft or hold it.

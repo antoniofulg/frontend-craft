@@ -35,6 +35,7 @@ bundled here. Installed project copies may differ from their recorded upstream.
 | [Tech Leads Club agent skills](https://github.com/tech-leads-club/agent-skills) (`tlc-spec-lean` and `tlc-spec-driven`, CC BY 4.0) | `e74dc8a` | [0.20.0 binding-design comparison](#binding-design-comparison) |
 | [Compozy](https://github.com/compozy/compozy) (MIT) | `b153f4a` | [0.21.0 prototype doctrine](#prototype-doctrine) |
 | [Pedro Nauck's skills](https://github.com/pedronauck/skills) (`skills/mine/ui-craft`, MIT) | `682e738` | [0.22.0 AI interfaces and dark theme](#ai-interfaces-and-dark-theme); [0.23.0 helper scripts](#bundled-helper-scripts) |
+| [Corey Haines' marketingskills](https://github.com/coreyhaines31/marketingskills) (`skills/copywriting`, MIT) | `1f83744` | [0.24.0 shared marketing-copy guidance](#shared-marketing-copy-guidance) |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `v2.15.0` | Targeted interaction, chart and accessibility reference categories |
 | [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Initial: `ce26fc25c0e5e8cab638f883de62d9a86ee5e45b`; v2.0.0 review: `2b44c81bbe36ac8a8a6bdd1c9ff593f28b8728f4` | Context-sensitive public-page composition; subject-specific identity, media workflow and rendered critique |
 | [Vercel agent skills](https://github.com/vercel-labs/agent-skills) | Local `react-composition-patterns` skill, metadata version `1.0.0` | Component composition and state-owner questions |
@@ -320,11 +321,12 @@ usability improvement is claimed.
 Installed `copy-editing` and `copywriting` skills, both metadata version `2.1.0`,
 and `humanizer` version `2.8.2` were comparison material on 2026-10-21. Their
 upstream revisions were not recorded. The independently authored
-[marketing-copy guidance](references/landing-pages.md#write-edit-and-refresh-marketing-copy)
+[marketing-copy guidance](references/copywriting.md#write-edit-and-refresh-marketing-copy)
 adds editing scope, voice matching, naturalness and factual refresh to the existing
 commercial owner and retains that guide's existing source terms. Existing audience,
 proof, CTA and claim-inventory guidance remains authoritative. No source prose,
-examples or reference catalogs are bundled.
+examples or reference catalogs are bundled; 0.24.0 later added the separately
+recorded [Corey Haines material](#shared-marketing-copy-guidance) to the same guide.
 
 Fixed editorial sweeps, simulated expert-score gates, prescribed page templates,
 punctuation and paragraph quotas, automatic refresh schedules and unsupported
@@ -713,6 +715,49 @@ spacing-value claims in its comments (colors only) and its references to
 
 APCA constants were compared with the `apca-w3` 0.1.9 package source and its test
 vectors (read, not executed). APCA is a draft, not part of WCAG 2.2 conformance.
+
+## Shared marketing-copy guidance
+
+The 0.24.0 [marketing-copy guide](references/copywriting.md) adapts practice from
+the `copywriting` skill in Corey Haines'
+[marketingskills](https://github.com/coreyhaines31/marketingskills) (MIT,
+Copyright (c) 2025 Corey Haines) at commit
+`1f837447b20bb6f0e72d87b80ece1c221c362c7d`, read on 2026-11-11: its `SKILL.md`
+and `references/copy-frameworks.md` and `references/ai-tells.md`. The full upstream
+notice is kept in [licenses/coreyhaines-marketingskills.txt](licenses/coreyhaines-marketingskills.txt).
+The text is reworded and condensed, and the examples are original.
+
+Adapted ideas: the headline families (outcome, problem, audience,
+differentiation, proof) as a menu for generating alternatives rather than
+templates; diagnosing the situation first (blank or generic, real voice present,
+point edit) and reading taste out of the input; declining an unsupported claim
+by naming the evidence that would unlock it; and the structural patterns of
+generated-sounding copy (contrast reveal, negation list, trailing pile-on,
+question then answer, colon reveal, reflexive threes, uniform rhythm, abstract
+subjects, false ranges). The patterns are recast as review signals that prompt a
+check of whether the sentence carries a supported claim.
+
+Not incorporated: the upstream hard bans and per-section frequency caps, its
+punctuation rules (including the em-dash ban) and word blacklists, which
+conflict with this skill's stance that punctuation bans and fixed counts are not
+quality measures; the product-marketing-context file protocol, the learnings
+log, the `[NEED: ...]` convention as a required format (kept only as an example
+placeholder), the Human Action Model and "Now you can" clarity tests, its
+conversion-lift statistics, the landing-page section types and page templates
+(already covered by [landing pages](references/landing-pages.md), which ties
+sections to the visitor's decision rather than a template), the CTA formulas,
+the natural-transition phrase bank, the persona-building exercise, the
+second-generation-tell list and the sibling skills it routes to. The upstream
+file credits Profound's `improved-copywriting` skill (MIT) for part of the
+diagnosis and gate material; that part was read through Corey Haines' text, not
+from the original. Frontend Craft's pre-existing "Commercial brief and claim
+inventory" and "Write, edit and refresh marketing copy" sections were moved
+into the same guide with only the wording changes needed to stand alone for any
+skill (page-specific links became plain-text pointers).
+
+The guide lives in `shared/copywriting.md` at the repository root and is copied
+into each consuming skill's `references/` by `scripts/sync_shared.py`; see the
+repository README.
 
 ## Binding-design comparison
 

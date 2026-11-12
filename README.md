@@ -1,6 +1,6 @@
 # Frontend Craft
 
-Current version: **0.23.0**. See the [release notes](CHANGELOG.md).
+Current version: **0.24.0**. See the [release notes](CHANGELOG.md).
 
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
@@ -402,9 +402,10 @@ python3 scripts/validate_package.py
 npx skills add . --list
 ```
 
-The package validator checks metadata shape, local links, reference reachability,
-and whether the installed skill is self-contained. The skills CLI independently
-checks discovery. To exercise installation without altering a real project:
+The package validator checks every `skills/*/` directory for metadata shape, local
+links, reference reachability, required distribution files and whether the
+installed skill is self-contained. It also checks that shared copies are current
+(see below). The skills CLI independently checks discovery. To exercise installation without altering a real project:
 
 ```bash
 skill_source="$PWD"
@@ -414,7 +415,30 @@ npx skills add "$skill_source" --skill frontend-craft --agent codex claude-code 
 ```
 
 Inspect the installed skill and references, then remove only that temporary
-directory. Behavioral evaluation tasks and their distinct failure criteria live in
+directory.
+
+### Shared references
+
+Guidance that more than one skill needs lives once in [`shared/`](shared) at the
+repository root, which is the source of truth and is not distributed. Skills
+install as independent folders, so `scripts/sync_shared.py` copies each
+`shared/*.md` file into `skills/<skill>/references/` for every consuming skill
+listed in `shared/manifest.json` (file name to skill names). Each copy begins
+with a comment saying it is generated. To change shared guidance, edit the file in
+`shared/` and run:
+
+```bash
+python3 scripts/sync_shared.py
+python3 -I scripts/validate_package.py
+```
+
+Never edit a generated copy. The validator fails with
+`run python3 scripts/sync_shared.py` when a copy differs from its source plus the
+generated header, and it rejects a shared file that links to anything except
+another shared file or an external URL, so every copy stays valid in any skill. To
+add a consumer, add the skill to the manifest and re-run the sync. Today the only
+consumer is `frontend-craft`, which receives
+[`copywriting.md`](skills/frontend-craft/references/copywriting.md). Behavioral evaluation tasks and their distinct failure criteria live in
 [evals/scenarios.md](evals/scenarios.md). Static checks and successful installation
 do not prove better agent decisions; report behavioral evidence separately.
 
@@ -532,6 +556,10 @@ The [0.23.0 verification record](evals/verification-0.23.0.md) covers the two
 helper scripts. It records the script tests and package checks; the new scenarios
 were not exercised for this release.
 
+The [0.24.0 verification record](evals/verification-0.24.0.md) covers the shared
+reference mechanism and the marketing-copy guide. It records the package checks
+and the drift-check proof; the new scenarios were not exercised for this release.
+
 ## License and sources
 
 Copyright 2026 Antonio Fulgêncio. This package has [mixed license terms](LICENSE).
@@ -558,6 +586,12 @@ retained and the [adaptation boundary](skills/frontend-craft/SOURCES.md#ai-inter
 recorded. The two helper scripts added in 0.23.0 are covered by
 [their own record](skills/frontend-craft/SOURCES.md#bundled-helper-scripts); no
 other upstream script, asset or tool is bundled.
+
+The marketing-copy guide adapts MIT-licensed material from Corey Haines'
+marketingskills copywriting skill, with the
+[full upstream notice](skills/frontend-craft/licenses/coreyhaines-marketingskills.txt)
+retained and the [adaptation boundary](skills/frontend-craft/SOURCES.md#shared-marketing-copy-guidance)
+recorded. No upstream code or tool is bundled.
 
 [Source notes](skills/frontend-craft/SOURCES.md) identify the adaptation scope,
 upstream revision and changes. No third-party skill bundle, recipe library,
