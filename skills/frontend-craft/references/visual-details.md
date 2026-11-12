@@ -1,7 +1,7 @@
 # Visual implementation details
 
 Read only when the task involves nested corners, display typography, font features, mixed-direction
-text, translucent surfaces, wide-gamut color or gradient interpolation. Impeccable and the adopted
+text, translucent surfaces, wide-gamut color, gradient interpolation or a dark theme. Impeccable and the adopted
 design system own aesthetic choices; these are implementation options, not a new style.
 
 ## Concentric corners
@@ -116,3 +116,60 @@ result. A fade that masks overflow (a scroll-edge fade, a "read more" gradient)
 needs several stops with eased alpha, or an eased mask, so the fade is invisible
 where it begins; a two-stop linear fade reads as a hard band. Spatial gradient interpolation is distinct from animating a color over
 time. See [MDN gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient).
+
+## Design a dark theme
+
+Treat dark as its own scene, not light inverted. Start from who uses it and when
+(a dim room, long sessions, a system preference); if nothing but taste asks for
+it, follow the system setting and do not over-design. Inverting with
+`filter: invert()` breaks images and gradients and is not a theme.
+
+Define the theme at the token owner: primitives stay shared and only the
+semantic roles are remapped per theme (surface, text, border, action, status,
+focus, disabled), following [change a shared style](shared-ui-patterns.md#change-a-shared-style).
+Components keep reading semantic roles; a component that needs a primitive or a
+raw value to look right in dark is a missing token.
+
+- **Elevation is lightness.** Cast shadows have little to fall on. Give each
+  layer (page, subtle, raised, overlay) a slightly lighter surface and, where
+  needed, a faint hairline; keep any shadow soft and only to anchor a floating
+  element. A shadow as the sole depth cue reads as a smudge.
+- **Avoid the extremes.** A pure `#000` page and `#fff` text produce harsh
+  contrast and halation for some readers and leave no darker step below the page.
+  Use a near-black surface and an off-white text role, and keep secondary text on
+  a defined token rather than `opacity`.
+- **Retune accents.** A saturated accent that suits white can vibrate on dark.
+  Keep the hue so the brand survives; raise lightness and lower chroma a little,
+  then retest status colors (error, success, warning, info) at text and icon
+  sizes. A perceptual space such as OKLCH makes this adjustment predictable.
+- **Watch the pairs that fail.** Saturated red or blue text on dark, gradient
+  text with unpredictable contrast along its length, white borders that compete
+  with content, and a disabled state made by halving opacity. Give disabled and
+  placeholder text explicit tokens that stay legible.
+- **Make focus visible.** A focus ring tuned for light can vanish on dark. Give
+  it its own role per theme and tab through every control in both.
+- **Handle assets.** Photos may need a softer crop or overlay; stroked or
+  `currentColor` icons usually carry over; illustrations, charts, code highlighting
+  themes, logos and skeleton placeholders each need a dark counterpart or a check
+  that they remain visible on every surface level, including raised cards. Chart
+  series keep their meaning and labels per [charts](charts.md).
+- **Compensate type only if it looks thin.** Light-on-dark text can look lighter
+  and tighter; adjust weight or line height for the theme only after seeing it
+  in the shipped face.
+
+Respect `prefers-color-scheme` as the default and offer System, Light and Dark;
+persist an explicit choice and apply it before first paint (an early inline
+script that sets the theme attribute) so a reload does not flash the other
+theme. Declare `color-scheme` so native controls and scrollbars match.
+
+Measure contrast per theme against the actual surface, not once: body text,
+large text and UI components, the focus ring against every surface level, and
+each status color. Contrast requirements are the same in both themes; see
+[color and contrast](interaction-accessibility.md#layout-typography-and-color).
+Check forced colors and `prefers-contrast` separately.
+
+Check: switch themes with the system setting and the explicit toggle, reload
+with each, and inspect every state (hover, focus, disabled, error, skeleton,
+overlay) and each image or chart in both themes with no flash and no contrast
+loss.
+

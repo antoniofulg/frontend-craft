@@ -34,6 +34,7 @@ bundled here. Installed project copies may differ from their recorded upstream.
 | [Emil Kowalski's skills](https://github.com/emilkowalski/skills) (MIT) | Initial: `e8a175de22ae1e49370fc144c1f3bb9aeedf988d`; 0.18.0 review: `5206a95`; 0.19.0 review: `715c180` | Motion purpose, frequency and interruption as design questions; [0.18.0 motion and mobile web additions](#motion-coordination-performance-and-mobile-web); [0.19.0 worst-case data, motion craft and variant comparison](#worst-case-data-motion-craft-and-variant-comparison) |
 | [Tech Leads Club agent skills](https://github.com/tech-leads-club/agent-skills) (`tlc-spec-lean` and `tlc-spec-driven`, CC BY 4.0) | `e74dc8a` | [0.20.0 binding-design comparison](#binding-design-comparison) |
 | [Compozy](https://github.com/compozy/compozy) (MIT) | `b153f4a` | [0.21.0 prototype doctrine](#prototype-doctrine) |
+| [Pedro Nauck's skills](https://github.com/pedronauck/skills) (`skills/mine/ui-craft`, MIT) | `682e738` | [0.22.0 AI interfaces and dark theme](#ai-interfaces-and-dark-theme) |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `v2.15.0` | Targeted interaction, chart and accessibility reference categories |
 | [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Initial: `ce26fc25c0e5e8cab638f883de62d9a86ee5e45b`; v2.0.0 review: `2b44c81bbe36ac8a8a6bdd1c9ff593f28b8728f4` | Context-sensitive public-page composition; subject-specific identity, media workflow and rendered critique |
 | [Vercel agent skills](https://github.com/vercel-labs/agent-skills) | Local `react-composition-patterns` skill, metadata version `1.0.0` | Component composition and state-owner questions |
@@ -636,6 +637,43 @@ ships no server, script or tool: it names no required preview tool and tells the
 agent to use the one the project has, falling back to the existing
 [temporary-harness rules](references/review.md#stress-a-real-component). Compozy
 is a single project's practice, not evidence of measured agent reliability.
+
+## AI interfaces and dark theme
+
+The 0.22.0 [AI and agent interfaces](references/ai-interfaces.md) reference and
+the [dark theme](references/visual-details.md#design-a-dark-theme) section of
+visual details adapt practice from Pedro Nauck's
+[ui-craft skill](https://github.com/pedronauck/skills/tree/main/skills/mine/ui-craft)
+(MIT, Copyright (c) 2026 Pedro Nauck) at commit `682e738`, read on 2026-11-11:
+`references/human-ai-ux.md` and `references/dark-mode.md`. The full upstream
+notice is kept in [licenses/pedronauck-skills.txt](licenses/pedronauck-skills.txt).
+The AI material is organized by the public origin the source itself cites,
+Microsoft's Guidelines for Human-AI Interaction (Amershi et al., CHI 2019), with
+IBM's accountability, value-alignment, explainability and data-rights framing
+folded into sources, uncertainty and memory control. Adapted ideas: capability and
+limit disclosure, cheap invocation, dismissal and correction, the streaming state
+set, partial output and input preserved on failure, scroll-follow only at the
+bottom, citations and reasons, graded uncertainty, per-response feedback, visible
+memory, global controls, announcing a stream once rather than per token and a
+shipping check. Dark theme: lightness-based elevation, avoiding pure black and
+white, accent retuning with the hue kept, dangerous pairs, per-theme focus and
+disabled tokens, theme-aware assets, `prefers-color-scheme` with a persisted
+choice applied before paint and per-theme contrast checks. The upstream repository ships no LICENSE file; its MIT terms and the
+copyright line were confirmed with the package maintainer, who knows the author.
+The text is reworded
+and condensed, and every rule links to the existing owner for async recovery,
+announcements, motion, loading states, behavioral guardrails and shared style
+changes instead of restating it.
+
+Not incorporated: the source's scene-test gate and its skill-specific
+vocabulary (anti-slop hit names and severities), Figma tooling routes, the
+`ui-craft` file structure and cross-references, exact token timings, hex and
+OKLCH values, letter-spacing and weight offsets, the surface-scale code, the
+inline theme script, and its third-party citations beyond the Microsoft
+guidelines. Brand-specific examples (Perplexity, Material, Apple, IBM Carbon) are
+omitted. No script, checker or generator is shipped. The Microsoft guidelines are
+a public research publication consulted through the source's summary, not
+re-read for this release.
 
 ## Binding-design comparison
 
