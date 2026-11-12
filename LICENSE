@@ -25,3 +25,9 @@ Those terms require attribution, preservation of the full license, and exclude
 betting, casino, gambling and the real-money gaming/loot-box applications named
 there. The commercial additions are not offered under CC BY 4.0 alone. See
 skills/frontend-craft/SOURCES.md for the files and integration passages covered.
+
+Video Craft (skills/video-craft) is also authored by Antonio Fulgêncio. Its
+original guidance is licensed under CC BY 4.0 as above. Adapted material keeps
+its upstream terms; the notices are in skills/video-craft/licenses/, and the
+sources and adaptation boundaries are in skills/video-craft/SOURCES.md, which
+is distributed with that skill.

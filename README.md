@@ -1,6 +1,18 @@
-# Frontend Craft
+# Frontend Craft and Video Craft
 
-Current version: **0.24.0**. See the [release notes](CHANGELOG.md).
+This repository ships two independent agent skills. They install separately and
+cooperate when both are present.
+
+| Skill | Version | Purpose | Release tag |
+| --- | --- | --- | --- |
+| [`frontend-craft`](skills/frontend-craft/SKILL.md) | **0.25.0** | Product strategy, sales and growth, and the interfaces that support them | `vX.Y.Z` (for example `v0.25.0`) |
+| [`video-craft`](skills/video-craft/SKILL.md) | **0.1.0** | Social videos, landing-page loops, product demos, captions, storyboards and prospecting clips | `video-craft-vX.Y.Z` (for example `video-craft-v0.1.0`) |
+
+See the [release notes](CHANGELOG.md); each entry is headed by the skill name and
+its version. Tags are per skill: `frontend-craft` keeps the plain `vX.Y.Z` tags it
+has always used, and `video-craft` uses the `video-craft-` prefix.
+
+## Frontend Craft
 
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
@@ -31,29 +43,33 @@ direction and operational UI conventions remain authoritative within their scope
 ## Install
 
 From your consuming project's directory, install through the
-[skills CLI](https://github.com/vercel-labs/skills):
+[skills CLI](https://github.com/vercel-labs/skills). Install either skill or both:
 
 ```bash
 npx skills add antoniofulg/frontend-craft
 ```
 
-Choose the agents interactively, or target Codex and Claude Code explicitly:
+Choose the skills and agents interactively, or name them. For Codex and Claude Code:
 
 ```bash
 npx skills add antoniofulg/frontend-craft --skill frontend-craft --agent codex claude-code
+npx skills add antoniofulg/frontend-craft --skill video-craft --agent codex claude-code
 ```
 
 For a local development checkout, replace `antoniofulg/frontend-craft` with its
-directory, such as `~/Projects/frontend-craft`. The package uses the standard
-`skills/frontend-craft/SKILL.md` layout. No npm publication or custom installer is required.
-Impeccable, UI/UX Pro Max and transitions-dev are optional companions; none is
+directory, such as `~/Projects/frontend-craft`. Each skill uses the standard
+`skills/<name>/SKILL.md` layout and installs as an independent folder. No npm
+publication or custom installer is required.
+Impeccable, UI/UX Pro Max and transitions-dev are optional companions of Frontend
+Craft; FFmpeg, Whisper and HyperFrames are optional tools of Video Craft. None is
 bundled or installed automatically.
 
-To update only this skill in each consuming project for Codex and Claude Code,
-run the explicit install command again:
+To update only one skill in each consuming project for Codex and Claude Code,
+run its explicit install command again, for example:
 
 ```bash
 npx skills@latest add antoniofulg/frontend-craft --skill frontend-craft --agent codex claude-code --yes
+npx skills@latest add antoniofulg/frontend-craft --skill video-craft --agent codex claude-code --yes
 ```
 
 Retain `--copy` if that project uses independent copies instead of symlinks.
@@ -395,6 +411,38 @@ relevant journey and visual guidance; market sizing or roadmap work loads only
 when that decision is requested or needed. Mapping and narrow technical repairs
 continue to use their existing implementation references.
 
+## Video Craft
+
+Plan, edit and prepare video for a named destination: Instagram Reels, TikTok and
+YouTube Shorts, landing-page background and hero loops, product demos and
+prospecting clips. The agent works from the user's own footage and message, with
+local FFmpeg, Whisper and (for motion graphics) HyperFrames. It produces files and
+draft text; it never logs in, uploads or posts, installs nothing without a yes,
+and runs HyperFrames with telemetry off.
+
+A full job follows nine phases, each with an approval gate before the next:
+preflight, brief, style guide, ingest and transcribe, storyboard, rough cut,
+motion and captions, audio, then render and QA. A small request, such as one
+caption fix, loads only the reference it needs. The
+[skill entrypoint](skills/video-craft/SKILL.md) holds the workflow and routing;
+the references are workspace, style guide, storyboard, editing, captions, audio,
+motion, social, web, demo, hooks and scripts, social channel, rights and
+disclosure, and a publish checklist.
+
+```text
+$video-craft Turn this raw talking-head recording into a 30-second Reel with burned-in captions. Propose any installs first and show a preview before the final render.
+$video-craft Study these three Reels for rhythm, framing and captions, and write a style guide for our channel. Do not download them without asking.
+$video-craft Make a 10-second background loop for our landing page, with an AV1 and H.264 ladder, a poster and a delivery manifest for the page owner.
+$video-craft Write ten hook options for a prospecting video to B2B finance teams, each with its visual, spoken line and caption, from this offer brief.
+$video-craft Fix the misspelled product name in these captions and re-burn them inside the safe band.
+```
+
+Video Craft produces the files. When Frontend Craft is also installed, it decides
+whether a page needs video and owns the markup, loading and controls. The shared
+[offer brief](skills/video-craft/references/offer-brief.md) and
+[copywriting guide](skills/video-craft/references/copywriting.md) are the common
+contract for audience, offer and claims; neither skill needs the other to work.
+
 ## Development and validation
 
 ```bash
@@ -414,8 +462,8 @@ cd "$install_probe"
 npx skills add "$skill_source" --skill frontend-craft --agent codex claude-code --copy --yes
 ```
 
-Inspect the installed skill and references, then remove only that temporary
-directory.
+Repeat with `--skill video-craft` to probe the second skill. Inspect the installed
+skill and references, then remove only that temporary directory.
 
 ### Shared references
 
@@ -436,9 +484,9 @@ Never edit a generated copy. The validator fails with
 `run python3 scripts/sync_shared.py` when a copy differs from its source plus the
 generated header, and it rejects a shared file that links to anything except
 another shared file or an external URL, so every copy stays valid in any skill. To
-add a consumer, add the skill to the manifest and re-run the sync. Today the only
-consumer is `frontend-craft`, which receives
-[`copywriting.md`](skills/frontend-craft/references/copywriting.md). Behavioral evaluation tasks and their distinct failure criteria live in
+add a consumer, add the skill to the manifest and re-run the sync. Both skills
+consume [`copywriting.md`](skills/frontend-craft/references/copywriting.md) and
+[`offer-brief.md`](skills/frontend-craft/references/offer-brief.md). Behavioral evaluation tasks and their distinct failure criteria live in
 [evals/scenarios.md](evals/scenarios.md). Static checks and successful installation
 do not prove better agent decisions; report behavioral evidence separately.
 
@@ -559,6 +607,11 @@ were not exercised for this release.
 The [0.24.0 verification record](evals/verification-0.24.0.md) covers the shared
 reference mechanism and the marketing-copy guide. It records the package checks
 and the drift-check proof; the new scenarios were not exercised for this release.
+
+The [0.25.0 verification record](evals/verification-0.25.0.md) covers both skills:
+the new `video-craft` 0.1.0, the shared offer brief and the two-skill package
+validation. It records package, script and anchor checks; the new scenarios were
+not exercised for this release.
 
 ## License and sources
 

@@ -40,6 +40,8 @@ separate strategy document is unnecessary for a page review.
   to it, the relevant cohort and the decision horizon.
 - **Audience:** user, buyer and approver where different; purchase trigger,
   current alternative, desired result, constraints and material objections.
+  The [offer brief](offer-brief.md) holds the field-by-field form, including how
+  account fit, persona and trigger stay separate.
 - **Decision stage:** discovering a problem, comparing approaches, evaluating
   this product or ready to transact. Match the argument and next action to it.
 - **Offer and proof:** actual capabilities, price/terms, credible demonstration

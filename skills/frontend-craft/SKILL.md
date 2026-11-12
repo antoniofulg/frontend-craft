@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/
 metadata:
   author: Antonio Fulgêncio
-  version: "0.24.0"
+  version: "0.25.0"
 ---
 
 # Frontend Craft
@@ -67,9 +67,11 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Subtract animation the user or owner finds excessive (reduced-motion handling stays in [motion](references/motion.md#handle-interruption-and-alternatives)) | [remove or reduce motion](references/motion.md#remove-or-reduce-motion) | Subtractive edits with dependent code and orphans cleaned up, and the kept motion with its purpose |
 | Diagnose a specific animation that stutters or drops frames (page-level responsiveness stays in performance) | [dropped frames](references/motion.md#diagnose-dropped-frames) | A named cause per finding, a cheaper property or driver, and device-recording limits |
 | Write, edit, refresh or rewrite marketing copy, headlines or CTAs; improve brand voice or naturalness | [marketing copy](references/copywriting.md#write-edit-and-refresh-marketing-copy), following only its relevant brief and claim routes | Usable copy within the requested editing scope, with consistent voice and supported claims |
+| Recover or check the audience, offer, ICP, buying trigger, current alternative, objections or proof behind commercial copy, a page, a demo or a prospecting script | [offer brief](references/offer-brief.md), then [copywriting](references/copywriting.md#commercial-brief-and-claim-inventory) for claim wording | A sourced one-page brief with account fit, persona and trigger kept separate, and every number labeled buyer-supplied, named benchmark or seller-assumed |
 | Create or assess a marketing/landing page; redesign a public page | [landing pages](references/landing-pages.md), including its commercial and review routing | A persuasive decision path or prioritized conversion findings, preserving public contracts |
 | Check whether a public site or new public route is ready to launch | [launch readiness](references/technical-seo.md#check-public-launch-readiness) | A yes/no/not-applicable table with deployed or rendered evidence and external actions named |
 | Change public indexing, SSR content, metadata, canonicals, sitemaps or AI discovery | [technical SEO and discovery](references/technical-seo.md) | A coherent public-route contract with HTML/HTTP evidence and explicit deployment and search-acceptance limits |
+| Produce or edit a video asset: social video (Reels, TikTok, Shorts), a landing-page background or hero loop, a product demo video, captions or a storyboard | Hand the production to the `video-craft` skill when it is installed; decide here whether the page needs video and how it integrates, using [imagery](references/imagery.md) and [performance](references/performance.md) | A page-integration decision (role, markup, loading, controls, poster, reduced-motion behavior) and a brief for the video; the files come from video-craft, or from the user's own workflow if it is absent |
 | Find, select, generate, crop or credit images/video; prepare a product demonstration | [imagery](references/imagery.md) | Relevant, traceable visual material with honest representation and verified delivery |
 | Create, change or review first-run onboarding, empty-state guidance or activation | [activation](references/activation.md) | A justified path and guidance pattern leading to the first useful result; measured outcomes where available |
 | Design or review pricing, trials, subscription paywalls, checkout, upgrades or expansion | [monetization](references/monetization.md) | An understandable offer and a revenue hypothesis evaluated across the full funnel |

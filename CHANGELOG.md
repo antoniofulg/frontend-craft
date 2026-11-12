@@ -1,5 +1,78 @@
 # Changelog
 
+This repository ships two skills. Entries from 0.25.0 are headed by the skill
+name and version. Entries without a skill name (0.24.0 and earlier) belong to
+`frontend-craft`. Tags are per skill: `frontend-craft` uses `vX.Y.Z` and
+`video-craft` uses `video-craft-vX.Y.Z`.
+
+## video-craft 0.1.0 — 2026-11-11
+
+- New skill, [video-craft](skills/video-craft/SKILL.md): plan, edit and prepare
+  video for Instagram Reels, TikTok and YouTube Shorts, landing-page background
+  and hero loops, product demos and prospecting clips. It produces files and draft
+  text; the user approves each stage and does all publishing.
+- Guided nine-phase workflow (preflight, brief, style guide, ingest and
+  transcribe, storyboard, rough cut, motion and captions, audio, render and QA),
+  each phase with its tool, reference and approval gate. Installs, the style
+  guide, the storyboard, previews and the final render each wait for a yes.
+- Fourteen references: [workspace](skills/video-craft/references/workspace.md),
+  [style guide](skills/video-craft/references/style-guide.md),
+  [storyboard](skills/video-craft/references/storyboard.md),
+  [editing](skills/video-craft/references/editing.md),
+  [captions](skills/video-craft/references/captions.md),
+  [audio](skills/video-craft/references/audio.md),
+  [motion](skills/video-craft/references/motion.md),
+  [social](skills/video-craft/references/social.md),
+  [web](skills/video-craft/references/web.md),
+  [demo](skills/video-craft/references/demo.md),
+  [hooks and scripts](skills/video-craft/references/hooks-and-scripts.md),
+  [social channel](skills/video-craft/references/social-channel.md),
+  [rights and disclosure](skills/video-craft/references/rights-and-disclosure.md)
+  and [publish checklist](skills/video-craft/references/publish-checklist.md), plus
+  the two shared references below.
+- Local tools only: FFmpeg, Whisper (mlx-whisper or whisper.cpp) and, for motion
+  graphics, HyperFrames. Nothing is installed without consent per item;
+  HyperFrames runs with telemetry off, no usage beacon, no runtime install and no
+  account. Composition and rendering go to HyperFrames' own skills when installed.
+- Platform figures (specs, safe zones, music, labels) carry a check date of
+  2026-11-11 and the source; the skill says to re-verify before a delivery.
+- Adapted material and its notices: Corey Haines' marketingskills (MIT), Pedro
+  Nauck's insta-master (MIT, with its unsourced or outdated claims corrected and
+  listed), HyperFrames (Apache-2.0) and the offer-brief sources below. See
+  [SOURCES](skills/video-craft/SOURCES.md) and
+  [LICENSE](skills/video-craft/LICENSE).
+- The skill reads the shared offer brief and copywriting guide; see the
+  frontend-craft entry. Without frontend-craft it works on its own.
+
+## frontend-craft 0.25.0 — 2026-11-11
+
+- New shared reference, [offer brief](skills/frontend-craft/references/offer-brief.md),
+  consumed by both skills. It recovers the offer, the ICP (account fit), the
+  persona (buyer, user, approver), the buying trigger, the current alternative,
+  the objections, a proof inventory and the call to action with its destination,
+  and keeps ICP, persona and trigger as separate fields. Below roughly 50 closed
+  deals the ICP is a hypothesis with an anti-fit list, not a scoring rubric. Every
+  number in the proof inventory is labeled buyer-supplied, named benchmark or
+  seller-assumed. Rules: claims only from approved sources, internal content kept
+  out of customer-facing assets, no invented metrics. Adapted from Corey Haines'
+  product-marketing skill (MIT), mbfinotti's sales-icp-definition and
+  deal-value-calc (MIT) and Anthropic's create-an-asset (Apache-2.0); notices in
+  `licenses/`.
+- The marketing-copy guide's brief section now points to the offer brief for
+  audience and offer and keeps the claim-inventory table, with provenance labels
+  carried over; commercial strategy links the brief from its audience facts. The
+  `copywriting.md#commercial-brief-and-claim-inventory` anchor is unchanged.
+- Routing: a row for the offer brief, and a row that hands production of video
+  assets (social video, landing-page loops, product demos) to the `video-craft`
+  skill when installed, while page-integration decisions stay in imagery and
+  performance. The imagery guide names video-craft for producing the file.
+- `shared/manifest.json` now sends `copywriting.md` and `offer-brief.md` to both
+  skills; `scripts/sync_shared.py` writes all four copies.
+- `scripts/validate_package.py` also requires each skill's bundled license
+  notices (video-craft: five files; frontend-craft: seven).
+- The README presents the repository as two skills with an install command for
+  each. The skill description is unchanged.
+
 ## 0.24.0 — 2026-11-11
 
 - Marketing copy now has its own reference,
