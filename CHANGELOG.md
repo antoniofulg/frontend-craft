@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.21.0 — 2026-11-11
+
+- [Prototype with production components](skills/frontend-craft/references/reuse-consistency.md#prototype-with-production-components):
+  when a project has a component library, concepts render real views from
+  shared typed fixtures with declared states. Component prototypes use no raw
+  markup; exploratory drafts may, and graduate to component prototypes on
+  approval and are deleted. A data-bound container is split into a pure view
+  first, prototypes make no network calls, the production build excludes them,
+  journeys name edges by the real control text, regions carry stable ids, people
+  approve and illustrative data is labeled. It uses the project's own preview
+  tool; the package ships no server or script.
+- The [binding comparison](skills/frontend-craft/references/review.md#compare-a-render-with-a-binding-design)
+  now says a design binds visual language only: content, data, copy, brand marks
+  and which controls exist stay with their owners, and a mockup's placeholder or
+  omission is never an instruction.
+- [Redesign parity](skills/frontend-craft/references/review.md#prove-redesign-parity):
+  a redesign of an implemented surface starts as a transcription of current
+  anatomy plus labeled deltas, scaled to the change.
+- One routing row, MIT notice for the adapted Compozy material and four
+  behavioral scenarios.
+
+Release package checks and remaining limits are recorded in
+[the 0.21.0 verification record](evals/verification-0.21.0.md).
+
 ## 0.20.0 — 2026-11-11
 
 - [Compare a render with a binding design](skills/frontend-craft/references/review.md#compare-a-render-with-a-binding-design):

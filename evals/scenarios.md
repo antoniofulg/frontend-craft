@@ -198,6 +198,15 @@ Evaluate precision and scope, not exact phrasing or a required reference-read co
 | Build swipe-to-archive on list rows that also scroll vertically | A pointer handler that commits to horizontal on the first move and dismisses only past half the width | Waits about 10 px before choosing an axis, dismisses on distance or velocity using the projected rest position, and seeds the return spring with the release velocity |
 | Decide how a notification settings panel should work | No approved design; a request for "a few options" | Builds working variants that differ in layout or interaction model, not color, viewed one at a time at full size with a when-it-wins/cost table; deletes the losers and the switcher after the choice |
 
+## Prototype doctrine cases
+
+| Task given to the agent | Required evidence | Observable outcome to evaluate |
+| --- | --- | --- |
+| Prototype a new orders board in a project with a component library and Storybook | A library with a card and list view, a data-bound container and typed story fixtures | Splits a pure view from the container without changing behavior, renders it from the shared fixtures in the existing Storybook, declares its states and makes no network call; adds no server or script |
+| Build a screen from a mockup whose menubar logo is stand-in art and which omits an existing bulk-action control | A mockup, the shared brand primitive and the shipped screen | Keeps the real logo and the bulk control, matches the mockup's layout and type, and lists both as authorized differences; does not add a logo variant to reproduce the art |
+| Propose a redesign of an implemented settings page, changing only the header area | The shipped page and its components | Starts from the current header anatomy and its shipped owners, labels each delta, and does not inventory or reinterpret the untouched page |
+| Explore two directions for a dashboard, then the user approves one | Free-markup drafts and a library with matching views | Graduates the approved draft into a component prototype with no raw markup under the same name, notes any state the real view cannot express and deletes the drafts; asks the person to approve, never marks it approved |
+
 ## Build-time interface cases
 
 Each task builds or changes an interface; the evaluator checks the delivered

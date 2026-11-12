@@ -294,6 +294,16 @@ departing from something it draws is asked, not decided while building. Before
 judging, list every departure the user approved; that list is the only accepted
 difference.
 
+A design binds visual language only: layout, anatomy, type, tokens and motion.
+It does not bind content. Data, copy, brand marks and which controls and views
+exist belong to their owners: runtime truth, the copy authority, the brand
+inventory and the surfaces already shipped. A placeholder, demo figure or
+omission in a mockup is never an instruction. Resolve it toward the owner and
+list the difference as an authorized one. Why: a mockup is lossy, and treating
+every pixel as binding turns stand-in art into brand inventory and omissions
+into deletions. Artwork from a design never extends a shared brand primitive
+with a variant that reproduces it.
+
 **Capture each state the design draws, at its size.** Take one picture per
 state from a browser window whose size is the design's pixel size over its
 scale: a 2880 × 1800 frame exported at 2× needs a 1440 × 900 window. Never
@@ -462,6 +472,16 @@ drops fields, validation and help text that nobody notices until users need them
    inventory item kept, moved, changed or removed, with the reason. List every
    removal at the top, so the owner approves it explicitly.
 4. **Keep the scope.** Change only what the stated problem requires.
+
+A prototype or redesign of a surface that is already implemented starts as a
+transcription of its current anatomy and the components that ship it, plus
+labeled deltas; it is never a reinterpretation. Without that baseline a
+reviewer cannot tell a proposal from drift, and the build that follows rolls
+back shipped behavior. Do not seed from an archived mockup or hand-roll a near
+copy of an exported component. Scale the baseline to the scope: a substantial
+redesign needs the full inventory above, a small change only the affected
+region. A requested surface the spec leaves out of scope is drawn and labeled
+as new, not refused; a delta is never left unmarked.
 
 Check: every inventory row has a status, and no item is missing from the new
 version without appearing in the removals list.
