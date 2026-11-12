@@ -1,6 +1,6 @@
 # Frontend Craft
 
-Current version: **0.20.0**. See the [release notes](CHANGELOG.md).
+Current version: **0.21.0**. See the [release notes](CHANGELOG.md).
 
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
@@ -504,6 +504,11 @@ render with a binding design: size-faithful captures, a judge without the code,
 the same/differs inventory and the two-round limit. It records package and
 installation checks only; the new scenarios were not exercised for this release.
 
+The [0.21.0 verification record](evals/verification-0.21.0.md) covers prototyping
+with production components, the visual-language-only reach of a binding design and
+the transcription baseline for redesigns. It records package and installation
+checks only; the new scenarios were not exercised for this release.
+
 ## License and sources
 
 Copyright 2026 Antonio Fulgêncio. This package has [mixed license terms](LICENSE).
@@ -517,6 +522,11 @@ The agentic screen-repair additions adapt Enmera's MIT-licensed instructions,
 with the [full upstream notice](skills/frontend-craft/licenses/enmera-ai-design-check.txt)
 retained and the [adaptation boundary](skills/frontend-craft/SOURCES.md#agentic-screen-repair)
 recorded. The upstream checker, generator, hooks and example code are not bundled.
+
+The prototype guidance adapts MIT-licensed Compozy design notes, with the
+[full upstream notice](skills/frontend-craft/licenses/compozy.txt) retained and the
+[adaptation boundary](skills/frontend-craft/SOURCES.md#prototype-doctrine) recorded.
+No Compozy package, CLI or code is bundled.
 
 [Source notes](skills/frontend-craft/SOURCES.md) identify the adaptation scope,
 upstream revision and changes. No third-party skill bundle, recipe library,

@@ -125,6 +125,67 @@ the switcher; the scratch surface follows the
 [harness lifecycle](review.md#stress-a-real-component). Page-level compositions
 follow [compare compositions](commercial-visuals.md#compare-compositions-when-direction-is-open).
 
+## Prototype with production components
+
+When the project has a component library, a concept or prototype renders the
+real views, not look-alike markup. Why: a prototype made of its own markup
+drifts from the product, so approval says little about what will ship. Use the
+preview tool the project already has (Storybook, an installed prototype
+gallery, or a route or page of the app itself); this skill ships none. With
+none, use the temporary harness rules in
+[stress a real component](review.md#stress-a-real-component), which also cover
+read-only reviews and servers.
+
+**Pick a kind.** A *component prototype* uses only library and view
+components, with no raw markup; layout a view lacks belongs in the view or in a
+primitive. An *exploratory draft* may use free markup with tokens, for
+direction before a view exists. When a draft is approved, build the real view,
+rewrite it as a component prototype under the same name so comments and links
+survive, keep equivalent states, say which state the real view cannot express,
+and delete the draft.
+
+**Render a pure view.** A view takes data and callbacks as props. When the one
+you need is bound to queries, stores, preload or OS menus, first split a pure
+view out of the container without changing behavior, and keep the container as
+the production entry. Import leaf components directly, since a barrel can
+re-export hooks that reach the network.
+
+**Fixtures and isolation.**
+- Typed fixtures live with the owning module and are shared with its stories,
+  never copied. Builders default to inert handlers; stories can pass logging
+  ones.
+- A prototype makes no network or API calls. A guard that rejects such imports
+  is fixed in the code, never loosened.
+- The production build must never include prototype code. Check the build
+  fails or omits it, and keep imports of it out of application source.
+
+**Declare states.** A prototype lists the states it shows (populated, empty,
+loading, error, permission denied, long content), and each is reachable. The
+declared list feeds the [stress test](review.md#stress-a-real-component) and
+the [binding comparison](review.md#compare-a-render-with-a-binding-design),
+which judges only drawn states. A state the production view cannot express is
+noted, not faked. A prototype of an implemented surface follows
+[redesign parity](review.md#prove-redesign-parity).
+
+**Journeys.** To show a flow, link states with edges. Name each edge by the
+exact text of the real button or link that causes it, so a reviewer can find it
+in the product. Each state is reachable from the start, and a state with no
+exit is marked as an end. Report states no journey reaches as a gap, not a
+failure.
+
+**Feedback and approval.** Give meaningful regions and controls stable ids so
+comments name them precisely and survive edits; refine the same files in place.
+People approve a direction; an agent applies comments and never approves.
+
+**Honest content.** Label illustrative data as illustrative. Never invent
+sources, endorsements, metrics or backend guarantees, and use the correct asset
+for a named real person, product or brand, or label a placeholder.
+
+Check: every prototype state is declared and renders from a shared fixture, a
+component prototype contains no raw markup, nothing in the production build
+imports it, and a preview of each state was inspected, or the report says it
+could not be.
+
 ## Exceptions and evolution
 
 For conversion, activation, monetization or retention work, apply the objective

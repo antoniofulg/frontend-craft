@@ -33,6 +33,7 @@ bundled here. Installed project copies may differ from their recorded upstream.
 | [Anthropic skills](https://github.com/anthropics/skills) | `8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4` | Purposeful content structure and consistent interface vocabulary |
 | [Emil Kowalski's skills](https://github.com/emilkowalski/skills) (MIT) | Initial: `e8a175de22ae1e49370fc144c1f3bb9aeedf988d`; 0.18.0 review: `5206a95`; 0.19.0 review: `715c180` | Motion purpose, frequency and interruption as design questions; [0.18.0 motion and mobile web additions](#motion-coordination-performance-and-mobile-web); [0.19.0 worst-case data, motion craft and variant comparison](#worst-case-data-motion-craft-and-variant-comparison) |
 | [Tech Leads Club agent skills](https://github.com/tech-leads-club/agent-skills) (`tlc-spec-lean` and `tlc-spec-driven`, CC BY 4.0) | `e74dc8a` | [0.20.0 binding-design comparison](#binding-design-comparison) |
+| [Compozy](https://github.com/compozy/compozy) (MIT) | `b153f4a` | [0.21.0 prototype doctrine](#prototype-doctrine) |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `v2.15.0` | Targeted interaction, chart and accessibility reference categories |
 | [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Initial: `ce26fc25c0e5e8cab638f883de62d9a86ee5e45b`; v2.0.0 review: `2b44c81bbe36ac8a8a6bdd1c9ff593f28b8728f4` | Context-sensitive public-page composition; subject-specific identity, media workflow and rendered critique |
 | [Vercel agent skills](https://github.com/vercel-labs/agent-skills) | Local `react-composition-patterns` skill, metadata version `1.0.0` | Component composition and state-owner questions |
@@ -606,6 +607,35 @@ universal 500 ms sheet curve, a global `user-select: none` on links and the
 are platform- or library-specific. The Motion 14.2 acceleration note was checked
 against Motion's [changelog](https://motion.dev/changelog) and
 [performance page](https://motion.dev/docs/performance) on 2026-11-08.
+
+## Prototype doctrine
+
+The 0.21.0 [prototyping with production components](references/reuse-consistency.md#prototype-with-production-components)
+section, the [content-ownership rule](references/review.md#compare-a-render-with-a-binding-design)
+of the binding comparison and the [transcription baseline](references/review.md#prove-redesign-parity)
+of redesign parity adapt practice from [Compozy](https://github.com/compozy/compozy)
+(MIT, Copyright (c) 2026 NauckGroup LTDA) at commit `b153f4a`, read on
+2026-11-11: `docs/design/prototyping.md`, lessons `L-032` (prototype fidelity
+binds visual language, not content) and `L-034` (prototypes of implemented
+surfaces are transcriptions plus deltas), and the shared authoring rules of the
+`open-design` extension skill. The full upstream notice is kept in
+[licenses/compozy.txt](licenses/compozy.txt). Adapted ideas: component prototypes
+versus exploratory drafts and the graduation of a draft; splitting a pure view
+from a data-bound container before prototyping; fixtures shared with stories; no
+network calls from prototypes; a production build that excludes prototype code;
+declared states; journeys whose edges carry the real control text; stable ids
+for feedback; approval by people only; labeled illustrative data. The text is
+reworded and reorganized around this skill's review sections, and every rule is
+tool-agnostic.
+
+Not incorporated: the `@compozy/proto` package, its CLI, gallery, review files,
+flow file format, `proto check` problem codes, port numbers, paths and `meta`
+API, the `data-od-id` attribute name, the `open-design` lint and browser tools,
+spec directories, Compozy component names and repository examples. This package
+ships no server, script or tool: it names no required preview tool and tells the
+agent to use the one the project has, falling back to the existing
+[temporary-harness rules](references/review.md#stress-a-real-component). Compozy
+is a single project's practice, not evidence of measured agent reliability.
 
 ## Binding-design comparison
 
