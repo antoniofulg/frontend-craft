@@ -1,6 +1,6 @@
 # Frontend Craft
 
-Current version: **0.21.0**. See the [release notes](CHANGELOG.md).
+Current version: **0.22.0**. See the [release notes](CHANGELOG.md).
 
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
@@ -229,8 +229,8 @@ mapping; design systems; reuse and consistency; shared UI patterns; components; 
 commercial strategy; growth and sales; commercial visuals; landing pages; imagery;
 GTM measurement and automation;
 checkout; activation; monetization; retention; behavioral design; dashboards; product strategy;
-positioning and distribution; experimentation; performance and loading states; technical SEO and discovery; visual details;
-charts; and reviews. Typical work reads
+positioning and distribution; experimentation; performance and loading states; technical SEO and discovery; visual details
+(including dark themes); AI and agent interfaces; charts; and reviews. Typical work reads
 the core and the relevant references, not a catalog of every rule. The core remains
 stack-neutral; React recipes and the shared UI patterns guide's Tailwind v4 guidance
 apply only to matching projects. Consult current documentation for framework and
@@ -312,6 +312,13 @@ When a design came with the request, the
 [binding-design comparison](skills/frontend-craft/references/review.md#compare-a-render-with-a-binding-design)
 adds a separate fidelity judgement: pictures at the design's size, a judge
 without the code and an inventory marked `same` or `differs`.
+
+The [AI and agent interfaces reference](skills/frontend-craft/references/ai-interfaces.md)
+covers expectations, correction, every streaming and failure state, sources,
+honest uncertainty, memory and off controls and accessible streamed output. The
+[dark theme section](skills/frontend-craft/references/visual-details.md#design-a-dark-theme)
+covers per-theme semantic roles, elevation, accents, assets, contrast and
+flash-free theme choice. Both route to existing owners instead of duplicating them.
 
 ## Commercial reviews
 
@@ -509,6 +516,10 @@ with production components, the visual-language-only reach of a binding design a
 the transcription baseline for redesigns. It records package and installation
 checks only; the new scenarios were not exercised for this release.
 
+The [0.22.0 verification record](evals/verification-0.22.0.md) covers the AI and
+agent interfaces reference and the dark theme section. It records package checks
+only; the new scenarios were not exercised for this release.
+
 ## License and sources
 
 Copyright 2026 Antonio Fulgêncio. This package has [mixed license terms](LICENSE).
@@ -527,6 +538,12 @@ The prototype guidance adapts MIT-licensed Compozy design notes, with the
 [full upstream notice](skills/frontend-craft/licenses/compozy.txt) retained and the
 [adaptation boundary](skills/frontend-craft/SOURCES.md#prototype-doctrine) recorded.
 No Compozy package, CLI or code is bundled.
+
+The AI-interface and dark-theme guidance adapts MIT-licensed material from Pedro
+Nauck's ui-craft skill, with the
+[full upstream notice](skills/frontend-craft/licenses/pedronauck-skills.txt)
+retained and the [adaptation boundary](skills/frontend-craft/SOURCES.md#ai-interfaces-and-dark-theme)
+recorded. No upstream script, asset or tool is bundled.
 
 [Source notes](skills/frontend-craft/SOURCES.md) identify the adaptation scope,
 upstream revision and changes. No third-party skill bundle, recipe library,

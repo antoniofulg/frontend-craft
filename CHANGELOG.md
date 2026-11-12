@@ -1,5 +1,32 @@
 # Changelog
 
+## 0.22.0 — 2026-11-11
+
+- New [AI and agent interfaces](skills/frontend-craft/references/ai-interfaces.md)
+  reference for chat, streaming, autocomplete, generated actions, copilots,
+  recommendations and agents: set expectations of capability and limits, make
+  invocation, dismissal and correction cheap, design every streaming state
+  (pending, partial, stopped, interrupted, failed) without losing input or
+  partial output, show sources and reasons, show uncertainty only where it is
+  real, give feedback, memory and off controls, and keep streamed content
+  accessible without flooding screen readers. It cites Microsoft's Guidelines for
+  Human-AI Interaction as the public origin and links the existing async,
+  announcement, motion, loading and behavioral-guardrail owners.
+- [Design a dark theme](skills/frontend-craft/references/visual-details.md#design-a-dark-theme):
+  semantic roles remapped per theme at the token owner, elevation by surface
+  lightness, no pure black or white, retuned accents with the hue kept, failing
+  color pairs, per-theme focus and disabled tokens, theme-aware assets,
+  `prefers-color-scheme` with a persisted choice applied before paint and
+  contrast measured per theme.
+- Two routing rows. The `SKILL.md` description now names AI interfaces and dark
+  themes and stays under 1,024 characters (1,017), trimming "and feedback",
+  "or codebase", and shortening "production bundles" to "bundles".
+- MIT notice for the adapted ui-craft material from Pedro Nauck's skills, and
+  four behavioral scenarios.
+
+Release package checks and remaining limits are recorded in
+[the 0.22.0 verification record](evals/verification-0.22.0.md).
+
 ## 0.21.0 — 2026-11-11
 
 - [Prototype with production components](skills/frontend-craft/references/reuse-consistency.md#prototype-with-production-components):

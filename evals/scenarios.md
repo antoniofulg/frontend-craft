@@ -207,6 +207,15 @@ Evaluate precision and scope, not exact phrasing or a required reference-read co
 | Propose a redesign of an implemented settings page, changing only the header area | The shipped page and its components | Starts from the current header anatomy and its shipped owners, labels each delta, and does not inventory or reinterpret the untouched page |
 | Explore two directions for a dashboard, then the user approves one | Free-markup drafts and a library with matching views | Graduates the approved draft into a component prototype with no raw markup under the same name, notes any state the real view cannot express and deletes the drafts; asks the person to approve, never marks it approved |
 
+## AI interface and dark theme cases
+
+| Task given to the agent | Required evidence | Observable outcome to evaluate |
+| --- | --- | --- |
+| Add a streamed chat answer panel to an existing app | Installed stack, existing announcement and async-recovery owners, the prompt input component | Designs submitted, streaming, stopped, interrupted and failed states; keeps the prompt as a draft and the partial output on failure; offers stop then regenerate; follows new content only at the bottom; announces start and end once, not each token; adds no artificial typing delay |
+| Review a "smart summary" feature that shows a 94% confidence badge and unlinked claims | The rendered feature and its data source | Flags a score the product cannot justify and claims without sources; proposes graded wording on the weak part and real source links; does not invent a confidence value |
+| Add a dark theme to an app with shared tokens and raw colors in some components | Token files, the theme owner, a component using a hard-coded hex | Remaps semantic roles at the owner without inverting; uses lighter surfaces rather than shadows for elevation; retunes accents keeping hue; gives focus and disabled their own per-theme roles; fixes the component by token, not a local override |
+| Ship a theme toggle for a page that flashes light on reload | The page head, stored preference, `prefers-color-scheme` | Applies the stored or system theme before first paint, offers System, Light and Dark, persists the explicit choice, and checks contrast, focus, charts and images in both themes |
+
 ## Build-time interface cases
 
 Each task builds or changes an interface; the evaluator checks the delivered
