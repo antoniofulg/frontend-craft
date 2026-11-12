@@ -59,7 +59,7 @@ relative file paths, NUL, file bytes, NUL, per skill directory):
 | Skill | Files | SHA-256 |
 | --- | --- | --- |
 | frontend-craft | 46 | `2a6ef31b9d1f27d3140f2013aa722ced6153f33dc707f86b514137bdba8ad693` |
-| video-craft | 24 | `445e501fc5696d7bfbd85021acc4aaa7d44707769f5546a89809c638667b0b86` |
+| video-craft | 24 | `0ba892ed73aa51a980d6b1b48b69851357624584a80666b6738b80abe21e5c29` |
 
 The same procedure reproduced the 0.24.0 frontend-craft digest (`6e49e51c...`,
 43 files) from the `HEAD` tree before this release.
