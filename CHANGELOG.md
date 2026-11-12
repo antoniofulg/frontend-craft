@@ -1,5 +1,36 @@
 # Changelog
 
+## 0.24.0 — 2026-11-11
+
+- Marketing copy now has its own reference,
+  [copywriting](skills/frontend-craft/references/copywriting.md). The "Commercial
+  brief and claim inventory" and "Write, edit and refresh marketing copy" sections
+  moved out of landing pages into it, with page-specific links turned into
+  plain-text pointers so the text stands alone. Landing pages keep a short stub
+  that links to it, still own the public redesign contracts and interface checks,
+  and every inbound link was retargeted.
+- New in that guide, adapted from Corey Haines' marketingskills (MIT): a
+  headline menu (outcome, problem, audience, differentiation, proof) for
+  generating alternatives rather than filling templates; diagnosing the
+  situation first (blank or generic, real voice present, point edit); declined
+  claims that name the evidence that would unlock them; and nine structural
+  patterns of generated-sounding copy (contrast reveal, negation list, trailing
+  pile-on, question then answer, colon reveal, reflexive threes, uniform rhythm,
+  abstract subjects, false ranges) as review signals that ask whether the sentence
+  carries a supported claim. They are cues, not bans or caps; upstream's
+  punctuation bans, frequency caps and word blacklists were left out. Notice in
+  `licenses/coreyhaines-marketingskills.txt`.
+- Repository mechanism for references that more than one skill needs: `shared/`
+  holds the source of truth (not distributed) and `shared/manifest.json` lists the
+  consuming skills. `scripts/sync_shared.py` copies each file into
+  `skills/<skill>/references/` under a generated-file comment, so each skill still
+  installs as an independent folder. Today the only consumer is `frontend-craft`.
+- `scripts/validate_package.py` now checks every `skills/*/` directory with the
+  same rules, requires each skill's license and sources files (and the helper
+  scripts for `frontend-craft`), keeps shared files linking only to other shared
+  files, and fails with `run python3 scripts/sync_shared.py` when a copy drifts.
+- The skill description is unchanged.
+
 ## 0.23.0 — 2026-11-11
 
 - Two optional, read-only Node helpers (no dependencies) now ship in

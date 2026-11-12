@@ -43,7 +43,7 @@ separate strategy document is unnecessary for a page review.
 - **Decision stage:** discovering a problem, comparing approaches, evaluating
   this product or ready to transact. Match the argument and next action to it.
 - **Offer and proof:** actual capabilities, price/terms, credible demonstration
-  and supplied evidence. The [landing-page claim inventory](landing-pages.md#commercial-brief-and-claim-inventory)
+  and supplied evidence. The [claim inventory](copywriting.md#commercial-brief-and-claim-inventory)
   owns claim verification; reuse it when writing commercial copy.
 - **Baseline:** what is known about entry, abandonment, payment and subsequent
   use; distinguish observed behavior from assumptions. Ask only for facts whose

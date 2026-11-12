@@ -70,7 +70,7 @@ guidance.
 | Matching a design supplied with the request, state by state | [binding design comparison](#compare-a-render-with-a-binding-design) |
 | Motion, timing, interruption and reduced motion | [motion](motion.md) |
 | Landing-page review: visitor decision path, including visual-only reviews | [landing pages](landing-pages.md) |
-| Marketing wording, brand voice, naturalness or stale commercial copy | [marketing copy](landing-pages.md#write-edit-and-refresh-marketing-copy) |
+| Marketing wording, brand voice, naturalness or stale commercial copy | [marketing copy](copywriting.md#write-edit-and-refresh-marketing-copy) |
 | Public indexing, SSR content, metadata, canonical/discovery URLs and response policies | [technical SEO and discovery](technical-seo.md) |
 | Media selection, representation, provenance, crops and delivery | [imagery](imagery.md) |
 | Commercial review or objective, audience, persuasion and growth priorities | [commercial strategy](commercial-strategy.md) |

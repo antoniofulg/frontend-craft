@@ -129,7 +129,7 @@ responses. See [robots meta and HTTP directives](https://developers.google.com/s
 Derive titles, descriptions, social previews and structured data from
 authoritative public content. Match the visible entity, offer and publication
 state; use the existing metadata owner to keep output coherent. Follow the
-[claim inventory](landing-pages.md#commercial-brief-and-claim-inventory) when
+[claim inventory](copywriting.md#commercial-brief-and-claim-inventory) when
 commercial facts need support. Never invent reviews, ratings, offers, venue facts
 or capabilities to satisfy a schema validator. Tag and icon specifics for a launch
 are in [launch readiness](#check-public-launch-readiness).

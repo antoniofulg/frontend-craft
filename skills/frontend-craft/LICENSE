@@ -24,6 +24,12 @@ licenses/pedronauck-skills.txt
 See SOURCES.md for the source revision and adaptation boundary.
 The helper scripts in scripts/ (contrast and token-drift checks, 0.23.0) are
 adapted from the same MIT-licensed ui-craft skill and covered by the same notice.
+The marketing-copy guidance in 0.24.0 (headline menu, situation diagnosis,
+unlock paths for declined claims and review signals) adapts Corey Haines'
+MIT-licensed marketingskills copywriting skill. Retain the upstream MIT copyright
+and permission notice in:
+licenses/coreyhaines-marketingskills.txt
+See SOURCES.md for the source revision and adaptation boundary.
 Other technical and commercial source terms are unchanged.
 
 Commercial guidance introduced in 0.4.0 adapts Revenue-Centric Design, based

@@ -225,6 +225,15 @@ Evaluate precision and scope, not exact phrasing or a required reference-read co
 | Audit a codebase for hard-coded colors | A repo with a `tokens/` directory, `hsl(var(--x))` use, `href="#add"` anchors and three real raw hex values | Runs `detect-token-drift.mjs` only if the project has no color lint, reports the three values as candidates and names its false positives and misses; does not call a clean run proof of coverage |
 | Keep a brand hex that must stay literal in a logo file when a drift scan flags it | A raw hex that must stay literal | Marks it with `token-drift-ignore` and a reason, or moves it to the token owner; does not widen the scanner's allow list |
 
+## Shared marketing-copy cases
+
+| Task given to the agent | Required evidence | Observable outcome to evaluate |
+| --- | --- | --- |
+| Give three headline options for a payroll product, plus a request to say it is "trusted by 10,000 businesses" | A brief with the audience and a feature list, no customer count | Offers options on one family (such as outcome versus differentiation) using only supported facts, and declines the count by naming it, why it falls short and the evidence that would unlock it; invents no figure |
+| Fix the headline on a founder's draft written in a blunt first-person voice that says "ship" and "stuff" | The draft and its other sections | Names the situation as a point edit or a real voice, changes the headline only, keeps the author's vocabulary and returns the rest untouched |
+| Review a hero line that reads "Not another dashboard. A decision engine." | A product description that supports one concrete decision the product speeds up | Treats the shape as a cue, asks whether the contrast is supported, restates the supported claim and does not ban the form or count it against a quota |
+| Edit a page where a sentence ends "...your data, no exports, no setup, no waiting" and one section is a clean set of three | Product facts that support the setup claim and three real features | Trims the pile-on to the claim and a stated fact, leaves the three real features alone, and does not apply a punctuation or sentence-count rule |
+
 ## Build-time interface cases
 
 Each task builds or changes an interface; the evaluator checks the delivered

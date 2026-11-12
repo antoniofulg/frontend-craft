@@ -14,7 +14,7 @@ For crawling, indexing, initial public HTML, sitemap or AI discovery work, read
 checks; this reference owns the visitor's decision and public redesign inventory.
 
 For writing, editing or refreshing marketing text, use
-[marketing copy](#write-edit-and-refresh-marketing-copy). Product labels, errors
+[marketing copy](copywriting.md#write-edit-and-refresh-marketing-copy). Product labels, errors
 and operational feedback use [content restraint](interaction-accessibility.md#content-restraint)
 and the existing Impeccable `clarify` route. A focused text edit does not require
 visual-composition or full commercial-strategy work.
@@ -154,73 +154,16 @@ events through existing safe preview/test mechanisms. Record unverified contract
 and intentional changes. A visual redesign alone does not authorize changing
 commercial/legal terms or publishing a migration.
 
-## Commercial brief and claim inventory
+## Marketing copy and claims
 
-Before writing new copy, recover the audience's situation, desired outcome,
-current alternative, decision stage and material objections from supplied context.
-Distinguish user, buyer and approver when they need different evidence. Ask only
-for missing facts that would otherwise force an invented offer or claim.
-
-Maintain a small working inventory for claims used on the page. Return it in the
-response for planning or review; update an existing brief only when the requested
-work authorizes editing it. Use this shape rather than a second marketing ledger:
-
-| Claim | Evidence and scope | Qualification | Decision |
-| --- | --- | --- | --- |
-| Proposed promise, number, testimonial or guarantee | Supplied source, date/population and permission where relevant | Limits needed for an accurate reading | Supported, needs confirmation, or omit |
-
-A design example is not evidence for a customer count. Distinguish an aspiration
-from a product capability already available. Keep the promise, supporting proof,
-CTA destination and post-click experience aligned; an honest narrower promise
-is preferable to an unsupported stronger one. Flag contradictions with approved
-copy rather than silently changing commercial facts.
-
-## Write, edit and refresh marketing copy
-
-Establish editing scope from the request and supplied text: polishing wording,
-refreshing facts or rewriting the argument. A wording edit preserves the intended
-message, offer, qualifications and next action. A rewrite can change the argument
-within the requested scope; flag a needed positioning or offer decision rather
-than silently making it. For new copy or changed claims, use the
-[commercial brief and claim inventory](#commercial-brief-and-claim-inventory).
-Reuse established context; ask only for missing facts that block accurate copy.
-
-### Voice and naturalness
-
-Use the existing brand guidance and approved writing samples to identify voice:
-formality, vocabulary, rhythm and acceptable humor. Keep the voice recognizable
-while adapting tone to the audience and situation. Product names, domain terms
-and legal meaning remain stable. Neutral technical or legal prose can be the
-appropriate voice; do not inject personality merely to make it sound human.
-
-Replace inflated praise, vague authority and formulaic filler with the supported
-mechanism, example or outcome. Changing synonyms alone does not make a vague
-claim useful. Keep author notes, editing commentary and chatbot offers out of
-publishable copy. Preserve factual scope and meaningful uncertainty; never add
-personal experience, customer quotations or numbers for a more natural voice.
-Treat stylistic patterns as editing cues, not evidence of who wrote the text;
-punctuation bans and fixed sentence or paragraph counts are not quality measures.
-
-### Refresh factual content
-
-Check affected capabilities, prices, terms, examples, statistics and links against
-current product behavior and dated evidence. Retain accurate historical dates and
-qualifications; changing a date alone does not refresh the underlying evidence.
-When the core promise still holds, update the affected details. A changed
-audience, offer or argument can justify a rewrite within the authorized scope.
-Name unresolved facts instead of filling gaps with plausible claims. Content age
-or declining traffic alone does not establish that the wording caused a problem.
-
-### Recheck the edited copy
-
-Select checks for the actual change: clarity, voice, claim support and consistency
-between the promise, CTA and destination. Read changed lines in their surrounding
-context so a smoother sentence does not lose a limit or contradict nearby text.
-For implemented text changes, verify affected wrapping and controls through the
-existing interface checks; use [public-page contracts](#public-redesign-contracts)
-when those contracts change. Return usable copy and material unresolved facts;
-explain consequential choices without annotating every line or requiring a fixed
-sequence of editorial passes. Editorial review does not prove higher conversion.
+Claims on the page follow the
+[commercial brief and claim inventory](copywriting.md#commercial-brief-and-claim-inventory);
+wording, voice, factual refresh and rechecking follow
+[write, edit and refresh marketing copy](copywriting.md#write-edit-and-refresh-marketing-copy).
+That guide is shared with other skills. For implemented text changes, verify
+affected wrapping and controls through the existing interface checks, and use
+[public-page contracts](#public-redesign-contracts) when URLs, metadata,
+analytics or forms change.
 
 ## Narrative and alternatives
 
@@ -231,6 +174,7 @@ Remove sections that repeat a claim without adding useful proof or resolving an
 objection. Preserve the public-site's established header, navigation and vocabulary.
 
 When asked to explore messaging, offer a small set of headline/CTA alternatives
+(see the [headline menu](copywriting.md#generate-headline-alternatives))
 on one meaningful axis, such as outcome-led versus workflow-led framing. Each
 option must use the same supported facts and state its audience fit or tradeoff.
 CTA wording describes the actual next step: booking a conversation differs from

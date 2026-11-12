@@ -84,7 +84,7 @@ conditions supported by the business rather than inventing available terms.
 For a useful offer draft, state audience, problem/result, differentiation, what
 is included, limits, supported proof, price or research scenario, and next step.
 Separate delivered capabilities from proposed additions. Use the
-[claim inventory](landing-pages.md#commercial-brief-and-claim-inventory) for sales
+[claim inventory](copywriting.md#commercial-brief-and-claim-inventory) for sales
 claims as well as website copy. Use [pricing economics](pricing-economics.md)
 for price bounds and [monetization](monetization.md) for tiers and trial design.
 

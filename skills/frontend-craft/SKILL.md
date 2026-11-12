@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/
 metadata:
   author: Antonio Fulgêncio
-  version: "0.23.0"
+  version: "0.24.0"
 ---
 
 # Frontend Craft
@@ -66,7 +66,7 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Coordinate several elements that animate together: staggers, view swaps, exits, multi-step transitions | [choreography](references/motion.md#coordinate-several-moving-elements) | A role-based timeline in which the group reads as one motion and nothing blocks input |
 | Subtract animation the user or owner finds excessive (reduced-motion handling stays in [motion](references/motion.md#handle-interruption-and-alternatives)) | [remove or reduce motion](references/motion.md#remove-or-reduce-motion) | Subtractive edits with dependent code and orphans cleaned up, and the kept motion with its purpose |
 | Diagnose a specific animation that stutters or drops frames (page-level responsiveness stays in performance) | [dropped frames](references/motion.md#diagnose-dropped-frames) | A named cause per finding, a cheaper property or driver, and device-recording limits |
-| Write, edit, refresh or rewrite marketing copy, headlines or CTAs; improve brand voice or naturalness | [marketing copy](references/landing-pages.md#write-edit-and-refresh-marketing-copy), following only its relevant brief and claim routes | Usable copy within the requested editing scope, with consistent voice and supported claims |
+| Write, edit, refresh or rewrite marketing copy, headlines or CTAs; improve brand voice or naturalness | [marketing copy](references/copywriting.md#write-edit-and-refresh-marketing-copy), following only its relevant brief and claim routes | Usable copy within the requested editing scope, with consistent voice and supported claims |
 | Create or assess a marketing/landing page; redesign a public page | [landing pages](references/landing-pages.md), including its commercial and review routing | A persuasive decision path or prioritized conversion findings, preserving public contracts |
 | Check whether a public site or new public route is ready to launch | [launch readiness](references/technical-seo.md#check-public-launch-readiness) | A yes/no/not-applicable table with deployed or rendered evidence and external actions named |
 | Change public indexing, SSR content, metadata, canonicals, sitemaps or AI discovery | [technical SEO and discovery](references/technical-seo.md) | A coherent public-route contract with HTML/HTTP evidence and explicit deployment and search-acceptance limits |
