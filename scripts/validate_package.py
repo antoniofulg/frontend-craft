@@ -20,7 +20,7 @@ REQUIRED_LICENSES = {
     "frontend-craft": [
         "anthropic-knowledge-work-plugins.txt", "compozy.txt", "coreyhaines-marketingskills.txt",
         "enmera-ai-design-check.txt", "mbfinotti-sales-skills.txt", "pedronauck-skills.txt",
-        "revenue-centric-design.txt",
+        "revenue-centric-design.txt", "social-media-skills.txt",
     ],
     "video-craft": [
         "anthropic-knowledge-work-plugins.txt", "coreyhaines-marketingskills.txt",

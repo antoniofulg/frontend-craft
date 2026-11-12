@@ -5,7 +5,7 @@ cooperate when both are present.
 
 | Skill | Version | Purpose | Release tag |
 | --- | --- | --- | --- |
-| [`frontend-craft`](skills/frontend-craft/SKILL.md) | **0.25.0** | Product strategy, sales and growth, and the interfaces that support them | `vX.Y.Z` (for example `v0.25.0`) |
+| [`frontend-craft`](skills/frontend-craft/SKILL.md) | **0.26.0** | Product strategy, sales and growth, and the interfaces that support them | `vX.Y.Z` (for example `v0.26.0`) |
 | [`video-craft`](skills/video-craft/SKILL.md) | **0.1.0** | Social videos, landing-page loops, product demos, captions, storyboards and prospecting clips | `video-craft-vX.Y.Z` (for example `video-craft-v0.1.0`) |
 
 See the [release notes](CHANGELOG.md); each entry is headed by the skill name and
@@ -234,6 +234,28 @@ costs and internal tools. Read them for those tasks; ordinary frontend work keep
 its existing focused routes. Platform/API details are verified against current
 official documentation when needed, rather than frozen into vendor tables.
 
+Reaching buyers is covered by the [outbound guide](skills/frontend-craft/references/outbound.md):
+a prospect list built from the ICP with account fit, persona and buying trigger kept
+separate, signals and tiers, a first-customer method that starts from public demand
+signals, a five-part reason to reach out whose claims are all verifiable, cold email
+plays, cadence, stop rules and reply handling, LinkedIn outreach with its automation
+risk, deliverability, a compliance checklist (not legal advice), consent-first social
+selling, measures by segment and play, and when an outreach video belongs, which it
+hands to `video-craft`. [Growth and sales](skills/frontend-craft/references/growth-sales.md)
+adds a [buyer business case](skills/frontend-craft/references/growth-sales.md#build-a-buyer-business-case)
+with every number labeled, a [deal-risk review](skills/frontend-craft/references/growth-sales.md#review-a-deal-for-risk)
+graded by severity and confidence, and a [win-loss method](skills/frontend-craft/references/growth-sales.md#learn-from-won-lost-and-no-decision-outcomes).
+Outbound work drafts messages; it never sends them.
+
+```text
+$frontend-craft Build a prospect list from our ICP for mid-size logistics firms. Show account fit, persona and trigger separately, tier it, and cite a source and date for each contact.
+$frontend-craft We have no customers yet. Find people showing the pain in public, with evidence for each, and draft a seven-day manual outreach plan.
+$frontend-craft Plan a cold email play for this segment with cadence, stop rules and reply handling, and list the deliverability and compliance items to check first.
+$frontend-craft Build a business case for this deal from the numbers the buyer gave us. Label every figure and lead with the conservative scenario.
+$frontend-craft Review these call notes for deal risk. Quote the evidence for each flag and ask one question per gap.
+$frontend-craft Code our last 20 closed deals by reason, plan the loss interviews and turn the findings into offer and positioning changes.
+```
+
 ```text
 $frontend-craft Reconcile our CRM and billing scorecard. Define pipeline, payback and attribution rules, then identify decisions we can support with this data.
 $frontend-craft Design our lead enrichment and sales handoff workflow. Include qualification, ownership, failure recovery, costs and a safe verification plan.
@@ -242,7 +264,7 @@ $frontend-craft Implement the approved CRM workflow using our existing stack. Ve
 
 The [skill entrypoint](skills/frontend-craft/SKILL.md) routes to focused references:
 mapping; design systems; reuse and consistency; shared UI patterns; components; interaction and accessibility; motion;
-commercial strategy; growth and sales; commercial visuals; landing pages; imagery;
+commercial strategy; growth and sales; outbound and prospecting; commercial visuals; landing pages; imagery;
 GTM measurement and automation;
 checkout; activation; monetization; retention; behavioral design; dashboards; product strategy;
 positioning and distribution; experimentation; performance and loading states; technical SEO and discovery; visual details
@@ -613,6 +635,11 @@ the new `video-craft` 0.1.0, the shared offer brief and the two-skill package
 validation. It records package, script and anchor checks; the new scenarios were
 not exercised for this release.
 
+The [0.26.0 verification record](evals/verification-0.26.0.md) covers the outbound
+guide and the business-case, deal-risk and win-loss sections. It records package,
+script and anchor checks and both skill-tree digests; the new scenarios were not
+exercised for this release.
+
 ## License and sources
 
 Copyright 2026 Antonio Fulgêncio. This package has [mixed license terms](LICENSE).
@@ -645,6 +672,16 @@ marketingskills copywriting skill, with the
 [full upstream notice](skills/frontend-craft/licenses/coreyhaines-marketingskills.txt)
 retained and the [adaptation boundary](skills/frontend-craft/SOURCES.md#shared-marketing-copy-guidance)
 recorded. No upstream code or tool is bundled.
+
+The outbound, business-case and win-loss guidance adapts MIT-licensed material from
+Corey Haines' marketingskills (cold-email, prospecting and sales-enablement),
+mbfinotti's sales-skills and the social-media-skills `social-selling-and-dm` skill,
+with the [upstream notices](skills/frontend-craft/licenses/social-media-skills.txt)
+retained (see also the
+[Corey Haines](skills/frontend-craft/licenses/coreyhaines-marketingskills.txt) and
+[mbfinotti](skills/frontend-craft/licenses/mbfinotti-sales-skills.txt) notices) and the
+[adaptation boundary](skills/frontend-craft/SOURCES.md#outbound-business-case-and-win-loss)
+recorded. No upstream code, tool or data is bundled.
 
 [Source notes](skills/frontend-craft/SOURCES.md) identify the adaptation scope,
 upstream revision and changes. No third-party skill bundle, recipe library,

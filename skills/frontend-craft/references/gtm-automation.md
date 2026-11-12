@@ -245,7 +245,7 @@ delivery and opt-out behavior after savings; no fixed savings percentage is prom
 | Workflow | Decision path and evidence to verify |
 | --- | --- |
 | Inbound qualification | Form/chat request, validation and deduplication, required enrichment, qualification, accepted owner handoff and tracked response; preserve the prospect's stated request. |
-| Outbound research and follow-up | Authorized audience, sourced research, supported draft, agreed review/send policy, response classification and stopped sequences; evaluate held meetings and downstream outcomes. |
+| Outbound research and follow-up | Authorized audience, sourced research, supported draft, agreed review/send policy, response classification and stopped sequences; evaluate held meetings and downstream outcomes. [Outbound](outbound.md) owns the list, message, cadence and compliance rules. |
 | Trial and activation | Verified signup/trial state, actual entitlements, permitted onboarding step and progress toward [first value](activation.md); preserve opt-outs and current account context. |
 | Expansion and retention | Meaningful usage, capacity or support signals, verified account context and appropriate owner action. Use [monetization](monetization.md) and [retention](retention.md); higher usage is not automatically expansion readiness. |
 | Content and competitive signals | Permitted content/discovery or competitor-change evidence, relevance review, source-linked brief and appropriate next action. Use [technical SEO](technical-seo.md) and [positioning](positioning-distribution.md); observed interest is not purchase intent. |
