@@ -24,6 +24,8 @@ When validating an offer, seek real commitments appropriate to the product:
 paid prototypes, pilots, purchases or transparent pre-sales with clear delivery
 terms. Interview interested people who decline about the obstacle to paying now.
 Separate curiosity, signup, willingness to pay, actual payment and retained use.
+To find the first people to ask, mine public pain and demand signals as described
+in [outbound](outbound.md#find-first-customers-from-demand-signals).
 Early customer counts in the source are examples, not gates requiring ten or
 twenty customers before design or launch. Provide enough usability and credibility
 to test the offer fairly; pilot commitments must not promise unavailable work.

@@ -19,6 +19,8 @@ Separate revenue recovered from profit recovered, time saved from cash actually
 saved, and demonstrated outcomes from projections. The resulting value estimate
 is a reference for research, not proof of willingness to pay or a universal price
 ceiling. Competition, credibility, switching effort and budget constrain capture.
+For a specific deal, the buyer's own numbers go into a
+[business case](growth-sales.md#build-a-buyer-business-case), not into the list price.
 
 A low price may signal weak value or attract a different segment, but price alone
 does not identify poor customers. Compare fit, support cost and retention by cohort.

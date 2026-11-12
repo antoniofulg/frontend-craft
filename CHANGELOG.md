@@ -5,6 +5,43 @@ name and version. Entries without a skill name (0.24.0 and earlier) belong to
 `frontend-craft`. Tags are per skill: `frontend-craft` uses `vX.Y.Z` and
 `video-craft` uses `video-craft-vX.Y.Z`.
 
+## frontend-craft 0.26.0 — 2026-11-11
+
+- New reference, [outbound](skills/frontend-craft/references/outbound.md), closing
+  the gap before "reached prospects". It covers building a prospect list from the
+  ICP (account fit, persona and buying trigger kept separate, sourced and dated
+  signals with freshness windows, tiering by effort, small samples treated as a
+  hypothesis), a first-customer method from public demand signals, a five-part
+  reason to reach out in which every claim about the prospect is verifiable, cold
+  email plays, structure, cadence, stop rules and reply handling, LinkedIn outreach
+  and its automation-ban risk, deliverability (domains, SPF, DKIM, DMARC, warm-up,
+  volume, bounce hygiene, with provider requirements dated 2026-11-11),
+  compliance (CAN-SPAM, GDPR and LGPD legitimate interest, opt-out and data
+  sourcing, stated as not legal advice with what to verify), consent-first social
+  selling, measures by segment and play linked to GTM measurement, and when an
+  outreach video belongs, handed to `video-craft` in plain text. Vendor
+  benchmarks are labeled as vendor data and there are no tool tables.
+- [Growth and sales](skills/frontend-craft/references/growth-sales.md) gains three
+  sections: a [buyer business case](skills/frontend-craft/references/growth-sales.md#build-a-buyer-business-case)
+  sized to the deal, with every number labeled with the offer brief's labels
+  (buyer-supplied, named benchmark, seller-assumed); a
+  [deal-risk review](skills/frontend-craft/references/growth-sales.md#review-a-deal-for-risk)
+  with flags graded by severity and confidence and an honest "unknown"; and a
+  [win-loss method](skills/frontend-craft/references/growth-sales.md#learn-from-won-lost-and-no-decision-outcomes)
+  with a six-code scheme, interview questions and a finding-to-action map.
+  Pricing economics, positioning and distribution and GTM automation link to them.
+- Routing: three new rows (prospecting and outbound, business case, deal risk and
+  win-loss); the video row names prospecting clips and points to the outbound
+  video section. The description keeps its triggers, adds "prospecting and
+  outbound" and stays under the 1,024-character limit (1,017 to 1,015).
+- Adapted from Corey Haines' marketingskills (`cold-email`, `prospecting`,
+  `sales-enablement`), mbfinotti's sales-skills (`sales-outreach-personalization`,
+  `deal-red-flags`, `deal-value-calc`, `sales-account-tiering`) and the
+  social-media-skills `social-selling-and-dm` skill (all MIT). The last has a new
+  notice in `licenses/`, which `scripts/validate_package.py` now requires.
+- `shared/` is unchanged, so `video-craft` is byte-for-byte identical to 0.1.0 and
+  needs no release.
+
 ## video-craft 0.1.0 — 2026-11-11
 
 - New skill, [video-craft](skills/video-craft/SKILL.md): plan, edit and prepare

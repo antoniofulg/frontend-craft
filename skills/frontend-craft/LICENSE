@@ -49,3 +49,12 @@ licenses/mbfinotti-sales-skills.txt
 licenses/anthropic-knowledge-work-plugins.txt
 The Apache-2.0 material was changed: rewritten in this skill's own words and
 reduced to the rules named in SOURCES.md.
+The outbound, business-case and win-loss guidance in 0.26.0 adapts ideas from
+Corey Haines' MIT-licensed marketingskills (cold-email, prospecting and
+sales-enablement skills), mbfinotti's MIT-licensed sales-skills (outreach
+personalization, deal red flags, deal value and account tiering) and the MIT-licensed
+social-media-skills social-selling-and-dm skill. Retain the upstream notices in:
+licenses/coreyhaines-marketingskills.txt
+licenses/mbfinotti-sales-skills.txt
+licenses/social-media-skills.txt
+See SOURCES.md for the source revisions and adaptation boundaries.

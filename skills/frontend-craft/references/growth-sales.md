@@ -1,7 +1,9 @@
 # Product growth, offers and sales
 
 Read for “help me sell more,” business strategy, a full commercial product audit,
-offer design or an assisted-sales problem. Use the brief and source terms in
+offer design, an assisted-sales problem, a buyer business case, deal risk or
+win-loss review. Reaching prospects in the first place is covered by
+[outbound and prospecting](outbound.md). Use the brief and source terms in
 [commercial strategy](commercial-strategy.md). This guide connects the twelve
 Revenue-Centric Design themes to business decisions, with additional sales
 application by Frontend Craft; see [sources](../SOURCES.md#standalone-strategy-and-sales-in-060).
@@ -22,7 +24,7 @@ its cause; examine conversations, observed behavior and account outcomes.
 
 | Observed pattern | Investigate | Candidate action |
 | --- | --- | --- |
-| Few relevant prospects | Audience access, problem urgency, channel/message fit | Narrow a reachable segment and test a concrete acquisition approach |
+| Few relevant prospects | Audience access, problem urgency, channel/message fit | Narrow a reachable segment and test a concrete acquisition approach; for list building and outreach, use [outbound](outbound.md) |
 | Attention or signups without purchase intent | Buyer fit, costly problem, offer and proof | Validate the buying trigger and test a specific paid offer |
 | Qualified buyers stall before commitment | Objections, decision roles, risk, price, proposal and procurement | Change the sales process, evidence, package or evaluation path |
 | Buyers pay but fail to obtain value | Setup, implementation capacity, expectations and time-to-value | Improve first-value delivery or qualify the offer more accurately |
@@ -91,7 +93,9 @@ for price bounds and [monetization](monetization.md) for tiers and trial design.
 ## Improve the assisted buying process
 
 Trace reached prospects → conversations → qualified opportunities → evaluation
-or demo → proposal → decision → payment → first value. Adapt the stages to the
+or demo → proposal → decision → payment → first value. How prospects were found
+and contacted is [outbound](outbound.md); this section starts once they respond.
+Adapt the stages to the
 real buying process; record counts, elapsed time, loss/no-decision reasons and
 next commitments. Separate contact response from qualification and a signed
 agreement from collected payment. Include acquisition and sales labor when
@@ -123,6 +127,162 @@ buyer's unresolved question and agreed timing, with a useful piece of evidence.
 Present outreach or follow-up text for use; sending it depends on the user's
 existing authorization. A strategy request alone is not an instruction to contact
 customers, spend money or change live commercial commitments.
+
+## Build a buyer business case
+
+Use when a buyer must justify the purchase to someone else: a finance reviewer,
+a committee, a spouse or co-signer. The seller supplies the structure and the
+arithmetic; the buyer supplies the company-specific inputs. A case built from the
+seller's own estimates spends the champion's credibility the moment finance
+questions a number. Start it after the first discovery conversation and revise it
+with the buying team, not as a late leave-behind.
+
+**Size it to the deal.** The trigger is complexity, such as about six or more
+stakeholders, procurement or security in the path, or strategic rather than
+tactical spend, not a price threshold.
+
+| Deal | Artifact |
+| --- | --- |
+| Transactional, one decider | A payback line with one or two value drivers and the full cost |
+| Mid-market | One page plus a light model: an input ledger, three or four drivers, three scenarios and sensitivity on the inputs the result hinges on |
+| Enterprise or committee | A full model, a summary for the economic buyer and a separate finance version with sourced assumptions |
+
+**Label every number** with the [offer brief's labels](offer-brief.md#label-every-number-in-the-proof-inventory):
+buyer-supplied, named benchmark or seller-assumed. Keep a ledger with each
+input's value, unit, source, label and date. Do not invent a missing input:
+ask the buyer, or leave a visible placeholder such as `[NEEDED: loaded hourly
+cost, from the buyer]`. The seller's own price and fees come from the written
+quote. If the headline result rests mostly on seller-assumed inputs, say so on
+the face of the document. When the buyer corrects a number, relabel it
+buyer-supplied; the corrected figure is stronger evidence than the original.
+
+**Choose drivers the buyer can feed.** Common ones: retired direct cost, labor
+time, error or rework, downtime, revenue lift counted at margin rather than top
+line, churn and risk or compliance exposure. Keep hard value (cash that leaves
+the budget or arrives) apart from soft value (capacity freed, avoided hires,
+risk reduced), and do not count one benefit under two drivers. Time saved becomes
+cash only when it is redeployed to additive work or removes a planned hire; see
+[pricing economics](pricing-economics.md#establish-economic-and-customer-value-bounds).
+Drop a driver the buyer cannot support instead of filling it with a plausible
+figure.
+
+**Count the full cost to the buyer:** price, implementation and integration,
+internal effort, training and ongoing administration, over a stated horizon.
+State the ROI convention and payback method, and guard the case where payback is
+undefined. Show three scenarios, conservative first, and test whether the
+conservative case clears the buyer's own hurdle on hard value alone. If it does
+not, tell the user before writing any narrative.
+
+**Write it to be forwarded.** The reader may never meet the seller, so the
+document carries the problem in the buyer's units, the cost of doing nothing,
+time to value and the confidence in each assumption. Use plain formatting without
+vendor polish. Keep internal margin and discount limits out of it, per the offer
+brief's audience rule. Record edit rounds and agreed assumptions; do not promise
+a lift from the number of rounds.
+
+## Review a deal for risk
+
+Use when a deal is stalled, slipping or on a forecast, and the evidence is the
+written record: call notes, emails, CRM fields and activity. The review grades the
+notes, not the deal, so thin notes produce many unknowns, and that is itself a
+finding about record keeping.
+
+Grade each flag on two separate axes and never merge them into one score:
+
+- **Severity:** how much damage the risk does to this deal if real, judged
+  against its size and cycle length.
+- **Confidence:** how the record evidences it. *Verified*: a first-hand buyer
+  statement, quoted. *Assumed*: only the seller's inference or a second-hand
+  relay, quoted. *Unknown*: the notes are silent. *Cleared*: the notes contain
+  the evidence that disproves it, quoted.
+
+A flag rated verified or assumed needs the exact fragment behind it; a flag with
+no quotable evidence is unknown. Unknown is the most useful verdict because it
+turns a note gap into the next call's question: write one diagnostic question per
+unknown. Name, for every flag, the evidence that would clear it, so the review is
+not a ratchet in which every deal looks doomed.
+
+| Group | Flags to check, each with a quotable cue |
+| --- | --- |
+| Stakeholders | Only one person ever engaged; no one advocates in rooms the seller is not in; the economic buyer never met; a blocker mentioned but never addressed; a champion who has left |
+| Urgency | No event that forces a decision; a timeline set by the seller; a close date pushed repeatedly |
+| Process | Decision steps undocumented; procurement, legal or security surfacing late; no dated next step |
+| Value | Pain stated only at surface level; impact never quantified; polite interest taken as commitment; requirements from one function only |
+| Engagement | Slower replies; shrinking or rescheduled meetings; notes thinning over time |
+| Commercial | Budget assumed rather than confirmed; the current alternative never discussed |
+
+For a considered consumer purchase, a single decider is normal; the equivalent
+flags are a co-decider never consulted and an ability to pay never confirmed.
+
+Report in this order: red (verified and high severity), amber (verified at lower
+severity, or assumed and high), watch (assumed and lower), gaps with their one
+question each, and cleared flags with the clearing quote. Pick the next touch by
+whether the answer changes what the seller will do. A check of the seller's own
+records is nearly free and can correct the evidence base itself; a single
+question in the thread comes next; asking the buyer for an introduction to the
+missing decision maker costs goodwill and may be refused, but nothing cheaper
+clears an unmet decision maker on a deal that is near commit. Give a verdict of
+what is evidenced versus merely absent and the single next action; do not output a
+win probability. This is a read of one deal; pipeline-level health belongs to
+[GTM measurement](gtm-measurement.md).
+
+## Learn from won, lost and no-decision outcomes
+
+Use to find out why deals end the way they do, as the evidence for the offer,
+objection answers, positioning and roadmap. [GTM measurement](gtm-measurement.md)
+defines win rate; this section supplies the reasons behind it.
+
+**Weigh the sources.** CRM loss reasons are entered by the seller, often at the
+end, and skew toward price, timing and no decision. Won notes are thin. Call
+recordings show what was said, not what decided it. Buyer interviews, of won and
+lost buyers alike, show the decision, but samples are small and lost buyers are
+polite. When sources disagree, prefer the buyer's words to the seller's summary;
+"price" in the CRM often becomes "we did not see enough value for the price" in
+an interview. Churned customers are a separate analysis; use
+[retention](retention.md).
+
+**Code each deal** with one primary reason, optional secondary reasons, a
+supporting quote or note, its source and a confidence level:
+
+| Code | Use when |
+| --- | --- |
+| Product fit | A missing or weaker capability decided it; name the capability |
+| Price or value | Total cost or perceived value decided it; note whether it was absolute budget or value for the price |
+| Onboarding or time to value | Implementation effort, time or services decided it |
+| Trust or risk | Security, references, vendor size or vendor risk decided it |
+| Relationship or process | An incumbent relationship, a departed champion, procurement or a better sales process decided it |
+| Timing or no decision | The buyer chose no vendor; not a competitive loss |
+
+One primary reason per deal keeps the counts equal to the number of deals. A deal
+with only a one-word CRM reason is coded but marked low-confidence. Name who won
+(a competitor, an in-house build or no decision) only when it is evidenced.
+Report competitive losses and no-decision outcomes separately; they need
+different fixes.
+
+**Interview** within two to four weeks of the decision, by someone other than the
+seller, with the buyer's permission and a statement of what the notes are for.
+Ask how the evaluation started, who else was considered, the two or three criteria
+that mattered by the end, where the product came out ahead or fell short, and
+whether a moment tipped the decision. On a loss, push past "price": what would you
+have needed to see to choose this option at that price? Avoid "if we had been the
+same price, would you have chosen us?", which invites a polite yes.
+
+**Read the results with their limits.** Segment by competitor, segment, deal size
+and the stage of the loss before counting. Report counts, not percentages, at
+small sizes: "6 of 9" tells the reader how far to trust it. A slice of fewer than
+about five deals is something to watch, not a finding for a battle card. Read wins
+too: why you win against a competitor is what to lead with against it.
+
+**Turn findings into action** with the count, the revenue involved and the quote:
+
+| Finding | Goes to |
+| --- | --- |
+| The offer, package or price did not read as worth it | [Make the offer worth buying](#make-the-offer-worth-buying) and [pricing economics](pricing-economics.md) |
+| Buyers misunderstood who it is for or why it differs | [Positioning and distribution](positioning-distribution.md); add a disqualifier to the [offer brief](offer-brief.md#icp-persona-and-trigger-are-three-separate-things) when good-fit accounts keep declining |
+| An objection recurs | The objection answers and proposal evidence in [assisted buying](#improve-the-assisted-buying-process) |
+| The same capability gap decides several deals | [Product strategy](product-strategy.md), with the deal count and value lost |
+| Deals die at one stage or from one missing stakeholder | Discovery questions and the deal-risk flags above |
+| Loss reasons are missing or unreliable in the CRM | [Measurement](gtm-measurement.md) data trust and the stage definitions |
 
 ## Deliver actions that can be used
 

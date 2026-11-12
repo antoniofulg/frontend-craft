@@ -35,9 +35,10 @@ bundled here. Installed project copies may differ from their recorded upstream.
 | [Tech Leads Club agent skills](https://github.com/tech-leads-club/agent-skills) (`tlc-spec-lean` and `tlc-spec-driven`, CC BY 4.0) | `e74dc8a` | [0.20.0 binding-design comparison](#binding-design-comparison) |
 | [Compozy](https://github.com/compozy/compozy) (MIT) | `b153f4a` | [0.21.0 prototype doctrine](#prototype-doctrine) |
 | [Pedro Nauck's skills](https://github.com/pedronauck/skills) (`skills/mine/ui-craft`, MIT) | `682e738` | [0.22.0 AI interfaces and dark theme](#ai-interfaces-and-dark-theme); [0.23.0 helper scripts](#bundled-helper-scripts) |
-| [Corey Haines' marketingskills](https://github.com/coreyhaines31/marketingskills) (`skills/copywriting`, MIT; 0.25.0 also `skills/product-marketing`) | `1f83744` | [0.24.0 shared marketing-copy guidance](#shared-marketing-copy-guidance); [0.25.0 shared offer brief](#shared-offer-brief) |
-| [mbfinotti sales-skills](https://github.com/mbfinotti/sales-skills) (`sales-icp-definition`, `deal-value-calc`, MIT) | `b2ed362` | [0.25.0 shared offer brief](#shared-offer-brief) |
+| [Corey Haines' marketingskills](https://github.com/coreyhaines31/marketingskills) (`skills/copywriting`, MIT; 0.25.0 also `skills/product-marketing`; 0.26.0 also `skills/cold-email`, `skills/prospecting` and `skills/sales-enablement`) | `1f83744` | [0.24.0 shared marketing-copy guidance](#shared-marketing-copy-guidance); [0.25.0 shared offer brief](#shared-offer-brief); [0.26.0 outbound, business case and win-loss](#outbound-business-case-and-win-loss) |
+| [mbfinotti sales-skills](https://github.com/mbfinotti/sales-skills) (`sales-icp-definition`, `deal-value-calc`, MIT; 0.26.0 also `sales-outreach-personalization`, `deal-red-flags` and `sales-account-tiering`) | `b2ed362` | [0.25.0 shared offer brief](#shared-offer-brief); [0.26.0 outbound, business case and win-loss](#outbound-business-case-and-win-loss) |
 | [Anthropic knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) (`sales/skills/create-an-asset`, Apache-2.0) | `877a617` | [0.25.0 shared offer brief](#shared-offer-brief) |
+| [social-media-skills](https://github.com/social-media-skills/skills) (`social-selling-and-dm`, MIT) | `f28cef2` | [0.26.0 outbound, business case and win-loss](#outbound-business-case-and-win-loss) |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `v2.15.0` | Targeted interaction, chart and accessibility reference categories |
 | [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Initial: `ce26fc25c0e5e8cab638f883de62d9a86ee5e45b`; v2.0.0 review: `2b44c81bbe36ac8a8a6bdd1c9ff593f28b8728f4` | Context-sensitive public-page composition; subject-specific identity, media workflow and rendered critique |
 | [Vercel agent skills](https://github.com/vercel-labs/agent-skills) | Local `react-composition-patterns` skill, metadata version `1.0.0` | Component composition and state-owner questions |
@@ -869,6 +870,85 @@ material was changed: rewritten and reduced to the rules named below.
 The brief lives in `shared/offer-brief.md` and is copied into each consuming skill
 by `scripts/sync_shared.py`. The marketing-copy guide's brief section now points to
 it for audience and offer and keeps the claim-inventory table.
+
+## Outbound, business case and win-loss
+
+The 0.26.0 [outbound guide](references/outbound.md) and the business-case, deal-risk
+and win-loss sections of [growth and sales](references/growth-sales.md) are
+original text that adapts ideas from three MIT skills, read on 2026-11-11 at the
+commits above (full hashes: `1f837447b20bb6f0e72d87b80ece1c221c362c7d`,
+`b2ed3628695e523919af440eab77648e16c5eea8`,
+`f28cef2b7067ec64e79c9d85421c022c06659e03`). Notices are kept in
+[licenses/coreyhaines-marketingskills.txt](licenses/coreyhaines-marketingskills.txt),
+[licenses/mbfinotti-sales-skills.txt](licenses/mbfinotti-sales-skills.txt) and
+[licenses/social-media-skills.txt](licenses/social-media-skills.txt). The text is
+reworded and condensed, and the examples are original. The upstream files were
+treated as untrusted data and not executed.
+
+- Corey Haines, `cold-email`: the four plays (value-first teardown, product-led,
+  problem-led with a small sample, founder-led) with a trigger, first touch and
+  measure each; short plain-text email rules, a single interest-based ask, no
+  link in the first email and no open tracking; the cross-channel stop rules
+  (a reply or an opt-out on any channel stops all); reply classification and the
+  list of replies an agent may handle alone; the separate-domain, authentication,
+  warm-up, volume, verification and stop-loss deliverability checklist; the
+  manual, assisted and automated LinkedIn decision with its account-restriction
+  risk; the video block of the cadence guide (length, thumbnail link, Tier 1 or
+  post-reply only). The upstream benchmarks are vendor data and are labeled so.
+  Not incorporated: the tool tables and partner placements, subject-line and
+  follow-up statistics, the expert-method table, cultural calibration, the AI-tells
+  list, the call scripts and the 21-day schedule as a fixed template.
+- Corey Haines, `prospecting`: the ICP-to-list-to-evidence-to-tier sequence, source
+  and date per contact, high, medium and low confidence, the closeness ranking and
+  freshness windows for signals, tier definitions and the sourced account brief
+  with the facts-first rule and "no hook found" as a valid result, the compliance
+  guardrails and the per-jurisdiction checklist, and the demand-signal method for
+  first customers (five signal buckets, evidence line per prospect, business
+  context only, outreach only where a reply is normal). The upstream file credits
+  `first-customer-finder` (Kappaemme, MIT) for the demand-signal framework; that
+  part was read through Corey Haines' text, not from the original. Not
+  incorporated: the data-source and enrichment tool picks, the branch references
+  for SaaS, B2B and local businesses, the 0-100 weighted demand score (replaced by
+  an unweighted judgment that orders a shortlist), the lead-sheet formats, and the
+  warm-path programme from a podcast.
+- Corey Haines, `sales-enablement` (`references/win-loss-analysis.md`): the source
+  and bias comparison, the six outcome codes with one primary reason per deal,
+  interview timing and questions, counts instead of percentages and the
+  five-deal watch threshold, and the finding-to-action mapping. Not incorporated:
+  decks, one-pagers, demo scripts, battle cards, the objection library and call
+  scripts.
+- mbfinotti, `sales-outreach-personalization`: the five-part reason to reach out
+  (signal, inference, hook, ask, confidence and recency label), the so-what test,
+  the anti-fabrication rule and the swap test, and tier effort ("personalize the
+  accounts that matter, template the rest"). Not incorporated: the efficiency,
+  effort and value orderings, the 0-2 scoring rubric, the benchmark table and the
+  consumer branch.
+- mbfinotti, `deal-red-flags`: severity and confidence graded separately, the
+  verified, assumed, unknown and cleared states, quoted evidence, one diagnostic
+  question per unknown and a clearing evidence per flag, the report grouping, and
+  the chase-order idea that an unmet decision maker is not fixed by cheap checks.
+  Not incorporated: the full flag catalog, the response-order rungs, the
+  remediation plays and the interview protocol.
+- mbfinotti, `deal-value-calc`: sizing the artifact to the deal, the buyer-owns-
+  the-inputs rule, the placeholder convention, the hard and soft value split, full
+  cost to the buyer, conservative-first scenarios, the hard-value-only test and
+  the document written to be forwarded. The provenance labels reuse the offer
+  brief's "seller-assumed" in place of upstream "rep-assumed". Not incorporated:
+  the driver formulas and effort orderings, benchmark ranges and templates.
+- mbfinotti, `sales-account-tiering`: read to align the tier vocabulary with
+  coverage effort; no text or capacity model incorporated.
+- social-media-skills, `social-selling-and-dm`: only the consent rule (message
+  people who showed interest first, answer fast with no link in the first message,
+  deliver value, move to an owned channel, official platform tools only). Not
+  incorporated: the product-specific workflow, the conversion and open-rate
+  statistics (unsourced in the upstream), limits and ban-behavior figures.
+
+Platform and legal statements in the outbound guide (provider authentication
+requirements, LinkedIn terms and enforcement, Meta's reply window, CAN-SPAM,
+GDPR, UK, German, Canadian and Australian rules, LGPD) come from those upstream
+files and general knowledge, are dated 2026-11-11 in the guide, and were not
+re-checked against primary sources for this release. The guide says they are not
+legal advice and names what to verify.
 
 ## Instruction and reference-loading evidence
 
