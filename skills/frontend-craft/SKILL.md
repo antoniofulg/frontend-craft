@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/
 metadata:
   author: Antonio Fulgêncio
-  version: "0.22.0"
+  version: "0.23.0"
 ---
 
 # Frontend Craft

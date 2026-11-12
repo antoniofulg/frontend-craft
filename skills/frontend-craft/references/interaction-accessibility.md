@@ -383,6 +383,11 @@ variable backgrounds require more than sampling one convenient pixel. Preserve
 semantic color meaning and pair color with text, shape or another cue for status.
 For charts, retain labels/units and an accessible way to obtain essential values.
 Theme changes must preserve relationships, not merely invert raw colors.
+For resolved color pairs without a project check, the read-only
+[check-contrast.mjs](../scripts/check-contrast.mjs) is an optional helper (`--fg`,
+`--bg`, `--large` for large text and UI components, or `--json`). It composites a
+translucent foreground over an opaque background and does not replace sampling the
+rendered result.
 
 ### Forced colors and translated content
 

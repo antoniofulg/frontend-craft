@@ -1,6 +1,6 @@
 # Frontend Craft
 
-Current version: **0.22.0**. See the [release notes](CHANGELOG.md).
+Current version: **0.23.0**. See the [release notes](CHANGELOG.md).
 
 Improve product strategy, sales and profitable growth, and build or review the
 interfaces that support them. Frontend Craft helps choose audiences, shape offers,
@@ -320,6 +320,14 @@ honest uncertainty, memory and off controls and accessible streamed output. The
 covers per-theme semantic roles, elevation, accents, assets, contrast and
 flash-free theme choice. Both route to existing owners instead of duplicating them.
 
+Two optional Node helpers (no dependencies, read-only) ship in
+[`skills/frontend-craft/scripts/`](skills/frontend-craft/scripts):
+`check-contrast.mjs` reports the WCAG 2.2 ratio and APCA Lc for hex, `rgb()` and
+`oklch()` pairs, and `detect-token-drift.mjs` lists raw color literals outside
+token files. They are referenced from the dark-theme, accessibility and shared UI
+patterns guidance as aids, never gates; a project's own lint wins. Check them with
+`node --test scripts/test_skill_scripts.mjs`.
+
 ## Commercial reviews
 
 The [commercial visuals reference](skills/frontend-craft/references/commercial-visuals.md)
@@ -520,6 +528,10 @@ The [0.22.0 verification record](evals/verification-0.22.0.md) covers the AI and
 agent interfaces reference and the dark theme section. It records package checks
 only; the new scenarios were not exercised for this release.
 
+The [0.23.0 verification record](evals/verification-0.23.0.md) covers the two
+helper scripts. It records the script tests and package checks; the new scenarios
+were not exercised for this release.
+
 ## License and sources
 
 Copyright 2026 Antonio Fulgêncio. This package has [mixed license terms](LICENSE).
@@ -543,7 +555,9 @@ The AI-interface and dark-theme guidance adapts MIT-licensed material from Pedro
 Nauck's ui-craft skill, with the
 [full upstream notice](skills/frontend-craft/licenses/pedronauck-skills.txt)
 retained and the [adaptation boundary](skills/frontend-craft/SOURCES.md#ai-interfaces-and-dark-theme)
-recorded. No upstream script, asset or tool is bundled.
+recorded. The two helper scripts added in 0.23.0 are covered by
+[their own record](skills/frontend-craft/SOURCES.md#bundled-helper-scripts); no
+other upstream script, asset or tool is bundled.
 
 [Source notes](skills/frontend-craft/SOURCES.md) identify the adaptation scope,
 upstream revision and changes. No third-party skill bundle, recipe library,

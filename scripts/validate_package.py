@@ -58,7 +58,8 @@ def validate():
     for reference in (SKILL / "references").glob("*.md"):
         if reference not in reached:
             errors.append(f"Unreachable reference: {reference.relative_to(ROOT)}")
-    for required in [ROOT / "README.md", ROOT / "LICENSE", SKILL / "LICENSE", SKILL / "SOURCES.md"]:
+    helpers = [SKILL / "scripts" / "check-contrast.mjs", SKILL / "scripts" / "detect-token-drift.mjs"]
+    for required in [ROOT / "README.md", ROOT / "LICENSE", SKILL / "LICENSE", SKILL / "SOURCES.md", *helpers]:
         if not required.is_file():
             errors.append(f"Missing distribution file: {required.relative_to(ROOT)}")
     return errors

@@ -168,6 +168,12 @@ each status color. Contrast requirements are the same in both themes; see
 [color and contrast](interaction-accessibility.md#layout-typography-and-color).
 Check forced colors and `prefers-contrast` separately.
 
+Optional helper: the read-only [check-contrast.mjs](../scripts/check-contrast.mjs)
+reports WCAG ratio and APCA Lc for hex, `rgb()` or `oklch()` pairs and exits 1 on an
+AA failure: `node <skill-dir>/scripts/check-contrast.mjs --fg "#767676" --bg "#fff"`,
+with `<skill-dir>` this skill's directory. A project's own contrast check wins, and
+APCA is informational.
+
 Check: switch themes with the system setting and the explicit toggle, reload
 with each, and inspect every state (hover, focus, disabled, error, skeleton,
 overlay) and each image or chart in both themes with no flash and no contrast

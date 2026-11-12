@@ -216,6 +216,15 @@ Evaluate precision and scope, not exact phrasing or a required reference-read co
 | Add a dark theme to an app with shared tokens and raw colors in some components | Token files, the theme owner, a component using a hard-coded hex | Remaps semantic roles at the owner without inverting; uses lighter surfaces rather than shadows for elevation; retunes accents keeping hue; gives focus and disabled their own per-theme roles; fixes the component by token, not a local override |
 | Ship a theme toggle for a page that flashes light on reload | The page head, stored preference, `prefers-color-scheme` | Applies the stored or system theme before first paint, offers System, Light and Dark, persists the explicit choice, and checks contrast, focus, charts and images in both themes |
 
+## Helper script cases
+
+| Task given to the agent | Required evidence | Observable outcome to evaluate |
+| --- | --- | --- |
+| Check the muted text color of a new dark theme on its card surface | Token values (one `oklch()`, one hex) and the surface token | Measures each theme and surface pair, using `check-contrast.mjs` or the project's own check; reads the 1 exit as a WCAG AA failure; treats APCA as informational; fixes the token at its owner rather than the component |
+| Check a 50% black overlay label on a photo | The overlay token with alpha and no opaque backdrop | Does not treat the composited-over-white result as the answer; samples the rendered result over the worst image content, noting the helper rejects a translucent background |
+| Audit a codebase for hard-coded colors | A repo with a `tokens/` directory, `hsl(var(--x))` use, `href="#add"` anchors and three real raw hex values | Runs `detect-token-drift.mjs` only if the project has no color lint, reports the three values as candidates and names its false positives and misses; does not call a clean run proof of coverage |
+| Keep a brand hex that must stay literal in a logo file when a drift scan flags it | A raw hex that must stay literal | Marks it with `token-drift-ignore` and a reason, or moves it to the token owner; does not widen the scanner's allow list |
+
 ## Build-time interface cases
 
 Each task builds or changes an interface; the evaluator checks the delivered

@@ -104,7 +104,13 @@ remain uninspected. Report sampled states and environments explicitly.
    markup, repeated utility bundles, hardcoded shared values, CSS modules,
    selectors, inline styles and caller overrides. Search by semantic purpose and
    resolved properties as well as exact strings; class order and conditional
-   composition can disguise the same recipe.
+   composition can disguise the same recipe. For raw color literals, the
+   project's own lint or codegen rule wins; otherwise the read-only
+   [detect-token-drift.mjs](../scripts/detect-token-drift.mjs) is an optional
+   first pass: `node <skill-dir>/scripts/detect-token-drift.mjs src --token-paths
+   "tokens,theme"`, with `<skill-dir>` this skill's directory. Its hits are
+   candidates (it has false positives and misses named or built colors), not proof
+   of coverage; mark accepted exceptions with `token-drift-ignore`.
 3. Trace candidates into their implementations and rendered roles. Compare
    behavior, accessibility, states, responsive/theme differences and runtime
    boundaries using [reuse and consistency](reuse-consistency.md). Classify an

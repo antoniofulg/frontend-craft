@@ -34,7 +34,7 @@ bundled here. Installed project copies may differ from their recorded upstream.
 | [Emil Kowalski's skills](https://github.com/emilkowalski/skills) (MIT) | Initial: `e8a175de22ae1e49370fc144c1f3bb9aeedf988d`; 0.18.0 review: `5206a95`; 0.19.0 review: `715c180` | Motion purpose, frequency and interruption as design questions; [0.18.0 motion and mobile web additions](#motion-coordination-performance-and-mobile-web); [0.19.0 worst-case data, motion craft and variant comparison](#worst-case-data-motion-craft-and-variant-comparison) |
 | [Tech Leads Club agent skills](https://github.com/tech-leads-club/agent-skills) (`tlc-spec-lean` and `tlc-spec-driven`, CC BY 4.0) | `e74dc8a` | [0.20.0 binding-design comparison](#binding-design-comparison) |
 | [Compozy](https://github.com/compozy/compozy) (MIT) | `b153f4a` | [0.21.0 prototype doctrine](#prototype-doctrine) |
-| [Pedro Nauck's skills](https://github.com/pedronauck/skills) (`skills/mine/ui-craft`, MIT) | `682e738` | [0.22.0 AI interfaces and dark theme](#ai-interfaces-and-dark-theme) |
+| [Pedro Nauck's skills](https://github.com/pedronauck/skills) (`skills/mine/ui-craft`, MIT) | `682e738` | [0.22.0 AI interfaces and dark theme](#ai-interfaces-and-dark-theme); [0.23.0 helper scripts](#bundled-helper-scripts) |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `v2.15.0` | Targeted interaction, chart and accessibility reference categories |
 | [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Initial: `ce26fc25c0e5e8cab638f883de62d9a86ee5e45b`; v2.0.0 review: `2b44c81bbe36ac8a8a6bdd1c9ff593f28b8728f4` | Context-sensitive public-page composition; subject-specific identity, media workflow and rendered critique |
 | [Vercel agent skills](https://github.com/vercel-labs/agent-skills) | Local `react-composition-patterns` skill, metadata version `1.0.0` | Component composition and state-owner questions |
@@ -671,9 +671,48 @@ vocabulary (anti-slop hit names and severities), Figma tooling routes, the
 OKLCH values, letter-spacing and weight offsets, the surface-scale code, the
 inline theme script, and its third-party citations beyond the Microsoft
 guidelines. Brand-specific examples (Perplexity, Material, Apple, IBM Carbon) are
-omitted. No script, checker or generator is shipped. The Microsoft guidelines are
+omitted. The 0.22.0 release shipped no script, checker or generator; 0.23.0 adds
+the two helpers recorded in [Bundled helper scripts](#bundled-helper-scripts). The Microsoft guidelines are
 a public research publication consulted through the source's summary, not
 re-read for this release.
+
+## Bundled helper scripts
+
+The 0.23.0 [`scripts/check-contrast.mjs`](scripts/check-contrast.mjs) and
+[`scripts/detect-token-drift.mjs`](scripts/detect-token-drift.mjs) are adapted
+from `scripts/check-contrast.mjs` and `scripts/detect-token-drift.mjs` in Pedro
+Nauck's [ui-craft skill](https://github.com/pedronauck/skills/tree/main/skills/mine/ui-craft)
+(MIT, Copyright (c) 2026 Pedro Nauck) at commit `682e738`, read on 2026-11-11 and
+never run from the downloaded copy. The notice is the one already kept in
+[licenses/pedronauck-skills.txt](licenses/pedronauck-skills.txt); each script
+carries a header crediting the source. They are optional, read-only,
+dependency-free Node helpers and are not required gates: a project's own lint or
+codegen that owns the invariant takes precedence.
+
+Reviewed and changed from the upstream files. Contrast: the APCA low clip was
+the 0.027 offset instead of APCA-W3 0.0.98G-4g's 0.1 (small contrasts reported a
+positive Lc instead of 0); the version of the algorithm is now stated, and Lc is
+signed as published; alpha in hex, `rgb()` and `oklch()` was silently dropped and
+is now composited over the background (a translucent background is rejected);
+`oklch()` out-of-gamut colors were clipped per channel and are now mapped by
+reducing chroma; hue units, percentages and `none` are parsed, trailing garbage
+and unknown arguments are rejected, a failing ratio is never shown as the
+threshold through rounding, and empty or malformed `--json` input exits 2. The
+WCAG luminance formula was already correct (the 0.04045 breakpoint replaces
+0.03928 with identical 8-bit results). Drift scan: comments, URL fragments and
+anchors (`href="#add"`), HTML entities, id selectors and class fields were
+reported as colors; functions whose first argument is a variable
+(`hsl(var(--x))`) were reported as raw colors; multi-line literals were missed;
+token files matched only as whole directories and by absolute path; symlinks
+were followed; the report cited a file of the source skill; unknown flags were
+treated as directories. A `token-drift-ignore` marker was added. Residual
+limits are listed in the script header. Not incorporated: the upstream
+spacing-value claims in its comments (colors only) and its references to
+`ai-slop-patterns.md`. Tests and fixtures live outside the distributed tree in
+`scripts/test_skill_scripts.mjs` and `evals/fixtures/token-drift/`.
+
+APCA constants were compared with the `apca-w3` 0.1.9 package source and its test
+vectors (read, not executed). APCA is a draft, not part of WCAG 2.2 conformance.
 
 ## Binding-design comparison
 

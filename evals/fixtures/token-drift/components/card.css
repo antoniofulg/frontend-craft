@@ -1,0 +1,16 @@
+/* old value: #ff0000 and rgb(1 2 3) are commented out */
+.card { background: #fafafa; border: 1px solid rgb(0 0 0 / 10%); } /* HIT:2 */
+.card { color: hsl(var(--fg)); background: var(--bg); }
+.card { border-color: rgb(var(--c) / 0.5); }
+.card { box-shadow: 0 0 1px oklch(0.5 0.1 200); } /* HIT */
+#add { margin: 0; }
+#face:hover { color: var(--x); }
+.logo { background: url(#fade); fill: url("#bad"); }
+a[href="#dad"] { color: var(--link); }
+.grad {
+  background: linear-gradient(
+    rgb(0 0 0), /* HIT */
+    #fff /* HIT */
+  );
+}
+.web { background: url(http://example.com/#abc); outline-color: #BADA55; } /* HIT */
