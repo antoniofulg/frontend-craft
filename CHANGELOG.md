@@ -5,6 +5,24 @@ name and version. Entries without a skill name (0.24.0 and earlier) belong to
 `frontend-craft`. Tags are per skill: `frontend-craft` uses `vX.Y.Z` and
 `video-craft` uses `video-craft-vX.Y.Z`.
 
+## frontend-craft 0.27.1 — 2026-11-13
+
+- [Learn from corrections](skills/frontend-craft/references/learn-from-corrections.md)
+  now targets the product's UI standard, read before creating a new page,
+  component or concept. A long landing-page run had proposed 14 rules and 6
+  questions, 6 of them decisions about that page.
+- Filter: skips corrections about the content, structure or story of the surface
+  under work, even when they repeat across its sections, and keeps only rules that
+  would change an unrelated screen (a settings form, a dashboard tile). Copy counts
+  only as a recurring UI wording pattern.
+- Scope: when the user names the kind of learning wanted, it collects at that
+  level first and lists other categories in one Skipped line.
+- Report: leads with repeated corrections, soft cap of about eight rules, at most
+  three questions with inferred reasons batched into one yes/no.
+- Read side: proposes the pointer for design and build agents to read the rules
+  before designing a page, component or concept and stay within them.
+- One new scenario.
+
 ## frontend-craft 0.27.0 — 2026-11-12
 
 - New reference, [learn from corrections](skills/frontend-craft/references/learn-from-corrections.md):
