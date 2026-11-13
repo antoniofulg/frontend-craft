@@ -5,6 +5,24 @@ name and version. Entries without a skill name (0.24.0 and earlier) belong to
 `frontend-craft`. Tags are per skill: `frontend-craft` uses `vX.Y.Z` and
 `video-craft` uses `video-craft-vX.Y.Z`.
 
+## frontend-craft 0.27.0 — 2026-11-12
+
+- New reference, [learn from corrections](skills/frontend-craft/references/learn-from-corrections.md):
+  turns the corrections a user made in a session (explicit corrections, silent
+  edits to files the agent wrote, repeated nudges, reverts and confirmed
+  non-obvious choices) into rules with their reasons. It filters one-offs, picks
+  the class level, never invents a reason, prefers a lint or token check over a
+  sentence, writes to the project's existing owner docs before a root
+  `DESIGN.md`, and writes nothing until the user approves. A prune mode cleans up
+  existing rules. Copy and tone corrections are in scope.
+- Invocation: a routing row for explicit requests ("learn from my corrections",
+  "record my taste", prune), and one line in "Before delivery" that lets the agent
+  offer it once per session when worthwhile corrections exist; it never runs
+  unasked. The description adds "turn corrections into rules" and stays under the
+  limit (1,016 to 1,018 characters).
+- Adapted from Emil Kowalski's `learn-taste` skill (MIT); notice in
+  `licenses/emilkowalski-skills.txt`, required by the package validator.
+
 ## frontend-craft 0.26.0 — 2026-11-11
 
 - New reference, [outbound](skills/frontend-craft/references/outbound.md), closing

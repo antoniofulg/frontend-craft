@@ -19,7 +19,7 @@ REQUIRED_SCRIPTS = {
 REQUIRED_LICENSES = {
     "frontend-craft": [
         "anthropic-knowledge-work-plugins.txt", "compozy.txt", "coreyhaines-marketingskills.txt",
-        "enmera-ai-design-check.txt", "mbfinotti-sales-skills.txt", "pedronauck-skills.txt",
+        "emilkowalski-skills.txt", "enmera-ai-design-check.txt", "mbfinotti-sales-skills.txt", "pedronauck-skills.txt",
         "revenue-centric-design.txt", "social-media-skills.txt",
     ],
     "video-craft": [

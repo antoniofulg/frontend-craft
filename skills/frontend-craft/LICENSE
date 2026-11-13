@@ -58,3 +58,7 @@ licenses/coreyhaines-marketingskills.txt
 licenses/mbfinotti-sales-skills.txt
 licenses/social-media-skills.txt
 See SOURCES.md for the source revisions and adaptation boundaries.
+The learn-from-corrections guidance in 0.27.0 adapts Emil Kowalski's MIT-licensed
+learn-taste skill. Retain the upstream notice in:
+licenses/emilkowalski-skills.txt
+See SOURCES.md for the source revision and adaptation boundary.

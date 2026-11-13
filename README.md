@@ -5,7 +5,7 @@ cooperate when both are present.
 
 | Skill | Version | Purpose | Release tag |
 | --- | --- | --- | --- |
-| [`frontend-craft`](skills/frontend-craft/SKILL.md) | **0.26.0** | Product strategy, sales and growth, and the interfaces that support them | `vX.Y.Z` (for example `v0.26.0`) |
+| [`frontend-craft`](skills/frontend-craft/SKILL.md) | **0.27.0** | Product strategy, sales and growth, and the interfaces that support them | `vX.Y.Z` (for example `v0.27.0`) |
 | [`video-craft`](skills/video-craft/SKILL.md) | **0.1.0** | Social videos, landing-page loops, product demos, captions, storyboards and prospecting clips | `video-craft-vX.Y.Z` (for example `video-craft-v0.1.0`) |
 
 See the [release notes](CHANGELOG.md); each entry is headed by the skill name and
@@ -262,12 +262,22 @@ $frontend-craft Design our lead enrichment and sales handoff workflow. Include q
 $frontend-craft Implement the approved CRM workflow using our existing stack. Verify duplicate events, uncertain sends, opt-outs and owner changes before rollout.
 ```
 
+Corrections you make during a session can become rules the next session follows.
+Ask for it, or accept the agent's one-line offer at the end of a task; the
+[learn-from-corrections reference](skills/frontend-craft/references/learn-from-corrections.md)
+proposes each rule with your words and its reason, and writes only what you approve.
+
+```text
+$frontend-craft Turn the corrections I made this session into rules for next time.
+$frontend-craft Prune our DESIGN.md: merge duplicates and tighten vague rules.
+```
+
 The [skill entrypoint](skills/frontend-craft/SKILL.md) routes to focused references:
 mapping; design systems; reuse and consistency; shared UI patterns; components; interaction and accessibility; motion;
 commercial strategy; growth and sales; outbound and prospecting; commercial visuals; landing pages; imagery;
 GTM measurement and automation;
 checkout; activation; monetization; retention; behavioral design; dashboards; product strategy;
-positioning and distribution; experimentation; performance and loading states; technical SEO and discovery; visual details
+positioning and distribution; learning from corrections; experimentation; performance and loading states; technical SEO and discovery; visual details
 (including dark themes); AI and agent interfaces; charts; and reviews. Typical work reads
 the core and the relevant references, not a catalog of every rule. The core remains
 stack-neutral; React recipes and the shared UI patterns guide's Tailwind v4 guidance
@@ -640,6 +650,10 @@ guide and the business-case, deal-risk and win-loss sections. It records package
 script and anchor checks and both skill-tree digests; the new scenarios were not
 exercised for this release.
 
+The [0.27.0 verification record](evals/verification-0.27.0.md) covers the
+learn-from-corrections reference and its routing. It records package, script and
+anchor checks and both skill-tree digests; the new scenarios were not exercised.
+
 ## License and sources
 
 Copyright 2026 Antonio Fulgêncio. This package has [mixed license terms](LICENSE).
@@ -682,6 +696,11 @@ retained (see also the
 [mbfinotti](skills/frontend-craft/licenses/mbfinotti-sales-skills.txt) notices) and the
 [adaptation boundary](skills/frontend-craft/SOURCES.md#outbound-business-case-and-win-loss)
 recorded. No upstream code, tool or data is bundled.
+
+The learn-from-corrections guidance adapts Emil Kowalski's MIT-licensed
+`learn-taste` skill, with the [upstream notice](skills/frontend-craft/licenses/emilkowalski-skills.txt)
+retained and the [adaptation boundary](skills/frontend-craft/SOURCES.md#learn-from-corrections)
+recorded.
 
 [Source notes](skills/frontend-craft/SOURCES.md) identify the adaptation scope,
 upstream revision and changes. No third-party skill bundle, recipe library,

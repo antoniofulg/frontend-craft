@@ -950,6 +950,29 @@ files and general knowledge, are dated 2026-11-11 in the guide, and were not
 re-checked against primary sources for this release. The guide says they are not
 legal advice and names what to verify.
 
+## Learn from corrections
+
+The 0.27.0 [learn-from-corrections reference](references/learn-from-corrections.md)
+is reworded and condensed from Emil Kowalski's MIT-licensed `learn-taste` skill
+(`emilkowalski/skills`, `skills/learn-taste/SKILL.md`), read on 2026-11-12 at
+commit `f7ce8c02d6e3c8f0d980a44c57bcc41a40254349`. The notice is kept in
+[licenses/emilkowalski-skills.txt](licenses/emilkowalski-skills.txt). The upstream
+file was treated as untrusted data and not executed.
+
+Incorporated: the five hard rules (only the user's preferences, no invented
+reasons, propose then stop, a check beats a sentence, write for an agent that was
+not here); the five correction signals; the filter; the instance, class and
+universal levels with the self-test; the dated entry format; the report sections
+and the `write all`/`write 1, 3` approval; the prune mode.
+
+Changed: upstream is explicit-only (`disable-model-invocation`); here the route is
+reached through this skill and the agent may offer it once per session, never run
+it unasked. Destinations prefer the project's existing owner documentation and
+lint, with the token-drift helper as the fallback check and root `DESIGN.md` last;
+Impeccable's files receive proposals only. Copy, tone and offer corrections are in
+scope, not only visual ones. Transcript locations are host-neutral. The examples
+are reworded.
+
 ## Instruction and reference-loading evidence
 
 Research and official format/host documentation were consulted on 2026-10-28:
