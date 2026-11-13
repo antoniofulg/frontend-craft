@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/
 metadata:
   author: Antonio Fulgêncio
-  version: "0.27.1"
+  version: "0.27.2"
 ---
 
 # Frontend Craft
@@ -59,6 +59,7 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Fix a web app that feels wrong on a phone: sticky hover, tap flash, viewport height, input zoom, safe areas, overscroll | [mobile web](references/interaction-accessibility.md#mobile-web) | Capability-gated platform fixes with device verification stated |
 | Check that a built screen matches a design supplied with the request (mockup, frame, capture or live page) | [binding design comparison](references/review.md#compare-a-render-with-a-binding-design) | Pictures of each drawn state at the design's size, judged without the code by a fresh reviewer as a same/differs inventory; one fix round, then what still differs goes to the user |
 | Make a concept, prototype or journey for a project that has a component library | [prototype with production components](references/reuse-consistency.md#prototype-with-production-components) | Real views rendered from shared typed fixtures with declared states, using the project's own preview tool; drafts graduate and are deleted, nothing prototype-only reaches production, people approve |
+| Review a whole page across screen sizes: small viewports, overlapping or cut elements, "is it responsive" | [viewport sweep](references/review.md#sweep-a-page-across-viewports) | Per-viewport measurements and captures triaged into fixed, recorded, dismissed-with-proof and not checked, with the engine named |
 | Break a component or screen with worst-case data: long names, huge counts, empty lists, every status at once | [stress a real component](references/review.md#stress-a-real-component) | Observed breaks graded by consequence, their layout causes and the truncate/wrap decisions they expose; read-only unless a harness is authorized |
 | Change deep links, Back/Forward behavior, restored views or unsaved drafts | [navigation resilience](references/interaction-accessibility.md#navigation-and-draft-resilience) | Useful restoration with protected drafts and current authorization |
 | Change localized numbers, currencies, messages, dates or scheduled times | [locale-sensitive values](references/interaction-accessibility.md#locale-sensitive-values-and-messages) | Correct display, input round trips and explicit time/currency contracts |

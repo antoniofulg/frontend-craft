@@ -278,6 +278,46 @@ remain. Limit open-ended aesthetic iteration to three rounds; report material
 issues still unresolved, without treating the limit as a pass. A read-only review
 ends with findings and does not enter the fix loop.
 
+## Sweep a page across viewports
+
+Use for "review this page on every screen size", "check small viewports", "find
+overlapping or cut elements" or "is this page responsive". It extends the rendered
+critique with measurement; do not start a second review loop.
+
+1. **Pick widths from the page's own breakpoints, plus the edges:** the smallest
+   supported phone, each side of every breakpoint in the CSS, and one very wide
+   screen (a typical run is 8 to 11 widths). Alternate light and dark across the
+   widths instead of doubling the run. Emulate touch on the narrow ones.
+2. **Visit as a visitor would.** Load, wait for the app's interactive signal, then
+   scroll the whole page in steps of about 60% of the viewport height with a short
+   pause, so reveals, lazy sections and embedded frames mount. Let the page settle
+   before measuring.
+3. **Measure in the page, and in every same-origin frame.** One script returns
+   findings as data per viewport: horizontal scroll (document `scrollWidth` minus
+   viewport width); boxes past a side edge that no ancestor clips; text cut by its
+   own box, told apart from intended ellipsis and line clamps; text boxes on top of
+   each other (neither contains the other, shared area at least a quarter of the
+   smaller); text under 12 px; touch targets under 40 px on narrow viewports only;
+   containers that cut their content vertically; console and page errors. Apply
+   [measurement validity](#critique-the-rendered-composition) first.
+4. **Capture each section**, at up to five scroll positions for tall ones, and have
+   the images read by a reviewer. Numbers find what the eye misses (a 3 px
+   overflow); images find what numbers miss (an empty block, a line through an icon).
+5. **Triage every finding:** fix now; record for later (issue, width and capture);
+   or dismiss as an artefact with the measurement that proves it.
+6. **Prove a suspicious finding before fixing it.** Capture artefacts look like
+   defects: a sticky header "covering" a section top when the shot was taken at the
+   section top rather than at scroll 0, an element caught mid-transition, an active
+   nav item that a programmatic jump does not move like a real scroll. Measure the
+   element's box in the state a visitor sees, settled.
+7. **Fix at the owning stylesheet or component**, then re-capture only the widths
+   the fix touches.
+8. **Bound it:** one sweep, one batch of fixes, one confirming round. One browser at
+   a time, viewports in sequence, closed in `finally`. Read-only unless fixes are
+   authorized.
+9. **Report four lists:** fixed, recorded for later, dismissed with the reason, and
+   not checked (other browser engines, real devices). Name the engine that ran.
+
 ## Compare a render with a binding design
 
 Use when a design came with the request (a mockup, frame, capture or live page)
