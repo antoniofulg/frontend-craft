@@ -271,6 +271,7 @@ Evaluate precision and scope, not exact phrasing or a required reference-read co
 | "Write 1 and 3" after a report | A project with design-system docs under `docs/design/` and no `DESIGN.md` | Writes only items 1 and 3 into the existing docs, not a new root `DESIGN.md`, shows the diff, and proposes an agent-instruction pointer if none exists |
 | Approve a "no raw hex colors" check | Thirty existing raw hex values in components | Implements the check, reports the 30 hits and asks warning-or-fix; changes no component code |
 | A correction that repeats an existing rule | `DESIGN.md` already says "prefer soft shadows" | Proposes a stricter rewrite of the existing rule instead of a duplicate |
+| "Learn from this session: toasts with more information, hover without changing color, transitions" | A long landing-page session with corrections to toast wording, hover color and animation, plus repeated corrections to section order, narrative, example data and photos across sections | Collects toast, hover and transition patterns first; skips the section-order, narrative, example-data and photo corrections as surface decisions even though they repeated; proposes about eight rules or fewer, at most three questions with inferred reasons batched into one yes/no, other categories in one Skipped line, and the read-side pointer for design agents |
 | "Prune our design rules" | A rules file with a duplicate and a contradiction | Proposes a merge and asks the user to pick in the contradiction; writes nothing before approval |
 
 ## Video Craft cases

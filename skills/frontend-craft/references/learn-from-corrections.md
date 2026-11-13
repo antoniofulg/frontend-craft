@@ -1,9 +1,16 @@
 # Learn from corrections
 
-Each correction the user makes is a preference the agent did not have. Unless it
-is written down, the next session repeats the mistake and the user corrects it
-again. This reference turns a session's corrections into rules with their
-reasons and writes them where the next agent reads them.
+The output is the product's UI standard: the rules a designer or implementer
+reads before creating a new page, component or concept, so new work stays inside
+the established patterns unless the user explicitly asks otherwise. Each
+correction the user makes is a pattern the agent did not have; unless it is
+written down, the next session repeats the mistake. This reference turns a
+session's corrections about those patterns into rules with their reasons and
+writes them where the next agent reads them.
+
+A rule describes how the product's interface behaves everywhere: what a toast
+says, how hover responds, which changes animate. Decisions about the surface
+being built (its section order, narrative, example data or photos) are not rules.
 
 It writes rules only. It never changes component code, copy or configuration
 beyond the approved rule or check, and it never adds a rule the user did not
@@ -30,7 +37,8 @@ express.
    said, edited or confirmed. A rule added because it seems like good practice is
    the agent's taste, which is what the user was correcting.
 2. **No invented reasons.** When the user gave no reason, propose one marked
-   *inferred* and get it confirmed before writing. A wrong reason misleads the
+   *inferred*; the user confirms all inferred reasons in one yes/no before
+   anything is written. A wrong reason misleads the
    next agent into extending the rule where it does not fit.
 3. **Propose, then stop.** Present every candidate and write only what the user
    approves. A wrong rule repeats in every future session.
@@ -46,6 +54,11 @@ express.
 Read the current conversation from the first turn. When the user names earlier
 sessions and the host stores readable transcripts, read those too.
 
+When the user names the kind of learning they want (for example "toasts with more
+information, hover without changing color, transitions"), collect at that level
+first. Every other category found goes into one line under Skipped, so the user
+can ask for it.
+
 Explicit corrections are the minority. Look for five signals:
 
 | Signal | Example | What it tells you |
@@ -56,9 +69,10 @@ Explicit corrections are the minority. Look for five signals:
 | Revert or rejection | "Undo that", choosing variant B, deleting something the agent added | What not to do; the reason is usually missing, so it becomes a question |
 | Confirmed non-obvious choice | "Yes, keep the icon outside the button" | Record it only if a fresh agent would plausibly do otherwise |
 
-Corrections are not only visual. Edits to headlines, CTAs, tone, error wording,
-offer framing or claim strength are preferences too, and they follow the same
-workflow.
+A copy correction counts only when it is a UI wording pattern that recurs
+across the product: what a notice names, how a recurring booking is phrased, how
+an error states its recovery. Page messaging, headlines, offer framing, claim
+strength and example content are decisions about one surface, not rules.
 
 For each, capture the user's words or the diff, what the agent did, what the
 user wanted instead and any reason given. Skip functional bugs, content specific
@@ -72,17 +86,21 @@ or diff.
 
 For each correction:
 
-1. Would a fresh agent building a *different* component, page or message in this
-   project make the same mistake? If not, it is a one-off: skip it.
-2. Does an existing rule already cover it? Check the project's design-system and
+1. Is it about the content, structure or story of the surface under work
+   (section order, narrative, example data, imagery, page messaging)? Skip it,
+   even when it repeated across that surface's sections: other sections of the
+   same page do not count as a different surface.
+2. Would this rule change how an unrelated screen of the product is designed,
+   such as a settings form or a dashboard tile? If not, it is a one-off: skip it.
+3. Does an existing rule already cover it? Check the project's design-system and
    owner documentation, `DESIGN.md`, `AGENTS.md`/`CLAUDE.md`, project skills,
    the voice or copy guide and Impeccable's context files when present.
    - Same meaning: the rule failed. Propose a stricter rewrite (a number, a
      token, "never") instead of a duplicate.
    - Contradicts: a conflict. Show both; the user picks.
-3. Can a violation be found by matching code? Make it a check candidate, and keep
+4. Can a violation be found by matching code? Make it a check candidate, and keep
    a one-line rule so the reason is recorded.
-4. Did the user say it applies everywhere, beyond this project? Ask where their
+5. Did the user say it applies everywhere, beyond this project? Ask where their
    global rules live. Otherwise it is a project rule.
 
 ## Generalize and find the reason
@@ -127,9 +145,11 @@ When a section grows past roughly 40 lines and matters to only some tasks
 (motion rules do not matter for a settings form), propose moving it to a
 project skill or a focused document and leaving a one-line pointer.
 
-Make sure it gets read: if no agent instruction file points to the rules file,
-propose adding `Before building or changing UI or copy, read DESIGN.md.` to
-whichever one the project uses. Respect repository documentation policy; if the
+Make sure it gets read. The same pass proposes the pointer for design and build
+agents, unless an agent instruction file already has it: `Before designing or
+building a page, component or concept, read <rules file> and stay within it
+unless the user explicitly asks otherwise.` Add it to whichever instruction file
+the project uses (`AGENTS.md`, `CLAUDE.md`, a designer agent definition). Respect repository documentation policy; if the
 project keeps agent files elsewhere or forbids them, ask where rules belong.
 
 Entry format, with the date and the user's words in a comment so a later
@@ -145,16 +165,23 @@ conflict shows which rule is newer:
 
 ## Report and stop
 
-Present this report, then stop:
+Present this report, then stop. Keep it short enough to approve in one read:
 
 - **Rules to add:** a table of number, what the user said (quote or diff),
-  rule, reason (marking *inferred* ones) and destination.
-- **Needs your answer:** each inferred reason, ambiguous level and
-  global-or-project question, one line each with a recommendation.
+  rule, reason (marking *inferred* ones) and destination. Lead with what the
+  user corrected more than once. Soft cap of about eight rules; the rest go to
+  Skipped with one line each.
+- **Needs your answer:** at most three questions, each one line with a
+  recommendation. All inferred reasons count as one question: "Are the reasons
+  marked *inferred* right? (yes / correct #n)". Never ask about a correction the
+  filter should have dropped; drop it instead.
 - **Conflicts:** the existing rule, the new correction and which to keep.
 - **Make it a check:** each candidate with its exact implementation and what it
   would flag in the current codebase.
-- **Skipped:** one line per skipped correction and why, so the user can override.
+- **Skipped:** one line per skipped correction and why, plus one line naming the
+  categories outside the scope the user gave, so the user can override.
+- **Pointer:** the read-side line proposed under [decide where it goes](#decide-where-it-goes),
+  when the instruction file lacks it.
 
 Close with: "Say `write all` or `write 1, 3`, and answer the questions above."
 A session with no corrections worth keeping gets one line saying so; that is a

@@ -5,7 +5,7 @@ cooperate when both are present.
 
 | Skill | Version | Purpose | Release tag |
 | --- | --- | --- | --- |
-| [`frontend-craft`](skills/frontend-craft/SKILL.md) | **0.27.0** | Product strategy, sales and growth, and the interfaces that support them | `vX.Y.Z` (for example `v0.27.0`) |
+| [`frontend-craft`](skills/frontend-craft/SKILL.md) | **0.27.1** | Product strategy, sales and growth, and the interfaces that support them | `vX.Y.Z` (for example `v0.27.1`) |
 | [`video-craft`](skills/video-craft/SKILL.md) | **0.1.0** | Social videos, landing-page loops, product demos, captions, storyboards and prospecting clips | `video-craft-vX.Y.Z` (for example `video-craft-v0.1.0`) |
 
 See the [release notes](CHANGELOG.md); each entry is headed by the skill name and
@@ -653,6 +653,9 @@ exercised for this release.
 The [0.27.0 verification record](evals/verification-0.27.0.md) covers the
 learn-from-corrections reference and its routing. It records package, script and
 anchor checks and both skill-tree digests; the new scenarios were not exercised.
+
+The [0.27.1 verification record](evals/verification-0.27.1.md) covers the narrower
+learn-from-corrections filter, the report caps and the read-side pointer.
 
 ## License and sources
 
