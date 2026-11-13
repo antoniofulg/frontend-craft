@@ -5,6 +5,17 @@ name and version. Entries without a skill name (0.24.0 and earlier) belong to
 `frontend-craft`. Tags are per skill: `frontend-craft` uses `vX.Y.Z` and
 `video-craft` uses `video-craft-vX.Y.Z`.
 
+## frontend-craft 0.27.3 — 2026-11-13
+
+- [Performance audits](skills/frontend-craft/references/performance-audits.md#inspect-production-bundles)
+  gain a preload-on-intent check: start a deferred view's chunk on hover, focus or
+  touch start (router preload first), then confirm no fallback flashes on the warm
+  path.
+- React note for projects that render `React.lazy` themselves: an earlier preload
+  still suspends once on first render, and React can hold the reveal up to 300 ms
+  after a fallback. Render the loaded module directly or open the view in a
+  transition. Pinned to React's source; provenance in `SOURCES.md`.
+
 ## frontend-craft 0.27.2 — 2026-11-13
 
 - New routed method in [review](skills/frontend-craft/references/review.md#sweep-a-page-across-viewports):

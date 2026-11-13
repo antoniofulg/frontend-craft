@@ -308,6 +308,12 @@ universal budgets, blanket rejection of zero estimated savings and a duplicate
 accessibility checklist were excluded. Existing performance evidence rules remain
 authoritative; the comparison does not establish measured site improvements.
 
+The 0.27.3 preload-on-intent check started from a third-party tip and was
+verified against React's source at commit `df6aa4ec` on 2026-11-13:
+`ReactLazy.js` calls the import factory on first render and waits on its
+promise; `ReactFiberWorkLoop.js` sets `FALLBACK_THROTTLE_MS = 300` for retry
+commits. The tip's "about 2 ms" figure was not verified and is not used.
+
 ## Content restraint
 
 The maintainer-supplied `minimalist-ui` skill was comparison material on

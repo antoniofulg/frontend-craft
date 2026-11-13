@@ -5,7 +5,7 @@ cooperate when both are present.
 
 | Skill | Version | Purpose | Release tag |
 | --- | --- | --- | --- |
-| [`frontend-craft`](skills/frontend-craft/SKILL.md) | **0.27.2** | Product strategy, sales and growth, and the interfaces that support them | `vX.Y.Z` (for example `v0.27.2`) |
+| [`frontend-craft`](skills/frontend-craft/SKILL.md) | **0.27.3** | Product strategy, sales and growth, and the interfaces that support them | `vX.Y.Z` (for example `v0.27.3`) |
 | [`video-craft`](skills/video-craft/SKILL.md) | **0.1.0** | Social videos, landing-page loops, product demos, captions, storyboards and prospecting clips | `video-craft-vX.Y.Z` (for example `video-craft-v0.1.0`) |
 
 See the [release notes](CHANGELOG.md); each entry is headed by the skill name and
@@ -660,6 +660,10 @@ learn-from-corrections filter, the report caps and the read-side pointer.
 The [0.27.2 verification record](evals/verification-0.27.2.md) covers the viewport
 sweep method in the review reference and its routing; the new scenario was not
 exercised.
+
+The [0.27.3 verification record](evals/verification-0.27.3.md) covers the
+preload-on-intent check in the performance audit procedure and its React source
+pins.
 
 ## License and sources
 
