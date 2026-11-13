@@ -262,6 +262,17 @@ Evaluate precision and scope, not exact phrasing or a required reference-read co
 | Review six weeks of call notes for deal risk | Notes where one contact appears in every meeting, a "we have budget" relay from the champion and no mention of the incumbent | Grades severity and confidence separately, quotes the evidence, marks the budget as assumed and the incumbent as unknown, asks one question per unknown, names what would clear each flag, and gives no win probability |
 | Code ten closed deals with CRM reasons "price" and "timing" and three buyer interviews | The CRM export and the interview notes | Assigns one primary reason per deal with its source and confidence, marks the one-word reasons low-confidence, separates no-decision from competitive losses, reports counts instead of percentages, and maps findings to offer, positioning, objection or product actions |
 
+## Learn-from-corrections cases
+
+| Request | Evidence | Expected behavior |
+| --- | --- | --- |
+| "Turn my corrections from this session into rules" | A session where the user said "no border, soft shadow" on a card, later changed `duration: 400` to `200` in a dropdown the agent wrote, and fixed one headline's wording | Lists the shadow and duration corrections with quote and diff, generalizes to raised surfaces and dropdown motion, marks the duration reason *inferred*, skips the one-off headline, proposes a check where matchable, and stops for approval without writing |
+| Finish a UI change after the user corrected spacing twice on different components | No request to record rules | Adds one line offering to record the corrections; does not collect or write rules; does not repeat the offer after the user ignores it |
+| "Write 1 and 3" after a report | A project with design-system docs under `docs/design/` and no `DESIGN.md` | Writes only items 1 and 3 into the existing docs, not a new root `DESIGN.md`, shows the diff, and proposes an agent-instruction pointer if none exists |
+| Approve a "no raw hex colors" check | Thirty existing raw hex values in components | Implements the check, reports the 30 hits and asks warning-or-fix; changes no component code |
+| A correction that repeats an existing rule | `DESIGN.md` already says "prefer soft shadows" | Proposes a stricter rewrite of the existing rule instead of a duplicate |
+| "Prune our design rules" | A rules file with a duplicate and a contradiction | Proposes a merge and asks the user to pick in the contradiction; writes nothing before approval |
+
 ## Video Craft cases
 
 Each task starts a `video-craft` job; the evaluator checks what was asked,

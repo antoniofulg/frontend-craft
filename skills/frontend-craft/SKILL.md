@@ -1,10 +1,10 @@
 ---
 name: frontend-craft
-description: Improve product strategy, sales and profitable growth, and build or review the interfaces that support them. Use to sell more, validate demand, plan prospecting and outbound, sharpen positioning and offers, write and edit marketing copy, choose acquisition channels, pricing or roadmap priorities, and improve conversion, activation, retention and expansion. Define GTM metrics and attribution, design or implement CRM enrichment, sales handoffs, revenue automation, create, review and evolve design systems, repair generated-looking screens, audit, consolidate and update shared UI components, styles and tokens, maintain frontend reuse, simplify interface content, find, coordinate, remove and debug animations, name motion effects, fix mobile web behavior, design loading states, AI interfaces and dark themes, audit web performance and bundles, improve public-page SEO, discovery and launch readiness, stress interfaces with worst-case data, verify accessibility and implementation; commercial work needs no UI.
+description: Improve product strategy, sales and profitable growth, and build or review their interfaces. Use to sell more, validate demand, plan prospecting and outbound, sharpen positioning and offers, write and edit marketing copy, choose acquisition channels, pricing or roadmap priorities, and improve conversion, activation, retention and expansion. Define GTM metrics and attribution, design or implement CRM enrichment, sales handoffs, revenue automation, create, review and evolve design systems, repair generated-looking screens, audit, consolidate and update shared UI components, styles and tokens, maintain frontend reuse, simplify interface content, find, coordinate, remove and debug animations, name motion effects, fix mobile web behavior, design loading states, AI interfaces and dark themes, audit web performance and bundles, improve public-page SEO, discovery, launch readiness, stress UIs with worst-case data, verify accessibility and implementation, turn corrections into rules; commercial work needs no UI.
 license: Mixed terms; see LICENSE and licenses/
 metadata:
   author: Antonio Fulgêncio
-  version: "0.26.0"
+  version: "0.27.0"
 ---
 
 # Frontend Craft
@@ -89,6 +89,7 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Refine nested corners, display typography, font features, mixed-direction text, or advanced color | [visual details](references/visual-details.md) | A scoped technical refinement within the existing design |
 | Choose or review a chart | [charts](references/charts.md) | A truthful encoding and accessible access to the data |
 | Repair, polish or de-template a whole screen | [agentic screen repair](references/review.md#repair-a-generated-looking-screen), plus applicable surface/lens routes | A scoped repair grounded in before/after observations, existing owners and a product-specific brief; preserved contracts and rendered/behavioral evidence |
+| Turn the user's corrections into rules for future sessions ("learn from my corrections", "record my taste", "remember this for next time"), or prune those rules | [learn from corrections](references/learn-from-corrections.md) | Proposed rules, each traced to the user's words or edit with a confirmed reason, a destination and check candidates; nothing written until approved |
 | Review a page, component, journey, change, or consistency; audit an interface that looks generated or templated | [review](references/review.md), following its cumulative surface and lens routes and its [generated-interface defaults](references/review.md#check-generated-interface-defaults) | Evidence-backed findings and verification limits |
 
 Select references cumulatively: identify every named surface/journey and every
@@ -240,7 +241,10 @@ Changed recovery paths also use [recovery verification](references/review.md#ver
 including narrow behavioral changes, without starting a page-wide visual critique.
 
 Report the useful result: reused/extended owners, deliberate differences, checks
-actually performed, and unresolved gaps. Source inspection supports source claims;
+actually performed, and unresolved gaps.
+When the session holds corrections worth keeping, add the one-line
+[offer to record them](references/learn-from-corrections.md#when-it-runs);
+run that workflow only if the user accepts. Source inspection supports source claims;
 rendered behavior requires rendered evidence. Never report unvisited states as passed.
 
 For commercial work, state the objective, prioritized changes and validation
