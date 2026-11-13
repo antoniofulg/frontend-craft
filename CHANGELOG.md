@@ -5,6 +5,20 @@ name and version. Entries without a skill name (0.24.0 and earlier) belong to
 `frontend-craft`. Tags are per skill: `frontend-craft` uses `vX.Y.Z` and
 `video-craft` uses `video-craft-vX.Y.Z`.
 
+## frontend-craft 0.27.2 — 2026-11-13
+
+- New routed method in [review](skills/frontend-craft/references/review.md#sweep-a-page-across-viewports):
+  a viewport sweep for "review this page on every screen size", small viewports and
+  overlapping or cut elements. Widths come from the page's own breakpoints plus the
+  edges; a visitor-style scroll mounts lazy content; one in-page script measures
+  overflow, clipped or overlapping text, small text and touch targets in every
+  same-origin frame; captures are read by a reviewer.
+- Triage into fix, record or dismiss, and prove a suspicious finding at the state a
+  visitor sees before fixing it (sticky header, mid-transition and nav-highlight
+  artefacts). One sweep, one fix batch, one confirming round; the report lists
+  fixed, recorded, dismissed and not checked, naming the engine.
+- One new routing row in `SKILL.md` and one new scenario.
+
 ## frontend-craft 0.27.1 — 2026-11-13
 
 - [Learn from corrections](skills/frontend-craft/references/learn-from-corrections.md)
