@@ -106,6 +106,16 @@ to the deployed revision. Inspect delivered minification and compression separat
   prefetch/preload behavior and route boundaries. Verify a supposedly deferred
   chunk is not immediately fetched by another import. Balance initial work against
   added interaction latency and request waterfalls.
+- **Preload on intent:** when a deferred view opens on click, start its chunk on
+  hover, focus or touch start, preferring the router's own preload. Then repeat the
+  action with the chunk already downloaded: no fallback should flash. React note,
+  only when the project renders `React.lazy` itself: `lazy` calls its import on
+  first render, so an earlier preload still suspends once, and React can hold the
+  reveal up to 300 ms after a fallback shows. Render the already-loaded module
+  directly, or open the view inside a transition so the current screen stays. See
+  React's [lazy](https://github.com/facebook/react/blob/df6aa4ec76cff5b3adde531c6fe8c36099e0469b/packages/react/src/ReactLazy.js)
+  and [throttle](https://github.com/facebook/react/blob/df6aa4ec76cff5b3adde531c6fe8c36099e0469b/packages/react-reconciler/src/ReactFiberWorkLoop.js#L527)
+  source; check the installed version.
 - **Tree shaking and unused code:** inspect production output, module format,
   export use, side-effect declarations, broad imports and retained CSS. Source
   syntax or a barrel import alone does not prove failed elimination. Coverage
