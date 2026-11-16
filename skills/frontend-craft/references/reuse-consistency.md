@@ -176,6 +176,8 @@ failure.
 **Feedback and approval.** Give meaningful regions and controls stable ids so
 comments name them precisely and survive edits; refine the same files in place.
 People approve a direction; an agent applies comments and never approves.
+Reviewed in a browser, each state also opens top-level; see
+[review states top-level](#review-states-top-level).
 
 **Honest content.** Label illustrative data as illustrative. Never invent
 sources, endorsements, metrics or backend guarantees, and use the correct asset
@@ -185,6 +187,48 @@ Check: every prototype state is declared and renders from a shared fixture, a
 component prototype contains no raw markup, nothing in the production build
 imports it, and a preview of each state was inspected, or the report says it
 could not be.
+
+### Review states top-level
+
+A gallery that frames each state in an iframe applies real media queries at
+preset widths, but element-level annotation tools (browser annotators, DevTools
+pickers, Orca's Annotate) cannot reach elements inside a frame, so feedback falls
+back to screenshots. Build the following by default when people review a
+prototype in a browser.
+
+- **A stable top-level URL per state.** Keep the selection in the URL
+  (prototype, state, theme, input density, story step). The same parameters plus
+  a frame flag render one state alone with the real components and shell. The
+  gallery keeps its iframe for side-by-side size comparison and links to that
+  URL; both URLs carry the story step.
+- **One small review overlay, top-level only.** When the state is the top window
+  (`window.self === window.top`), add a collapsible pill that covers no primary
+  action: position (n/N) and title, and previous/next through the story steps
+  when following a story, otherwise through the screen's states. ←/→ do the
+  same outside text fields. Expanded, it shows the step's story and what to
+  evaluate, a state picker (which leaves the story), and theme and touch/mouse
+  toggles. Hide it inside the gallery frame.
+- **Be honest about viewport.** Without an iframe the width is the window's, and
+  it cannot be emulated. Show the current width, the layout it maps to and the
+  preset widths, and tell the reviewer to resize the pane.
+- **A guided story for flows.** Chapters of steps, each pointing at an existing
+  state with its story text and what to evaluate, walk the reviewer end to end.
+  Drop and report a step whose state no longer resolves.
+
+**Apply batched annotations.** The reviewer annotates many elements and sends
+them at once. Read the batch from the tool (Orca:
+`orca tab annotations --page <id> --json`, with the id from
+`orca tab list --json`) or from a pasted feedback list giving selector, intent,
+text and note per item. Answer every item as applied, question or declined with
+a reason, make the changes in the owning files, then reopen each affected state
+top-level in a browser and inspect it. The agent cannot operate the reviewer's
+annotation UI itself: claim that annotation reaches the elements only once the
+reviewer confirms it or their notes come back, and otherwise report it as
+unverified.
+
+Check: every state opens top-level at a stable URL with no frame around it, the
+overlay is absent inside the gallery and states the width it cannot emulate,
+arrow keys move between steps or states, and every annotation has an answer.
 
 ## Exceptions and evolution
 
