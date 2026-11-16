@@ -5,7 +5,7 @@ cooperate when both are present.
 
 | Skill | Version | Purpose | Release tag |
 | --- | --- | --- | --- |
-| [`frontend-craft`](skills/frontend-craft/SKILL.md) | **0.27.3** | Product strategy, sales and growth, and the interfaces that support them | `vX.Y.Z` (for example `v0.27.3`) |
+| [`frontend-craft`](skills/frontend-craft/SKILL.md) | **0.27.4** | Product strategy, sales and growth, and the interfaces that support them | `vX.Y.Z` (for example `v0.27.4`) |
 | [`video-craft`](skills/video-craft/SKILL.md) | **0.1.0** | Social videos, landing-page loops, product demos, captions, storyboards and prospecting clips | `video-craft-vX.Y.Z` (for example `video-craft-v0.1.0`) |
 
 See the [release notes](CHANGELOG.md); each entry is headed by the skill name and
@@ -664,6 +664,10 @@ exercised.
 The [0.27.3 verification record](evals/verification-0.27.3.md) covers the
 preload-on-intent check in the performance audit procedure and its React source
 pins.
+
+The [0.27.4 verification record](evals/verification-0.27.4.md) covers the
+top-level review mode for prototypes and the batched-annotation loop; the new
+scenario was not exercised.
 
 ## License and sources
 

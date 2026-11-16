@@ -5,6 +5,25 @@ name and version. Entries without a skill name (0.24.0 and earlier) belong to
 `frontend-craft`. Tags are per skill: `frontend-craft` uses `vX.Y.Z` and
 `video-craft` uses `video-craft-vX.Y.Z`.
 
+## frontend-craft 0.27.4 — 2026-11-16
+
+- New subsection in [prototype with production components](skills/frontend-craft/references/reuse-consistency.md#review-states-top-level):
+  review states top-level. Element-level annotation tools (browser annotators,
+  DevTools pickers, Orca's Annotate) cannot reach elements inside an iframe, so
+  every prototype state now opens on its own at a stable URL (prototype, state,
+  theme, density, story step); the iframe gallery stays for size comparison.
+- Top-level review overlay: a small collapsible pill with position, title and
+  previous/next through story steps or states (also ←/→ outside text fields),
+  expanding to the step's story, what to evaluate, a state picker and theme and
+  input toggles; hidden inside the gallery frame. It shows the current width, its
+  layout and the preset widths and asks the reviewer to resize, since the viewport
+  cannot be emulated without a frame.
+- Feedback loop: read the batch (`orca tab annotations --page <id> --json` or a
+  pasted list with selector, intent, text and note), answer every item, apply the
+  changes and re-inspect each state top-level; the agent cannot run the
+  reviewer's annotation UI, so it does not claim annotation works unconfirmed.
+- One routing row in `SKILL.md` and one new scenario.
+
 ## frontend-craft 0.27.3 — 2026-11-13
 
 - [Performance audits](skills/frontend-craft/references/performance-audits.md#inspect-production-bundles)
