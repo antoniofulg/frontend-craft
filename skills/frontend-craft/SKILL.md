@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/
 metadata:
   author: Antonio Fulgêncio
-  version: "0.27.4"
+  version: "0.27.5"
 ---
 
 # Frontend Craft
@@ -64,7 +64,7 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Break a component or screen with worst-case data: long names, huge counts, empty lists, every status at once | [stress a real component](references/review.md#stress-a-real-component) | Observed breaks graded by consequence, their layout causes and the truncate/wrap decisions they expose; read-only unless a harness is authorized |
 | Change deep links, Back/Forward behavior, restored views or unsaved drafts | [navigation resilience](references/interaction-accessibility.md#navigation-and-draft-resilience) | Useful restoration with protected drafts and current authorization |
 | Change localized numbers, currencies, messages, dates or scheduled times | [locale-sensitive values](references/interaction-accessibility.md#locale-sensitive-values-and-messages) | Correct display, input round trips and explicit time/currency contracts |
-| Clarify labels, instructions, empty states or errors; reduce redundant content, duplicated feedback or unnecessary controls | [content restraint](references/interaction-accessibility.md#content-restraint); Impeccable's `clarify`, when available, for wording | Concise task-relevant content with necessary context, accessible feedback and recovery preserved |
+| Clarify labels, instructions, empty states or errors; cut AI slop from interface copy, badges or decorative cues | [content restraint](references/interaction-accessibility.md#content-restraint); for charts, [labels and comparisons](references/charts.md#preserve-truthful-comparisons); Impeccable's `clarify`, when available, for wording | Remove only cues that add no information; preserve real state, accessible feedback and recovery |
 | Add, change, or review motion/gestures; choose a transition recipe | [motion](references/motion.md), including optional transitions-dev routing | Purposeful, interruptible movement or an intentional static response |
 | Find animation opportunities or assess where a page/application should remain static | [opportunity discovery](references/motion.md#find-animation-opportunities) | Prioritized source-located proposals, rejected candidates and coverage limits; discovery remains read-only |
 | Identify a described animation, name a motion effect or clarify motion terminology | [motion vocabulary](references/motion-vocabulary.md) | The best matching term and concise explanation, with distinctions or uncertainty when needed |
