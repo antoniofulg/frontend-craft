@@ -5,6 +5,12 @@ name and version. Entries without a skill name (0.24.0 and earlier) belong to
 `frontend-craft`. Tags are per skill: `frontend-craft` uses `vX.Y.Z` and
 `video-craft` uses `video-craft-vX.Y.Z`.
 
+## frontend-craft 0.27.5 — 2026-11-19
+
+- Copy-only cleanup now traces status cues to their data and distinguishes decorative
+  labels from scope or sequence. Chart cleanup preserves comparison periods and
+  interactive legends. See [content restraint](skills/frontend-craft/references/interaction-accessibility.md#content-restraint).
+
 ## frontend-craft 0.27.4 — 2026-11-16
 
 - New subsection in [prototype with production components](skills/frontend-craft/references/reuse-consistency.md#review-states-top-level):

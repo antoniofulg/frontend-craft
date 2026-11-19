@@ -37,6 +37,13 @@ Preserve series identity across filters/themes through names and stable tokens.
 Use labels, line styles, shapes or patterns alongside color. Check empty, loading,
 single-point, negative-value and large-label states as the dataset permits.
 
+For a changing series, title the chart with its measure; a fixed report can lead
+with a finding its data supports. Trim KPI narration without losing the comparison:
+if the caption is the only place that says “vs. last quarter”, keep that period
+beside the delta. Prefer names beside the marks when they fit at the narrowest
+supported width. Keep a legend when labels collide or it doubles as a series
+control. Remove duplicate visual cues, not the accessible data alternative.
+
 ## Accessible access
 
 Provide a concise description of what the chart answers and its salient pattern,

@@ -37,6 +37,23 @@ same thing, means the page is explaining itself.
 - **Visual structure:** use existing hierarchy, spacing and grouping before adding
   another card, border, icon or label. Follow approved tokens and design direction.
 
+For generated-looking UI, check what each cue means before cutting it:
+
+- Trace a status word or dot to the state it describes. On an archived import,
+  a permanent green “Syncing” dot misleads; the same cue driven by a pending job
+  belongs. If the source is unavailable, flag the claim rather than guessing.
+- Read the heading without its eyebrow, the menu item without its blurb, or the
+  feature without its number. Cut what the reader still knows. Keep the account
+  name that scopes a heading, the distinction between similar destinations, and
+  the step number in an ordered workflow.
+- Edit translated or CMS-owned copy at its source, checking other consumers of
+  a shared string. If that source is out of scope, report it. Keep the visible
+  field label, format constraints and accessible names when removing repetition.
+
+For a copy-only request, leave the visual system alone. If every candidate earns
+its place, leave the screen unchanged. For KPI or chart copy, check the
+[comparison and labels](charts.md#preserve-truthful-comparisons) before cutting.
+
 When removing content or controls, verify that users can still identify the action,
 understand its consequences, perceive the outcome and recover. Preserve accessible
 names, required disclosures and safety confirmations. A cleaner screenshot alone

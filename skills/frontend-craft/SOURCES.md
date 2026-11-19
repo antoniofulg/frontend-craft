@@ -31,6 +31,7 @@ bundled here. Installed project copies may differ from their recorded upstream.
 | --- | --- | --- |
 | [Jakub Krehel's skills](https://github.com/jakubkrehel/skills) | `267330e1adfc66a718fb65fa6918c1f06d0a689e` | Interface inspection, domain review, explanation evidence, and relevant component stress axes |
 | [Anthropic skills](https://github.com/anthropics/skills) | `8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4` | Purposeful content structure and consistent interface vocabulary |
+| [Felipe Basurto's unslop-ui](https://github.com/felipebasurto/unslop-ui/blob/cd891160453f26aaacc569bad96a8d10d595076d/skills/unslop-ui/SKILL.md) (MIT) | `cd89116` | Distinguishing decorative copy from state, editing strings at their owner, and simplifying chart labels without losing comparison context |
 | [Emil Kowalski's skills](https://github.com/emilkowalski/skills) (MIT) | Initial: `e8a175de22ae1e49370fc144c1f3bb9aeedf988d`; 0.18.0 review: `5206a95`; 0.19.0 review: `715c180` | Motion purpose, frequency and interruption as design questions; [0.18.0 motion and mobile web additions](#motion-coordination-performance-and-mobile-web); [0.19.0 worst-case data, motion craft and variant comparison](#worst-case-data-motion-craft-and-variant-comparison) |
 | [Tech Leads Club agent skills](https://github.com/tech-leads-club/agent-skills) (`tlc-spec-lean` and `tlc-spec-driven`, CC BY 4.0) | `e74dc8a` | [0.20.0 binding-design comparison](#binding-design-comparison) |
 | [Compozy](https://github.com/compozy/compozy) (MIT) | `b153f4a` | [0.21.0 prototype doctrine](#prototype-doctrine) |
