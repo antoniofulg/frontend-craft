@@ -4,7 +4,7 @@ description: Improve product strategy, sales and profitable growth, and build or
 license: Mixed terms; see LICENSE and licenses/
 metadata:
   author: Antonio Fulgêncio
-  version: "0.27.5"
+  version: "0.27.6"
 ---
 
 # Frontend Craft
@@ -56,7 +56,7 @@ mandatory agent rounds. Tailwind and framework API manuals are outside its scope
 | Change tables, filters, sorting, paging or bulk selection | [collections](references/components.md#collections-sorting-and-selection), following its semantics/performance routes | Explicit query and selection scope with usable table behavior |
 | Design or review filters, configurators or other surfaces where users weigh trade-offs | [choice surfaces](references/components.md#choice-surfaces-and-decision-support), following its collection, chart and accessibility routes | Context, controls and outcome previews tied to the decision, with truthful counts and evidence limits |
 | Change controls, forms, onboarding, authentication, blocked/limit states, layout adaptation, keyboard shortcuts or keyboard behavior | [interaction and accessibility](references/interaction-accessibility.md), including [limits and unavailable states](references/interaction-accessibility.md#limits-and-unavailable-states) when applicable | Usable behavior in the relevant states and environments |
-| Fix a web app that feels wrong on a phone: sticky hover, tap flash, viewport height, input zoom, safe areas, overscroll | [mobile web](references/interaction-accessibility.md#mobile-web) | Capability-gated platform fixes with device verification stated |
+| Fix a web app that feels wrong on a phone: sticky hover, tap flash, viewport height, input zoom, safe areas, overscroll, keyboard covering an action, wrong phone keyboard, Back leaving an open sheet; mobile principles for a native app | [mobile web](references/interaction-accessibility.md#mobile-web), including [principles that carry to native](references/interaction-accessibility.md#mobile-principles-that-carry-to-native-apps) | Capability-gated platform fixes with device verification stated |
 | Check that a built screen matches a design supplied with the request (mockup, frame, capture or live page) | [binding design comparison](references/review.md#compare-a-render-with-a-binding-design) | Pictures of each drawn state at the design's size, judged without the code by a fresh reviewer as a same/differs inventory; one fix round, then what still differs goes to the user |
 | Make a concept, prototype or journey for a project that has a component library | [prototype with production components](references/reuse-consistency.md#prototype-with-production-components) | Real views rendered from shared typed fixtures with declared states, using the project's own preview tool; drafts graduate and are deleted, nothing prototype-only reaches production, people approve |
 | Let people review a prototype in a browser with an annotation tool, or apply a batch of annotations or pasted design feedback | [review states top-level](references/reuse-consistency.md#review-states-top-level) | Every state at a stable top-level URL with a small review overlay and an honest viewport note, the iframe gallery kept for size comparison; each annotation answered, applied and re-inspected in a browser |
