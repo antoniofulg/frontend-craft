@@ -621,6 +621,23 @@ are platform- or library-specific. The Motion 14.2 acceleration note was checked
 against Motion's [changelog](https://motion.dev/changelog) and
 [performance page](https://motion.dev/docs/performance) on 2026-11-08.
 
+## Mobile keyboard, input and Back behavior
+
+The 0.27.6 additions to [mobile web](references/interaction-accessibility.md#mobile-web)
+and its [principles that carry to native apps](references/interaction-accessibility.md#mobile-principles-that-carry-to-native-apps)
+generalize a keyboard defect a maintainer hit in a consuming web app's sign-in
+screen; product names and code are not bundled. Browser support was checked on
+2026-11-20 against Chrome's [viewport resize behavior](https://developer.chrome.com/blog/viewport-resize-behavior)
+note, [caniuse for `interactive-widget`](https://caniuse.com/mdn-html_elements_meta_name_viewport_interactive-widget)
+(Safari on iOS unsupported through 26.5),
+[MDN `VisualViewport`](https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport)
+and [MDN `CloseWatcher`](https://developer.mozilla.org/en-US/docs/Web/API/CloseWatcher)
+(Chromium and Firefox; not Safari). The Chromium-only
+[VirtualKeyboard API](https://developer.chrome.com/docs/web-platform/virtual-keyboard)
+was considered and left out in favour of the two portable mechanisms. Target-size
+figures cite Apple's Human Interface Guidelines and Material Design. This guidance
+retains CC BY 4.0 with the other technical guidance.
+
 ## Prototype doctrine
 
 The 0.21.0 [prototyping with production components](references/reuse-consistency.md#prototype-with-production-components)

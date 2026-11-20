@@ -436,19 +436,55 @@ width-based touch detection. Apply each fix where its reason applies:
 | Page zooms into a focused input | iOS zooms inputs whose font size is below 16 px; set inputs to at least 16 px. Keep pinch zoom: never `user-scalable=no` or `maximum-scale=1`. |
 | Tap feels slow | Show feedback on pointer-down. A `width=device-width` viewport already removes the classic tap delay; `touch-action: manipulation` on controls covers remaining double-tap-zoom handling. |
 | Pull-to-refresh or scroll chaining fights the app | `overscroll-behavior` on the scroll container, or on `html, body` for an app shell where the browser's pull-to-refresh is unwanted; avoid `touchmove` with `preventDefault()`. |
-| Content hidden by the notch or home indicator | `viewport-fit=cover` in the viewport meta, then `env(safe-area-inset-*)` padding; without the meta the insets resolve to zero. |
+| Content hidden by the notch or home indicator | `viewport-fit=cover` in the viewport meta, then `env(safe-area-inset-*)` padding; without the meta the insets resolve to zero. In landscape the notch moves to a side, so pad `left` and `right` as well as `top` and `bottom`. |
+| Keyboard opens and covers the primary action, or the whole screen slides up | The layout gives way in order: the free space between the content and the action shrinks first, then only the content area scrolls; the primary action stays visible just above the keyboard and nothing else moves. Build the screen as a column sized to the visible area: content in a region with `flex: 1; min-height: 0; overflow-y: auto`, the action outside it, and the flexible gap as `margin-top: auto` on the action rather than a fixed spacing. On Chromium and Firefox for Android, `interactive-widget=resizes-content` in the viewport meta plus `height: 100dvh` shrinks the column. Safari on iOS ignores that value, only shrinks the [visual viewport](https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport) and pans the whole page to reveal the focused field; make the column `position: fixed` with `top` and `height` following `visualViewport.offsetTop` and `visualViewport.height`, updated on its `resize` and `scroll` events, so it tracks the visible area. After it shrinks, bring the focused field into the content region with `scrollIntoView({ block: "nearest" })`. Short and long forms use the same pattern. |
+| Phone keyboard is wrong for the field, or typing needs extra steps | Set the matching `type` (`email`, `tel`, `url`), `inputmode` for digits that are not numbers (codes, document IDs), `enterkeyhint` (`next`, `go`, `send`, `search`), `autocomplete` (`email`, `one-time-code` for SMS codes) and `autocapitalize="off"` with `spellcheck="false"` on emails, usernames and codes. |
+| Keyboard opens before the person has read the screen | No `autofocus` on load on touch screens unless the field is the screen's only task; focus moves after a tap. |
+| Page scrolls behind an open modal or bottom sheet | Use a modal `<dialog>` opened with `showModal()` and `overscroll-behavior: contain` on the sheet's scroll area; avoid JavaScript body-scroll locks that break the scroll position on iOS. |
+| Back gesture or Android Back leaves the page while a sheet or dialog is open | Back closes the topmost layer first. A modal `<dialog>` already closes on Android Back where [`CloseWatcher`](https://developer.mozilla.org/en-US/docs/Web/API/CloseWatcher) ships (not Safari); for full-screen sheets, push a history entry on open and close on `popstate`, without leaving a stray entry when closed by a button. |
+| Custom gesture starts at the screen edge | Edge swipes belong to the system (iOS back, Android back gesture); start custom swipes away from the edges and offer a visible control for the same action. |
+| Text grows on rotation to landscape on iOS | `-webkit-text-size-adjust: 100%` (with `text-size-adjust`) on `html`; never `none`, which blocks text zoom in some browsers. |
+| Custom select or date picker is hard to use by touch | Prefer native `<select>` and `<input type="date">` on touch screens; the system picker is sized and placed for thumbs. Keep a custom control only when the native one cannot express the choice. |
 | Long-press selects a control's label | `user-select: none` with `-webkit-user-select: none` for Safari, on controls only, never on readable content. |
 | Taps miss small targets or fire while the finger is already scrolling | Extend the hit area about 10 px beyond the visual target through padding or a pseudo-element, cancel a tap when the finger leaves the target before release, and treat contact as a tap until it has travelled about 10 px (see [gestures](motion.md#gestures-and-continuity)). |
 | Custom horizontal gesture blocks vertical scroll | `touch-action: pan-y` on the horizontal gesture surface (the value names what the browser keeps); prefer native `scroll-snap` carousels, which need none. |
 | Browser chrome color mismatches the theme | One `theme-color` meta per `prefers-color-scheme`, matching the top of the page; update it on a class-based theme toggle. |
 
-On Android Chrome, `interactive-widget=resizes-content` in the viewport meta lets
-the software keyboard resize the layout viewport so bottom-pinned inputs follow
-it. Verify on real hardware over the LAN with remote inspection (Safari Web
+Verify on real hardware over the LAN with remote inspection (Safari Web
 Inspector, `chrome://inspect`): sticky hover, tap highlight, viewport units, input
-zoom, overscroll, safe areas and the keyboard all differ from emulation. Report
-which fixes were verified from code and which need a device. Native mobile apps
-(React Native, Expo, Swift) are outside this guidance.
+zoom, overscroll, safe areas, Back and the keyboard all differ from emulation, and
+emulation never opens a software keyboard. Report which fixes were verified from
+code and which need a device. Platform APIs of native mobile apps (React Native,
+Expo, Swift, Kotlin) are outside this guidance; the principles below carry over.
+
+### Mobile principles that carry to native apps
+
+These hold for a phone layout of a web app and for a native app; only the
+mechanism changes. In native code, use the platform's own equivalent (for
+example React Native `KeyboardAvoidingView`, `keyboardType`, `autoComplete` and
+`BackHandler`) and check its documentation.
+
+- **The keyboard is part of the layout.** When it opens, free space shrinks first,
+  then only the content scrolls; the focused field and the primary action stay
+  visible and the rest of the screen does not slide away.
+- **Every field asks for the right keyboard and autofill**, and a code from SMS or
+  a password manager fills without typing.
+- **Back closes the topmost layer first** (menu, sheet, dialog), then navigates.
+  It never discards a draft silently; see [navigation resilience](#navigation-and-draft-resilience).
+- **Edges belong to the system.** Custom swipes start away from the screen edges
+  and always have a visible control for the same action.
+- **Reach decides placement.** On tall phones the bottom third is easiest to reach
+  with a thumb: put the frequent primary action there or in the content flow, and
+  keep destructive actions away from it. Top-corner actions suit rare or
+  reversible operations.
+- **Press feedback is immediate**, and work that takes longer shows
+  [loading feedback](#loading-feedback); a tap that seems to do nothing gets
+  repeated.
+- **Interruptions are normal.** Calls, app switches, a locked screen and a dropped
+  connection must not lose input or state; restore the screen where the person
+  left it.
+- **Touch targets** follow the [target-size rules](#target-sizes-requirement-versus-recommendation);
+  platform guides recommend about 44 × 44 pt (Apple) and 48 × 48 dp (Material).
 
 ## Verification
 

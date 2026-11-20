@@ -5,6 +5,25 @@ name and version. Entries without a skill name (0.24.0 and earlier) belong to
 `frontend-craft`. Tags are per skill: `frontend-craft` uses `vX.Y.Z` and
 `video-craft` uses `video-craft-vX.Y.Z`.
 
+## frontend-craft 0.27.6 — 2026-11-20
+
+- [Mobile web](skills/frontend-craft/references/interaction-accessibility.md#mobile-web)
+  gains rows for the software keyboard covering the primary action: free space
+  shrinks first, then only the content scrolls, and the action stays visible
+  without the screen sliding up (`interactive-widget=resizes-content` with
+  `100dvh` on Android, a column tracking `visualViewport` on iOS, which ignores
+  that value). Further rows cover the right phone keyboard per
+  field (`type`, `inputmode`, `enterkeyhint`, `autocomplete`), `autofocus` on load,
+  scroll behind sheets, Back closing the top layer, edge gestures, landscape text
+  inflation and native pickers. Safe areas now cover landscape sides.
+- New subsection [mobile principles that carry to native apps](skills/frontend-craft/references/interaction-accessibility.md#mobile-principles-that-carry-to-native-apps):
+  keyboard as layout, input keyboards and autofill, Back order, system edges,
+  thumb reach, press feedback, interruptions and target sizes. Native platform
+  APIs stay out of scope.
+- The [viewport sweep](skills/frontend-craft/references/review.md#sweep-a-page-across-viewports)
+  checks bottom actions against the keyboard in code and lists the open keyboard
+  as not checked, since emulation never opens it.
+
 ## frontend-craft 0.27.5 — 2026-11-19
 
 - Copy-only cleanup now traces status cues to their data and distinguishes decorative

@@ -299,7 +299,10 @@ critique with measurement; do not start a second review loop.
    each other (neither contains the other, shared area at least a quarter of the
    smaller); text under 12 px; touch targets under 40 px on narrow viewports only;
    containers that cut their content vertically; console and page errors. Apply
-   [measurement validity](#critique-the-rendered-composition) first.
+   [measurement validity](#critique-the-rendered-composition) first. On narrow
+   widths with text fields, also list fixed or sticky bottom actions: emulation
+   never opens a software keyboard, so check them in code against the keyboard
+   row of [mobile web](interaction-accessibility.md#mobile-web).
 4. **Capture each section**, at up to five scroll positions for tall ones, and have
    the images read by a reviewer. Numbers find what the eye misses (a 3 px
    overflow); images find what numbers miss (an empty block, a line through an icon).
@@ -316,7 +319,8 @@ critique with measurement; do not start a second review loop.
    a time, viewports in sequence, closed in `finally`. Read-only unless fixes are
    authorized.
 9. **Report four lists:** fixed, recorded for later, dismissed with the reason, and
-   not checked (other browser engines, real devices). Name the engine that ran.
+   not checked (other browser engines, real devices, the open keyboard). Name the
+   engine that ran.
 
 ## Compare a render with a binding design
 
